@@ -1,0 +1,9 @@
+Version:W.0Q
+Date:2011/07/06
+1.bdInit.c
+*not use Now!!
+for A1 BD-ROM DL hang on issue(BD Read Speed)
+2.plrststp.c
+Modify DVD+R startup set speed issue from STAND BY mode.
+3.svo_sta.c
+if(MediaRecovery)disckind_rw_th = 1100;//1000  [W.0Q]Walker

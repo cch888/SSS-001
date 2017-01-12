@@ -1,0 +1,2470 @@
+/******************************************************************************
+*               (c) Copyright 2003 - 2010 SUNEXT TECHNOLOGY CO., LTD.
+*                        All Right Reserved
+*
+* FILENAME: REG_dvd_decoder.h
+*
+*
+* DESCRIPTION: This file contains register, bit and enum definitions
+*              for RegHAL analysis of the DVDD core.
+*
+* NOTE: This file is created automatically and should NOT be modified by hand.
+*
+**************************** SUNEXT CONFIDENTIAL *****************************/
+
+#ifndef __REG_DVD_DECODER_H__
+#define __REG_DVD_DECODER_H__
+
+// Core register map
+#define HAL_DVDD_VERSION 7.63
+#define HAL_DVDD_BaseAddress 0x10000300
+#define HAL_DVDDREG_MAP ((struct halDVDDReg_Map*) (void *) HAL_DVDD_BaseAddress)
+__packed struct halDVDDReg_Map
+{
+	HAL_Reg8  DVDRST;                         //00000000
+	HAL_Reg8  DVDCNFG;                        //00000001
+	HAL_Reg8  DVDCTRL;                        //00000002
+	HAL_Reg8  MEDCTRL;                        //00000003
+	HAL_Reg8  DVDIRQC1;                       //00000004
+	HAL_Reg8  DVDIRQC2;                       //00000005
+	HAL_Reg8  DVDIRQC3;                       //00000006
+	HAL_Reg8  ReservedBlk0[1];                //00000007
+	HAL_Reg8  DVDIRQS1;                       //00000008
+	HAL_Reg8  DVDIRQS2;                       //00000009
+	HAL_Reg8  DVDIRQS3;                       //0000000A
+	HAL_Reg8  ReservedBlk1[1];                //0000000B
+	HAL_Reg8  DASCL;                          //0000000C
+	HAL_Reg8  DASCH;                          //0000000D
+	HAL_Reg8  ECCIPRD;                        //0000000E
+	HAL_Reg8  ECCCTRL;                        //0000000F
+	HAL_Reg32 EDCERRL;                        //00000010
+	HAL_Reg8  ReservedBlk2[4];                //00000014
+	HAL_Reg8  BCACNT;                         //00000018
+	HAL_Reg8  BLKINC;                         //00000019
+	HAL_Reg16 BKTOBUFL;                       //0000001A
+	HAL_Reg32 TID0;                           //0000001C
+	HAL_Reg16 STARTBKL;                       //00000020
+	HAL_Reg16 ENDBKL;                         //00000022
+	HAL_Reg16 PIPOSRTL;                       //00000024
+	HAL_Reg16 CURBUFL;                        //00000026
+	HAL_Reg16 CURBAUXL;                       //00000028
+	HAL_Reg16 CURECCL;                        //0000002A
+	HAL_Reg16 CUREAUXL;                       //0000002C
+	HAL_Reg8  ReservedBlk3[2];                //0000002E
+	HAL_Reg32 PDLSRTL;                        //00000030
+	HAL_Reg32 CURPDLL;                        //00000034
+	HAL_Reg32 CURID0;                         //00000038
+	HAL_Reg32 PID0;                           //0000003C
+	HAL_Reg8  DVDRAMLG0;                      //00000040
+	HAL_Reg8  ReservedBlk4[3];                //00000041
+	HAL_Reg8  DVDSTAT;                        //00000044
+	HAL_Reg8  CSSCMD;                         //00000045
+	HAL_Reg8  CSSCHAL9;                       //00000046
+	HAL_Reg8  CSSCHAL8;                       //00000047
+	HAL_Reg8  CSSCHAL7;                       //00000048
+	HAL_Reg8  CSSCHAL6;                       //00000049
+	HAL_Reg8  CSSCHAL5;                       //0000004A
+	HAL_Reg8  CSSCHAL4;                       //0000004B
+	HAL_Reg8  CSSCHAL3;                       //0000004C
+	HAL_Reg8  CSSCHAL2;                       //0000004D
+	HAL_Reg8  CSSCHAL1;                       //0000004E
+	HAL_Reg8  CSSCHAL0;                       //0000004F
+	HAL_Reg8  ReservedBlk5[3];                //00000050
+	HAL_Reg8  CSSRES4;                        //00000053
+	HAL_Reg8  CSSRES3;                        //00000054
+	HAL_Reg8  CSSRES2;                        //00000055
+	HAL_Reg8  CSSRES1;                        //00000056
+	HAL_Reg8  CSSRES0;                        //00000057
+	HAL_Reg8  ReservedBlk6[2];                //00000058
+	HAL_Reg8  ACCODE;                         //0000005A
+	HAL_Reg8  BUSKEY4;                        //0000005B
+	HAL_Reg8  BUSKEY3;                        //0000005C
+	HAL_Reg8  BUSKEY2;                        //0000005D
+	HAL_Reg8  BUSKEY1;                        //0000005E
+	HAL_Reg8  BUSKEY0;                        //0000005F
+	HAL_Reg8  BUFCTRL;                        //00000060
+	HAL_Reg8  ReservedBlk7[7];                //00000061
+	HAL_Reg8  DVDRAMC0;                       //00000068
+	HAL_Reg8  DVDRAMC1;                       //00000069
+	HAL_Reg8  ReservedBlk8[1];                //0000006A
+	HAL_Reg8  DVDRAMC3;                       //0000006B
+	HAL_Reg8  DVDRAMS;                        //0000006C
+	HAL_Reg8  ReservedBlk9[1];                //0000006D
+	HAL_Reg16 PISCORL;                        //0000006E
+	HAL_Reg8  PIUCOR;                         //00000070
+	HAL_Reg8  PISTH;                          //00000071
+	HAL_Reg8  PIRXTH;                         //00000072
+	HAL_Reg8  PIUTH;                          //00000073
+	HAL_Reg16 POSCORL;                        //00000074
+	HAL_Reg8  POUCOR;                         //00000076
+	HAL_Reg8  RECCSTAT;                       //00000077
+	HAL_Reg8  DRFTCNTL;                       //00000078
+	HAL_Reg8  ReservedBlk10[7];               //00000079
+	HAL_Reg8  SCRMBLCTL;                      //00000080
+	HAL_Reg8  ReservedBlk11[1];               //00000081
+	HAL_Reg8  CIDCTRCTL;                      //00000082
+	HAL_Reg8  ReservedBlk12[30];              //00000083
+	HAL_Reg8  DVDRAMLG1;                      //000000A1
+	HAL_Reg8  DVDRAMLG2;                      //000000A2
+	HAL_Reg8  ReservedBlk13[1];               //000000A3
+	HAL_Reg32 PIDFW0;                         //000000A4
+	HAL_Reg32 CIDFW0;                         //000000A8
+	HAL_Reg8  CIDCNTRV;                       //000000AC
+	HAL_Reg8  SECTTID0;                       //000000AD
+	HAL_Reg8  SECTTID1;                       //000000AE
+	HAL_Reg8  SECTTID2;                       //000000AF
+	HAL_Reg8  MISCCTRL;                       //000000B0
+	HAL_Reg8  PID4ERRL;                       //000000B1
+	HAL_Reg8  PID4ERRH;                       //000000B2
+	HAL_Reg8  PID3ERRL;                       //000000B3
+	HAL_Reg8  PID3ERRH;                       //000000B4
+	HAL_Reg8  PID2ERRL;                       //000000B5
+	HAL_Reg8  PID2ERRH;                       //000000B6
+	HAL_Reg8  PID1ERRL;                       //000000B7
+	HAL_Reg8  PID1ERRH;                       //000000B8
+	HAL_Reg8  PIDMESURL;                      //000000B9
+	HAL_Reg8  PIDMESURH;                      //000000BA
+	HAL_Reg8  ReservedBlk14[5];               //000000BB
+	HAL_Reg8  LFLASHCTRL;                     //000000C0
+	HAL_Reg8  ReservedBlk15[41];              //000000C1
+	HAL_Reg8  DVDDBG48C;                      //000000EA
+	HAL_Reg8  ReservedBlk16[1];               //000000EB
+	HAL_Reg16 FWKEYL;                         //000000EC
+	HAL_Reg8  ReservedBlk17[1];               //000000EE
+	HAL_Reg8  TSTCTRL;                        //000000EF
+	HAL_Reg8  DVDDSPARE;                      //000000F0
+};
+// Register DVDRST
+#define HAL_DVDD_RSTDVDD_REGISTER    (HAL_DVDDREG_MAP->DVDRST)
+#define HAL_DVDD_RSTDVDD_LSB         1
+#define HAL_DVDD_RSTDVDD_MSB         1
+#define HAL_DVDD_RSTDVDD_MASK        0x00000002
+#define HAL_DVDD_RSTDVDD_TYPE        Bool
+#define HAL_DVDD_RSTDVDD             HAL_DVDD_RSTDVDD_MASK
+#define HAL_DVDD_RSTDVDD_READABLE    0
+#define HAL_DVDD_RSTDVDD_WRITABLE    1
+#define HAL_DVDD_RSTDVDD_SIGNED      0
+#define HAL_DVDD_RSTDVDD_ADR         0x10000300
+
+#define HAL_DVDD_RSTCSS_REGISTER    (HAL_DVDDREG_MAP->DVDRST)
+#define HAL_DVDD_RSTCSS_LSB         0
+#define HAL_DVDD_RSTCSS_MSB         0
+#define HAL_DVDD_RSTCSS_MASK        0x00000001
+#define HAL_DVDD_RSTCSS_TYPE        Bool
+#define HAL_DVDD_RSTCSS             HAL_DVDD_RSTCSS_MASK
+#define HAL_DVDD_RSTCSS_READABLE    0
+#define HAL_DVDD_RSTCSS_WRITABLE    1
+#define HAL_DVDD_RSTCSS_SIGNED      0
+#define HAL_DVDD_RSTCSS_ADR         0x10000300
+
+// Register DVDCNFG
+#define HAL_DVDD_PIRSDRMEN_REGISTER    (HAL_DVDDREG_MAP->DVDCNFG)
+#define HAL_DVDD_PIRSDRMEN_LSB         1
+#define HAL_DVDD_PIRSDRMEN_MSB         1
+#define HAL_DVDD_PIRSDRMEN_MASK        0x00000002
+#define HAL_DVDD_PIRSDRMEN_TYPE        Bool
+#define HAL_DVDD_PIRSDRMEN             HAL_DVDD_PIRSDRMEN_MASK
+#define HAL_DVDD_PIRSDRMEN_READABLE    1
+#define HAL_DVDD_PIRSDRMEN_WRITABLE    1
+#define HAL_DVDD_PIRSDRMEN_SIGNED      0
+#define HAL_DVDD_PIRSDRMEN_ADR         0x10000301
+
+#define HAL_DVDD_PISSDRMEN_REGISTER    (HAL_DVDDREG_MAP->DVDCNFG)
+#define HAL_DVDD_PISSDRMEN_LSB         0
+#define HAL_DVDD_PISSDRMEN_MSB         0
+#define HAL_DVDD_PISSDRMEN_MASK        0x00000001
+#define HAL_DVDD_PISSDRMEN_TYPE        Bool
+#define HAL_DVDD_PISSDRMEN             HAL_DVDD_PISSDRMEN_MASK
+#define HAL_DVDD_PISSDRMEN_READABLE    1
+#define HAL_DVDD_PISSDRMEN_WRITABLE    1
+#define HAL_DVDD_PISSDRMEN_SIGNED      0
+#define HAL_DVDD_PISSDRMEN_ADR         0x10000301
+
+// Register DVDCTRL
+
+#if (CHIP_REV >= 0xC0)
+
+#define HAL_DVDD_RMD_REGISTER    (HAL_DVDDREG_MAP->DVDCTRL)
+#define HAL_DVDD_RMD_LSB         7
+#define HAL_DVDD_RMD_MSB         7
+#define HAL_DVDD_RMD_MASK        0x00000080
+#define HAL_DVDD_RMD_TYPE        Bool
+#define HAL_DVDD_RMD             HAL_DVDD_RMD_MASK
+#define HAL_DVDD_RMD_READABLE    1
+#define HAL_DVDD_RMD_WRITABLE    1
+#define HAL_DVDD_RMD_SIGNED      0
+#define HAL_DVDD_RMD_ADR         0x10000302
+
+#endif // #if (CHIP_REV >= 0xC0)
+
+#define HAL_DVDD_BUFMODE_REGISTER    (HAL_DVDDREG_MAP->DVDCTRL)
+#define HAL_DVDD_BUFMODE_LSB         6
+#define HAL_DVDD_BUFMODE_MSB         6
+#define HAL_DVDD_BUFMODE_MASK        0x00000040
+#define HAL_DVDD_BUFMODE_TYPE        Bool
+#define HAL_DVDD_BUFMODE             HAL_DVDD_BUFMODE_MASK
+#define HAL_DVDD_BUFMODE_READABLE    1
+#define HAL_DVDD_BUFMODE_WRITABLE    1
+#define HAL_DVDD_BUFMODE_SIGNED      0
+#define HAL_DVDD_BUFMODE_ADR         0x10000302
+
+#define HAL_DVDD_RDLONG_REGISTER    (HAL_DVDDREG_MAP->DVDCTRL)
+#define HAL_DVDD_RDLONG_LSB         5
+#define HAL_DVDD_RDLONG_MSB         5
+#define HAL_DVDD_RDLONG_MASK        0x00000020
+#define HAL_DVDD_RDLONG_TYPE        Bool
+#define HAL_DVDD_RDLONG             HAL_DVDD_RDLONG_MASK
+#define HAL_DVDD_RDLONG_READABLE    1
+#define HAL_DVDD_RDLONG_WRITABLE    1
+#define HAL_DVDD_RDLONG_SIGNED      0
+#define HAL_DVDD_RDLONG_ADR         0x10000302
+
+#define HAL_DVDD_POERRDIS_REGISTER    (HAL_DVDDREG_MAP->DVDCTRL)
+#define HAL_DVDD_POERRDIS_LSB         4
+#define HAL_DVDD_POERRDIS_MSB         4
+#define HAL_DVDD_POERRDIS_MASK        0x00000010
+#define HAL_DVDD_POERRDIS_TYPE        Bool
+#define HAL_DVDD_POERRDIS             HAL_DVDD_POERRDIS_MASK
+#define HAL_DVDD_POERRDIS_READABLE    1
+#define HAL_DVDD_POERRDIS_WRITABLE    1
+#define HAL_DVDD_POERRDIS_SIGNED      0
+#define HAL_DVDD_POERRDIS_ADR         0x10000302
+
+#define HAL_DVDD_POCORDIS_REGISTER    (HAL_DVDDREG_MAP->DVDCTRL)
+#define HAL_DVDD_POCORDIS_LSB         3
+#define HAL_DVDD_POCORDIS_MSB         3
+#define HAL_DVDD_POCORDIS_MASK        0x00000008
+#define HAL_DVDD_POCORDIS_TYPE        Bool
+#define HAL_DVDD_POCORDIS             HAL_DVDD_POCORDIS_MASK
+#define HAL_DVDD_POCORDIS_READABLE    1
+#define HAL_DVDD_POCORDIS_WRITABLE    1
+#define HAL_DVDD_POCORDIS_SIGNED      0
+#define HAL_DVDD_POCORDIS_ADR         0x10000302
+
+#define HAL_DVDD_PICORDIS_REGISTER    (HAL_DVDDREG_MAP->DVDCTRL)
+#define HAL_DVDD_PICORDIS_LSB         2
+#define HAL_DVDD_PICORDIS_MSB         2
+#define HAL_DVDD_PICORDIS_MASK        0x00000004
+#define HAL_DVDD_PICORDIS_TYPE        Bool
+#define HAL_DVDD_PICORDIS             HAL_DVDD_PICORDIS_MASK
+#define HAL_DVDD_PICORDIS_READABLE    1
+#define HAL_DVDD_PICORDIS_WRITABLE    1
+#define HAL_DVDD_PICORDIS_SIGNED      0
+#define HAL_DVDD_PICORDIS_ADR         0x10000302
+
+#define HAL_DVDD_TIDDIS_REGISTER    (HAL_DVDDREG_MAP->DVDCTRL)
+#define HAL_DVDD_TIDDIS_LSB         1
+#define HAL_DVDD_TIDDIS_MSB         1
+#define HAL_DVDD_TIDDIS_MASK        0x00000002
+#define HAL_DVDD_TIDDIS_TYPE        Bool
+#define HAL_DVDD_TIDDIS             HAL_DVDD_TIDDIS_MASK
+#define HAL_DVDD_TIDDIS_READABLE    1
+#define HAL_DVDD_TIDDIS_WRITABLE    1
+#define HAL_DVDD_TIDDIS_SIGNED      0
+#define HAL_DVDD_TIDDIS_ADR         0x10000302
+
+#if (CHIP_REV >= 0xC0)
+
+#define HAL_DVDD_SUDMEMSTP_REGISTER    (HAL_DVDDREG_MAP->DVDCTRL)
+#define HAL_DVDD_SUDMEMSTP_LSB         0
+#define HAL_DVDD_SUDMEMSTP_MSB         0
+#define HAL_DVDD_SUDMEMSTP_MASK        0x00000001
+#define HAL_DVDD_SUDMEMSTP_TYPE        Bool
+#define HAL_DVDD_SUDMEMSTP             HAL_DVDD_SUDMEMSTP_MASK
+#define HAL_DVDD_SUDMEMSTP_READABLE    1
+#define HAL_DVDD_SUDMEMSTP_WRITABLE    1
+#define HAL_DVDD_SUDMEMSTP_SIGNED      0
+#define HAL_DVDD_SUDMEMSTP_ADR         0x10000302
+
+#endif // #if (CHIP_REV >= 0xC0)
+
+// Register MEDCTRL
+#define HAL_DVDD_ZROLNKEN_REGISTER    (HAL_DVDDREG_MAP->MEDCTRL)
+#define HAL_DVDD_ZROLNKEN_LSB         6
+#define HAL_DVDD_ZROLNKEN_MSB         6
+#define HAL_DVDD_ZROLNKEN_MASK        0x00000040
+#define HAL_DVDD_ZROLNKEN_TYPE        Bool
+#define HAL_DVDD_ZROLNKEN             HAL_DVDD_ZROLNKEN_MASK
+#define HAL_DVDD_ZROLNKEN_READABLE    1
+#define HAL_DVDD_ZROLNKEN_WRITABLE    1
+#define HAL_DVDD_ZROLNKEN_SIGNED      0
+#define HAL_DVDD_ZROLNKEN_ADR         0x10000303
+
+#define HAL_DVDD_ENDVDD_REGISTER    (HAL_DVDDREG_MAP->MEDCTRL)
+#define HAL_DVDD_ENDVDD_LSB         0
+#define HAL_DVDD_ENDVDD_MSB         0
+#define HAL_DVDD_ENDVDD_MASK        0x00000001
+#define HAL_DVDD_ENDVDD_TYPE        Bool
+#define HAL_DVDD_ENDVDD             HAL_DVDD_ENDVDD_MASK
+#define HAL_DVDD_ENDVDD_READABLE    1
+#define HAL_DVDD_ENDVDD_WRITABLE    1
+#define HAL_DVDD_ENDVDD_SIGNED      0
+#define HAL_DVDD_ENDVDD_ADR         0x10000303
+
+// Register DVDIRQC1
+#define HAL_DVDD_ZROFILEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC1)
+#define HAL_DVDD_ZROFILEN_LSB         7
+#define HAL_DVDD_ZROFILEN_MSB         7
+#define HAL_DVDD_ZROFILEN_MASK        0x00000080
+#define HAL_DVDD_ZROFILEN_TYPE        Bool
+#define HAL_DVDD_ZROFILEN             HAL_DVDD_ZROFILEN_MASK
+#define HAL_DVDD_ZROFILEN_READABLE    1
+#define HAL_DVDD_ZROFILEN_WRITABLE    1
+#define HAL_DVDD_ZROFILEN_SIGNED      0
+#define HAL_DVDD_ZROFILEN_ADR         0x10000304
+
+#define HAL_DVDD_ECCBLKEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC1)
+#define HAL_DVDD_ECCBLKEN_LSB         6
+#define HAL_DVDD_ECCBLKEN_MSB         6
+#define HAL_DVDD_ECCBLKEN_MASK        0x00000040
+#define HAL_DVDD_ECCBLKEN_TYPE        Bool
+#define HAL_DVDD_ECCBLKEN             HAL_DVDD_ECCBLKEN_MASK
+#define HAL_DVDD_ECCBLKEN_READABLE    1
+#define HAL_DVDD_ECCBLKEN_WRITABLE    1
+#define HAL_DVDD_ECCBLKEN_SIGNED      0
+#define HAL_DVDD_ECCBLKEN_ADR         0x10000304
+
+#define HAL_DVDD_UNECCEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC1)
+#define HAL_DVDD_UNECCEN_LSB         5
+#define HAL_DVDD_UNECCEN_MSB         5
+#define HAL_DVDD_UNECCEN_MASK        0x00000020
+#define HAL_DVDD_UNECCEN_TYPE        Bool
+#define HAL_DVDD_UNECCEN             HAL_DVDD_UNECCEN_MASK
+#define HAL_DVDD_UNECCEN_READABLE    1
+#define HAL_DVDD_UNECCEN_WRITABLE    1
+#define HAL_DVDD_UNECCEN_SIGNED      0
+#define HAL_DVDD_UNECCEN_ADR         0x10000304
+
+#define HAL_DVDD_BWDTHEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC1)
+#define HAL_DVDD_BWDTHEN_LSB         4
+#define HAL_DVDD_BWDTHEN_MSB         4
+#define HAL_DVDD_BWDTHEN_MASK        0x00000010
+#define HAL_DVDD_BWDTHEN_TYPE        Bool
+#define HAL_DVDD_BWDTHEN             HAL_DVDD_BWDTHEN_MASK
+#define HAL_DVDD_BWDTHEN_READABLE    1
+#define HAL_DVDD_BWDTHEN_WRITABLE    1
+#define HAL_DVDD_BWDTHEN_SIGNED      0
+#define HAL_DVDD_BWDTHEN_ADR         0x10000304
+
+#define HAL_DVDD_BUFDNEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC1)
+#define HAL_DVDD_BUFDNEN_LSB         3
+#define HAL_DVDD_BUFDNEN_MSB         3
+#define HAL_DVDD_BUFDNEN_MASK        0x00000008
+#define HAL_DVDD_BUFDNEN_TYPE        Bool
+#define HAL_DVDD_BUFDNEN             HAL_DVDD_BUFDNEN_MASK
+#define HAL_DVDD_BUFDNEN_READABLE    1
+#define HAL_DVDD_BUFDNEN_WRITABLE    1
+#define HAL_DVDD_BUFDNEN_SIGNED      0
+#define HAL_DVDD_BUFDNEN_ADR         0x10000304
+
+#define HAL_DVDD_BUFFEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC1)
+#define HAL_DVDD_BUFFEN_LSB         2
+#define HAL_DVDD_BUFFEN_MSB         2
+#define HAL_DVDD_BUFFEN_MASK        0x00000004
+#define HAL_DVDD_BUFFEN_TYPE        Bool
+#define HAL_DVDD_BUFFEN             HAL_DVDD_BUFFEN_MASK
+#define HAL_DVDD_BUFFEN_READABLE    1
+#define HAL_DVDD_BUFFEN_WRITABLE    1
+#define HAL_DVDD_BUFFEN_SIGNED      0
+#define HAL_DVDD_BUFFEN_ADR         0x10000304
+
+#define HAL_DVDD_ECCDNEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC1)
+#define HAL_DVDD_ECCDNEN_LSB         1
+#define HAL_DVDD_ECCDNEN_MSB         1
+#define HAL_DVDD_ECCDNEN_MASK        0x00000002
+#define HAL_DVDD_ECCDNEN_TYPE        Bool
+#define HAL_DVDD_ECCDNEN             HAL_DVDD_ECCDNEN_MASK
+#define HAL_DVDD_ECCDNEN_READABLE    1
+#define HAL_DVDD_ECCDNEN_WRITABLE    1
+#define HAL_DVDD_ECCDNEN_SIGNED      0
+#define HAL_DVDD_ECCDNEN_ADR         0x10000304
+
+#define HAL_DVDD_ECCEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC1)
+#define HAL_DVDD_ECCEN_LSB         0
+#define HAL_DVDD_ECCEN_MSB         0
+#define HAL_DVDD_ECCEN_MASK        0x00000001
+#define HAL_DVDD_ECCEN_TYPE        Bool
+#define HAL_DVDD_ECCEN             HAL_DVDD_ECCEN_MASK
+#define HAL_DVDD_ECCEN_READABLE    1
+#define HAL_DVDD_ECCEN_WRITABLE    1
+#define HAL_DVDD_ECCEN_SIGNED      0
+#define HAL_DVDD_ECCEN_ADR         0x10000304
+
+// Register DVDIRQC2
+#define HAL_DVDD_HDERREN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC2)
+#define HAL_DVDD_HDERREN_LSB         7
+#define HAL_DVDD_HDERREN_MSB         7
+#define HAL_DVDD_HDERREN_MASK        0x00000080
+#define HAL_DVDD_HDERREN_TYPE        Bool
+#define HAL_DVDD_HDERREN             HAL_DVDD_HDERREN_MASK
+#define HAL_DVDD_HDERREN_READABLE    1
+#define HAL_DVDD_HDERREN_WRITABLE    1
+#define HAL_DVDD_HDERREN_SIGNED      0
+#define HAL_DVDD_HDERREN_ADR         0x10000305
+
+#define HAL_DVDD_AUTHEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC2)
+#define HAL_DVDD_AUTHEN_LSB         6
+#define HAL_DVDD_AUTHEN_MSB         6
+#define HAL_DVDD_AUTHEN_MASK        0x00000040
+#define HAL_DVDD_AUTHEN_TYPE        Bool
+#define HAL_DVDD_AUTHEN             HAL_DVDD_AUTHEN_MASK
+#define HAL_DVDD_AUTHEN_READABLE    1
+#define HAL_DVDD_AUTHEN_WRITABLE    1
+#define HAL_DVDD_AUTHEN_SIGNED      0
+#define HAL_DVDD_AUTHEN_ADR         0x10000305
+
+#define HAL_DVDD_TIDMISEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC2)
+#define HAL_DVDD_TIDMISEN_LSB         5
+#define HAL_DVDD_TIDMISEN_MSB         5
+#define HAL_DVDD_TIDMISEN_MASK        0x00000020
+#define HAL_DVDD_TIDMISEN_TYPE        Bool
+#define HAL_DVDD_TIDMISEN             HAL_DVDD_TIDMISEN_MASK
+#define HAL_DVDD_TIDMISEN_READABLE    1
+#define HAL_DVDD_TIDMISEN_WRITABLE    1
+#define HAL_DVDD_TIDMISEN_SIGNED      0
+#define HAL_DVDD_TIDMISEN_ADR         0x10000305
+
+#define HAL_DVDD_PIUTHEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC2)
+#define HAL_DVDD_PIUTHEN_LSB         4
+#define HAL_DVDD_PIUTHEN_MSB         4
+#define HAL_DVDD_PIUTHEN_MASK        0x00000010
+#define HAL_DVDD_PIUTHEN_TYPE        Bool
+#define HAL_DVDD_PIUTHEN             HAL_DVDD_PIUTHEN_MASK
+#define HAL_DVDD_PIUTHEN_READABLE    1
+#define HAL_DVDD_PIUTHEN_WRITABLE    1
+#define HAL_DVDD_PIUTHEN_SIGNED      0
+#define HAL_DVDD_PIUTHEN_ADR         0x10000305
+
+#define HAL_DVDD_PISTHEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC2)
+#define HAL_DVDD_PISTHEN_LSB         3
+#define HAL_DVDD_PISTHEN_MSB         3
+#define HAL_DVDD_PISTHEN_MASK        0x00000008
+#define HAL_DVDD_PISTHEN_TYPE        Bool
+#define HAL_DVDD_PISTHEN             HAL_DVDD_PISTHEN_MASK
+#define HAL_DVDD_PISTHEN_READABLE    1
+#define HAL_DVDD_PISTHEN_WRITABLE    1
+#define HAL_DVDD_PISTHEN_SIGNED      0
+#define HAL_DVDD_PISTHEN_ADR         0x10000305
+
+#define HAL_DVDD_EDCEREN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC2)
+#define HAL_DVDD_EDCEREN_LSB         1
+#define HAL_DVDD_EDCEREN_MSB         1
+#define HAL_DVDD_EDCEREN_MASK        0x00000002
+#define HAL_DVDD_EDCEREN_TYPE        Bool
+#define HAL_DVDD_EDCEREN             HAL_DVDD_EDCEREN_MASK
+#define HAL_DVDD_EDCEREN_READABLE    1
+#define HAL_DVDD_EDCEREN_WRITABLE    1
+#define HAL_DVDD_EDCEREN_SIGNED      0
+#define HAL_DVDD_EDCEREN_ADR         0x10000305
+
+#define HAL_DVDD_DMDFIFLEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC2)
+#define HAL_DVDD_DMDFIFLEN_LSB         0
+#define HAL_DVDD_DMDFIFLEN_MSB         0
+#define HAL_DVDD_DMDFIFLEN_MASK        0x00000001
+#define HAL_DVDD_DMDFIFLEN_TYPE        Bool
+#define HAL_DVDD_DMDFIFLEN             HAL_DVDD_DMDFIFLEN_MASK
+#define HAL_DVDD_DMDFIFLEN_READABLE    1
+#define HAL_DVDD_DMDFIFLEN_WRITABLE    1
+#define HAL_DVDD_DMDFIFLEN_SIGNED      0
+#define HAL_DVDD_DMDFIFLEN_ADR         0x10000305
+
+// Register DVDIRQC3
+#define HAL_DVDD_DRSEQIDEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC3)
+#define HAL_DVDD_DRSEQIDEN_LSB         7
+#define HAL_DVDD_DRSEQIDEN_MSB         7
+#define HAL_DVDD_DRSEQIDEN_MASK        0x00000080
+#define HAL_DVDD_DRSEQIDEN_TYPE        Bool
+#define HAL_DVDD_DRSEQIDEN             HAL_DVDD_DRSEQIDEN_MASK
+#define HAL_DVDD_DRSEQIDEN_READABLE    1
+#define HAL_DVDD_DRSEQIDEN_WRITABLE    1
+#define HAL_DVDD_DRSEQIDEN_SIGNED      0
+#define HAL_DVDD_DRSEQIDEN_ADR         0x10000306
+
+#define HAL_DVDD_SEQIDEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC3)
+#define HAL_DVDD_SEQIDEN_LSB         6
+#define HAL_DVDD_SEQIDEN_MSB         6
+#define HAL_DVDD_SEQIDEN_MASK        0x00000040
+#define HAL_DVDD_SEQIDEN_TYPE        Bool
+#define HAL_DVDD_SEQIDEN             HAL_DVDD_SEQIDEN_MASK
+#define HAL_DVDD_SEQIDEN_READABLE    1
+#define HAL_DVDD_SEQIDEN_WRITABLE    1
+#define HAL_DVDD_SEQIDEN_SIGNED      0
+#define HAL_DVDD_SEQIDEN_ADR         0x10000306
+
+#define HAL_DVDD_POMISMEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC3)
+#define HAL_DVDD_POMISMEN_LSB         5
+#define HAL_DVDD_POMISMEN_MSB         5
+#define HAL_DVDD_POMISMEN_MASK        0x00000020
+#define HAL_DVDD_POMISMEN_TYPE        Bool
+#define HAL_DVDD_POMISMEN             HAL_DVDD_POMISMEN_MASK
+#define HAL_DVDD_POMISMEN_READABLE    1
+#define HAL_DVDD_POMISMEN_WRITABLE    1
+#define HAL_DVDD_POMISMEN_SIGNED      0
+#define HAL_DVDD_POMISMEN_ADR         0x10000306
+
+#define HAL_DVDD_PIMISMEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC3)
+#define HAL_DVDD_PIMISMEN_LSB         4
+#define HAL_DVDD_PIMISMEN_MSB         4
+#define HAL_DVDD_PIMISMEN_MASK        0x00000010
+#define HAL_DVDD_PIMISMEN_TYPE        Bool
+#define HAL_DVDD_PIMISMEN             HAL_DVDD_PIMISMEN_MASK
+#define HAL_DVDD_PIMISMEN_READABLE    1
+#define HAL_DVDD_PIMISMEN_WRITABLE    1
+#define HAL_DVDD_PIMISMEN_SIGNED      0
+#define HAL_DVDD_PIMISMEN_ADR         0x10000306
+
+#define HAL_DVDD_PIDEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC3)
+#define HAL_DVDD_PIDEN_LSB         1
+#define HAL_DVDD_PIDEN_MSB         1
+#define HAL_DVDD_PIDEN_MASK        0x00000002
+#define HAL_DVDD_PIDEN_TYPE        Bool
+#define HAL_DVDD_PIDEN             HAL_DVDD_PIDEN_MASK
+#define HAL_DVDD_PIDEN_READABLE    1
+#define HAL_DVDD_PIDEN_WRITABLE    1
+#define HAL_DVDD_PIDEN_SIGNED      0
+#define HAL_DVDD_PIDEN_ADR         0x10000306
+
+#define HAL_DVDD_CIDEN_REGISTER    (HAL_DVDDREG_MAP->DVDIRQC3)
+#define HAL_DVDD_CIDEN_LSB         0
+#define HAL_DVDD_CIDEN_MSB         0
+#define HAL_DVDD_CIDEN_MASK        0x00000001
+#define HAL_DVDD_CIDEN_TYPE        Bool
+#define HAL_DVDD_CIDEN             HAL_DVDD_CIDEN_MASK
+#define HAL_DVDD_CIDEN_READABLE    1
+#define HAL_DVDD_CIDEN_WRITABLE    1
+#define HAL_DVDD_CIDEN_SIGNED      0
+#define HAL_DVDD_CIDEN_ADR         0x10000306
+
+// Register DVDIRQS1
+#define HAL_DVDD_ZROFILI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS1)
+#define HAL_DVDD_ZROFILI_LSB         7
+#define HAL_DVDD_ZROFILI_MSB         7
+#define HAL_DVDD_ZROFILI_MASK        0x00000080
+#define HAL_DVDD_ZROFILI_TYPE        Bool
+#define HAL_DVDD_ZROFILI             HAL_DVDD_ZROFILI_MASK
+#define HAL_DVDD_ZROFILI_READABLE    1
+#define HAL_DVDD_ZROFILI_WRITABLE    1
+#define HAL_DVDD_ZROFILI_SIGNED      0
+#define HAL_DVDD_ZROFILI_ADR         0x10000308
+
+#define HAL_DVDD_ECCBLKI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS1)
+#define HAL_DVDD_ECCBLKI_LSB         6
+#define HAL_DVDD_ECCBLKI_MSB         6
+#define HAL_DVDD_ECCBLKI_MASK        0x00000040
+#define HAL_DVDD_ECCBLKI_TYPE        Bool
+#define HAL_DVDD_ECCBLKI             HAL_DVDD_ECCBLKI_MASK
+#define HAL_DVDD_ECCBLKI_READABLE    1
+#define HAL_DVDD_ECCBLKI_WRITABLE    1
+#define HAL_DVDD_ECCBLKI_SIGNED      0
+#define HAL_DVDD_ECCBLKI_ADR         0x10000308
+
+#define HAL_DVDD_UNECCI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS1)
+#define HAL_DVDD_UNECCI_LSB         5
+#define HAL_DVDD_UNECCI_MSB         5
+#define HAL_DVDD_UNECCI_MASK        0x00000020
+#define HAL_DVDD_UNECCI_TYPE        Bool
+#define HAL_DVDD_UNECCI             HAL_DVDD_UNECCI_MASK
+#define HAL_DVDD_UNECCI_READABLE    1
+#define HAL_DVDD_UNECCI_WRITABLE    1
+#define HAL_DVDD_UNECCI_SIGNED      0
+#define HAL_DVDD_UNECCI_ADR         0x10000308
+
+#define HAL_DVDD_BWDTHI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS1)
+#define HAL_DVDD_BWDTHI_LSB         4
+#define HAL_DVDD_BWDTHI_MSB         4
+#define HAL_DVDD_BWDTHI_MASK        0x00000010
+#define HAL_DVDD_BWDTHI_TYPE        Bool
+#define HAL_DVDD_BWDTHI             HAL_DVDD_BWDTHI_MASK
+#define HAL_DVDD_BWDTHI_READABLE    1
+#define HAL_DVDD_BWDTHI_WRITABLE    1
+#define HAL_DVDD_BWDTHI_SIGNED      0
+#define HAL_DVDD_BWDTHI_ADR         0x10000308
+
+#define HAL_DVDD_BUFDNI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS1)
+#define HAL_DVDD_BUFDNI_LSB         3
+#define HAL_DVDD_BUFDNI_MSB         3
+#define HAL_DVDD_BUFDNI_MASK        0x00000008
+#define HAL_DVDD_BUFDNI_TYPE        Bool
+#define HAL_DVDD_BUFDNI             HAL_DVDD_BUFDNI_MASK
+#define HAL_DVDD_BUFDNI_READABLE    1
+#define HAL_DVDD_BUFDNI_WRITABLE    1
+#define HAL_DVDD_BUFDNI_SIGNED      0
+#define HAL_DVDD_BUFDNI_ADR         0x10000308
+
+#define HAL_DVDD_BUFFI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS1)
+#define HAL_DVDD_BUFFI_LSB         2
+#define HAL_DVDD_BUFFI_MSB         2
+#define HAL_DVDD_BUFFI_MASK        0x00000004
+#define HAL_DVDD_BUFFI_TYPE        Bool
+#define HAL_DVDD_BUFFI             HAL_DVDD_BUFFI_MASK
+#define HAL_DVDD_BUFFI_READABLE    1
+#define HAL_DVDD_BUFFI_WRITABLE    1
+#define HAL_DVDD_BUFFI_SIGNED      0
+#define HAL_DVDD_BUFFI_ADR         0x10000308
+
+#define HAL_DVDD_ECCDNI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS1)
+#define HAL_DVDD_ECCDNI_LSB         1
+#define HAL_DVDD_ECCDNI_MSB         1
+#define HAL_DVDD_ECCDNI_MASK        0x00000002
+#define HAL_DVDD_ECCDNI_TYPE        Bool
+#define HAL_DVDD_ECCDNI             HAL_DVDD_ECCDNI_MASK
+#define HAL_DVDD_ECCDNI_READABLE    1
+#define HAL_DVDD_ECCDNI_WRITABLE    1
+#define HAL_DVDD_ECCDNI_SIGNED      0
+#define HAL_DVDD_ECCDNI_ADR         0x10000308
+
+#define HAL_DVDD_ECCI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS1)
+#define HAL_DVDD_ECCI_LSB         0
+#define HAL_DVDD_ECCI_MSB         0
+#define HAL_DVDD_ECCI_MASK        0x00000001
+#define HAL_DVDD_ECCI_TYPE        Bool
+#define HAL_DVDD_ECCI             HAL_DVDD_ECCI_MASK
+#define HAL_DVDD_ECCI_READABLE    1
+#define HAL_DVDD_ECCI_WRITABLE    1
+#define HAL_DVDD_ECCI_SIGNED      0
+#define HAL_DVDD_ECCI_ADR         0x10000308
+
+// Register DVDIRQS2
+#define HAL_DVDD_HDERRI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS2)
+#define HAL_DVDD_HDERRI_LSB         7
+#define HAL_DVDD_HDERRI_MSB         7
+#define HAL_DVDD_HDERRI_MASK        0x00000080
+#define HAL_DVDD_HDERRI_TYPE        Bool
+#define HAL_DVDD_HDERRI             HAL_DVDD_HDERRI_MASK
+#define HAL_DVDD_HDERRI_READABLE    1
+#define HAL_DVDD_HDERRI_WRITABLE    1
+#define HAL_DVDD_HDERRI_SIGNED      0
+#define HAL_DVDD_HDERRI_ADR         0x10000309
+
+#define HAL_DVDD_AUTHI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS2)
+#define HAL_DVDD_AUTHI_LSB         6
+#define HAL_DVDD_AUTHI_MSB         6
+#define HAL_DVDD_AUTHI_MASK        0x00000040
+#define HAL_DVDD_AUTHI_TYPE        Bool
+#define HAL_DVDD_AUTHI             HAL_DVDD_AUTHI_MASK
+#define HAL_DVDD_AUTHI_READABLE    1
+#define HAL_DVDD_AUTHI_WRITABLE    1
+#define HAL_DVDD_AUTHI_SIGNED      0
+#define HAL_DVDD_AUTHI_ADR         0x10000309
+
+#define HAL_DVDD_TIDMISI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS2)
+#define HAL_DVDD_TIDMISI_LSB         5
+#define HAL_DVDD_TIDMISI_MSB         5
+#define HAL_DVDD_TIDMISI_MASK        0x00000020
+#define HAL_DVDD_TIDMISI_TYPE        Bool
+#define HAL_DVDD_TIDMISI             HAL_DVDD_TIDMISI_MASK
+#define HAL_DVDD_TIDMISI_READABLE    1
+#define HAL_DVDD_TIDMISI_WRITABLE    1
+#define HAL_DVDD_TIDMISI_SIGNED      0
+#define HAL_DVDD_TIDMISI_ADR         0x10000309
+
+#define HAL_DVDD_PIUTHI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS2)
+#define HAL_DVDD_PIUTHI_LSB         4
+#define HAL_DVDD_PIUTHI_MSB         4
+#define HAL_DVDD_PIUTHI_MASK        0x00000010
+#define HAL_DVDD_PIUTHI_TYPE        Bool
+#define HAL_DVDD_PIUTHI             HAL_DVDD_PIUTHI_MASK
+#define HAL_DVDD_PIUTHI_READABLE    1
+#define HAL_DVDD_PIUTHI_WRITABLE    1
+#define HAL_DVDD_PIUTHI_SIGNED      0
+#define HAL_DVDD_PIUTHI_ADR         0x10000309
+
+#define HAL_DVDD_PISTHI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS2)
+#define HAL_DVDD_PISTHI_LSB         3
+#define HAL_DVDD_PISTHI_MSB         3
+#define HAL_DVDD_PISTHI_MASK        0x00000008
+#define HAL_DVDD_PISTHI_TYPE        Bool
+#define HAL_DVDD_PISTHI             HAL_DVDD_PISTHI_MASK
+#define HAL_DVDD_PISTHI_READABLE    1
+#define HAL_DVDD_PISTHI_WRITABLE    1
+#define HAL_DVDD_PISTHI_SIGNED      0
+#define HAL_DVDD_PISTHI_ADR         0x10000309
+
+#define HAL_DVDD_EDCERI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS2)
+#define HAL_DVDD_EDCERI_LSB         1
+#define HAL_DVDD_EDCERI_MSB         1
+#define HAL_DVDD_EDCERI_MASK        0x00000002
+#define HAL_DVDD_EDCERI_TYPE        Bool
+#define HAL_DVDD_EDCERI             HAL_DVDD_EDCERI_MASK
+#define HAL_DVDD_EDCERI_READABLE    1
+#define HAL_DVDD_EDCERI_WRITABLE    1
+#define HAL_DVDD_EDCERI_SIGNED      0
+#define HAL_DVDD_EDCERI_ADR         0x10000309
+
+#define HAL_DVDD_DMDFIFLI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS2)
+#define HAL_DVDD_DMDFIFLI_LSB         0
+#define HAL_DVDD_DMDFIFLI_MSB         0
+#define HAL_DVDD_DMDFIFLI_MASK        0x00000001
+#define HAL_DVDD_DMDFIFLI_TYPE        Bool
+#define HAL_DVDD_DMDFIFLI             HAL_DVDD_DMDFIFLI_MASK
+#define HAL_DVDD_DMDFIFLI_READABLE    1
+#define HAL_DVDD_DMDFIFLI_WRITABLE    1
+#define HAL_DVDD_DMDFIFLI_SIGNED      0
+#define HAL_DVDD_DMDFIFLI_ADR         0x10000309
+
+// Register DVDIRQS3
+#define HAL_DVDD_DRSEQIDI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS3)
+#define HAL_DVDD_DRSEQIDI_LSB         7
+#define HAL_DVDD_DRSEQIDI_MSB         7
+#define HAL_DVDD_DRSEQIDI_MASK        0x00000080
+#define HAL_DVDD_DRSEQIDI_TYPE        Bool
+#define HAL_DVDD_DRSEQIDI             HAL_DVDD_DRSEQIDI_MASK
+#define HAL_DVDD_DRSEQIDI_READABLE    1
+#define HAL_DVDD_DRSEQIDI_WRITABLE    1
+#define HAL_DVDD_DRSEQIDI_SIGNED      0
+#define HAL_DVDD_DRSEQIDI_ADR         0x1000030A
+
+#define HAL_DVDD_SEQIDI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS3)
+#define HAL_DVDD_SEQIDI_LSB         6
+#define HAL_DVDD_SEQIDI_MSB         6
+#define HAL_DVDD_SEQIDI_MASK        0x00000040
+#define HAL_DVDD_SEQIDI_TYPE        Bool
+#define HAL_DVDD_SEQIDI             HAL_DVDD_SEQIDI_MASK
+#define HAL_DVDD_SEQIDI_READABLE    1
+#define HAL_DVDD_SEQIDI_WRITABLE    1
+#define HAL_DVDD_SEQIDI_SIGNED      0
+#define HAL_DVDD_SEQIDI_ADR         0x1000030A
+
+#define HAL_DVDD_POMISMI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS3)
+#define HAL_DVDD_POMISMI_LSB         5
+#define HAL_DVDD_POMISMI_MSB         5
+#define HAL_DVDD_POMISMI_MASK        0x00000020
+#define HAL_DVDD_POMISMI_TYPE        Bool
+#define HAL_DVDD_POMISMI             HAL_DVDD_POMISMI_MASK
+#define HAL_DVDD_POMISMI_READABLE    1
+#define HAL_DVDD_POMISMI_WRITABLE    1
+#define HAL_DVDD_POMISMI_SIGNED      0
+#define HAL_DVDD_POMISMI_ADR         0x1000030A
+
+#define HAL_DVDD_PIMISMI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS3)
+#define HAL_DVDD_PIMISMI_LSB         4
+#define HAL_DVDD_PIMISMI_MSB         4
+#define HAL_DVDD_PIMISMI_MASK        0x00000010
+#define HAL_DVDD_PIMISMI_TYPE        Bool
+#define HAL_DVDD_PIMISMI             HAL_DVDD_PIMISMI_MASK
+#define HAL_DVDD_PIMISMI_READABLE    1
+#define HAL_DVDD_PIMISMI_WRITABLE    1
+#define HAL_DVDD_PIMISMI_SIGNED      0
+#define HAL_DVDD_PIMISMI_ADR         0x1000030A
+
+#define HAL_DVDD_PIDI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS3)
+#define HAL_DVDD_PIDI_LSB         1
+#define HAL_DVDD_PIDI_MSB         1
+#define HAL_DVDD_PIDI_MASK        0x00000002
+#define HAL_DVDD_PIDI_TYPE        Bool
+#define HAL_DVDD_PIDI             HAL_DVDD_PIDI_MASK
+#define HAL_DVDD_PIDI_READABLE    1
+#define HAL_DVDD_PIDI_WRITABLE    1
+#define HAL_DVDD_PIDI_SIGNED      0
+#define HAL_DVDD_PIDI_ADR         0x1000030A
+
+#define HAL_DVDD_CIDI_REGISTER    (HAL_DVDDREG_MAP->DVDIRQS3)
+#define HAL_DVDD_CIDI_LSB         0
+#define HAL_DVDD_CIDI_MSB         0
+#define HAL_DVDD_CIDI_MASK        0x00000001
+#define HAL_DVDD_CIDI_TYPE        Bool
+#define HAL_DVDD_CIDI             HAL_DVDD_CIDI_MASK
+#define HAL_DVDD_CIDI_READABLE    1
+#define HAL_DVDD_CIDI_WRITABLE    1
+#define HAL_DVDD_CIDI_SIGNED      0
+#define HAL_DVDD_CIDI_ADR         0x1000030A
+
+// Register DASCL
+#define HAL_DVDD_ZROFILAS_REGISTER    (HAL_DVDDREG_MAP->DASCL)
+#define HAL_DVDD_ZROFILAS_LSB         7
+#define HAL_DVDD_ZROFILAS_MSB         7
+#define HAL_DVDD_ZROFILAS_MASK        0x00000080
+#define HAL_DVDD_ZROFILAS_TYPE        Bool
+#define HAL_DVDD_ZROFILAS             HAL_DVDD_ZROFILAS_MASK
+#define HAL_DVDD_ZROFILAS_READABLE    1
+#define HAL_DVDD_ZROFILAS_WRITABLE    1
+#define HAL_DVDD_ZROFILAS_SIGNED      0
+#define HAL_DVDD_ZROFILAS_ADR         0x1000030C
+
+#define HAL_DVDD_UNECCAS_REGISTER    (HAL_DVDDREG_MAP->DASCL)
+#define HAL_DVDD_UNECCAS_LSB         5
+#define HAL_DVDD_UNECCAS_MSB         5
+#define HAL_DVDD_UNECCAS_MASK        0x00000020
+#define HAL_DVDD_UNECCAS_TYPE        Bool
+#define HAL_DVDD_UNECCAS             HAL_DVDD_UNECCAS_MASK
+#define HAL_DVDD_UNECCAS_READABLE    1
+#define HAL_DVDD_UNECCAS_WRITABLE    1
+#define HAL_DVDD_UNECCAS_SIGNED      0
+#define HAL_DVDD_UNECCAS_ADR         0x1000030C
+
+#define HAL_DVDD_BWDTHAS_REGISTER    (HAL_DVDDREG_MAP->DASCL)
+#define HAL_DVDD_BWDTHAS_LSB         4
+#define HAL_DVDD_BWDTHAS_MSB         4
+#define HAL_DVDD_BWDTHAS_MASK        0x00000010
+#define HAL_DVDD_BWDTHAS_TYPE        Bool
+#define HAL_DVDD_BWDTHAS             HAL_DVDD_BWDTHAS_MASK
+#define HAL_DVDD_BWDTHAS_READABLE    1
+#define HAL_DVDD_BWDTHAS_WRITABLE    1
+#define HAL_DVDD_BWDTHAS_SIGNED      0
+#define HAL_DVDD_BWDTHAS_ADR         0x1000030C
+
+// Register DASCH
+#define HAL_DVDD_PIUTHAS_REGISTER    (HAL_DVDDREG_MAP->DASCH)
+#define HAL_DVDD_PIUTHAS_LSB         4
+#define HAL_DVDD_PIUTHAS_MSB         4
+#define HAL_DVDD_PIUTHAS_MASK        0x00000010
+#define HAL_DVDD_PIUTHAS_TYPE        Bool
+#define HAL_DVDD_PIUTHAS             HAL_DVDD_PIUTHAS_MASK
+#define HAL_DVDD_PIUTHAS_READABLE    1
+#define HAL_DVDD_PIUTHAS_WRITABLE    1
+#define HAL_DVDD_PIUTHAS_SIGNED      0
+#define HAL_DVDD_PIUTHAS_ADR         0x1000030D
+
+#define HAL_DVDD_PISTHAS_REGISTER    (HAL_DVDDREG_MAP->DASCH)
+#define HAL_DVDD_PISTHAS_LSB         3
+#define HAL_DVDD_PISTHAS_MSB         3
+#define HAL_DVDD_PISTHAS_MASK        0x00000008
+#define HAL_DVDD_PISTHAS_TYPE        Bool
+#define HAL_DVDD_PISTHAS             HAL_DVDD_PISTHAS_MASK
+#define HAL_DVDD_PISTHAS_READABLE    1
+#define HAL_DVDD_PISTHAS_WRITABLE    1
+#define HAL_DVDD_PISTHAS_SIGNED      0
+#define HAL_DVDD_PISTHAS_ADR         0x1000030D
+
+#define HAL_DVDD_EDCERAS_REGISTER    (HAL_DVDDREG_MAP->DASCH)
+#define HAL_DVDD_EDCERAS_LSB         1
+#define HAL_DVDD_EDCERAS_MSB         1
+#define HAL_DVDD_EDCERAS_MASK        0x00000002
+#define HAL_DVDD_EDCERAS_TYPE        Bool
+#define HAL_DVDD_EDCERAS             HAL_DVDD_EDCERAS_MASK
+#define HAL_DVDD_EDCERAS_READABLE    1
+#define HAL_DVDD_EDCERAS_WRITABLE    1
+#define HAL_DVDD_EDCERAS_SIGNED      0
+#define HAL_DVDD_EDCERAS_ADR         0x1000030D
+
+// Register ECCIPRD
+#define HAL_DVDD_ECCIPRD_REGISTER    (HAL_DVDDREG_MAP->ECCIPRD)
+#define HAL_DVDD_ECCIPRD_LSB         0
+#define HAL_DVDD_ECCIPRD_MSB         7
+#define HAL_DVDD_ECCIPRD_MASK        0x000000FF
+#define HAL_DVDD_ECCIPRD_TYPE        UByte
+#define HAL_DVDD_ECCIPRD             HAL_DVDD_ECCIPRD_MASK
+#define HAL_DVDD_ECCIPRD_READABLE    1
+#define HAL_DVDD_ECCIPRD_WRITABLE    1
+#define HAL_DVDD_ECCIPRD_SIGNED      0
+#define HAL_DVDD_ECCIPRD_ADR         0x1000030E
+
+// Register ECCCTRL
+#define HAL_DVDD_ECCCNT_REGISTER    (HAL_DVDDREG_MAP->ECCCTRL)
+#define HAL_DVDD_ECCCNT_LSB         0
+#define HAL_DVDD_ECCCNT_MSB         2
+#define HAL_DVDD_ECCCNT_MASK        0x00000007
+#define HAL_DVDD_ECCCNT_TYPE        UByte
+#define HAL_DVDD_ECCCNT             HAL_DVDD_ECCCNT_MASK
+#define HAL_DVDD_ECCCNT_READABLE    1
+#define HAL_DVDD_ECCCNT_WRITABLE    1
+#define HAL_DVDD_ECCCNT_SIGNED      0
+#define HAL_DVDD_ECCCNT_ADR         0x1000030F
+
+// Registers EDCERRL/EDCERRM/EDCERRH/EDCERRU
+#define HAL_DVDD_EDCERR_REGISTER    (HAL_DVDDREG_MAP->EDCERRL)
+#define HAL_DVDD_EDCERR_LSB         0
+#define HAL_DVDD_EDCERR_MSB         31
+#define HAL_DVDD_EDCERR_MASK        0xFFFFFFFF
+#define HAL_DVDD_EDCERR_TYPE        UInt32
+#define HAL_DVDD_EDCERR             HAL_DVDD_EDCERR_MASK
+#define HAL_DVDD_EDCERR_READABLE    1
+#define HAL_DVDD_EDCERR_WRITABLE    0
+#define HAL_DVDD_EDCERR_SIGNED      0
+#define HAL_DVDD_EDCERR_ADR         0x10000310
+
+// Register BCACNT
+#define HAL_DVDD_BCACNT_REGISTER    (HAL_DVDDREG_MAP->BCACNT)
+#define HAL_DVDD_BCACNT_LSB         0
+#define HAL_DVDD_BCACNT_MSB         3
+#define HAL_DVDD_BCACNT_MASK        0x0000000F
+#define HAL_DVDD_BCACNT_TYPE        UByte
+#define HAL_DVDD_BCACNT             HAL_DVDD_BCACNT_MASK
+#define HAL_DVDD_BCACNT_READABLE    1
+#define HAL_DVDD_BCACNT_WRITABLE    0
+#define HAL_DVDD_BCACNT_SIGNED      0
+#define HAL_DVDD_BCACNT_ADR         0x10000318
+
+// Register BLKINC
+#define HAL_DVDD_BLKINC_REGISTER    (HAL_DVDDREG_MAP->BLKINC)
+#define HAL_DVDD_BLKINC_LSB         0
+#define HAL_DVDD_BLKINC_MSB         7
+#define HAL_DVDD_BLKINC_MASK        0x000000FF
+#define HAL_DVDD_BLKINC_TYPE        UByte
+#define HAL_DVDD_BLKINC             HAL_DVDD_BLKINC_MASK
+#define HAL_DVDD_BLKINC_READABLE    0
+#define HAL_DVDD_BLKINC_WRITABLE    1
+#define HAL_DVDD_BLKINC_SIGNED      0
+#define HAL_DVDD_BLKINC_ADR         0x10000319
+
+// Registers BKTOBUFL/BKTOBUFH
+#define HAL_DVDD_BKTOBUF_REGISTER    (HAL_DVDDREG_MAP->BKTOBUFL)
+#define HAL_DVDD_BKTOBUF_LSB         0
+#define HAL_DVDD_BKTOBUF_MSB         9
+#define HAL_DVDD_BKTOBUF_MASK        0x000003FF
+#define HAL_DVDD_BKTOBUF_TYPE        UInt16
+#define HAL_DVDD_BKTOBUF             HAL_DVDD_BKTOBUF_MASK
+#define HAL_DVDD_BKTOBUF_READABLE    1
+#define HAL_DVDD_BKTOBUF_WRITABLE    1
+#define HAL_DVDD_BKTOBUF_SIGNED      0
+#define HAL_DVDD_BKTOBUF_ADR         0x1000031A
+
+// Registers TID0/TID1/TID2
+#define HAL_DVDD_TID_REGISTER    (HAL_DVDDREG_MAP->TID0)
+#define HAL_DVDD_TID_LSB         0
+#define HAL_DVDD_TID_MSB         23
+#define HAL_DVDD_TID_MASK        0x00FFFFFF
+#define HAL_DVDD_TID_TYPE        UInt32
+#define HAL_DVDD_TID             HAL_DVDD_TID_MASK
+#define HAL_DVDD_TID_READABLE    1
+#define HAL_DVDD_TID_WRITABLE    1
+#define HAL_DVDD_TID_SIGNED      0
+#define HAL_DVDD_TID_ADR         0x1000031C
+
+// Registers STARTBKL/STARTBKH
+#define HAL_DVDD_STARTBK_REGISTER    (HAL_DVDDREG_MAP->STARTBKL)
+#define HAL_DVDD_STARTBK_LSB         0
+#define HAL_DVDD_STARTBK_MSB         12
+#define HAL_DVDD_STARTBK_MASK        0x00001FFF
+#define HAL_DVDD_STARTBK_TYPE        UInt16
+#define HAL_DVDD_STARTBK             HAL_DVDD_STARTBK_MASK
+#define HAL_DVDD_STARTBK_READABLE    1
+#define HAL_DVDD_STARTBK_WRITABLE    1
+#define HAL_DVDD_STARTBK_SIGNED      0
+#define HAL_DVDD_STARTBK_ADR         0x10000320
+
+// Registers ENDBKL/ENDBKH
+#define HAL_DVDD_ENDBK_REGISTER    (HAL_DVDDREG_MAP->ENDBKL)
+#define HAL_DVDD_ENDBK_LSB         0
+#define HAL_DVDD_ENDBK_MSB         12
+#define HAL_DVDD_ENDBK_MASK        0x00001FFF
+#define HAL_DVDD_ENDBK_TYPE        UInt16
+#define HAL_DVDD_ENDBK             HAL_DVDD_ENDBK_MASK
+#define HAL_DVDD_ENDBK_READABLE    1
+#define HAL_DVDD_ENDBK_WRITABLE    1
+#define HAL_DVDD_ENDBK_SIGNED      0
+#define HAL_DVDD_ENDBK_ADR         0x10000322
+
+// Registers PIPOSRTL/PIPOSRTH
+#define HAL_DVDD_PIPOSRT_REGISTER    (HAL_DVDDREG_MAP->PIPOSRTL)
+#define HAL_DVDD_PIPOSRT_LSB         0
+#define HAL_DVDD_PIPOSRT_MSB         15
+#define HAL_DVDD_PIPOSRT_MASK        0x0000FFFF
+#define HAL_DVDD_PIPOSRT_TYPE        UInt16
+#define HAL_DVDD_PIPOSRT             HAL_DVDD_PIPOSRT_MASK
+#define HAL_DVDD_PIPOSRT_READABLE    1
+#define HAL_DVDD_PIPOSRT_WRITABLE    1
+#define HAL_DVDD_PIPOSRT_SIGNED      0
+#define HAL_DVDD_PIPOSRT_ADR         0x10000324
+
+// Registers CURBUFL/CURBUFH
+#define HAL_DVDD_CURBUF_REGISTER    (HAL_DVDDREG_MAP->CURBUFL)
+#define HAL_DVDD_CURBUF_LSB         0
+#define HAL_DVDD_CURBUF_MSB         12
+#define HAL_DVDD_CURBUF_MASK        0x00001FFF
+#define HAL_DVDD_CURBUF_TYPE        UInt16
+#define HAL_DVDD_CURBUF             HAL_DVDD_CURBUF_MASK
+#define HAL_DVDD_CURBUF_READABLE    1
+#define HAL_DVDD_CURBUF_WRITABLE    1
+#define HAL_DVDD_CURBUF_SIGNED      0
+#define HAL_DVDD_CURBUF_ADR         0x10000326
+
+// Registers CURBAUXL/CURBAUXH
+#define HAL_DVDD_CURBAUX_REGISTER    (HAL_DVDDREG_MAP->CURBAUXL)
+#define HAL_DVDD_CURBAUX_LSB         0
+#define HAL_DVDD_CURBAUX_MSB         15
+#define HAL_DVDD_CURBAUX_MASK        0x0000FFFF
+#define HAL_DVDD_CURBAUX_TYPE        UInt16
+#define HAL_DVDD_CURBAUX             HAL_DVDD_CURBAUX_MASK
+#define HAL_DVDD_CURBAUX_READABLE    1
+#define HAL_DVDD_CURBAUX_WRITABLE    0
+#define HAL_DVDD_CURBAUX_SIGNED      0
+#define HAL_DVDD_CURBAUX_ADR         0x10000328
+
+// Registers CURECCL/CURECCH
+#define HAL_DVDD_CURECC_REGISTER    (HAL_DVDDREG_MAP->CURECCL)
+#define HAL_DVDD_CURECC_LSB         0
+#define HAL_DVDD_CURECC_MSB         12
+#define HAL_DVDD_CURECC_MASK        0x00001FFF
+#define HAL_DVDD_CURECC_TYPE        UInt16
+#define HAL_DVDD_CURECC             HAL_DVDD_CURECC_MASK
+#define HAL_DVDD_CURECC_READABLE    1
+#define HAL_DVDD_CURECC_WRITABLE    0
+#define HAL_DVDD_CURECC_SIGNED      0
+#define HAL_DVDD_CURECC_ADR         0x1000032A
+
+// Registers CUREAUXL/CUREAUXH
+#define HAL_DVDD_CUREAUX_REGISTER    (HAL_DVDDREG_MAP->CUREAUXL)
+#define HAL_DVDD_CUREAUX_LSB         0
+#define HAL_DVDD_CUREAUX_MSB         15
+#define HAL_DVDD_CUREAUX_MASK        0x0000FFFF
+#define HAL_DVDD_CUREAUX_TYPE        UInt16
+#define HAL_DVDD_CUREAUX             HAL_DVDD_CUREAUX_MASK
+#define HAL_DVDD_CUREAUX_READABLE    1
+#define HAL_DVDD_CUREAUX_WRITABLE    0
+#define HAL_DVDD_CUREAUX_SIGNED      0
+#define HAL_DVDD_CUREAUX_ADR         0x1000032C
+
+// Registers PDLSRTL/PDLSRTH/PDLSRTU
+#define HAL_DVDD_PDLSRT_REGISTER    (HAL_DVDDREG_MAP->PDLSRTL)
+#define HAL_DVDD_PDLSRT_LSB         0
+#define HAL_DVDD_PDLSRT_MSB         21
+#define HAL_DVDD_PDLSRT_MASK        0x003FFFFF
+#define HAL_DVDD_PDLSRT_TYPE        UInt32
+#define HAL_DVDD_PDLSRT             HAL_DVDD_PDLSRT_MASK
+#define HAL_DVDD_PDLSRT_READABLE    1
+#define HAL_DVDD_PDLSRT_WRITABLE    1
+#define HAL_DVDD_PDLSRT_SIGNED      0
+#define HAL_DVDD_PDLSRT_ADR         0x10000330
+
+// Registers CURPDLL/CURPDLH/CURPDLU
+#define HAL_DVDD_CURPDL_REGISTER    (HAL_DVDDREG_MAP->CURPDLL)
+#define HAL_DVDD_CURPDL_LSB         0
+#define HAL_DVDD_CURPDL_MSB         21
+#define HAL_DVDD_CURPDL_MASK        0x003FFFFF
+#define HAL_DVDD_CURPDL_TYPE        UInt32
+#define HAL_DVDD_CURPDL             HAL_DVDD_CURPDL_MASK
+#define HAL_DVDD_CURPDL_READABLE    1
+#define HAL_DVDD_CURPDL_WRITABLE    0
+#define HAL_DVDD_CURPDL_SIGNED      0
+#define HAL_DVDD_CURPDL_ADR         0x10000334
+
+// Registers CURID0/CURID1/CURID2/CURID3
+#define HAL_DVDD_CURID_REGISTER    (HAL_DVDDREG_MAP->CURID0)
+#define HAL_DVDD_CURID_LSB         0
+#define HAL_DVDD_CURID_MSB         31
+#define HAL_DVDD_CURID_MASK        0xFFFFFFFF
+#define HAL_DVDD_CURID_TYPE        UInt32
+#define HAL_DVDD_CURID             HAL_DVDD_CURID_MASK
+#define HAL_DVDD_CURID_READABLE    1
+#define HAL_DVDD_CURID_WRITABLE    0
+#define HAL_DVDD_CURID_SIGNED      0
+#define HAL_DVDD_CURID_ADR         0x10000338
+
+// Registers PID0/PID1/PID2/PID3
+#define HAL_DVDD_PID0_REGISTER    (HAL_DVDDREG_MAP->PID0)
+#define HAL_DVDD_PID0_LSB         0
+#define HAL_DVDD_PID0_MSB         7
+#define HAL_DVDD_PID0_MASK        0x000000FF
+#define HAL_DVDD_PID0_TYPE        UByte
+#define HAL_DVDD_PID0             HAL_DVDD_PID0_MASK
+#define HAL_DVDD_PID0_READABLE    1
+#define HAL_DVDD_PID0_WRITABLE    0
+#define HAL_DVDD_PID0_SIGNED      0
+#define HAL_DVDD_PID0_ADR         0x1000033C
+
+#define HAL_DVDD_PID1_REGISTER    (HAL_DVDDREG_MAP->PID0)
+#define HAL_DVDD_PID1_LSB         8
+#define HAL_DVDD_PID1_MSB         15
+#define HAL_DVDD_PID1_MASK        0x0000FF00
+#define HAL_DVDD_PID1_TYPE        UByte
+#define HAL_DVDD_PID1             HAL_DVDD_PID1_MASK
+#define HAL_DVDD_PID1_READABLE    1
+#define HAL_DVDD_PID1_WRITABLE    0
+#define HAL_DVDD_PID1_SIGNED      0
+#define HAL_DVDD_PID1_ADR         0x1000033C
+
+#define HAL_DVDD_PID2_REGISTER    (HAL_DVDDREG_MAP->PID0)
+#define HAL_DVDD_PID2_LSB         16
+#define HAL_DVDD_PID2_MSB         23
+#define HAL_DVDD_PID2_MASK        0x00FF0000
+#define HAL_DVDD_PID2_TYPE        UByte
+#define HAL_DVDD_PID2             HAL_DVDD_PID2_MASK
+#define HAL_DVDD_PID2_READABLE    1
+#define HAL_DVDD_PID2_WRITABLE    0
+#define HAL_DVDD_PID2_SIGNED      0
+#define HAL_DVDD_PID2_ADR         0x1000033C
+
+#define HAL_DVDD_PID3_REGISTER    (HAL_DVDDREG_MAP->PID0)
+#define HAL_DVDD_PID3_LSB         24
+#define HAL_DVDD_PID3_MSB         31
+#define HAL_DVDD_PID3_MASK        0xFF000000
+#define HAL_DVDD_PID3_TYPE        UByte
+#define HAL_DVDD_PID3             HAL_DVDD_PID3_MASK
+#define HAL_DVDD_PID3_READABLE    1
+#define HAL_DVDD_PID3_WRITABLE    0
+#define HAL_DVDD_PID3_SIGNED      0
+#define HAL_DVDD_PID3_ADR         0x1000033C
+
+// Register DVDRAMLG0
+#define HAL_DVDD_TRKSZPID_REGISTER    (HAL_DVDDREG_MAP->DVDRAMLG0)
+#define HAL_DVDD_TRKSZPID_LSB         6
+#define HAL_DVDD_TRKSZPID_MSB         6
+#define HAL_DVDD_TRKSZPID_MASK        0x00000040
+#define HAL_DVDD_TRKSZPID_TYPE        Bool
+#define HAL_DVDD_TRKSZPID             HAL_DVDD_TRKSZPID_MASK
+#define HAL_DVDD_TRKSZPID_READABLE    1
+#define HAL_DVDD_TRKSZPID_WRITABLE    1
+#define HAL_DVDD_TRKSZPID_SIGNED      0
+#define HAL_DVDD_TRKSZPID_ADR         0x10000340
+
+#define HAL_DVDD_PIDCNTRV_REGISTER    (HAL_DVDDREG_MAP->DVDRAMLG0)
+#define HAL_DVDD_PIDCNTRV_LSB         3
+#define HAL_DVDD_PIDCNTRV_MSB         3
+#define HAL_DVDD_PIDCNTRV_MASK        0x00000008
+#define HAL_DVDD_PIDCNTRV_TYPE        Bool
+#define HAL_DVDD_PIDCNTRV             HAL_DVDD_PIDCNTRV_MASK
+#define HAL_DVDD_PIDCNTRV_READABLE    1
+#define HAL_DVDD_PIDCNTRV_WRITABLE    0
+#define HAL_DVDD_PIDCNTRV_SIGNED      0
+#define HAL_DVDD_PIDCNTRV_ADR         0x10000340
+
+#define HAL_DVDD_LGRSTDIS_REGISTER    (HAL_DVDDREG_MAP->DVDRAMLG0)
+#define HAL_DVDD_LGRSTDIS_LSB         2
+#define HAL_DVDD_LGRSTDIS_MSB         2
+#define HAL_DVDD_LGRSTDIS_MASK        0x00000004
+#define HAL_DVDD_LGRSTDIS_TYPE        Bool
+#define HAL_DVDD_LGRSTDIS             HAL_DVDD_LGRSTDIS_MASK
+#define HAL_DVDD_LGRSTDIS_READABLE    1
+#define HAL_DVDD_LGRSTDIS_WRITABLE    1
+#define HAL_DVDD_LGRSTDIS_SIGNED      0
+#define HAL_DVDD_LGRSTDIS_ADR         0x10000340
+
+// Register DVDSTAT
+#define HAL_DVDD_PIDVLD_REGISTER    (HAL_DVDDREG_MAP->DVDSTAT)
+#define HAL_DVDD_PIDVLD_LSB         6
+#define HAL_DVDD_PIDVLD_MSB         6
+#define HAL_DVDD_PIDVLD_MASK        0x00000040
+#define HAL_DVDD_PIDVLD_TYPE        Bool
+#define HAL_DVDD_PIDVLD             HAL_DVDD_PIDVLD_MASK
+#define HAL_DVDD_PIDVLD_READABLE    1
+#define HAL_DVDD_PIDVLD_WRITABLE    0
+#define HAL_DVDD_PIDVLD_SIGNED      0
+#define HAL_DVDD_PIDVLD_ADR         0x10000344
+
+#define HAL_DVDD_CIDVLD_REGISTER    (HAL_DVDDREG_MAP->DVDSTAT)
+#define HAL_DVDD_CIDVLD_LSB         5
+#define HAL_DVDD_CIDVLD_MSB         5
+#define HAL_DVDD_CIDVLD_MASK        0x00000020
+#define HAL_DVDD_CIDVLD_TYPE        Bool
+#define HAL_DVDD_CIDVLD             HAL_DVDD_CIDVLD_MASK
+#define HAL_DVDD_CIDVLD_READABLE    1
+#define HAL_DVDD_CIDVLD_WRITABLE    0
+#define HAL_DVDD_CIDVLD_SIGNED      0
+#define HAL_DVDD_CIDVLD_ADR         0x10000344
+
+#define HAL_DVDD_CSSBSY_REGISTER    (HAL_DVDDREG_MAP->DVDSTAT)
+#define HAL_DVDD_CSSBSY_LSB         4
+#define HAL_DVDD_CSSBSY_MSB         4
+#define HAL_DVDD_CSSBSY_MASK        0x00000010
+#define HAL_DVDD_CSSBSY_TYPE        Bool
+#define HAL_DVDD_CSSBSY             HAL_DVDD_CSSBSY_MASK
+#define HAL_DVDD_CSSBSY_READABLE    1
+#define HAL_DVDD_CSSBSY_WRITABLE    0
+#define HAL_DVDD_CSSBSY_SIGNED      0
+#define HAL_DVDD_CSSBSY_ADR         0x10000344
+
+#define HAL_DVDD_BCASYNC_REGISTER    (HAL_DVDDREG_MAP->DVDSTAT)
+#define HAL_DVDD_BCASYNC_LSB         3
+#define HAL_DVDD_BCASYNC_MSB         3
+#define HAL_DVDD_BCASYNC_MASK        0x00000008
+#define HAL_DVDD_BCASYNC_TYPE        Bool
+#define HAL_DVDD_BCASYNC             HAL_DVDD_BCASYNC_MASK
+#define HAL_DVDD_BCASYNC_READABLE    1
+#define HAL_DVDD_BCASYNC_WRITABLE    0
+#define HAL_DVDD_BCASYNC_SIGNED      0
+#define HAL_DVDD_BCASYNC_ADR         0x10000344
+
+#define HAL_DVDD_MEDPROT_REGISTER    (HAL_DVDDREG_MAP->DVDSTAT)
+#define HAL_DVDD_MEDPROT_LSB         2
+#define HAL_DVDD_MEDPROT_MSB         2
+#define HAL_DVDD_MEDPROT_MASK        0x00000004
+#define HAL_DVDD_MEDPROT_TYPE        Bool
+#define HAL_DVDD_MEDPROT             HAL_DVDD_MEDPROT_MASK
+#define HAL_DVDD_MEDPROT_READABLE    1
+#define HAL_DVDD_MEDPROT_WRITABLE    0
+#define HAL_DVDD_MEDPROT_SIGNED      0
+#define HAL_DVDD_MEDPROT_ADR         0x10000344
+
+#define HAL_DVDD_BCAERR_REGISTER    (HAL_DVDDREG_MAP->DVDSTAT)
+#define HAL_DVDD_BCAERR_LSB         1
+#define HAL_DVDD_BCAERR_MSB         1
+#define HAL_DVDD_BCAERR_MASK        0x00000002
+#define HAL_DVDD_BCAERR_TYPE        Bool
+#define HAL_DVDD_BCAERR             HAL_DVDD_BCAERR_MASK
+#define HAL_DVDD_BCAERR_READABLE    1
+#define HAL_DVDD_BCAERR_WRITABLE    0
+#define HAL_DVDD_BCAERR_SIGNED      0
+#define HAL_DVDD_BCAERR_ADR         0x10000344
+
+#define HAL_DVDD_CSSERR_REGISTER    (HAL_DVDDREG_MAP->DVDSTAT)
+#define HAL_DVDD_CSSERR_LSB         0
+#define HAL_DVDD_CSSERR_MSB         0
+#define HAL_DVDD_CSSERR_MASK        0x00000001
+#define HAL_DVDD_CSSERR_TYPE        Bool
+#define HAL_DVDD_CSSERR             HAL_DVDD_CSSERR_MASK
+#define HAL_DVDD_CSSERR_READABLE    1
+#define HAL_DVDD_CSSERR_WRITABLE    0
+#define HAL_DVDD_CSSERR_SIGNED      0
+#define HAL_DVDD_CSSERR_ADR         0x10000344
+
+#define HAL_DVDD_CSSRUN_REGISTER    (HAL_DVDDREG_MAP->DVDSTAT)
+#define HAL_DVDD_CSSRUN_LSB         4
+#define HAL_DVDD_CSSRUN_MSB         4
+#define HAL_DVDD_CSSRUN_MASK        0x00000010
+#define HAL_DVDD_CSSRUN_TYPE        Bool
+#define HAL_DVDD_CSSRUN             HAL_DVDD_CSSRUN_MASK
+#define HAL_DVDD_CSSRUN_READABLE    0
+#define HAL_DVDD_CSSRUN_WRITABLE    1
+#define HAL_DVDD_CSSRUN_SIGNED      0
+#define HAL_DVDD_CSSRUN_ADR         0x10000344
+
+// Register CSSCMD
+#define HAL_DVDD_CSSCMD_REGISTER    (HAL_DVDDREG_MAP->CSSCMD)
+#define HAL_DVDD_CSSCMD_LSB         0
+#define HAL_DVDD_CSSCMD_MSB         2
+#define HAL_DVDD_CSSCMD_MASK        0x00000007
+#define HAL_DVDD_CSSCMD_TYPE        halDVDD_CSSCommand_t
+#define HAL_DVDD_CSSCMD             HAL_DVDD_CSSCMD_MASK
+#define HAL_DVDD_CSSCMD_READABLE    1
+#define HAL_DVDD_CSSCMD_WRITABLE    1
+#define HAL_DVDD_CSSCMD_SIGNED      0
+#define HAL_DVDD_CSSCMD_ADR         0x10000345
+
+// Register CSSCHAL9
+#define HAL_DVDD_CSSCHAL9_REGISTER    (HAL_DVDDREG_MAP->CSSCHAL9)
+#define HAL_DVDD_CSSCHAL9_LSB         0
+#define HAL_DVDD_CSSCHAL9_MSB         7
+#define HAL_DVDD_CSSCHAL9_MASK        0x000000FF
+#define HAL_DVDD_CSSCHAL9_TYPE        UByte
+#define HAL_DVDD_CSSCHAL9             HAL_DVDD_CSSCHAL9_MASK
+#define HAL_DVDD_CSSCHAL9_READABLE    1
+#define HAL_DVDD_CSSCHAL9_WRITABLE    1
+#define HAL_DVDD_CSSCHAL9_SIGNED      0
+#define HAL_DVDD_CSSCHAL9_ADR         0x10000346
+
+// Register CSSCHAL8
+#define HAL_DVDD_CSSCHAL8_REGISTER    (HAL_DVDDREG_MAP->CSSCHAL8)
+#define HAL_DVDD_CSSCHAL8_LSB         0
+#define HAL_DVDD_CSSCHAL8_MSB         7
+#define HAL_DVDD_CSSCHAL8_MASK        0x000000FF
+#define HAL_DVDD_CSSCHAL8_TYPE        UByte
+#define HAL_DVDD_CSSCHAL8             HAL_DVDD_CSSCHAL8_MASK
+#define HAL_DVDD_CSSCHAL8_READABLE    1
+#define HAL_DVDD_CSSCHAL8_WRITABLE    1
+#define HAL_DVDD_CSSCHAL8_SIGNED      0
+#define HAL_DVDD_CSSCHAL8_ADR         0x10000347
+
+// Register CSSCHAL7
+#define HAL_DVDD_CSSCHAL7_REGISTER    (HAL_DVDDREG_MAP->CSSCHAL7)
+#define HAL_DVDD_CSSCHAL7_LSB         0
+#define HAL_DVDD_CSSCHAL7_MSB         7
+#define HAL_DVDD_CSSCHAL7_MASK        0x000000FF
+#define HAL_DVDD_CSSCHAL7_TYPE        UByte
+#define HAL_DVDD_CSSCHAL7             HAL_DVDD_CSSCHAL7_MASK
+#define HAL_DVDD_CSSCHAL7_READABLE    1
+#define HAL_DVDD_CSSCHAL7_WRITABLE    1
+#define HAL_DVDD_CSSCHAL7_SIGNED      0
+#define HAL_DVDD_CSSCHAL7_ADR         0x10000348
+
+// Register CSSCHAL6
+#define HAL_DVDD_CSSCHAL6_REGISTER    (HAL_DVDDREG_MAP->CSSCHAL6)
+#define HAL_DVDD_CSSCHAL6_LSB         0
+#define HAL_DVDD_CSSCHAL6_MSB         7
+#define HAL_DVDD_CSSCHAL6_MASK        0x000000FF
+#define HAL_DVDD_CSSCHAL6_TYPE        UByte
+#define HAL_DVDD_CSSCHAL6             HAL_DVDD_CSSCHAL6_MASK
+#define HAL_DVDD_CSSCHAL6_READABLE    1
+#define HAL_DVDD_CSSCHAL6_WRITABLE    1
+#define HAL_DVDD_CSSCHAL6_SIGNED      0
+#define HAL_DVDD_CSSCHAL6_ADR         0x10000349
+
+// Register CSSCHAL5
+#define HAL_DVDD_CSSCHAL5_REGISTER    (HAL_DVDDREG_MAP->CSSCHAL5)
+#define HAL_DVDD_CSSCHAL5_LSB         0
+#define HAL_DVDD_CSSCHAL5_MSB         7
+#define HAL_DVDD_CSSCHAL5_MASK        0x000000FF
+#define HAL_DVDD_CSSCHAL5_TYPE        UByte
+#define HAL_DVDD_CSSCHAL5             HAL_DVDD_CSSCHAL5_MASK
+#define HAL_DVDD_CSSCHAL5_READABLE    1
+#define HAL_DVDD_CSSCHAL5_WRITABLE    1
+#define HAL_DVDD_CSSCHAL5_SIGNED      0
+#define HAL_DVDD_CSSCHAL5_ADR         0x1000034A
+
+// Register CSSCHAL4
+#define HAL_DVDD_CSSCHAL4_REGISTER    (HAL_DVDDREG_MAP->CSSCHAL4)
+#define HAL_DVDD_CSSCHAL4_LSB         0
+#define HAL_DVDD_CSSCHAL4_MSB         7
+#define HAL_DVDD_CSSCHAL4_MASK        0x000000FF
+#define HAL_DVDD_CSSCHAL4_TYPE        UByte
+#define HAL_DVDD_CSSCHAL4             HAL_DVDD_CSSCHAL4_MASK
+#define HAL_DVDD_CSSCHAL4_READABLE    1
+#define HAL_DVDD_CSSCHAL4_WRITABLE    1
+#define HAL_DVDD_CSSCHAL4_SIGNED      0
+#define HAL_DVDD_CSSCHAL4_ADR         0x1000034B
+
+// Register CSSCHAL3
+#define HAL_DVDD_CSSCHAL3_REGISTER    (HAL_DVDDREG_MAP->CSSCHAL3)
+#define HAL_DVDD_CSSCHAL3_LSB         0
+#define HAL_DVDD_CSSCHAL3_MSB         7
+#define HAL_DVDD_CSSCHAL3_MASK        0x000000FF
+#define HAL_DVDD_CSSCHAL3_TYPE        UByte
+#define HAL_DVDD_CSSCHAL3             HAL_DVDD_CSSCHAL3_MASK
+#define HAL_DVDD_CSSCHAL3_READABLE    1
+#define HAL_DVDD_CSSCHAL3_WRITABLE    1
+#define HAL_DVDD_CSSCHAL3_SIGNED      0
+#define HAL_DVDD_CSSCHAL3_ADR         0x1000034C
+
+// Register CSSCHAL2
+#define HAL_DVDD_CSSCHAL2_REGISTER    (HAL_DVDDREG_MAP->CSSCHAL2)
+#define HAL_DVDD_CSSCHAL2_LSB         0
+#define HAL_DVDD_CSSCHAL2_MSB         7
+#define HAL_DVDD_CSSCHAL2_MASK        0x000000FF
+#define HAL_DVDD_CSSCHAL2_TYPE        UByte
+#define HAL_DVDD_CSSCHAL2             HAL_DVDD_CSSCHAL2_MASK
+#define HAL_DVDD_CSSCHAL2_READABLE    1
+#define HAL_DVDD_CSSCHAL2_WRITABLE    1
+#define HAL_DVDD_CSSCHAL2_SIGNED      0
+#define HAL_DVDD_CSSCHAL2_ADR         0x1000034D
+
+// Register CSSCHAL1
+#define HAL_DVDD_CSSCHAL1_REGISTER    (HAL_DVDDREG_MAP->CSSCHAL1)
+#define HAL_DVDD_CSSCHAL1_LSB         0
+#define HAL_DVDD_CSSCHAL1_MSB         7
+#define HAL_DVDD_CSSCHAL1_MASK        0x000000FF
+#define HAL_DVDD_CSSCHAL1_TYPE        UByte
+#define HAL_DVDD_CSSCHAL1             HAL_DVDD_CSSCHAL1_MASK
+#define HAL_DVDD_CSSCHAL1_READABLE    1
+#define HAL_DVDD_CSSCHAL1_WRITABLE    1
+#define HAL_DVDD_CSSCHAL1_SIGNED      0
+#define HAL_DVDD_CSSCHAL1_ADR         0x1000034E
+
+// Register CSSCHAL0
+#define HAL_DVDD_CSSCHAL0_REGISTER    (HAL_DVDDREG_MAP->CSSCHAL0)
+#define HAL_DVDD_CSSCHAL0_LSB         0
+#define HAL_DVDD_CSSCHAL0_MSB         7
+#define HAL_DVDD_CSSCHAL0_MASK        0x000000FF
+#define HAL_DVDD_CSSCHAL0_TYPE        UByte
+#define HAL_DVDD_CSSCHAL0             HAL_DVDD_CSSCHAL0_MASK
+#define HAL_DVDD_CSSCHAL0_READABLE    1
+#define HAL_DVDD_CSSCHAL0_WRITABLE    1
+#define HAL_DVDD_CSSCHAL0_SIGNED      0
+#define HAL_DVDD_CSSCHAL0_ADR         0x1000034F
+
+// Register CSSRES4
+#define HAL_DVDD_CSSRES4_REGISTER    (HAL_DVDDREG_MAP->CSSRES4)
+#define HAL_DVDD_CSSRES4_LSB         0
+#define HAL_DVDD_CSSRES4_MSB         7
+#define HAL_DVDD_CSSRES4_MASK        0x000000FF
+#define HAL_DVDD_CSSRES4_TYPE        UByte
+#define HAL_DVDD_CSSRES4             HAL_DVDD_CSSRES4_MASK
+#define HAL_DVDD_CSSRES4_READABLE    1
+#define HAL_DVDD_CSSRES4_WRITABLE    1
+#define HAL_DVDD_CSSRES4_SIGNED      0
+#define HAL_DVDD_CSSRES4_ADR         0x10000353
+
+// Register CSSRES3
+#define HAL_DVDD_CSSRES3_REGISTER    (HAL_DVDDREG_MAP->CSSRES3)
+#define HAL_DVDD_CSSRES3_LSB         0
+#define HAL_DVDD_CSSRES3_MSB         7
+#define HAL_DVDD_CSSRES3_MASK        0x000000FF
+#define HAL_DVDD_CSSRES3_TYPE        UByte
+#define HAL_DVDD_CSSRES3             HAL_DVDD_CSSRES3_MASK
+#define HAL_DVDD_CSSRES3_READABLE    1
+#define HAL_DVDD_CSSRES3_WRITABLE    1
+#define HAL_DVDD_CSSRES3_SIGNED      0
+#define HAL_DVDD_CSSRES3_ADR         0x10000354
+
+// Register CSSRES2
+#define HAL_DVDD_CSSRES2_REGISTER    (HAL_DVDDREG_MAP->CSSRES2)
+#define HAL_DVDD_CSSRES2_LSB         0
+#define HAL_DVDD_CSSRES2_MSB         7
+#define HAL_DVDD_CSSRES2_MASK        0x000000FF
+#define HAL_DVDD_CSSRES2_TYPE        UByte
+#define HAL_DVDD_CSSRES2             HAL_DVDD_CSSRES2_MASK
+#define HAL_DVDD_CSSRES2_READABLE    1
+#define HAL_DVDD_CSSRES2_WRITABLE    1
+#define HAL_DVDD_CSSRES2_SIGNED      0
+#define HAL_DVDD_CSSRES2_ADR         0x10000355
+
+// Register CSSRES1
+#define HAL_DVDD_CSSRES1_REGISTER    (HAL_DVDDREG_MAP->CSSRES1)
+#define HAL_DVDD_CSSRES1_LSB         0
+#define HAL_DVDD_CSSRES1_MSB         7
+#define HAL_DVDD_CSSRES1_MASK        0x000000FF
+#define HAL_DVDD_CSSRES1_TYPE        UByte
+#define HAL_DVDD_CSSRES1             HAL_DVDD_CSSRES1_MASK
+#define HAL_DVDD_CSSRES1_READABLE    1
+#define HAL_DVDD_CSSRES1_WRITABLE    1
+#define HAL_DVDD_CSSRES1_SIGNED      0
+#define HAL_DVDD_CSSRES1_ADR         0x10000356
+
+// Register CSSRES0
+#define HAL_DVDD_CSSRES0_REGISTER    (HAL_DVDDREG_MAP->CSSRES0)
+#define HAL_DVDD_CSSRES0_LSB         0
+#define HAL_DVDD_CSSRES0_MSB         7
+#define HAL_DVDD_CSSRES0_MASK        0x000000FF
+#define HAL_DVDD_CSSRES0_TYPE        UByte
+#define HAL_DVDD_CSSRES0             HAL_DVDD_CSSRES0_MASK
+#define HAL_DVDD_CSSRES0_READABLE    1
+#define HAL_DVDD_CSSRES0_WRITABLE    1
+#define HAL_DVDD_CSSRES0_SIGNED      0
+#define HAL_DVDD_CSSRES0_ADR         0x10000357
+
+// Register ACCODE
+#define HAL_DVDD_ACCODE_REGISTER    (HAL_DVDDREG_MAP->ACCODE)
+#define HAL_DVDD_ACCODE_LSB         0
+#define HAL_DVDD_ACCODE_MSB         4
+#define HAL_DVDD_ACCODE_MASK        0x0000001F
+#define HAL_DVDD_ACCODE_TYPE        UByte
+#define HAL_DVDD_ACCODE             HAL_DVDD_ACCODE_MASK
+#define HAL_DVDD_ACCODE_READABLE    1
+#define HAL_DVDD_ACCODE_WRITABLE    1
+#define HAL_DVDD_ACCODE_SIGNED      0
+#define HAL_DVDD_ACCODE_ADR         0x1000035A
+
+// Register BUSKEY4
+#define HAL_DVDD_BUSKEY4_REGISTER    (HAL_DVDDREG_MAP->BUSKEY4)
+#define HAL_DVDD_BUSKEY4_LSB         0
+#define HAL_DVDD_BUSKEY4_MSB         7
+#define HAL_DVDD_BUSKEY4_MASK        0x000000FF
+#define HAL_DVDD_BUSKEY4_TYPE        UByte
+#define HAL_DVDD_BUSKEY4             HAL_DVDD_BUSKEY4_MASK
+#define HAL_DVDD_BUSKEY4_READABLE    1
+#define HAL_DVDD_BUSKEY4_WRITABLE    0
+#define HAL_DVDD_BUSKEY4_SIGNED      0
+#define HAL_DVDD_BUSKEY4_ADR         0x1000035B
+
+// Register BUSKEY3
+#define HAL_DVDD_BUSKEY3_REGISTER    (HAL_DVDDREG_MAP->BUSKEY3)
+#define HAL_DVDD_BUSKEY3_LSB         0
+#define HAL_DVDD_BUSKEY3_MSB         7
+#define HAL_DVDD_BUSKEY3_MASK        0x000000FF
+#define HAL_DVDD_BUSKEY3_TYPE        UByte
+#define HAL_DVDD_BUSKEY3             HAL_DVDD_BUSKEY3_MASK
+#define HAL_DVDD_BUSKEY3_READABLE    1
+#define HAL_DVDD_BUSKEY3_WRITABLE    0
+#define HAL_DVDD_BUSKEY3_SIGNED      0
+#define HAL_DVDD_BUSKEY3_ADR         0x1000035C
+
+// Register BUSKEY2
+#define HAL_DVDD_BUSKEY2_REGISTER    (HAL_DVDDREG_MAP->BUSKEY2)
+#define HAL_DVDD_BUSKEY2_LSB         0
+#define HAL_DVDD_BUSKEY2_MSB         7
+#define HAL_DVDD_BUSKEY2_MASK        0x000000FF
+#define HAL_DVDD_BUSKEY2_TYPE        UByte
+#define HAL_DVDD_BUSKEY2             HAL_DVDD_BUSKEY2_MASK
+#define HAL_DVDD_BUSKEY2_READABLE    1
+#define HAL_DVDD_BUSKEY2_WRITABLE    0
+#define HAL_DVDD_BUSKEY2_SIGNED      0
+#define HAL_DVDD_BUSKEY2_ADR         0x1000035D
+
+// Register BUSKEY1
+#define HAL_DVDD_BUSKEY1_REGISTER    (HAL_DVDDREG_MAP->BUSKEY1)
+#define HAL_DVDD_BUSKEY1_LSB         0
+#define HAL_DVDD_BUSKEY1_MSB         7
+#define HAL_DVDD_BUSKEY1_MASK        0x000000FF
+#define HAL_DVDD_BUSKEY1_TYPE        UByte
+#define HAL_DVDD_BUSKEY1             HAL_DVDD_BUSKEY1_MASK
+#define HAL_DVDD_BUSKEY1_READABLE    1
+#define HAL_DVDD_BUSKEY1_WRITABLE    0
+#define HAL_DVDD_BUSKEY1_SIGNED      0
+#define HAL_DVDD_BUSKEY1_ADR         0x1000035E
+
+// Register BUSKEY0
+#define HAL_DVDD_BUSKEY0_REGISTER    (HAL_DVDDREG_MAP->BUSKEY0)
+#define HAL_DVDD_BUSKEY0_LSB         0
+#define HAL_DVDD_BUSKEY0_MSB         7
+#define HAL_DVDD_BUSKEY0_MASK        0x000000FF
+#define HAL_DVDD_BUSKEY0_TYPE        UByte
+#define HAL_DVDD_BUSKEY0             HAL_DVDD_BUSKEY0_MASK
+#define HAL_DVDD_BUSKEY0_READABLE    1
+#define HAL_DVDD_BUSKEY0_WRITABLE    0
+#define HAL_DVDD_BUSKEY0_SIGNED      0
+#define HAL_DVDD_BUSKEY0_ADR         0x1000035F
+
+// Register BUFCTRL
+#define HAL_DVDD_BCADLY_REGISTER    (HAL_DVDDREG_MAP->BUFCTRL)
+#define HAL_DVDD_BCADLY_LSB         3
+#define HAL_DVDD_BCADLY_MSB         3
+#define HAL_DVDD_BCADLY_MASK        0x00000008
+#define HAL_DVDD_BCADLY_TYPE        Bool
+#define HAL_DVDD_BCADLY             HAL_DVDD_BCADLY_MASK
+#define HAL_DVDD_BCADLY_READABLE    1
+#define HAL_DVDD_BCADLY_WRITABLE    1
+#define HAL_DVDD_BCADLY_SIGNED      0
+#define HAL_DVDD_BCADLY_ADR         0x10000360
+
+#define HAL_DVDD_BUFRNG_REGISTER    (HAL_DVDDREG_MAP->BUFCTRL)
+#define HAL_DVDD_BUFRNG_LSB         2
+#define HAL_DVDD_BUFRNG_MSB         2
+#define HAL_DVDD_BUFRNG_MASK        0x00000004
+#define HAL_DVDD_BUFRNG_TYPE        Bool
+#define HAL_DVDD_BUFRNG             HAL_DVDD_BUFRNG_MASK
+#define HAL_DVDD_BUFRNG_READABLE    1
+#define HAL_DVDD_BUFRNG_WRITABLE    0
+#define HAL_DVDD_BUFRNG_SIGNED      0
+#define HAL_DVDD_BUFRNG_ADR         0x10000360
+
+#define HAL_DVDD_ENECCE_REGISTER    (HAL_DVDDREG_MAP->BUFCTRL)
+#define HAL_DVDD_ENECCE_LSB         1
+#define HAL_DVDD_ENECCE_MSB         1
+#define HAL_DVDD_ENECCE_MASK        0x00000002
+#define HAL_DVDD_ENECCE_TYPE        Bool
+#define HAL_DVDD_ENECCE             HAL_DVDD_ENECCE_MASK
+#define HAL_DVDD_ENECCE_READABLE    1
+#define HAL_DVDD_ENECCE_WRITABLE    1
+#define HAL_DVDD_ENECCE_SIGNED      0
+#define HAL_DVDD_ENECCE_ADR         0x10000360
+
+#define HAL_DVDD_ENBUF_REGISTER    (HAL_DVDDREG_MAP->BUFCTRL)
+#define HAL_DVDD_ENBUF_LSB         0
+#define HAL_DVDD_ENBUF_MSB         0
+#define HAL_DVDD_ENBUF_MASK        0x00000001
+#define HAL_DVDD_ENBUF_TYPE        Bool
+#define HAL_DVDD_ENBUF             HAL_DVDD_ENBUF_MASK
+#define HAL_DVDD_ENBUF_READABLE    1
+#define HAL_DVDD_ENBUF_WRITABLE    1
+#define HAL_DVDD_ENBUF_SIGNED      0
+#define HAL_DVDD_ENBUF_ADR         0x10000360
+
+// Register DVDRAMC0
+#define HAL_DVDD_LANDOUT_REGISTER    (HAL_DVDDREG_MAP->DVDRAMC0)
+#define HAL_DVDD_LANDOUT_LSB         7
+#define HAL_DVDD_LANDOUT_MSB         7
+#define HAL_DVDD_LANDOUT_MASK        0x00000080
+#define HAL_DVDD_LANDOUT_TYPE        Bool
+#define HAL_DVDD_LANDOUT             HAL_DVDD_LANDOUT_MASK
+#define HAL_DVDD_LANDOUT_READABLE    1
+#define HAL_DVDD_LANDOUT_WRITABLE    1
+#define HAL_DVDD_LANDOUT_SIGNED      0
+#define HAL_DVDD_LANDOUT_ADR         0x10000368
+
+#define HAL_DVDD_MANLAND_REGISTER    (HAL_DVDDREG_MAP->DVDRAMC0)
+#define HAL_DVDD_MANLAND_LSB         6
+#define HAL_DVDD_MANLAND_MSB         6
+#define HAL_DVDD_MANLAND_MASK        0x00000040
+#define HAL_DVDD_MANLAND_TYPE        Bool
+#define HAL_DVDD_MANLAND             HAL_DVDD_MANLAND_MASK
+#define HAL_DVDD_MANLAND_READABLE    1
+#define HAL_DVDD_MANLAND_WRITABLE    1
+#define HAL_DVDD_MANLAND_SIGNED      0
+#define HAL_DVDD_MANLAND_ADR         0x10000368
+
+#define HAL_DVDD_WOBLAND_REGISTER    (HAL_DVDDREG_MAP->DVDRAMC0)
+#define HAL_DVDD_WOBLAND_LSB         5
+#define HAL_DVDD_WOBLAND_MSB         5
+#define HAL_DVDD_WOBLAND_MASK        0x00000020
+#define HAL_DVDD_WOBLAND_TYPE        Bool
+#define HAL_DVDD_WOBLAND             HAL_DVDD_WOBLAND_MASK
+#define HAL_DVDD_WOBLAND_READABLE    1
+#define HAL_DVDD_WOBLAND_WRITABLE    1
+#define HAL_DVDD_WOBLAND_SIGNED      0
+#define HAL_DVDD_WOBLAND_ADR         0x10000368
+
+#if (CHIP_REV >= 0xC0)
+
+#define HAL_DVDD_PIDRDY_REGISTER    (HAL_DVDDREG_MAP->DVDRAMC0)
+#define HAL_DVDD_PIDRDY_LSB         4
+#define HAL_DVDD_PIDRDY_MSB         4
+#define HAL_DVDD_PIDRDY_MASK        0x00000010
+#define HAL_DVDD_PIDRDY_TYPE        Bool
+#define HAL_DVDD_PIDRDY             HAL_DVDD_PIDRDY_MASK
+#define HAL_DVDD_PIDRDY_READABLE    1
+#define HAL_DVDD_PIDRDY_WRITABLE    1
+#define HAL_DVDD_PIDRDY_SIGNED      0
+#define HAL_DVDD_PIDRDY_ADR         0x10000368
+
+#define HAL_DVDD_PIDFWCNTR_REGISTER    (HAL_DVDDREG_MAP->DVDRAMC0)
+#define HAL_DVDD_PIDFWCNTR_LSB         3
+#define HAL_DVDD_PIDFWCNTR_MSB         3
+#define HAL_DVDD_PIDFWCNTR_MASK        0x00000008
+#define HAL_DVDD_PIDFWCNTR_TYPE        Bool
+#define HAL_DVDD_PIDFWCNTR             HAL_DVDD_PIDFWCNTR_MASK
+#define HAL_DVDD_PIDFWCNTR_READABLE    1
+#define HAL_DVDD_PIDFWCNTR_WRITABLE    1
+#define HAL_DVDD_PIDFWCNTR_SIGNED      0
+#define HAL_DVDD_PIDFWCNTR_ADR         0x10000368
+
+#define HAL_DVDD_HEADONLY_REGISTER    (HAL_DVDDREG_MAP->DVDRAMC0)
+#define HAL_DVDD_HEADONLY_LSB         2
+#define HAL_DVDD_HEADONLY_MSB         2
+#define HAL_DVDD_HEADONLY_MASK        0x00000004
+#define HAL_DVDD_HEADONLY_TYPE        Bool
+#define HAL_DVDD_HEADONLY             HAL_DVDD_HEADONLY_MASK
+#define HAL_DVDD_HEADONLY_READABLE    1
+#define HAL_DVDD_HEADONLY_WRITABLE    1
+#define HAL_DVDD_HEADONLY_SIGNED      0
+#define HAL_DVDD_HEADONLY_ADR         0x10000368
+
+#endif // #if (CHIP_REV >= 0xC0)
+
+#define HAL_DVDD_TRGTTRK_REGISTER    (HAL_DVDDREG_MAP->DVDRAMC0)
+#define HAL_DVDD_TRGTTRK_LSB         1
+#define HAL_DVDD_TRGTTRK_MSB         1
+#define HAL_DVDD_TRGTTRK_MASK        0x00000002
+#define HAL_DVDD_TRGTTRK_TYPE        Bool
+#define HAL_DVDD_TRGTTRK             HAL_DVDD_TRGTTRK_MASK
+#define HAL_DVDD_TRGTTRK_READABLE    1
+#define HAL_DVDD_TRGTTRK_WRITABLE    1
+#define HAL_DVDD_TRGTTRK_SIGNED      0
+#define HAL_DVDD_TRGTTRK_ADR         0x10000368
+
+#define HAL_DVDD_SLIPEN_REGISTER    (HAL_DVDDREG_MAP->DVDRAMC0)
+#define HAL_DVDD_SLIPEN_LSB         0
+#define HAL_DVDD_SLIPEN_MSB         0
+#define HAL_DVDD_SLIPEN_MASK        0x00000001
+#define HAL_DVDD_SLIPEN_TYPE        Bool
+#define HAL_DVDD_SLIPEN             HAL_DVDD_SLIPEN_MASK
+#define HAL_DVDD_SLIPEN_READABLE    1
+#define HAL_DVDD_SLIPEN_WRITABLE    1
+#define HAL_DVDD_SLIPEN_SIGNED      0
+#define HAL_DVDD_SLIPEN_ADR         0x10000368
+
+#if (CHIP_REV >= 0xC0)
+
+// Register DVDRAMC1
+#define HAL_DVDD_DVDLANDCTRL_REGISTER    (HAL_DVDDREG_MAP->DVDRAMC1)
+#define HAL_DVDD_DVDLANDCTRL_LSB         0
+#define HAL_DVDD_DVDLANDCTRL_MSB         0
+#define HAL_DVDD_DVDLANDCTRL_MASK        0x00000001
+#define HAL_DVDD_DVDLANDCTRL_TYPE        Bool
+#define HAL_DVDD_DVDLANDCTRL             HAL_DVDD_DVDLANDCTRL_MASK
+#define HAL_DVDD_DVDLANDCTRL_READABLE    1
+#define HAL_DVDD_DVDLANDCTRL_WRITABLE    1
+#define HAL_DVDD_DVDLANDCTRL_SIGNED      0
+#define HAL_DVDD_DVDLANDCTRL_ADR         0x10000369
+
+#define HAL_DVDD_TRACKCTRL_REGISTER    (HAL_DVDDREG_MAP->DVDRAMC1)
+#define HAL_DVDD_TRACKCTRL_LSB         1
+#define HAL_DVDD_TRACKCTRL_MSB         1
+#define HAL_DVDD_TRACKCTRL_MASK        0x00000002
+#define HAL_DVDD_TRACKCTRL_TYPE        Bool
+#define HAL_DVDD_TRACKCTRL             HAL_DVDD_TRACKCTRL_MASK
+#define HAL_DVDD_TRACKCTRL_READABLE    1
+#define HAL_DVDD_TRACKCTRL_WRITABLE    1
+#define HAL_DVDD_TRACKCTRL_SIGNED      0
+#define HAL_DVDD_TRACKCTRL_ADR         0x10000369
+
+#define HAL_DVDD_PIDCNTRST_REGISTER    (HAL_DVDDREG_MAP->DVDRAMC1)
+#define HAL_DVDD_PIDCNTRST_LSB         2
+#define HAL_DVDD_PIDCNTRST_MSB         2
+#define HAL_DVDD_PIDCNTRST_MASK        0x00000004
+#define HAL_DVDD_PIDCNTRST_TYPE        Bool
+#define HAL_DVDD_PIDCNTRST             HAL_DVDD_PIDCNTRST_MASK
+#define HAL_DVDD_PIDCNTRST_READABLE    1
+#define HAL_DVDD_PIDCNTRST_WRITABLE    1
+#define HAL_DVDD_PIDCNTRST_SIGNED      0
+#define HAL_DVDD_PIDCNTRST_ADR         0x10000369
+
+#endif // #if (CHIP_REV >= 0xC0)
+
+// Register DVDRAMC3
+
+#if (CHIP_REV >= 0xC0)
+
+#define HAL_DVDD_SECTOR_COUNT_FW_REGISTER    (HAL_DVDDREG_MAP->DVDRAMC3)
+#define HAL_DVDD_SECTOR_COUNT_FW_LSB         2
+#define HAL_DVDD_SECTOR_COUNT_FW_MSB         7
+#define HAL_DVDD_SECTOR_COUNT_FW_MASK        0x000000FC
+#define HAL_DVDD_SECTOR_COUNT_FW_TYPE        UByte
+#define HAL_DVDD_SECTOR_COUNT_FW             HAL_DVDD_SECTOR_COUNT_FW_MASK
+#define HAL_DVDD_SECTOR_COUNT_FW_READABLE    1
+#define HAL_DVDD_SECTOR_COUNT_FW_WRITABLE    1
+#define HAL_DVDD_SECTOR_COUNT_FW_SIGNED      0
+#define HAL_DVDD_SECTOR_COUNT_FW_ADR         0x1000036B
+
+#endif // #if (CHIP_REV >= 0xC0)
+
+#define HAL_DVDD_PIDERRTH_REGISTER    (HAL_DVDDREG_MAP->DVDRAMC3)
+#define HAL_DVDD_PIDERRTH_LSB         0
+#define HAL_DVDD_PIDERRTH_MSB         1
+#define HAL_DVDD_PIDERRTH_MASK        0x00000003
+#define HAL_DVDD_PIDERRTH_TYPE        UByte
+#define HAL_DVDD_PIDERRTH             HAL_DVDD_PIDERRTH_MASK
+#define HAL_DVDD_PIDERRTH_READABLE    1
+#define HAL_DVDD_PIDERRTH_WRITABLE    1
+#define HAL_DVDD_PIDERRTH_SIGNED      0
+#define HAL_DVDD_PIDERRTH_ADR         0x1000036B
+
+// Register DVDRAMS
+#define HAL_DVDD_PIDERR4_REGISTER    (HAL_DVDDREG_MAP->DVDRAMS)
+#define HAL_DVDD_PIDERR4_LSB         7
+#define HAL_DVDD_PIDERR4_MSB         7
+#define HAL_DVDD_PIDERR4_MASK        0x00000080
+#define HAL_DVDD_PIDERR4_TYPE        Bool
+#define HAL_DVDD_PIDERR4             HAL_DVDD_PIDERR4_MASK
+#define HAL_DVDD_PIDERR4_READABLE    1
+#define HAL_DVDD_PIDERR4_WRITABLE    0
+#define HAL_DVDD_PIDERR4_SIGNED      0
+#define HAL_DVDD_PIDERR4_ADR         0x1000036C
+
+#define HAL_DVDD_PIDERR3_REGISTER    (HAL_DVDDREG_MAP->DVDRAMS)
+#define HAL_DVDD_PIDERR3_LSB         6
+#define HAL_DVDD_PIDERR3_MSB         6
+#define HAL_DVDD_PIDERR3_MASK        0x00000040
+#define HAL_DVDD_PIDERR3_TYPE        Bool
+#define HAL_DVDD_PIDERR3             HAL_DVDD_PIDERR3_MASK
+#define HAL_DVDD_PIDERR3_READABLE    1
+#define HAL_DVDD_PIDERR3_WRITABLE    0
+#define HAL_DVDD_PIDERR3_SIGNED      0
+#define HAL_DVDD_PIDERR3_ADR         0x1000036C
+
+#define HAL_DVDD_PIDERR2_REGISTER    (HAL_DVDDREG_MAP->DVDRAMS)
+#define HAL_DVDD_PIDERR2_LSB         5
+#define HAL_DVDD_PIDERR2_MSB         5
+#define HAL_DVDD_PIDERR2_MASK        0x00000020
+#define HAL_DVDD_PIDERR2_TYPE        Bool
+#define HAL_DVDD_PIDERR2             HAL_DVDD_PIDERR2_MASK
+#define HAL_DVDD_PIDERR2_READABLE    1
+#define HAL_DVDD_PIDERR2_WRITABLE    0
+#define HAL_DVDD_PIDERR2_SIGNED      0
+#define HAL_DVDD_PIDERR2_ADR         0x1000036C
+
+#define HAL_DVDD_PIDERR1_REGISTER    (HAL_DVDDREG_MAP->DVDRAMS)
+#define HAL_DVDD_PIDERR1_LSB         4
+#define HAL_DVDD_PIDERR1_MSB         4
+#define HAL_DVDD_PIDERR1_MASK        0x00000010
+#define HAL_DVDD_PIDERR1_TYPE        Bool
+#define HAL_DVDD_PIDERR1             HAL_DVDD_PIDERR1_MASK
+#define HAL_DVDD_PIDERR1_READABLE    1
+#define HAL_DVDD_PIDERR1_WRITABLE    0
+#define HAL_DVDD_PIDERR1_SIGNED      0
+#define HAL_DVDD_PIDERR1_ADR         0x1000036C
+
+#if (CHIP_REV >= 0xC0)
+
+#define HAL_DVDD_DVDRAMHDR_REGISTER    (HAL_DVDDREG_MAP->DVDRAMS)
+#define HAL_DVDD_DVDRAMHDR_LSB         3
+#define HAL_DVDD_DVDRAMHDR_MSB         3
+#define HAL_DVDD_DVDRAMHDR_MASK        0x00000008
+#define HAL_DVDD_DVDRAMHDR_TYPE        Bool
+#define HAL_DVDD_DVDRAMHDR             HAL_DVDD_DVDRAMHDR_MASK
+#define HAL_DVDD_DVDRAMHDR_READABLE    1
+#define HAL_DVDD_DVDRAMHDR_WRITABLE    1
+#define HAL_DVDD_DVDRAMHDR_SIGNED      0
+#define HAL_DVDD_DVDRAMHDR_ADR         0x1000036C
+
+#endif // #if (CHIP_REV >= 0xC0)
+
+#define HAL_DVDD_LANDMVD_REGISTER    (HAL_DVDDREG_MAP->DVDRAMS)
+#define HAL_DVDD_LANDMVD_LSB         2
+#define HAL_DVDD_LANDMVD_MSB         2
+#define HAL_DVDD_LANDMVD_MASK        0x00000004
+#define HAL_DVDD_LANDMVD_TYPE        Bool
+#define HAL_DVDD_LANDMVD             HAL_DVDD_LANDMVD_MASK
+#define HAL_DVDD_LANDMVD_READABLE    1
+#define HAL_DVDD_LANDMVD_WRITABLE    0
+#define HAL_DVDD_LANDMVD_SIGNED      0
+#define HAL_DVDD_LANDMVD_ADR         0x1000036C
+
+#define HAL_DVDD_LANDMON_REGISTER    (HAL_DVDDREG_MAP->DVDRAMS)
+#define HAL_DVDD_LANDMON_LSB         1
+#define HAL_DVDD_LANDMON_MSB         1
+#define HAL_DVDD_LANDMON_MASK        0x00000002
+#define HAL_DVDD_LANDMON_TYPE        Bool
+#define HAL_DVDD_LANDMON             HAL_DVDD_LANDMON_MASK
+#define HAL_DVDD_LANDMON_READABLE    1
+#define HAL_DVDD_LANDMON_WRITABLE    0
+#define HAL_DVDD_LANDMON_SIGNED      0
+#define HAL_DVDD_LANDMON_ADR         0x1000036C
+
+#define HAL_DVDD_LAND_REGISTER    (HAL_DVDDREG_MAP->DVDRAMS)
+#define HAL_DVDD_LAND_LSB         0
+#define HAL_DVDD_LAND_MSB         0
+#define HAL_DVDD_LAND_MASK        0x00000001
+#define HAL_DVDD_LAND_TYPE        Bool
+#define HAL_DVDD_LAND             HAL_DVDD_LAND_MASK
+#define HAL_DVDD_LAND_READABLE    1
+#define HAL_DVDD_LAND_WRITABLE    0
+#define HAL_DVDD_LAND_SIGNED      0
+#define HAL_DVDD_LAND_ADR         0x1000036C
+
+// Registers PISCORL/PISCORH
+#define HAL_DVDD_PISCOR_REGISTER    (HAL_DVDDREG_MAP->PISCORL)
+#define HAL_DVDD_PISCOR_LSB         0
+#define HAL_DVDD_PISCOR_MSB         11
+#define HAL_DVDD_PISCOR_MASK        0x00000FFF
+#define HAL_DVDD_PISCOR_TYPE        UInt16
+#define HAL_DVDD_PISCOR             HAL_DVDD_PISCOR_MASK
+#define HAL_DVDD_PISCOR_READABLE    1
+#define HAL_DVDD_PISCOR_WRITABLE    0
+#define HAL_DVDD_PISCOR_SIGNED      0
+#define HAL_DVDD_PISCOR_ADR         0x1000036E
+
+// Register PIUCOR
+#define HAL_DVDD_PIUCOR_REGISTER    (HAL_DVDDREG_MAP->PIUCOR)
+#define HAL_DVDD_PIUCOR_LSB         0
+#define HAL_DVDD_PIUCOR_MSB         7
+#define HAL_DVDD_PIUCOR_MASK        0x000000FF
+#define HAL_DVDD_PIUCOR_TYPE        UByte
+#define HAL_DVDD_PIUCOR             HAL_DVDD_PIUCOR_MASK
+#define HAL_DVDD_PIUCOR_READABLE    1
+#define HAL_DVDD_PIUCOR_WRITABLE    0
+#define HAL_DVDD_PIUCOR_SIGNED      0
+#define HAL_DVDD_PIUCOR_ADR         0x10000370
+
+// Register PISTH
+#define HAL_DVDD_PISTH_REGISTER    (HAL_DVDDREG_MAP->PISTH)
+#define HAL_DVDD_PISTH_LSB         0
+#define HAL_DVDD_PISTH_MSB         3
+#define HAL_DVDD_PISTH_MASK        0x0000000F
+#define HAL_DVDD_PISTH_TYPE        UByte
+#define HAL_DVDD_PISTH             HAL_DVDD_PISTH_MASK
+#define HAL_DVDD_PISTH_READABLE    1
+#define HAL_DVDD_PISTH_WRITABLE    1
+#define HAL_DVDD_PISTH_SIGNED      0
+#define HAL_DVDD_PISTH_ADR         0x10000371
+
+// Register PIRXTH
+#define HAL_DVDD_PIRXTH_REGISTER    (HAL_DVDDREG_MAP->PIRXTH)
+#define HAL_DVDD_PIRXTH_LSB         0
+#define HAL_DVDD_PIRXTH_MSB         7
+#define HAL_DVDD_PIRXTH_MASK        0x000000FF
+#define HAL_DVDD_PIRXTH_TYPE        UByte
+#define HAL_DVDD_PIRXTH             HAL_DVDD_PIRXTH_MASK
+#define HAL_DVDD_PIRXTH_READABLE    1
+#define HAL_DVDD_PIRXTH_WRITABLE    0
+#define HAL_DVDD_PIRXTH_SIGNED      0
+#define HAL_DVDD_PIRXTH_ADR         0x10000372
+
+// Register PIUTH
+#define HAL_DVDD_PIUTH_REGISTER    (HAL_DVDDREG_MAP->PIUTH)
+#define HAL_DVDD_PIUTH_LSB         0
+#define HAL_DVDD_PIUTH_MSB         7
+#define HAL_DVDD_PIUTH_MASK        0x000000FF
+#define HAL_DVDD_PIUTH_TYPE        UByte
+#define HAL_DVDD_PIUTH             HAL_DVDD_PIUTH_MASK
+#define HAL_DVDD_PIUTH_READABLE    1
+#define HAL_DVDD_PIUTH_WRITABLE    1
+#define HAL_DVDD_PIUTH_SIGNED      0
+#define HAL_DVDD_PIUTH_ADR         0x10000373
+
+// Registers POSCORL/POSCORH
+#define HAL_DVDD_POSCOR_REGISTER    (HAL_DVDDREG_MAP->POSCORL)
+#define HAL_DVDD_POSCOR_LSB         0
+#define HAL_DVDD_POSCOR_MSB         11
+#define HAL_DVDD_POSCOR_MASK        0x00000FFF
+#define HAL_DVDD_POSCOR_TYPE        UInt16
+#define HAL_DVDD_POSCOR             HAL_DVDD_POSCOR_MASK
+#define HAL_DVDD_POSCOR_READABLE    1
+#define HAL_DVDD_POSCOR_WRITABLE    0
+#define HAL_DVDD_POSCOR_SIGNED      0
+#define HAL_DVDD_POSCOR_ADR         0x10000374
+
+// Register POUCOR
+#define HAL_DVDD_POUCOR_REGISTER    (HAL_DVDDREG_MAP->POUCOR)
+#define HAL_DVDD_POUCOR_LSB         0
+#define HAL_DVDD_POUCOR_MSB         7
+#define HAL_DVDD_POUCOR_MASK        0x000000FF
+#define HAL_DVDD_POUCOR_TYPE        UByte
+#define HAL_DVDD_POUCOR             HAL_DVDD_POUCOR_MASK
+#define HAL_DVDD_POUCOR_READABLE    1
+#define HAL_DVDD_POUCOR_WRITABLE    0
+#define HAL_DVDD_POUCOR_SIGNED      0
+#define HAL_DVDD_POUCOR_ADR         0x10000376
+
+// Register RECCSTAT
+#define HAL_DVDD_RECCCNT_REGISTER    (HAL_DVDDREG_MAP->RECCSTAT)
+#define HAL_DVDD_RECCCNT_LSB         0
+#define HAL_DVDD_RECCCNT_MSB         2
+#define HAL_DVDD_RECCCNT_MASK        0x00000007
+#define HAL_DVDD_RECCCNT_TYPE        UByte
+#define HAL_DVDD_RECCCNT             HAL_DVDD_RECCCNT_MASK
+#define HAL_DVDD_RECCCNT_READABLE    1
+#define HAL_DVDD_RECCCNT_WRITABLE    0
+#define HAL_DVDD_RECCCNT_SIGNED      0
+#define HAL_DVDD_RECCCNT_ADR         0x10000377
+
+// Register DRFTCNTL
+#define HAL_DVDD_POIDEREN_REGISTER    (HAL_DVDDREG_MAP->DRFTCNTL)
+#define HAL_DVDD_POIDEREN_LSB         3
+#define HAL_DVDD_POIDEREN_MSB         3
+#define HAL_DVDD_POIDEREN_MASK        0x00000008
+#define HAL_DVDD_POIDEREN_TYPE        Bool
+#define HAL_DVDD_POIDEREN             HAL_DVDD_POIDEREN_MASK
+#define HAL_DVDD_POIDEREN_READABLE    1
+#define HAL_DVDD_POIDEREN_WRITABLE    1
+#define HAL_DVDD_POIDEREN_SIGNED      0
+#define HAL_DVDD_POIDEREN_ADR         0x10000378
+
+#define HAL_DVDD_PIIDEREN_REGISTER    (HAL_DVDDREG_MAP->DRFTCNTL)
+#define HAL_DVDD_PIIDEREN_LSB         2
+#define HAL_DVDD_PIIDEREN_MSB         2
+#define HAL_DVDD_PIIDEREN_MASK        0x00000004
+#define HAL_DVDD_PIIDEREN_TYPE        Bool
+#define HAL_DVDD_PIIDEREN             HAL_DVDD_PIIDEREN_MASK
+#define HAL_DVDD_PIIDEREN_READABLE    1
+#define HAL_DVDD_PIIDEREN_WRITABLE    1
+#define HAL_DVDD_PIIDEREN_SIGNED      0
+#define HAL_DVDD_PIIDEREN_ADR         0x10000378
+
+#define HAL_DVDD_SEEDMISTHR_REGISTER    (HAL_DVDDREG_MAP->DRFTCNTL)
+#define HAL_DVDD_SEEDMISTHR_LSB         0
+#define HAL_DVDD_SEEDMISTHR_MSB         1
+#define HAL_DVDD_SEEDMISTHR_MASK        0x00000003
+#define HAL_DVDD_SEEDMISTHR_TYPE        UByte
+#define HAL_DVDD_SEEDMISTHR             HAL_DVDD_SEEDMISTHR_MASK
+#define HAL_DVDD_SEEDMISTHR_READABLE    1
+#define HAL_DVDD_SEEDMISTHR_WRITABLE    1
+#define HAL_DVDD_SEEDMISTHR_SIGNED      0
+#define HAL_DVDD_SEEDMISTHR_ADR         0x10000378
+
+// Register SCRMBLCTL
+#define HAL_DVDD_SCRMBLSED_REGISTER    (HAL_DVDDREG_MAP->SCRMBLCTL)
+#define HAL_DVDD_SCRMBLSED_LSB         4
+#define HAL_DVDD_SCRMBLSED_MSB         7
+#define HAL_DVDD_SCRMBLSED_MASK        0x000000F0
+#define HAL_DVDD_SCRMBLSED_TYPE        UByte
+#define HAL_DVDD_SCRMBLSED             HAL_DVDD_SCRMBLSED_MASK
+#define HAL_DVDD_SCRMBLSED_READABLE    1
+#define HAL_DVDD_SCRMBLSED_WRITABLE    1
+#define HAL_DVDD_SCRMBLSED_SIGNED      0
+#define HAL_DVDD_SCRMBLSED_ADR         0x10000380
+
+#define HAL_DVDD_SCRMBLFWP_REGISTER    (HAL_DVDDREG_MAP->SCRMBLCTL)
+#define HAL_DVDD_SCRMBLFWP_LSB         1
+#define HAL_DVDD_SCRMBLFWP_MSB         1
+#define HAL_DVDD_SCRMBLFWP_MASK        0x00000002
+#define HAL_DVDD_SCRMBLFWP_TYPE        Bool
+#define HAL_DVDD_SCRMBLFWP             HAL_DVDD_SCRMBLFWP_MASK
+#define HAL_DVDD_SCRMBLFWP_READABLE    1
+#define HAL_DVDD_SCRMBLFWP_WRITABLE    1
+#define HAL_DVDD_SCRMBLFWP_SIGNED      0
+#define HAL_DVDD_SCRMBLFWP_ADR         0x10000380
+
+#define HAL_DVDD_SCRMBFDS_REGISTER    (HAL_DVDDREG_MAP->SCRMBLCTL)
+#define HAL_DVDD_SCRMBFDS_LSB         0
+#define HAL_DVDD_SCRMBFDS_MSB         0
+#define HAL_DVDD_SCRMBFDS_MASK        0x00000001
+#define HAL_DVDD_SCRMBFDS_TYPE        Bool
+#define HAL_DVDD_SCRMBFDS             HAL_DVDD_SCRMBFDS_MASK
+#define HAL_DVDD_SCRMBFDS_READABLE    1
+#define HAL_DVDD_SCRMBFDS_WRITABLE    1
+#define HAL_DVDD_SCRMBFDS_SIGNED      0
+#define HAL_DVDD_SCRMBFDS_ADR         0x10000380
+
+// Register CIDCTRCTL
+#define HAL_DVDD_CIDERRTH_REGISTER    (HAL_DVDDREG_MAP->CIDCTRCTL)
+#define HAL_DVDD_CIDERRTH_LSB         0
+#define HAL_DVDD_CIDERRTH_MSB         1
+#define HAL_DVDD_CIDERRTH_MASK        0x00000003
+#define HAL_DVDD_CIDERRTH_TYPE        UByte
+#define HAL_DVDD_CIDERRTH             HAL_DVDD_CIDERRTH_MASK
+#define HAL_DVDD_CIDERRTH_READABLE    1
+#define HAL_DVDD_CIDERRTH_WRITABLE    1
+#define HAL_DVDD_CIDERRTH_SIGNED      0
+#define HAL_DVDD_CIDERRTH_ADR         0x10000382
+
+// Register DVDRAMLG1
+#define HAL_DVDD_TRACKSIZE_REGISTER    (HAL_DVDDREG_MAP->DVDRAMLG1)
+#define HAL_DVDD_TRACKSIZE_LSB         0
+#define HAL_DVDD_TRACKSIZE_MSB         5
+#define HAL_DVDD_TRACKSIZE_MASK        0x0000003F
+#define HAL_DVDD_TRACKSIZE_TYPE        UByte
+#define HAL_DVDD_TRACKSIZE             HAL_DVDD_TRACKSIZE_MASK
+#define HAL_DVDD_TRACKSIZE_READABLE    1
+#define HAL_DVDD_TRACKSIZE_WRITABLE    1
+#define HAL_DVDD_TRACKSIZE_SIGNED      0
+#define HAL_DVDD_TRACKSIZE_ADR         0x100003A1
+
+// Register DVDRAMLG2
+
+#if (CHIP_REV >= 0xC0)
+
+#define HAL_DVDD_PIDPRD_REGISTER    (HAL_DVDDREG_MAP->DVDRAMLG2)
+#define HAL_DVDD_PIDPRD_LSB         6
+#define HAL_DVDD_PIDPRD_MSB         7
+#define HAL_DVDD_PIDPRD_MASK        0x000000C0
+#define HAL_DVDD_PIDPRD_TYPE        UByte
+#define HAL_DVDD_PIDPRD             HAL_DVDD_PIDPRD_MASK
+#define HAL_DVDD_PIDPRD_READABLE    1
+#define HAL_DVDD_PIDPRD_WRITABLE    1
+#define HAL_DVDD_PIDPRD_SIGNED      0
+#define HAL_DVDD_PIDPRD_ADR         0x100003A2
+
+#endif // #if (CHIP_REV >= 0xC0)
+
+#define HAL_DVDD_BADPIDTH_REGISTER    (HAL_DVDDREG_MAP->DVDRAMLG2)
+#define HAL_DVDD_BADPIDTH_LSB         0
+#define HAL_DVDD_BADPIDTH_MSB         5
+#define HAL_DVDD_BADPIDTH_MASK        0x0000003F
+#define HAL_DVDD_BADPIDTH_TYPE        UByte
+#define HAL_DVDD_BADPIDTH             HAL_DVDD_BADPIDTH_MASK
+#define HAL_DVDD_BADPIDTH_READABLE    1
+#define HAL_DVDD_BADPIDTH_WRITABLE    1
+#define HAL_DVDD_BADPIDTH_SIGNED      0
+#define HAL_DVDD_BADPIDTH_ADR         0x100003A2
+
+// Registers PIDFW0/PIDFW1/PIDFW2/SECTCNT
+#define HAL_DVDD_PIDFW_REGISTER    (HAL_DVDDREG_MAP->PIDFW0)
+#define HAL_DVDD_PIDFW_LSB         0
+#define HAL_DVDD_PIDFW_MSB         23
+#define HAL_DVDD_PIDFW_MASK        0x00FFFFFF
+#define HAL_DVDD_PIDFW_TYPE        UInt32
+#define HAL_DVDD_PIDFW             HAL_DVDD_PIDFW_MASK
+#define HAL_DVDD_PIDFW_READABLE    1
+#define HAL_DVDD_PIDFW_WRITABLE    0
+#define HAL_DVDD_PIDFW_SIGNED      0
+#define HAL_DVDD_PIDFW_ADR         0x100003A4
+
+#if (CHIP_REV >= 0xC0)
+
+#define HAL_DVDD_SECTCNVLD_REGISTER    (HAL_DVDDREG_MAP->PIDFW0)
+#define HAL_DVDD_SECTCNVLD_LSB         30
+#define HAL_DVDD_SECTCNVLD_MSB         30
+#define HAL_DVDD_SECTCNVLD_MASK        0x40000000
+#define HAL_DVDD_SECTCNVLD_TYPE        Bool
+#define HAL_DVDD_SECTCNVLD             HAL_DVDD_SECTCNVLD_MASK
+#define HAL_DVDD_SECTCNVLD_READABLE    1
+#define HAL_DVDD_SECTCNVLD_WRITABLE    0
+#define HAL_DVDD_SECTCNVLD_SIGNED      0
+#define HAL_DVDD_SECTCNVLD_ADR         0x100003A4
+
+#define HAL_DVDD_SECTCNT_REGISTER    (HAL_DVDDREG_MAP->PIDFW0)
+#define HAL_DVDD_SECTCNT_LSB         24
+#define HAL_DVDD_SECTCNT_MSB         29
+#define HAL_DVDD_SECTCNT_MASK        0x3F000000
+#define HAL_DVDD_SECTCNT_TYPE        UByte
+#define HAL_DVDD_SECTCNT             HAL_DVDD_SECTCNT_MASK
+#define HAL_DVDD_SECTCNT_READABLE    1
+#define HAL_DVDD_SECTCNT_WRITABLE    0
+#define HAL_DVDD_SECTCNT_SIGNED      0
+#define HAL_DVDD_SECTCNT_ADR         0x100003A4
+
+#endif // #if (CHIP_REV >= 0xC0)
+
+// Registers CIDFW0/CIDFW1/CIDFW2/TRCKSZR
+#define HAL_DVDD_CIDFW_REGISTER    (HAL_DVDDREG_MAP->CIDFW0)
+#define HAL_DVDD_CIDFW_LSB         0
+#define HAL_DVDD_CIDFW_MSB         23
+#define HAL_DVDD_CIDFW_MASK        0x00FFFFFF
+#define HAL_DVDD_CIDFW_TYPE        UInt32
+#define HAL_DVDD_CIDFW             HAL_DVDD_CIDFW_MASK
+#define HAL_DVDD_CIDFW_READABLE    1
+#define HAL_DVDD_CIDFW_WRITABLE    0
+#define HAL_DVDD_CIDFW_SIGNED      0
+#define HAL_DVDD_CIDFW_ADR         0x100003A8
+
+#if (CHIP_REV >= 0xC0)
+
+#define HAL_DVDD_TRACKSZREL_REGISTER    (HAL_DVDDREG_MAP->CIDFW0)
+#define HAL_DVDD_TRACKSZREL_LSB         24
+#define HAL_DVDD_TRACKSZREL_MSB         29
+#define HAL_DVDD_TRACKSZREL_MASK        0x3F000000
+#define HAL_DVDD_TRACKSZREL_TYPE        UByte
+#define HAL_DVDD_TRACKSZREL             HAL_DVDD_TRACKSZREL_MASK
+#define HAL_DVDD_TRACKSZREL_READABLE    1
+#define HAL_DVDD_TRACKSZREL_WRITABLE    0
+#define HAL_DVDD_TRACKSZREL_SIGNED      0
+#define HAL_DVDD_TRACKSZREL_ADR         0x100003A8
+
+#define HAL_DVDD_TRACKSZVLD_REGISTER    (HAL_DVDDREG_MAP->CIDFW0)
+#define HAL_DVDD_TRACKSZVLD_LSB         30
+#define HAL_DVDD_TRACKSZVLD_MSB         30
+#define HAL_DVDD_TRACKSZVLD_MASK        0x40000000
+#define HAL_DVDD_TRACKSZVLD_TYPE        Bool
+#define HAL_DVDD_TRACKSZVLD             HAL_DVDD_TRACKSZVLD_MASK
+#define HAL_DVDD_TRACKSZVLD_READABLE    1
+#define HAL_DVDD_TRACKSZVLD_WRITABLE    0
+#define HAL_DVDD_TRACKSZVLD_SIGNED      0
+#define HAL_DVDD_TRACKSZVLD_ADR         0x100003A8
+
+#endif // #if (CHIP_REV >= 0xC0)
+
+// Register CIDCNTRV
+#define HAL_DVDD_CIDCNTRVLD_REGISTER    (HAL_DVDDREG_MAP->CIDCNTRV)
+#define HAL_DVDD_CIDCNTRVLD_LSB         0
+#define HAL_DVDD_CIDCNTRVLD_MSB         0
+#define HAL_DVDD_CIDCNTRVLD_MASK        0x00000001
+#define HAL_DVDD_CIDCNTRVLD_TYPE        Bool
+#define HAL_DVDD_CIDCNTRVLD             HAL_DVDD_CIDCNTRVLD_MASK
+#define HAL_DVDD_CIDCNTRVLD_READABLE    1
+#define HAL_DVDD_CIDCNTRVLD_WRITABLE    0
+#define HAL_DVDD_CIDCNTRVLD_SIGNED      0
+#define HAL_DVDD_CIDCNTRVLD_ADR         0x100003AC
+
+#if (CHIP_REV >= 0xC0)
+
+// Register SECTTID0
+#define HAL_DVDD_SECTTID_REGISTER    (HAL_DVDDREG_MAP->SECTTID0)
+#define HAL_DVDD_SECTTID_LSB         0
+#define HAL_DVDD_SECTTID_MSB         7
+#define HAL_DVDD_SECTTID_MASK        0x000000FF
+#define HAL_DVDD_SECTTID_TYPE        UByte
+#define HAL_DVDD_SECTTID             HAL_DVDD_SECTTID_MASK
+#define HAL_DVDD_SECTTID_READABLE    1
+#define HAL_DVDD_SECTTID_WRITABLE    1
+#define HAL_DVDD_SECTTID_SIGNED      0
+#define HAL_DVDD_SECTTID_ADR         0x100003AD
+
+// Register SECTTID1
+#define HAL_DVDD_SECTTID1_REGISTER    (HAL_DVDDREG_MAP->SECTTID1)
+#define HAL_DVDD_SECTTID1_LSB         0
+#define HAL_DVDD_SECTTID1_MSB         7
+#define HAL_DVDD_SECTTID1_MASK        0x000000FF
+#define HAL_DVDD_SECTTID1_TYPE        UByte
+#define HAL_DVDD_SECTTID1             HAL_DVDD_SECTTID1_MASK
+#define HAL_DVDD_SECTTID1_READABLE    1
+#define HAL_DVDD_SECTTID1_WRITABLE    1
+#define HAL_DVDD_SECTTID1_SIGNED      0
+#define HAL_DVDD_SECTTID1_ADR         0x100003AE
+
+// Register SECTTID2
+#define HAL_DVDD_SECTTID2_REGISTER    (HAL_DVDDREG_MAP->SECTTID2)
+#define HAL_DVDD_SECTTID2_LSB         0
+#define HAL_DVDD_SECTTID2_MSB         7
+#define HAL_DVDD_SECTTID2_MASK        0x000000FF
+#define HAL_DVDD_SECTTID2_TYPE        UByte
+#define HAL_DVDD_SECTTID2             HAL_DVDD_SECTTID2_MASK
+#define HAL_DVDD_SECTTID2_READABLE    1
+#define HAL_DVDD_SECTTID2_WRITABLE    1
+#define HAL_DVDD_SECTTID2_SIGNED      0
+#define HAL_DVDD_SECTTID2_ADR         0x100003AF
+
+#endif // #if (CHIP_REV >= 0xC0)
+
+// Register MISCCTRL
+#define HAL_DVDD_SCRSEDSRC_REGISTER    (HAL_DVDDREG_MAP->MISCCTRL)
+#define HAL_DVDD_SCRSEDSRC_LSB         6
+#define HAL_DVDD_SCRSEDSRC_MSB         6
+#define HAL_DVDD_SCRSEDSRC_MASK        0x00000040
+#define HAL_DVDD_SCRSEDSRC_TYPE        Bool
+#define HAL_DVDD_SCRSEDSRC             HAL_DVDD_SCRSEDSRC_MASK
+#define HAL_DVDD_SCRSEDSRC_READABLE    1
+#define HAL_DVDD_SCRSEDSRC_WRITABLE    1
+#define HAL_DVDD_SCRSEDSRC_SIGNED      0
+#define HAL_DVDD_SCRSEDSRC_ADR         0x100003B0
+
+#define HAL_DVDD_RECCCRIT_REGISTER    (HAL_DVDDREG_MAP->MISCCTRL)
+#define HAL_DVDD_RECCCRIT_LSB         5
+#define HAL_DVDD_RECCCRIT_MSB         5
+#define HAL_DVDD_RECCCRIT_MASK        0x00000020
+#define HAL_DVDD_RECCCRIT_TYPE        Bool
+#define HAL_DVDD_RECCCRIT             HAL_DVDD_RECCCRIT_MASK
+#define HAL_DVDD_RECCCRIT_READABLE    1
+#define HAL_DVDD_RECCCRIT_WRITABLE    1
+#define HAL_DVDD_RECCCRIT_SIGNED      0
+#define HAL_DVDD_RECCCRIT_ADR         0x100003B0
+
+#define HAL_DVDD_MNSCSTDIS_REGISTER    (HAL_DVDDREG_MAP->MISCCTRL)
+#define HAL_DVDD_MNSCSTDIS_LSB         0
+#define HAL_DVDD_MNSCSTDIS_MSB         4
+#define HAL_DVDD_MNSCSTDIS_MASK        0x0000001F
+#define HAL_DVDD_MNSCSTDIS_TYPE        UByte
+#define HAL_DVDD_MNSCSTDIS             HAL_DVDD_MNSCSTDIS_MASK
+#define HAL_DVDD_MNSCSTDIS_READABLE    1
+#define HAL_DVDD_MNSCSTDIS_WRITABLE    1
+#define HAL_DVDD_MNSCSTDIS_SIGNED      0
+#define HAL_DVDD_MNSCSTDIS_ADR         0x100003B0
+
+#if (CHIP_REV >= 0xC0)
+
+// Register PID4ERRL
+#define HAL_DVDD_PID4ERRL_REGISTER    (HAL_DVDDREG_MAP->PID4ERRL)
+#define HAL_DVDD_PID4ERRL_LSB         0
+#define HAL_DVDD_PID4ERRL_MSB         7
+#define HAL_DVDD_PID4ERRL_MASK        0x000000FF
+#define HAL_DVDD_PID4ERRL_TYPE        UByte
+#define HAL_DVDD_PID4ERRL             HAL_DVDD_PID4ERR_MASK
+#define HAL_DVDD_PID4ERRL_READABLE    1
+#define HAL_DVDD_PID4ERRL_WRITABLE    0
+#define HAL_DVDD_PID4ERRL_SIGNED      0
+#define HAL_DVDD_PID4ERRL_ADR         0x100003B1
+
+// Register PID4ERRH
+#define HAL_DVDD_PID4ERRH_REGISTER    (HAL_DVDDREG_MAP->PID4ERRH)
+#define HAL_DVDD_PID4ERRH_LSB         0
+#define HAL_DVDD_PID4ERRH_MSB         3
+#define HAL_DVDD_PID4ERRH_MASK        0x0000000F
+#define HAL_DVDD_PID4ERRH_TYPE        UByte
+#define HAL_DVDD_PID4ERRH             HAL_DVDD_PID4ERR_MASK
+#define HAL_DVDD_PID4ERRH_READABLE    1
+#define HAL_DVDD_PID4ERRH_WRITABLE    0
+#define HAL_DVDD_PID4ERRH_SIGNED      0
+#define HAL_DVDD_PID4ERRH_ADR         0x100003B2
+
+#define HAL_DVDD_PIDERRLD_REGISTER    (HAL_DVDDREG_MAP->PID4ERRH)
+#define HAL_DVDD_PIDERRLD_LSB         4
+#define HAL_DVDD_PIDERRLD_MSB         4
+#define HAL_DVDD_PIDERRLD_MASK        0x00000010
+#define HAL_DVDD_PIDERRLD_TYPE        Bool
+#define HAL_DVDD_PIDERRLD             HAL_DVDD_PIDERRLD_MASK
+#define HAL_DVDD_PIDERRLD_READABLE    1
+#define HAL_DVDD_PIDERRLD_WRITABLE    0
+#define HAL_DVDD_PIDERRLD_SIGNED      0
+#define HAL_DVDD_PIDERRLD_ADR         0x100003B2
+
+// Register PID3ERRL
+#define HAL_DVDD_PID3ERRL_REGISTER    (HAL_DVDDREG_MAP->PID3ERRL)
+#define HAL_DVDD_PID3ERRL_LSB         0
+#define HAL_DVDD_PID3ERRL_MSB         7
+#define HAL_DVDD_PID3ERRL_MASK        0x000000FF
+#define HAL_DVDD_PID3ERRL_TYPE        UByte
+#define HAL_DVDD_PID3ERRL             HAL_DVDD_PID3ERR_MASK
+#define HAL_DVDD_PID3ERRL_READABLE    1
+#define HAL_DVDD_PID3ERRL_WRITABLE    0
+#define HAL_DVDD_PID3ERRL_SIGNED      0
+#define HAL_DVDD_PID3ERRL_ADR         0x100003B3
+
+// Register PID3ERRH
+#define HAL_DVDD_PID3ERRH_REGISTER    (HAL_DVDDREG_MAP->PID3ERRH)
+#define HAL_DVDD_PID3ERRH_LSB         0
+#define HAL_DVDD_PID3ERRH_MSB         3
+#define HAL_DVDD_PID3ERRH_MASK        0x0000000F
+#define HAL_DVDD_PID3ERRH_TYPE        UByte
+#define HAL_DVDD_PID3ERRH             HAL_DVDD_PID3ERR_MASK
+#define HAL_DVDD_PID3ERRH_READABLE    1
+#define HAL_DVDD_PID3ERRH_WRITABLE    0
+#define HAL_DVDD_PID3ERRH_SIGNED      0
+#define HAL_DVDD_PID3ERRH_ADR         0x100003B4
+
+// Register PID2ERRL
+#define HAL_DVDD_PID2ERRL_REGISTER    (HAL_DVDDREG_MAP->PID2ERRL)
+#define HAL_DVDD_PID2ERRL_LSB         0
+#define HAL_DVDD_PID2ERRL_MSB         7
+#define HAL_DVDD_PID2ERRL_MASK        0x000000FF
+#define HAL_DVDD_PID2ERRL_TYPE        UByte
+#define HAL_DVDD_PID2ERRL             HAL_DVDD_PID2ERR_MASK
+#define HAL_DVDD_PID2ERRL_READABLE    1
+#define HAL_DVDD_PID2ERRL_WRITABLE    0
+#define HAL_DVDD_PID2ERRL_SIGNED      0
+#define HAL_DVDD_PID2ERRL_ADR         0x100003B5
+
+// Register PID2ERRH
+#define HAL_DVDD_PID2ERRH_REGISTER    (HAL_DVDDREG_MAP->PID2ERRH)
+#define HAL_DVDD_PID2ERRH_LSB         0
+#define HAL_DVDD_PID2ERRH_MSB         3
+#define HAL_DVDD_PID2ERRH_MASK        0x0000000F
+#define HAL_DVDD_PID2ERRH_TYPE        UByte
+#define HAL_DVDD_PID2ERRH             HAL_DVDD_PID2ERR_MASK
+#define HAL_DVDD_PID2ERRH_READABLE    1
+#define HAL_DVDD_PID2ERRH_WRITABLE    0
+#define HAL_DVDD_PID2ERRH_SIGNED      0
+#define HAL_DVDD_PID2ERRH_ADR         0x100003B6
+
+// Register PID1ERRL
+#define HAL_DVDD_PID1ERRL_REGISTER    (HAL_DVDDREG_MAP->PID1ERRL)
+#define HAL_DVDD_PID1ERRL_LSB         0
+#define HAL_DVDD_PID1ERRL_MSB         7
+#define HAL_DVDD_PID1ERRL_MASK        0x000000FF
+#define HAL_DVDD_PID1ERRL_TYPE        UByte
+#define HAL_DVDD_PID1ERRL             HAL_DVDD_PID1ERR_MASK
+#define HAL_DVDD_PID1ERRL_READABLE    1
+#define HAL_DVDD_PID1ERRL_WRITABLE    0
+#define HAL_DVDD_PID1ERRL_SIGNED      0
+#define HAL_DVDD_PID1ERRL_ADR         0x100003B7
+
+// Register PID1ERRH
+#define HAL_DVDD_PID1ERRH_REGISTER    (HAL_DVDDREG_MAP->PID1ERRH)
+#define HAL_DVDD_PID1ERRH_LSB         0
+#define HAL_DVDD_PID1ERRH_MSB         3
+#define HAL_DVDD_PID1ERRH_MASK        0x0000000F
+#define HAL_DVDD_PID1ERRH_TYPE        UByte
+#define HAL_DVDD_PID1ERRH             HAL_DVDD_PID1ERR_MASK
+#define HAL_DVDD_PID1ERRH_READABLE    1
+#define HAL_DVDD_PID1ERRH_WRITABLE    0
+#define HAL_DVDD_PID1ERRH_SIGNED      0
+#define HAL_DVDD_PID1ERRH_ADR         0x100003B8
+
+// Register PIDMESURL
+#define HAL_DVDD_PIDMESURL_REGISTER    (HAL_DVDDREG_MAP->PIDMESURL)
+#define HAL_DVDD_PIDMESURL_LSB         0
+#define HAL_DVDD_PIDMESURL_MSB         7
+#define HAL_DVDD_PIDMESURL_MASK        0x000000FF
+#define HAL_DVDD_PIDMESURL_TYPE        UByte
+#define HAL_DVDD_PIDMESURL             HAL_DVDD_PIDMESURL_MASK
+#define HAL_DVDD_PIDMESURL_READABLE    1
+#define HAL_DVDD_PIDMESURL_WRITABLE    1
+#define HAL_DVDD_PIDMESURL_SIGNED      0
+#define HAL_DVDD_PIDMESURL_ADR         0x100003B9
+
+// Register PIDMESURH
+#define HAL_DVDD_PIDMESURH_REGISTER    (HAL_DVDDREG_MAP->PIDMESURH)
+#define HAL_DVDD_PIDMESURH_LSB         0
+#define HAL_DVDD_PIDMESURH_MSB         3
+#define HAL_DVDD_PIDMESURH_MASK        0x0000000F
+#define HAL_DVDD_PIDMESURH_TYPE        UByte
+#define HAL_DVDD_PIDMESURH             HAL_DVDD_PIDMESURH_MASK
+#define HAL_DVDD_PIDMESURH_READABLE    1
+#define HAL_DVDD_PIDMESURH_WRITABLE    1
+#define HAL_DVDD_PIDMESURH_SIGNED      0
+#define HAL_DVDD_PIDMESURH_ADR         0x100003BA
+
+// Register LFLASHCTRL
+#define HAL_DVDD_LFLASH_TID_MATCH_REGISTER    (HAL_DVDDREG_MAP->LFLASHCTRL)
+#define HAL_DVDD_LFLASH_TID_MATCH_LSB         1
+#define HAL_DVDD_LFLASH_TID_MATCH_MSB         1
+#define HAL_DVDD_LFLASH_TID_MATCH_MASK        0x00000002
+#define HAL_DVDD_LFLASH_TID_MATCH_TYPE        Bool
+#define HAL_DVDD_LFLASH_TID_MATCH             HAL_DVDD_LFLASH_TID_MATCH_MASK
+#define HAL_DVDD_LFLASH_TID_MATCH_READABLE    1
+#define HAL_DVDD_LFLASH_TID_MATCH_WRITABLE    1
+#define HAL_DVDD_LFLASH_TID_MATCH_SIGNED      0
+#define HAL_DVDD_LFLASH_TID_MATCH_ADR         0x100003C0
+
+#define HAL_DVDD_LFLASH_TID_EN_REGISTER    (HAL_DVDDREG_MAP->LFLASHCTRL)
+#define HAL_DVDD_LFLASH_TID_EN_LSB         0
+#define HAL_DVDD_LFLASH_TID_EN_MSB         0
+#define HAL_DVDD_LFLASH_TID_EN_MASK        0x00000001
+#define HAL_DVDD_LFLASH_TID_EN_TYPE        Bool
+#define HAL_DVDD_LFLASH_TID_EN             HAL_DVDD_LFLASH_TID_EN_MASK
+#define HAL_DVDD_LFLASH_TID_EN_READABLE    1
+#define HAL_DVDD_LFLASH_TID_EN_WRITABLE    1
+#define HAL_DVDD_LFLASH_TID_EN_SIGNED      0
+#define HAL_DVDD_LFLASH_TID_EN_ADR         0x100003C0
+
+#endif // #if (CHIP_REV >= 0xC0)
+
+#if (CHIP_REV <= 0xB3)
+
+// Register DVDDBG64C
+#define HAL_DVDD_DVDDBG64C_REGISTER    (HAL_DVDDREG_MAP->DVDDBG48C)
+#define HAL_DVDD_DVDDBG64C_LSB         0
+#define HAL_DVDD_DVDDBG64C_MSB         3
+#define HAL_DVDD_DVDDBG64C_MASK        0x0000000F
+#define HAL_DVDD_DVDDBG64C_TYPE        UByte
+#define HAL_DVDD_DVDDBG64C             HAL_DVDD_DVDDBG64C_MASK
+#define HAL_DVDD_DVDDBG64C_READABLE    1
+#define HAL_DVDD_DVDDBG64C_WRITABLE    1
+#define HAL_DVDD_DVDDBG64C_SIGNED      0
+#define HAL_DVDD_DVDDBG64C_ADR         0x100003EA
+
+#endif // #if (CHIP_REV <= 0xB3)
+
+#if (CHIP_REV >= 0xC0)
+
+// Register DVDDBG48C
+#define HAL_DVDD_DVDDBG48C_REGISTER    (HAL_DVDDREG_MAP->DVDDBG48C)
+#define HAL_DVDD_DVDDBG48C_LSB         0
+#define HAL_DVDD_DVDDBG48C_MSB         4
+#define HAL_DVDD_DVDDBG48C_MASK        0x0000001F
+#define HAL_DVDD_DVDDBG48C_TYPE        halDVDD_DVDDBG48control_t
+#define HAL_DVDD_DVDDBG48C             HAL_DVDD_DVDDBG48C_MASK
+#define HAL_DVDD_DVDDBG48C_READABLE    1
+#define HAL_DVDD_DVDDBG48C_WRITABLE    1
+#define HAL_DVDD_DVDDBG48C_SIGNED      0
+#define HAL_DVDD_DVDDBG48C_ADR         0x100003EA
+
+#endif // #if (CHIP_REV >= 0xC0)
+
+// Registers FWKEYL/FWKEYH
+#define HAL_DVDD_FWKEY_REGISTER    (HAL_DVDDREG_MAP->FWKEYL)
+#define HAL_DVDD_FWKEY_LSB         0
+#define HAL_DVDD_FWKEY_MSB         15
+#define HAL_DVDD_FWKEY_MASK        0x0000FFFF
+#define HAL_DVDD_FWKEY_TYPE        UInt16
+#define HAL_DVDD_FWKEY             HAL_DVDD_FWKEY_MASK
+#define HAL_DVDD_FWKEY_READABLE    1
+#define HAL_DVDD_FWKEY_WRITABLE    0
+#define HAL_DVDD_FWKEY_SIGNED      0
+#define HAL_DVDD_FWKEY_ADR         0x100003EC
+
+// Register TSTCTRL
+#define HAL_DVDD_FRCTRK_REGISTER    (HAL_DVDDREG_MAP->TSTCTRL)
+#define HAL_DVDD_FRCTRK_LSB         6
+#define HAL_DVDD_FRCTRK_MSB         6
+#define HAL_DVDD_FRCTRK_MASK        0x00000040
+#define HAL_DVDD_FRCTRK_TYPE        Bool
+#define HAL_DVDD_FRCTRK             HAL_DVDD_FRCTRK_MASK
+#define HAL_DVDD_FRCTRK_READABLE    1
+#define HAL_DVDD_FRCTRK_WRITABLE    1
+#define HAL_DVDD_FRCTRK_SIGNED      0
+#define HAL_DVDD_FRCTRK_ADR         0x100003EF
+
+#define HAL_DVDD_TPMUX_REGISTER    (HAL_DVDDREG_MAP->TSTCTRL)
+#define HAL_DVDD_TPMUX_LSB         0
+#define HAL_DVDD_TPMUX_MSB         5
+#define HAL_DVDD_TPMUX_MASK        0x0000003F
+#define HAL_DVDD_TPMUX_TYPE        UByte
+#define HAL_DVDD_TPMUX             HAL_DVDD_TPMUX_MASK
+#define HAL_DVDD_TPMUX_READABLE    1
+#define HAL_DVDD_TPMUX_WRITABLE    1
+#define HAL_DVDD_TPMUX_SIGNED      0
+#define HAL_DVDD_TPMUX_ADR         0x100003EF
+
+// Register DVDDSPARE
+#if (CHIP_REV <= 0xB3)
+
+#define HAL_DVDD_DVDRAMHDR_REGISTER    (HAL_DVDDREG_MAP->DVDDSPARE)
+#define HAL_DVDD_DVDRAMHDR_LSB         1
+#define HAL_DVDD_DVDRAMHDR_MSB         1
+#define HAL_DVDD_DVDRAMHDR_MASK        0x00000002
+#define HAL_DVDD_DVDRAMHDR_TYPE        Bool
+#define HAL_DVDD_DVDRAMHDR             HAL_DVDD_DVDRAMHDR_MASK
+#define HAL_DVDD_DVDRAMHDR_READABLE    1
+#define HAL_DVDD_DVDRAMHDR_WRITABLE    1
+#define HAL_DVDD_DVDRAMHDR_SIGNED      0
+#define HAL_DVDD_DVDRAMHDR_ADR         0x100003F0
+
+#define HAL_DVDD_HEADERONLY_REGISTER    (HAL_DVDDREG_MAP->DVDDSPARE)
+#define HAL_DVDD_HEADERONLY_LSB         0
+#define HAL_DVDD_HEADERONLY_MSB         0
+#define HAL_DVDD_HEADERONLY_MASK        0x00000001
+#define HAL_DVDD_HEADERONLY_TYPE        Bool
+#define HAL_DVDD_HEADERONLY             HAL_DVDD_HEADERONLY_MASK
+#define HAL_DVDD_HEADERONLY_READABLE    1
+#define HAL_DVDD_HEADERONLY_WRITABLE    1
+#define HAL_DVDD_HEADERONLY_SIGNED      0
+#define HAL_DVDD_HEADERONLY_ADR         0x100003F0
+
+#endif // #if (CHIP_REV <= 0xB3)
+
+#if (CHIP_REV >= 0xC1)
+
+#define HAL_DVDD_BUF2NDSC_REGISTER    (HAL_DVDDREG_MAP->DVDDSPARE)
+#define HAL_DVDD_BUF2NDSC_LSB         1
+#define HAL_DVDD_BUF2NDSC_MSB         1
+#define HAL_DVDD_BUF2NDSC_MASK        0x00000002
+#define HAL_DVDD_BUF2NDSC_TYPE        Bool
+#define HAL_DVDD_BUF2NDSC             HAL_DVDD_BUF2NDSC_MASK
+#define HAL_DVDD_BUF2NDSC_READABLE    1
+#define HAL_DVDD_BUF2NDSC_WRITABLE    1
+#define HAL_DVDD_BUF2NDSC_SIGNED      0
+#define HAL_DVDD_BUF2NDSC_ADR         0x100003F0
+
+#define HAL_DVDD_ENBUFRST_REGISTER    (HAL_DVDDREG_MAP->DVDDSPARE)
+#define HAL_DVDD_ENBUFRST_LSB         0
+#define HAL_DVDD_ENBUFRST_MSB         0
+#define HAL_DVDD_ENBUFRST_MASK        0x00000001
+#define HAL_DVDD_ENBUFRST_TYPE        Bool
+#define HAL_DVDD_ENBUFRST             HAL_DVDD_ENBUFRST_MASK
+#define HAL_DVDD_ENBUFRST_READABLE    1
+#define HAL_DVDD_ENBUFRST_WRITABLE    1
+#define HAL_DVDD_ENBUFRST_SIGNED      0
+#define HAL_DVDD_ENBUFRST_ADR         0x100003F0
+
+#endif // #if (CHIP_REV >= 0xC1)
+
+// Enumerations
+typedef enum
+{
+	halDVDD_GenerateResponse  = 0,    // Generate Drive Response
+	halDVDD_GenerateChallenge = 1,    // Generate Decoder Challenge
+	halDVDD_CheckResponse     = 2,    // Check Decoder Response
+	halDVDD_GenerateBusKey    = 3,    // Generate Bus Key
+	halDVDD_GenerateCPRMMAC   = 4,    // Generate CPRM MAC
+	halDVDD_GenerateRandom    = 5     // Generate Random Number
+} halDVDD_CSSCommand_t;
+
+#if (CHIP_REV >= 0xC0)
+
+typedef enum
+{
+	halDVDD_DVDD_DEMOD_IF_1 = 0,
+	halDVDD_DVDD_DEMOD_IF_2 = 1,
+	halDVDD_MEMIF_1         = 2,
+	halDVDD_MEMIF_2         = 3,
+	halDVDD_PI_TOP          = 4,
+	halDVDD_PO_TOP_1        = 5,
+	halDVDD_PO_TOP_2        = 6,
+	halDVDD_EDC_TOP         = 7,
+	halDVDD_DVD_MISC_1      = 8,
+	halDVDD_DVD_MISC_2      = 9,
+	halDVDD_DVD_ROM_1       = 10,
+	halDVDD_DVD_ROM_2       = 11,
+	halDVDD_DVD_RAM_1       = 12,
+	halDVDD_DVD_RAM_2       = 13,
+	halDVDD_DVD_MULTIPASS_1 = 14,
+	halDVDD_DVD_MULTIPASS_2 = 15,
+	halDVDD_SYNC_JUMP       = 16,
+	halDVDD_CSS_1           = 17,
+	halDVDD_CSS_2           = 18,
+	halDVDD_BCA_1           = 19,
+	halDVDD_BCA_2           = 20 
+} halDVDD_DVDDBG48control_t;
+
+#endif // #if (CHIP_REV >= 0xC0)
+
+#endif /* __REG_DVD_DECODER_H__ */
+

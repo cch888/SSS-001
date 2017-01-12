@@ -1,0 +1,430 @@
+/******************************************************************************
+*               (c) Copyright 2003 - 2010 SUNEXT TECHNOLOGY CO., LTD.
+*                        All Right Reserved
+*
+* FILENAME: REG_uart.h
+*
+*
+* DESCRIPTION: This file contains register, bit and enum definitions
+*              for RegHAL analysis of the SOC_APB_UART core.
+*
+* NOTE: This file is created automatically and should NOT be modified by hand.
+*
+**************************** SUNEXT CONFIDENTIAL *****************************/
+
+#ifndef __REG_UART_H__
+#define __REG_UART_H__
+
+// Core register map
+#define HAL_APB_UART_VERSION 7.142
+#define HAL_APB_UART_BaseAddress 0xCC000000
+#define HAL_APB_UARTREG_MAP ((struct halAPB_UARTReg_Map*) (void *) HAL_APB_UART_BaseAddress)
+__packed struct halAPB_UARTReg_Map
+{
+	HAL_Reg8  UARTRBR;                        //00000000
+	HAL_Reg8  ReservedBlk0[3];                //00000001
+	HAL_Reg8  UARTDLH;                        //00000004
+	HAL_Reg8  ReservedBlk1[3];                //00000005
+	HAL_Reg8  UARTIIR;                        //00000008
+	HAL_Reg8  ReservedBlk2[3];                //00000009
+	HAL_Reg8  UARTLCR;                        //0000000C
+	HAL_Reg8  ReservedBlk3[3];                //0000000D
+	HAL_Reg8  UARTMCR;                        //00000010
+	HAL_Reg8  ReservedBlk4[3];                //00000011
+	HAL_Reg8  UARTLSR;                        //00000014
+	HAL_Reg8  ReservedBlk5[7];                //00000015
+	HAL_Reg8  UARTSCR;                        //0000001C
+};
+// Registers UARTRBR/UARTTHR/UARTDLL
+#define HAL_APB_UART_UARTRBR_REGISTER    (HAL_APB_UARTREG_MAP->UARTRBR)
+#define HAL_APB_UART_UARTRBR_LSB         0
+#define HAL_APB_UART_UARTRBR_MSB         7
+#define HAL_APB_UART_UARTRBR_MASK        0x000000FF
+#define HAL_APB_UART_UARTRBR_TYPE        UByte
+#define HAL_APB_UART_UARTRBR             HAL_APB_UART_UARTRBR_MASK
+#define HAL_APB_UART_UARTRBR_READABLE    1
+#define HAL_APB_UART_UARTRBR_WRITABLE    0
+#define HAL_APB_UART_UARTRBR_SIGNED      0
+#define HAL_APB_UART_UARTRBR_ADR         0xCC000000
+
+#define HAL_APB_UART_UARTTHR_REGISTER    (HAL_APB_UARTREG_MAP->UARTRBR)
+#define HAL_APB_UART_UARTTHR_LSB         0
+#define HAL_APB_UART_UARTTHR_MSB         7
+#define HAL_APB_UART_UARTTHR_MASK        0x000000FF
+#define HAL_APB_UART_UARTTHR_TYPE        UByte
+#define HAL_APB_UART_UARTTHR             HAL_APB_UART_UARTTHR_MASK
+#define HAL_APB_UART_UARTTHR_READABLE    0
+#define HAL_APB_UART_UARTTHR_WRITABLE    1
+#define HAL_APB_UART_UARTTHR_SIGNED      0
+#define HAL_APB_UART_UARTTHR_ADR         0xCC000000
+
+#define HAL_APB_UART_UARTDLL_REGISTER    (HAL_APB_UARTREG_MAP->UARTRBR)
+#define HAL_APB_UART_UARTDLL_LSB         0
+#define HAL_APB_UART_UARTDLL_MSB         7
+#define HAL_APB_UART_UARTDLL_MASK        0x000000FF
+#define HAL_APB_UART_UARTDLL_TYPE        UByte
+#define HAL_APB_UART_UARTDLL             HAL_APB_UART_UARTDLL_MASK
+#define HAL_APB_UART_UARTDLL_READABLE    1
+#define HAL_APB_UART_UARTDLL_WRITABLE    1
+#define HAL_APB_UART_UARTDLL_SIGNED      0
+#define HAL_APB_UART_UARTDLL_ADR         0xCC000000
+
+// Registers UARTDLH/UARTIER
+#define HAL_APB_UART_UARTDLH_REGISTER    (HAL_APB_UARTREG_MAP->UARTDLH)
+#define HAL_APB_UART_UARTDLH_LSB         0
+#define HAL_APB_UART_UARTDLH_MSB         7
+#define HAL_APB_UART_UARTDLH_MASK        0x000000FF
+#define HAL_APB_UART_UARTDLH_TYPE        UByte
+#define HAL_APB_UART_UARTDLH             HAL_APB_UART_UARTDLH_MASK
+#define HAL_APB_UART_UARTDLH_READABLE    1
+#define HAL_APB_UART_UARTDLH_WRITABLE    1
+#define HAL_APB_UART_UARTDLH_SIGNED      0
+#define HAL_APB_UART_UARTDLH_ADR         0xCC000004
+
+#define HAL_APB_UART_ELSI_REGISTER    (HAL_APB_UARTREG_MAP->UARTDLH)
+#define HAL_APB_UART_ELSI_LSB         2
+#define HAL_APB_UART_ELSI_MSB         2
+#define HAL_APB_UART_ELSI_MASK        0x00000004
+#define HAL_APB_UART_ELSI_TYPE        Bool
+#define HAL_APB_UART_ELSI             HAL_APB_UART_ELSI_MASK
+#define HAL_APB_UART_ELSI_READABLE    1
+#define HAL_APB_UART_ELSI_WRITABLE    1
+#define HAL_APB_UART_ELSI_SIGNED      0
+#define HAL_APB_UART_ELSI_ADR         0xCC000004
+
+#define HAL_APB_UART_ETBEI_REGISTER    (HAL_APB_UARTREG_MAP->UARTDLH)
+#define HAL_APB_UART_ETBEI_LSB         1
+#define HAL_APB_UART_ETBEI_MSB         1
+#define HAL_APB_UART_ETBEI_MASK        0x00000002
+#define HAL_APB_UART_ETBEI_TYPE        Bool
+#define HAL_APB_UART_ETBEI             HAL_APB_UART_ETBEI_MASK
+#define HAL_APB_UART_ETBEI_READABLE    1
+#define HAL_APB_UART_ETBEI_WRITABLE    1
+#define HAL_APB_UART_ETBEI_SIGNED      0
+#define HAL_APB_UART_ETBEI_ADR         0xCC000004
+
+#define HAL_APB_UART_ERBFI_REGISTER    (HAL_APB_UARTREG_MAP->UARTDLH)
+#define HAL_APB_UART_ERBFI_LSB         0
+#define HAL_APB_UART_ERBFI_MSB         0
+#define HAL_APB_UART_ERBFI_MASK        0x00000001
+#define HAL_APB_UART_ERBFI_TYPE        Bool
+#define HAL_APB_UART_ERBFI             HAL_APB_UART_ERBFI_MASK
+#define HAL_APB_UART_ERBFI_READABLE    1
+#define HAL_APB_UART_ERBFI_WRITABLE    1
+#define HAL_APB_UART_ERBFI_SIGNED      0
+#define HAL_APB_UART_ERBFI_ADR         0xCC000004
+
+// Registers UARTIIR/UARTFCR
+#define HAL_APB_UART_FIFOSTAT_REGISTER    (HAL_APB_UARTREG_MAP->UARTIIR)
+#define HAL_APB_UART_FIFOSTAT_LSB         6
+#define HAL_APB_UART_FIFOSTAT_MSB         7
+#define HAL_APB_UART_FIFOSTAT_MASK        0x000000C0
+#define HAL_APB_UART_FIFOSTAT_TYPE        halAPB_UART_EnableFIFOStatus_t
+#define HAL_APB_UART_FIFOSTAT             HAL_APB_UART_FIFOSTAT_MASK
+#define HAL_APB_UART_FIFOSTAT_READABLE    1
+#define HAL_APB_UART_FIFOSTAT_WRITABLE    0
+#define HAL_APB_UART_FIFOSTAT_SIGNED      0
+#define HAL_APB_UART_FIFOSTAT_ADR         0xCC000008
+
+#define HAL_APB_UART_UINTID_REGISTER    (HAL_APB_UARTREG_MAP->UARTIIR)
+#define HAL_APB_UART_UINTID_LSB         0
+#define HAL_APB_UART_UINTID_MSB         3
+#define HAL_APB_UART_UINTID_MASK        0x0000000F
+#define HAL_APB_UART_UINTID_TYPE        halAPB_UART_UIntId_t
+#define HAL_APB_UART_UINTID             HAL_APB_UART_UINTID_MASK
+#define HAL_APB_UART_UINTID_READABLE    1
+#define HAL_APB_UART_UINTID_WRITABLE    0
+#define HAL_APB_UART_UINTID_SIGNED      0
+#define HAL_APB_UART_UINTID_ADR         0xCC000008
+
+#define HAL_APB_UART_RXTRIG_REGISTER    (HAL_APB_UARTREG_MAP->UARTIIR)
+#define HAL_APB_UART_RXTRIG_LSB         6
+#define HAL_APB_UART_RXTRIG_MSB         7
+#define HAL_APB_UART_RXTRIG_MASK        0x000000C0
+#define HAL_APB_UART_RXTRIG_TYPE        halAPB_UART_RXTRIGTriLv_t
+#define HAL_APB_UART_RXTRIG             HAL_APB_UART_RXTRIG_MASK
+#define HAL_APB_UART_RXTRIG_READABLE    0
+#define HAL_APB_UART_RXTRIG_WRITABLE    1
+#define HAL_APB_UART_RXTRIG_SIGNED      0
+#define HAL_APB_UART_RXTRIG_ADR         0xCC000008
+
+#define HAL_APB_UART_RXFIFORST_REGISTER    (HAL_APB_UARTREG_MAP->UARTIIR)
+#define HAL_APB_UART_RXFIFORST_LSB         1
+#define HAL_APB_UART_RXFIFORST_MSB         1
+#define HAL_APB_UART_RXFIFORST_MASK        0x00000002
+#define HAL_APB_UART_RXFIFORST_TYPE        Bool
+#define HAL_APB_UART_RXFIFORST             HAL_APB_UART_RXFIFORST_MASK
+#define HAL_APB_UART_RXFIFORST_READABLE    0
+#define HAL_APB_UART_RXFIFORST_WRITABLE    1
+#define HAL_APB_UART_RXFIFORST_SIGNED      0
+#define HAL_APB_UART_RXFIFORST_ADR         0xCC000008
+
+#define HAL_APB_UART_FIFOEN_REGISTER    (HAL_APB_UARTREG_MAP->UARTIIR)
+#define HAL_APB_UART_FIFOEN_LSB         0
+#define HAL_APB_UART_FIFOEN_MSB         0
+#define HAL_APB_UART_FIFOEN_MASK        0x00000001
+#define HAL_APB_UART_FIFOEN_TYPE        Bool
+#define HAL_APB_UART_FIFOEN             HAL_APB_UART_FIFOEN_MASK
+#define HAL_APB_UART_FIFOEN_READABLE    0
+#define HAL_APB_UART_FIFOEN_WRITABLE    1
+#define HAL_APB_UART_FIFOEN_SIGNED      0
+#define HAL_APB_UART_FIFOEN_ADR         0xCC000008
+
+// Register UARTLCR
+#define HAL_APB_UART_DLAB_REGISTER    (HAL_APB_UARTREG_MAP->UARTLCR)
+#define HAL_APB_UART_DLAB_LSB         7
+#define HAL_APB_UART_DLAB_MSB         7
+#define HAL_APB_UART_DLAB_MASK        0x00000080
+#define HAL_APB_UART_DLAB_TYPE        Bool
+#define HAL_APB_UART_DLAB             HAL_APB_UART_DLAB_MASK
+#define HAL_APB_UART_DLAB_READABLE    1
+#define HAL_APB_UART_DLAB_WRITABLE    1
+#define HAL_APB_UART_DLAB_SIGNED      0
+#define HAL_APB_UART_DLAB_ADR         0xCC00000C
+
+#define HAL_APB_UART_UBREAK_REGISTER    (HAL_APB_UARTREG_MAP->UARTLCR)
+#define HAL_APB_UART_UBREAK_LSB         6
+#define HAL_APB_UART_UBREAK_MSB         6
+#define HAL_APB_UART_UBREAK_MASK        0x00000040
+#define HAL_APB_UART_UBREAK_TYPE        Bool
+#define HAL_APB_UART_UBREAK             HAL_APB_UART_UBREAK_MASK
+#define HAL_APB_UART_UBREAK_READABLE    1
+#define HAL_APB_UART_UBREAK_WRITABLE    1
+#define HAL_APB_UART_UBREAK_SIGNED      0
+#define HAL_APB_UART_UBREAK_ADR         0xCC00000C
+
+#define HAL_APB_UART_EPS_REGISTER    (HAL_APB_UARTREG_MAP->UARTLCR)
+#define HAL_APB_UART_EPS_LSB         4
+#define HAL_APB_UART_EPS_MSB         4
+#define HAL_APB_UART_EPS_MASK        0x00000010
+#define HAL_APB_UART_EPS_TYPE        Bool
+#define HAL_APB_UART_EPS             HAL_APB_UART_EPS_MASK
+#define HAL_APB_UART_EPS_READABLE    1
+#define HAL_APB_UART_EPS_WRITABLE    1
+#define HAL_APB_UART_EPS_SIGNED      0
+#define HAL_APB_UART_EPS_ADR         0xCC00000C
+
+#define HAL_APB_UART_PEN_REGISTER    (HAL_APB_UARTREG_MAP->UARTLCR)
+#define HAL_APB_UART_PEN_LSB         3
+#define HAL_APB_UART_PEN_MSB         3
+#define HAL_APB_UART_PEN_MASK        0x00000008
+#define HAL_APB_UART_PEN_TYPE        Bool
+#define HAL_APB_UART_PEN             HAL_APB_UART_PEN_MASK
+#define HAL_APB_UART_PEN_READABLE    1
+#define HAL_APB_UART_PEN_WRITABLE    1
+#define HAL_APB_UART_PEN_SIGNED      0
+#define HAL_APB_UART_PEN_ADR         0xCC00000C
+
+#define HAL_APB_UART_STOPBITS_REGISTER    (HAL_APB_UARTREG_MAP->UARTLCR)
+#define HAL_APB_UART_STOPBITS_LSB         2
+#define HAL_APB_UART_STOPBITS_MSB         2
+#define HAL_APB_UART_STOPBITS_MASK        0x00000004
+#define HAL_APB_UART_STOPBITS_TYPE        Bool
+#define HAL_APB_UART_STOPBITS             HAL_APB_UART_STOPBITS_MASK
+#define HAL_APB_UART_STOPBITS_READABLE    1
+#define HAL_APB_UART_STOPBITS_WRITABLE    1
+#define HAL_APB_UART_STOPBITS_SIGNED      0
+#define HAL_APB_UART_STOPBITS_ADR         0xCC00000C
+
+#define HAL_APB_UART_CLS_REGISTER    (HAL_APB_UARTREG_MAP->UARTLCR)
+#define HAL_APB_UART_CLS_LSB         0
+#define HAL_APB_UART_CLS_MSB         1
+#define HAL_APB_UART_CLS_MASK        0x00000003
+#define HAL_APB_UART_CLS_TYPE        halAPB_UART_CLSTrgLv_t
+#define HAL_APB_UART_CLS             HAL_APB_UART_CLS_MASK
+#define HAL_APB_UART_CLS_READABLE    1
+#define HAL_APB_UART_CLS_WRITABLE    1
+#define HAL_APB_UART_CLS_SIGNED      0
+#define HAL_APB_UART_CLS_ADR         0xCC00000C
+
+// Register UARTMCR
+#define HAL_APB_UART_UARTAFCE_REGISTER    (HAL_APB_UARTREG_MAP->UARTMCR)
+#define HAL_APB_UART_UARTAFCE_LSB         5
+#define HAL_APB_UART_UARTAFCE_MSB         5
+#define HAL_APB_UART_UARTAFCE_MASK        0x00000020
+#define HAL_APB_UART_UARTAFCE_TYPE        Bool
+#define HAL_APB_UART_UARTAFCE             HAL_APB_UART_UARTAFCE_MASK
+#define HAL_APB_UART_UARTAFCE_READABLE    1
+#define HAL_APB_UART_UARTAFCE_WRITABLE    1
+#define HAL_APB_UART_UARTAFCE_SIGNED      0
+#define HAL_APB_UART_UARTAFCE_ADR         0xCC000010
+
+#define HAL_APB_UART_UARTLB_REGISTER    (HAL_APB_UARTREG_MAP->UARTMCR)
+#define HAL_APB_UART_UARTLB_LSB         4
+#define HAL_APB_UART_UARTLB_MSB         4
+#define HAL_APB_UART_UARTLB_MASK        0x00000010
+#define HAL_APB_UART_UARTLB_TYPE        Bool
+#define HAL_APB_UART_UARTLB             HAL_APB_UART_UARTLB_MASK
+#define HAL_APB_UART_UARTLB_READABLE    1
+#define HAL_APB_UART_UARTLB_WRITABLE    1
+#define HAL_APB_UART_UARTLB_SIGNED      0
+#define HAL_APB_UART_UARTLB_ADR         0xCC000010
+
+#define HAL_APB_UART_UARTOUT2_REGISTER    (HAL_APB_UARTREG_MAP->UARTMCR)
+#define HAL_APB_UART_UARTOUT2_LSB         3
+#define HAL_APB_UART_UARTOUT2_MSB         3
+#define HAL_APB_UART_UARTOUT2_MASK        0x00000008
+#define HAL_APB_UART_UARTOUT2_TYPE        Bool
+#define HAL_APB_UART_UARTOUT2             HAL_APB_UART_UARTOUT2_MASK
+#define HAL_APB_UART_UARTOUT2_READABLE    1
+#define HAL_APB_UART_UARTOUT2_WRITABLE    1
+#define HAL_APB_UART_UARTOUT2_SIGNED      0
+#define HAL_APB_UART_UARTOUT2_ADR         0xCC000010
+
+#define HAL_APB_UART_UARTOUT1_REGISTER    (HAL_APB_UARTREG_MAP->UARTMCR)
+#define HAL_APB_UART_UARTOUT1_LSB         2
+#define HAL_APB_UART_UARTOUT1_MSB         2
+#define HAL_APB_UART_UARTOUT1_MASK        0x00000004
+#define HAL_APB_UART_UARTOUT1_TYPE        Bool
+#define HAL_APB_UART_UARTOUT1             HAL_APB_UART_UARTOUT1_MASK
+#define HAL_APB_UART_UARTOUT1_READABLE    1
+#define HAL_APB_UART_UARTOUT1_WRITABLE    1
+#define HAL_APB_UART_UARTOUT1_SIGNED      0
+#define HAL_APB_UART_UARTOUT1_ADR         0xCC000010
+
+#define HAL_APB_UART_UARTRTS_REGISTER    (HAL_APB_UARTREG_MAP->UARTMCR)
+#define HAL_APB_UART_UARTRTS_LSB         1
+#define HAL_APB_UART_UARTRTS_MSB         1
+#define HAL_APB_UART_UARTRTS_MASK        0x00000002
+#define HAL_APB_UART_UARTRTS_TYPE        Bool
+#define HAL_APB_UART_UARTRTS             HAL_APB_UART_UARTRTS_MASK
+#define HAL_APB_UART_UARTRTS_READABLE    1
+#define HAL_APB_UART_UARTRTS_WRITABLE    1
+#define HAL_APB_UART_UARTRTS_SIGNED      0
+#define HAL_APB_UART_UARTRTS_ADR         0xCC000010
+
+#define HAL_APB_UART_UARTDTR_REGISTER    (HAL_APB_UARTREG_MAP->UARTMCR)
+#define HAL_APB_UART_UARTDTR_LSB         0
+#define HAL_APB_UART_UARTDTR_MSB         0
+#define HAL_APB_UART_UARTDTR_MASK        0x00000001
+#define HAL_APB_UART_UARTDTR_TYPE        Bool
+#define HAL_APB_UART_UARTDTR             HAL_APB_UART_UARTDTR_MASK
+#define HAL_APB_UART_UARTDTR_READABLE    1
+#define HAL_APB_UART_UARTDTR_WRITABLE    1
+#define HAL_APB_UART_UARTDTR_SIGNED      0
+#define HAL_APB_UART_UARTDTR_ADR         0xCC000010
+
+// Register UARTLSR
+#define HAL_APB_UART_RXFIFOERR_REGISTER    (HAL_APB_UARTREG_MAP->UARTLSR)
+#define HAL_APB_UART_RXFIFOERR_LSB         7
+#define HAL_APB_UART_RXFIFOERR_MSB         7
+#define HAL_APB_UART_RXFIFOERR_MASK        0x00000080
+#define HAL_APB_UART_RXFIFOERR_TYPE        Bool
+#define HAL_APB_UART_RXFIFOERR             HAL_APB_UART_RXFIFOERR_MASK
+#define HAL_APB_UART_RXFIFOERR_READABLE    1
+#define HAL_APB_UART_RXFIFOERR_WRITABLE    0
+#define HAL_APB_UART_RXFIFOERR_SIGNED      0
+#define HAL_APB_UART_RXFIFOERR_ADR         0xCC000014
+
+#define HAL_APB_UART_TEMT_REGISTER    (HAL_APB_UARTREG_MAP->UARTLSR)
+#define HAL_APB_UART_TEMT_LSB         6
+#define HAL_APB_UART_TEMT_MSB         6
+#define HAL_APB_UART_TEMT_MASK        0x00000040
+#define HAL_APB_UART_TEMT_TYPE        Bool
+#define HAL_APB_UART_TEMT             HAL_APB_UART_TEMT_MASK
+#define HAL_APB_UART_TEMT_READABLE    1
+#define HAL_APB_UART_TEMT_WRITABLE    0
+#define HAL_APB_UART_TEMT_SIGNED      0
+#define HAL_APB_UART_TEMT_ADR         0xCC000014
+
+#define HAL_APB_UART_THRE_REGISTER    (HAL_APB_UARTREG_MAP->UARTLSR)
+#define HAL_APB_UART_THRE_LSB         5
+#define HAL_APB_UART_THRE_MSB         5
+#define HAL_APB_UART_THRE_MASK        0x00000020
+#define HAL_APB_UART_THRE_TYPE        Bool
+#define HAL_APB_UART_THRE             HAL_APB_UART_THRE_MASK
+#define HAL_APB_UART_THRE_READABLE    1
+#define HAL_APB_UART_THRE_WRITABLE    0
+#define HAL_APB_UART_THRE_SIGNED      0
+#define HAL_APB_UART_THRE_ADR         0xCC000014
+
+#define HAL_APB_UART_UARTBI_REGISTER    (HAL_APB_UARTREG_MAP->UARTLSR)
+#define HAL_APB_UART_UARTBI_LSB         4
+#define HAL_APB_UART_UARTBI_MSB         4
+#define HAL_APB_UART_UARTBI_MASK        0x00000010
+#define HAL_APB_UART_UARTBI_TYPE        Bool
+#define HAL_APB_UART_UARTBI             HAL_APB_UART_UARTBI_MASK
+#define HAL_APB_UART_UARTBI_READABLE    1
+#define HAL_APB_UART_UARTBI_WRITABLE    0
+#define HAL_APB_UART_UARTBI_SIGNED      0
+#define HAL_APB_UART_UARTBI_ADR         0xCC000014
+
+#define HAL_APB_UART_UARTFE_REGISTER    (HAL_APB_UARTREG_MAP->UARTLSR)
+#define HAL_APB_UART_UARTFE_LSB         3
+#define HAL_APB_UART_UARTFE_MSB         3
+#define HAL_APB_UART_UARTFE_MASK        0x00000008
+#define HAL_APB_UART_UARTFE_TYPE        Bool
+#define HAL_APB_UART_UARTFE             HAL_APB_UART_UARTFE_MASK
+#define HAL_APB_UART_UARTFE_READABLE    1
+#define HAL_APB_UART_UARTFE_WRITABLE    0
+#define HAL_APB_UART_UARTFE_SIGNED      0
+#define HAL_APB_UART_UARTFE_ADR         0xCC000014
+
+#define HAL_APB_UART_UARTPE_REGISTER    (HAL_APB_UARTREG_MAP->UARTLSR)
+#define HAL_APB_UART_UARTPE_LSB         2
+#define HAL_APB_UART_UARTPE_MSB         2
+#define HAL_APB_UART_UARTPE_MASK        0x00000004
+#define HAL_APB_UART_UARTPE_TYPE        Bool
+#define HAL_APB_UART_UARTPE             HAL_APB_UART_UARTPE_MASK
+#define HAL_APB_UART_UARTPE_READABLE    1
+#define HAL_APB_UART_UARTPE_WRITABLE    0
+#define HAL_APB_UART_UARTPE_SIGNED      0
+#define HAL_APB_UART_UARTPE_ADR         0xCC000014
+
+#define HAL_APB_UART_UARTOE_REGISTER    (HAL_APB_UARTREG_MAP->UARTLSR)
+#define HAL_APB_UART_UARTOE_LSB         1
+#define HAL_APB_UART_UARTOE_MSB         1
+#define HAL_APB_UART_UARTOE_MASK        0x00000002
+#define HAL_APB_UART_UARTOE_TYPE        Bool
+#define HAL_APB_UART_UARTOE             HAL_APB_UART_UARTOE_MASK
+#define HAL_APB_UART_UARTOE_READABLE    1
+#define HAL_APB_UART_UARTOE_WRITABLE    0
+#define HAL_APB_UART_UARTOE_SIGNED      0
+#define HAL_APB_UART_UARTOE_ADR         0xCC000014
+
+#define HAL_APB_UART_UARTDR_REGISTER    (HAL_APB_UARTREG_MAP->UARTLSR)
+#define HAL_APB_UART_UARTDR_LSB         0
+#define HAL_APB_UART_UARTDR_MSB         0
+#define HAL_APB_UART_UARTDR_MASK        0x00000001
+#define HAL_APB_UART_UARTDR_TYPE        Bool
+#define HAL_APB_UART_UARTDR             HAL_APB_UART_UARTDR_MASK
+#define HAL_APB_UART_UARTDR_READABLE    1
+#define HAL_APB_UART_UARTDR_WRITABLE    0
+#define HAL_APB_UART_UARTDR_SIGNED      0
+#define HAL_APB_UART_UARTDR_ADR         0xCC000014
+
+// Register UARTSCR
+// Enumerations
+typedef enum
+{
+	halAPB_UART_FIFODisable = 0,    // FIFO Disabled
+	halAPB_UART_FIFOEnable  = 3     // FIFO Enabled
+} halAPB_UART_EnableFIFOStatus_t;
+
+typedef enum
+{
+	halAPB_UART_PriLv_none    = 1,    // No interrupt
+	halAPB_UART_PriLv_1st     = 6,    // Highest priority - receiver line status
+	halAPB_UART_PriLv_2ndData = 4,    // Second priority - received data available
+	halAPB_UART_PriLv_2ndTout = 12,    // Second priority - character timeout indication
+	halAPB_UART_PriLv_3rd     = 2     // Third priority - transmitter hodling register empty
+} halAPB_UART_UIntId_t;
+
+typedef enum
+{
+	halAPB_UART_RXTRIGTriLv_1char     = 0,    // UART receive FIFO trigger level for RXTRIG[1:0] register.trigger level: 1 char in FIFO
+	halAPB_UART_RXTRIGTriLv_FIFODiv4  = 1,    // UART receive FIFO trigger level for RXTRIG[1:0] register.trigger level: FIFO 1/4 full
+	halAPB_UART_RXTRIGTriLv_FIFODiv2  = 2,    // UART receive FIFO trigger level for RXTRIG[1:0] register.trigger level: FIFO 1/2 full
+	halAPB_UART_RXTRIGTriLv_FIFOLess2 = 3     // UART receive FIFO trigger level for RXTRIG[1:0] register.trigger level: FIFO 2 less full
+} halAPB_UART_RXTRIGTriLv_t;
+
+typedef enum
+{
+	halAPB_UART_CLSTrgLv_5bits = 0,    // UART receive FIFO trigger level for CLS[1:0] register: 5 bits per character
+	halAPB_UART_CLSTrgLv_6bits = 1,    // UART receive FIFO trigger level for CLS[1:0] register: 6 bits per character
+	halAPB_UART_CLSTrgLv_7bits = 2,    // UART receive FIFO trigger level for CLS[1:0] register: 7 bits per character
+	halAPB_UART_CLSTrgLv_8bits = 3     // UART receive FIFO trigger level for CLS[1:0] register: 8 bits per character
+} halAPB_UART_CLSTrgLv_t;
+
+#endif /* __REG_UART_H__ */
+

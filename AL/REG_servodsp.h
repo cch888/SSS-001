@@ -1,0 +1,6689 @@
+/******************************************************************************
+*               (c) Copyright 2003 - 2010 SUNEXT TECHNOLOGY CO., LTD.
+*                        All Right Reserved
+*
+* FILENAME: REG_servodsp.h
+*
+*
+* DESCRIPTION: This file contains register, bit and enum definitions
+*              for RegHAL analysis of the SRVDSP core.
+*
+* NOTE: This file is created automatically and should NOT be modified by hand.
+*
+**************************** SUNEXT CONFIDENTIAL *****************************/
+
+#ifndef __REG_SERVODSP_H__
+#define __REG_SERVODSP_H__
+
+// This file will be removed from project as all servo DSP address definitions
+// are now controlled by svo_dsp.h file
+
+#if 0 //SV
+
+// Core register map
+#define HAL_SRVDSP_VERSION 1.13
+#define HAL_SRVDSP_BaseAddress 0xB0000600
+#define HAL_SRVDSPREG_MAP ((struct halSRVDSPReg_Map*) (void *) HAL_SRVDSP_BaseAddress)
+__packed struct halSRVDSPReg_Map
+{
+	HAL_Reg32 K0_a;                           //00000000
+	HAL_Reg32 K1_a;                           //00000004
+	HAL_Reg32 K1_aa;                          //00000008
+	HAL_Reg32 K_1_a;                          //0000000C
+	HAL_Reg32 cadr_acu;                       //00000010
+	HAL_Reg32 radr_acu1;                      //00000014
+	HAL_Reg32 radr_acu2;                      //00000018
+	HAL_Reg32 ktg;                            //0000001C
+	HAL_Reg32 kt11;                           //00000020
+	HAL_Reg32 ktu11;                          //00000024
+	HAL_Reg32 ktw11;                          //00000028
+	HAL_Reg32 ktwuxc11;                       //0000002C
+	HAL_Reg32 kt12;                           //00000030
+	HAL_Reg32 ktu12;                          //00000034
+	HAL_Reg32 ktw12;                          //00000038
+	HAL_Reg32 ktwuxc12;                       //0000003C
+	HAL_Reg32 kt13;                           //00000040
+	HAL_Reg32 ktu13;                          //00000044
+	HAL_Reg32 ktw13;                          //00000048
+	HAL_Reg32 ktwuxc13;                       //0000004C
+	HAL_Reg32 kt14;                           //00000050
+	HAL_Reg32 ktu14;                          //00000054
+	HAL_Reg32 ktw14;                          //00000058
+	HAL_Reg32 ktwuxc14;                       //0000005C
+	HAL_Reg32 kt15;                           //00000060
+	HAL_Reg32 ktu15;                          //00000064
+	HAL_Reg32 ktw15;                          //00000068
+	HAL_Reg32 ktwuxc15;                       //0000006C
+	HAL_Reg32 kt16;                           //00000070
+	HAL_Reg32 ktu16;                          //00000074
+	HAL_Reg32 ktw16;                          //00000078
+	HAL_Reg32 ktwuxc16;                       //0000007C
+	HAL_Reg32 kt17;                           //00000080
+	HAL_Reg32 ktu17;                          //00000084
+	HAL_Reg32 ktw17;                          //00000088
+	HAL_Reg32 ktwuxc17;                       //0000008C
+	HAL_Reg32 kt18;                           //00000090
+	HAL_Reg32 ktu18;                          //00000094
+	HAL_Reg32 ktw18;                          //00000098
+	HAL_Reg32 ktwuxc18;                       //0000009C
+	HAL_Reg32 kt19;                           //000000A0
+	HAL_Reg32 ktu19;                          //000000A4
+	HAL_Reg32 ktw19;                          //000000A8
+	HAL_Reg32 ktwuxc19;                       //000000AC
+	HAL_Reg32 kt1A;                           //000000B0
+	HAL_Reg32 ktu1A;                          //000000B4
+	HAL_Reg32 ktw1A;                          //000000B8
+	HAL_Reg32 ktwuxc1A;                       //000000BC
+	HAL_Reg32 src_trk_prescale;               //000000C0
+	HAL_Reg32 reserved_C4;                    //000000C4
+	HAL_Reg32 reserved_C8;                    //000000C8
+	HAL_Reg32 reserved_CC;                    //000000CC
+	HAL_Reg32 kt1c;                           //000000D0
+	HAL_Reg32 ktc1c;                          //000000D4
+	HAL_Reg32 kt1d;                           //000000D8
+	HAL_Reg32 ktc1d;                          //000000DC
+	HAL_Reg32 kt1e;                           //000000E0
+	HAL_Reg32 ktc1e;                          //000000E4
+	HAL_Reg32 kt1f;                           //000000E8
+	HAL_Reg32 ktc1f;                          //000000EC
+	HAL_Reg32 kt1B;                           //000000F0
+	HAL_Reg32 reserved_F4;                    //000000F4
+	HAL_Reg32 reserved_F8;                    //000000F8
+	HAL_Reg32 reserved_FC;                    //000000FC
+	HAL_Reg32 src_kt2;                        //00000100
+	HAL_Reg32 reserved_104;                   //00000104
+	HAL_Reg32 reserved_108;                   //00000108
+	HAL_Reg32 reserved_10C;                   //0000010C
+	HAL_Reg32 reserved_110;                   //00000110
+	HAL_Reg32 reserved_114;                   //00000114
+	HAL_Reg32 reserved_118;                   //00000118
+	HAL_Reg32 reserved_11C;                   //0000011C
+	HAL_Reg32 kt10;                           //00000120
+	HAL_Reg32 kt20;                           //00000124
+	HAL_Reg32 kt21;                           //00000128
+	HAL_Reg32 kt22;                           //0000012C
+	HAL_Reg32 kt30;                           //00000130
+	HAL_Reg32 kt31;                           //00000134
+	HAL_Reg32 kt32;                           //00000138
+	HAL_Reg32 kt33;                           //0000013C
+	HAL_Reg32 kt34;                           //00000140
+	HAL_Reg32 kt35;                           //00000144
+	HAL_Reg32 ktb10;                          //00000148
+	HAL_Reg32 krb10;                          //0000014C
+	HAL_Reg32 kspd_0;                         //00000150
+	HAL_Reg32 kspd_4;                         //00000154
+	HAL_Reg32 kspd_8;                         //00000158
+	HAL_Reg32 kspd_16;                        //0000015C
+	HAL_Reg32 kspd_32;                        //00000160
+	HAL_Reg32 kspd_64;                        //00000164
+	HAL_Reg32 kspd_128;                       //00000168
+	HAL_Reg32 kspd_256;                       //0000016C
+	HAL_Reg32 kspd_512;                       //00000170
+	HAL_Reg32 kspd_1024;                      //00000174
+	HAL_Reg32 dummy_kspd;                     //00000178
+	HAL_Reg32 kspd_addr_start;                //0000017C
+	HAL_Reg32 debug2_gain;                    //00000180
+	HAL_Reg32 debug3_gain;                    //00000184
+	HAL_Reg32 temp_debug;                     //00000188
+	HAL_Reg32 reserved_18C;                   //0000018C
+	HAL_Reg32 reserved_190;                   //00000190
+	HAL_Reg32 reserved_194;                   //00000194
+	HAL_Reg32 reserved_198;                   //00000198
+	HAL_Reg32 reserved_19C;                   //0000019C
+	HAL_Reg32 reserved_1A0;                   //000001A0
+	HAL_Reg32 reserved_1A4;                   //000001A4
+	HAL_Reg32 reserved_1A8;                   //000001A8
+	HAL_Reg32 trk_pwr_limit_inv;              //000001AC
+	HAL_Reg32 foc_pwr_limit_inv;              //000001B0
+	HAL_Reg32 tilt_pwr_limit_inv;             //000001B4
+	HAL_Reg32 trksum_pwr_limit_inv;           //000001B8
+	HAL_Reg32 focsum_pwr_limit_inv;           //000001BC
+	HAL_Reg32 tiltsum_pwr_limit_inv;          //000001C0
+	HAL_Reg32 actdiss_tau;                    //000001C4
+	HAL_Reg32 actdiss_timescale;              //000001C8
+	HAL_Reg32 trk_actdiss_acc_msb;            //000001CC
+	HAL_Reg32 foc_actdiss_acc_msb;            //000001D0
+	HAL_Reg32 tilt_actdiss_acc_msb;           //000001D4
+	HAL_Reg32 sum_actdiss_acc_msb;            //000001D8
+	HAL_Reg32 reserved_1DC;                   //000001DC
+	HAL_Reg32 debug0;                         //000001E0
+	HAL_Reg32 debug1;                         //000001E4
+	HAL_Reg32 debug2;                         //000001E8
+	HAL_Reg32 debug3;                         //000001EC
+	HAL_Reg32 pwr_dummy;                      //000001F0
+	HAL_Reg32 FOO;                            //000001F4
+	HAL_Reg32 TRO;                            //000001F8
+	HAL_Reg32 TILT;                           //000001FC
+	HAL_Reg32 K0_b;                           //00000200
+	HAL_Reg32 K1_b;                           //00000204
+	HAL_Reg32 K1_bb;                          //00000208
+	HAL_Reg32 K_1_b;                          //0000020C
+	HAL_Reg32 val_0008;                       //00000210
+	HAL_Reg32 val_0001;                       //00000214
+	HAL_Reg32 val_FFFF;                       //00000218
+	HAL_Reg32 kfg;                            //0000021C
+	HAL_Reg32 kf11;                           //00000220
+	HAL_Reg32 kfu11;                          //00000224
+	HAL_Reg32 kfw11;                          //00000228
+	HAL_Reg32 kfwux11;                        //0000022C
+	HAL_Reg32 kf12;                           //00000230
+	HAL_Reg32 kfu12;                          //00000234
+	HAL_Reg32 kfw12;                          //00000238
+	HAL_Reg32 kfwux12;                        //0000023C
+	HAL_Reg32 kf13;                           //00000240
+	HAL_Reg32 kfu13;                          //00000244
+	HAL_Reg32 kfw13;                          //00000248
+	HAL_Reg32 kfwux13;                        //0000024C
+	HAL_Reg32 kf14;                           //00000250
+	HAL_Reg32 kfu14;                          //00000254
+	HAL_Reg32 kfw14;                          //00000258
+	HAL_Reg32 kfwux14;                        //0000025C
+	HAL_Reg32 kf15;                           //00000260
+	HAL_Reg32 kfu15;                          //00000264
+	HAL_Reg32 kfw15;                          //00000268
+	HAL_Reg32 kfwux15;                        //0000026C
+	HAL_Reg32 kf16;                           //00000270
+	HAL_Reg32 kfu16;                          //00000274
+	HAL_Reg32 kfw16;                          //00000278
+	HAL_Reg32 kfwux16;                        //0000027C
+	HAL_Reg32 kf17;                           //00000280
+	HAL_Reg32 kfu17;                          //00000284
+	HAL_Reg32 kfw17;                          //00000288
+	HAL_Reg32 kfwux17;                        //0000028C
+	HAL_Reg32 reserved_290;                   //00000290
+	HAL_Reg32 reserved_294;                   //00000294
+	HAL_Reg32 reserved_298;                   //00000298
+	HAL_Reg32 fcs_foo_alfa;                   //0000029C
+	HAL_Reg32 fcs_vel_thresh;                 //000002A0
+	HAL_Reg32 fcs_vel_gain;                   //000002A4
+	HAL_Reg32 fcs_leak;                       //000002A8
+	HAL_Reg32 reserved_2AC;                   //000002AC
+	HAL_Reg32 src_kf2;                        //000002B0
+	HAL_Reg32 reserved_2B4;                   //000002B4
+	HAL_Reg32 reserved_2B8;                   //000002B8
+	HAL_Reg32 reserved_2BC;                   //000002BC
+	HAL_Reg32 src_foc_prescale;               //000002C0
+	HAL_Reg32 reserved_2C4;                   //000002C4
+	HAL_Reg32 reserved_2C8;                   //000002C8
+	HAL_Reg32 reserved_2CC;                   //000002CC
+	HAL_Reg32 kf1c;                           //000002D0
+	HAL_Reg32 kf1d;                           //000002D4
+	HAL_Reg32 kf1e;                           //000002D8
+	HAL_Reg32 kf1f;                           //000002DC
+	HAL_Reg32 kf10;                           //000002E0
+	HAL_Reg32 kf18;                           //000002E4
+	HAL_Reg32 kf20;                           //000002E8
+	HAL_Reg32 kf21;                           //000002EC
+	HAL_Reg32 kf22;                           //000002F0
+	HAL_Reg32 kf30;                           //000002F4
+	HAL_Reg32 kf31;                           //000002F8
+	HAL_Reg32 kf32;                           //000002FC
+	HAL_Reg32 kfb20;                          //00000300
+	HAL_Reg32 kfb21;                          //00000304
+	HAL_Reg32 fcs2_leak;                      //00000308
+	HAL_Reg32 fooffset2;                      //0000030C
+	HAL_Reg32 kb10;                           //00000310
+	HAL_Reg32 kb11;                           //00000314
+	HAL_Reg32 kb12;                           //00000318
+	HAL_Reg32 kb20;                           //0000031C
+	HAL_Reg32 kb21;                           //00000320
+	HAL_Reg32 kb22;                           //00000324
+	HAL_Reg32 klg10;                          //00000328
+	HAL_Reg32 klg11;                          //0000032C
+	HAL_Reg32 klg12;                          //00000330
+	HAL_Reg32 klg13;                          //00000334
+	HAL_Reg32 klg14;                          //00000338
+	HAL_Reg32 reserved_33C;                   //0000033C
+	HAL_Reg32 ks10;                           //00000340
+	HAL_Reg32 ks11;                           //00000344
+	HAL_Reg32 ks12;                           //00000348
+	HAL_Reg32 ks13;                           //0000034C
+	HAL_Reg32 ks14;                           //00000350
+	HAL_Reg32 ks15;                           //00000354
+	HAL_Reg32 ks16;                           //00000358
+	HAL_Reg32 ks17;                           //0000035C
+	HAL_Reg32 reserved_360;                   //00000360
+	HAL_Reg32 reserved_364;                   //00000364
+	HAL_Reg32 reserved_368;                   //00000368
+	HAL_Reg32 reserved_36C;                   //0000036C
+	HAL_Reg32 reserved_370;                   //00000370
+	HAL_Reg32 reserved_374;                   //00000374
+	HAL_Reg32 reserved_378;                   //00000378
+	HAL_Reg32 reserved_37C;                   //0000037C
+	HAL_Reg32 reserved_380;                   //00000380
+	HAL_Reg32 reserved_384;                   //00000384
+	HAL_Reg32 reserved_388;                   //00000388
+	HAL_Reg32 reserved_38C;                   //0000038C
+	HAL_Reg32 reserved_390;                   //00000390
+	HAL_Reg32 reserved_394;                   //00000394
+	HAL_Reg32 reserved_398;                   //00000398
+	HAL_Reg32 reserved_39C;                   //0000039C
+	HAL_Reg32 reserved_3A0;                   //000003A0
+	HAL_Reg32 reserved_3A4;                   //000003A4
+	HAL_Reg32 reserved_3A8;                   //000003A8
+	HAL_Reg32 reserved_3AC;                   //000003AC
+	HAL_Reg32 reserved_3B0;                   //000003B0
+	HAL_Reg32 reserved_3B4;                   //000003B4
+	HAL_Reg32 reserved_3B8;                   //000003B8
+	HAL_Reg32 reserved_3BC;                   //000003BC
+	HAL_Reg32 reserved_3C0;                   //000003C0
+	HAL_Reg32 reserved_3C4;                   //000003C4
+	HAL_Reg32 reserved_3C8;                   //000003C8
+	HAL_Reg32 reserved_3CC;                   //000003CC
+	HAL_Reg32 reserved_3D0;                   //000003D0
+	HAL_Reg32 reserved_3D4;                   //000003D4
+	HAL_Reg32 reserved_3D8;                   //000003D8
+	HAL_Reg32 reserved_3DC;                   //000003DC
+	HAL_Reg32 reserved_3E0;                   //000003E0
+	HAL_Reg32 cadr_addr;                      //000003E4
+	HAL_Reg32 bank0;                          //000003E8
+	HAL_Reg32 bank1;                          //000003EC
+	HAL_Reg32 bank2;                          //000003F0
+	HAL_Reg32 bank3;                          //000003F4
+	HAL_Reg32 testxx;                         //000003F8
+	HAL_Reg32 testyy;                         //000003FC
+	HAL_Reg32 K0_c;                           //00000400
+	HAL_Reg32 K1_c;                           //00000404
+	HAL_Reg32 K1_cc;                          //00000408
+	HAL_Reg32 K_1c;                           //0000040C
+	HAL_Reg32 src_trk_alfa;                   //00000410
+	HAL_Reg32 src_trk_tap;                    //00000414
+	HAL_Reg32 src_kt;                         //00000418
+	HAL_Reg32 src_trk_tap1;                   //0000041C
+	HAL_Reg32 src_trk_tap2;                   //00000420
+	HAL_Reg32 trk_roc_m1;                     //00000424
+	HAL_Reg32 trk_roc_m2;                     //00000428
+	HAL_Reg32 src_trk_fg;                     //0000042C
+	HAL_Reg32 src_trk_fir1;                   //00000430
+	HAL_Reg32 src_trk_fir2;                   //00000434
+	HAL_Reg32 src_trk_balance;                //00000438
+	HAL_Reg32 src_foc_balance;                //0000043C
+	HAL_Reg32 trk_roc_0;                      //00000440
+	HAL_Reg32 trk_roc_1;                      //00000444
+	HAL_Reg32 trk_roc_2;                      //00000448
+	HAL_Reg32 trk_roc_3;                      //0000044C
+	HAL_Reg32 trk_roc_4;                      //00000450
+	HAL_Reg32 trk_roc_5;                      //00000454
+	HAL_Reg32 trk_roc_6;                      //00000458
+	HAL_Reg32 trk_roc_7;                      //0000045C
+	HAL_Reg32 trk_roc_8;                      //00000460
+	HAL_Reg32 trk_roc_9;                      //00000464
+	HAL_Reg32 trk_roc_10;                     //00000468
+	HAL_Reg32 trk_roc_11;                     //0000046C
+	HAL_Reg32 trk_roc_12;                     //00000470
+	HAL_Reg32 trk_roc_13;                     //00000474
+	HAL_Reg32 trk_roc_14;                     //00000478
+	HAL_Reg32 trk_roc_15;                     //0000047C
+	HAL_Reg32 trk_roc_16;                     //00000480
+	HAL_Reg32 trk_roc_17;                     //00000484
+	HAL_Reg32 trk_roc_18;                     //00000488
+	HAL_Reg32 trk_roc_19;                     //0000048C
+	HAL_Reg32 trk_roc_20;                     //00000490
+	HAL_Reg32 trk_roc_21;                     //00000494
+	HAL_Reg32 trk_roc_22;                     //00000498
+	HAL_Reg32 trk_roc_23;                     //0000049C
+	HAL_Reg32 trk_roc_24;                     //000004A0
+	HAL_Reg32 trk_roc_25;                     //000004A4
+	HAL_Reg32 trk_roc_26;                     //000004A8
+	HAL_Reg32 trk_roc_27;                     //000004AC
+	HAL_Reg32 trk_roc_28;                     //000004B0
+	HAL_Reg32 trk_roc_29;                     //000004B4
+	HAL_Reg32 trk_roc_30;                     //000004B8
+	HAL_Reg32 trk_roc_31;                     //000004BC
+	HAL_Reg32 trk_roc_32;                     //000004C0
+	HAL_Reg32 trk_roc_33;                     //000004C4
+	HAL_Reg32 trk_roc_34;                     //000004C8
+	HAL_Reg32 trk_roc_35;                     //000004CC
+	HAL_Reg32 te_roc_0;                       //000004D0
+	HAL_Reg32 te_roc_1;                       //000004D4
+	HAL_Reg32 te_roc_2;                       //000004D8
+	HAL_Reg32 te_roc_3;                       //000004DC
+	HAL_Reg32 te_roc_4;                       //000004E0
+	HAL_Reg32 te_roc_5;                       //000004E4
+	HAL_Reg32 te_roc_6;                       //000004E8
+	HAL_Reg32 te_roc_7;                       //000004EC
+	HAL_Reg32 te_roc_8;                       //000004F0
+	HAL_Reg32 te_roc_9;                       //000004F4
+	HAL_Reg32 te_roc_10;                      //000004F8
+	HAL_Reg32 te_roc_11;                      //000004FC
+	HAL_Reg32 te_roc_12;                      //00000500
+	HAL_Reg32 te_roc_13;                      //00000504
+	HAL_Reg32 te_roc_14;                      //00000508
+	HAL_Reg32 te_roc_15;                      //0000050C
+	HAL_Reg32 te_roc_16;                      //00000510
+	HAL_Reg32 te_roc_17;                      //00000514
+	HAL_Reg32 te_roc_18;                      //00000518
+	HAL_Reg32 te_roc_19;                      //0000051C
+	HAL_Reg32 te_roc_20;                      //00000520
+	HAL_Reg32 te_roc_21;                      //00000524
+	HAL_Reg32 te_roc_22;                      //00000528
+	HAL_Reg32 te_roc_23;                      //0000052C
+	HAL_Reg32 te_roc_24;                      //00000530
+	HAL_Reg32 te_roc_25;                      //00000534
+	HAL_Reg32 te_roc_26;                      //00000538
+	HAL_Reg32 te_roc_27;                      //0000053C
+	HAL_Reg32 te_roc_28;                      //00000540
+	HAL_Reg32 te_roc_29;                      //00000544
+	HAL_Reg32 te_roc_30;                      //00000548
+	HAL_Reg32 te_roc_31;                      //0000054C
+	HAL_Reg32 te_roc_32;                      //00000550
+	HAL_Reg32 te_roc_33;                      //00000554
+	HAL_Reg32 te_roc_34;                      //00000558
+	HAL_Reg32 te_roc_35;                      //0000055C
+	HAL_Reg32 reserved_560;                   //00000560
+	HAL_Reg32 reserved_564;                   //00000564
+	HAL_Reg32 src_x;                          //00000568
+	HAL_Reg32 dummy;                          //0000056C
+	HAL_Reg32 a4096;                          //00000570
+	HAL_Reg32 src_tap8;                       //00000574
+	HAL_Reg32 frot_step;                      //00000578
+	HAL_Reg32 frot8x;                         //0000057C
+	HAL_Reg32 kdf10;                          //00000580
+	HAL_Reg32 kdd10;                          //00000584
+	HAL_Reg32 kdw10;                          //00000588
+	HAL_Reg32 kdf11;                          //0000058C
+	HAL_Reg32 kdd11;                          //00000590
+	HAL_Reg32 kdw11;                          //00000594
+	HAL_Reg32 kdf12;                          //00000598
+	HAL_Reg32 kdd12;                          //0000059C
+	HAL_Reg32 kdw12;                          //000005A0
+	HAL_Reg32 kdf13;                          //000005A4
+	HAL_Reg32 kdd13;                          //000005A8
+	HAL_Reg32 kdw13;                          //000005AC
+	HAL_Reg32 kdf14;                          //000005B0
+	HAL_Reg32 kdd14;                          //000005B4
+	HAL_Reg32 kdw14;                          //000005B8
+	HAL_Reg32 kdf15;                          //000005BC
+	HAL_Reg32 kdd15;                          //000005C0
+	HAL_Reg32 kdw15;                          //000005C4
+	HAL_Reg32 kdf16;                          //000005C8
+	HAL_Reg32 kdd16;                          //000005CC
+	HAL_Reg32 kdw16;                          //000005D0
+	HAL_Reg32 reserved_5D4;                   //000005D4
+	HAL_Reg32 src_te_alfa;                    //000005D8
+	HAL_Reg32 src_te_tap;                     //000005DC
+	HAL_Reg32 src_te_prescale;                //000005E0
+	HAL_Reg32 te_roc_m1;                      //000005E4
+	HAL_Reg32 te_roc_m2;                      //000005E8
+	HAL_Reg32 reserved_5EC;                   //000005EC
+	HAL_Reg32 src_te_fir1;                    //000005F0
+	HAL_Reg32 src_te_fir2;                    //000005F4
+	HAL_Reg32 src_te_balance;                 //000005F8
+	HAL_Reg32 reserved_5FC;                   //000005FC
+	HAL_Reg32 K0_d;                           //00000600
+	HAL_Reg32 K1_d;                           //00000604
+	HAL_Reg32 K1_dd;                          //00000608
+	HAL_Reg32 K_1_d;                          //0000060C
+	HAL_Reg32 src_foc_alfa;                   //00000610
+	HAL_Reg32 src_foc_tap;                    //00000614
+	HAL_Reg32 src_kf;                         //00000618
+	HAL_Reg32 src_foc_tap1;                   //0000061C
+	HAL_Reg32 src_foc_tap2;                   //00000620
+	HAL_Reg32 foc_roc_m1;                     //00000624
+	HAL_Reg32 foc_roc_m2;                     //00000628
+	HAL_Reg32 src_foc_fg;                     //0000062C
+	HAL_Reg32 src_foc_fir1;                   //00000630
+	HAL_Reg32 src_foc_fir2;                   //00000634
+	HAL_Reg32 reserved_638;                   //00000638
+	HAL_Reg32 reserved_63C;                   //0000063C
+	HAL_Reg32 foc_roc_0;                      //00000640
+	HAL_Reg32 foc_roc_1;                      //00000644
+	HAL_Reg32 foc_roc_2;                      //00000648
+	HAL_Reg32 foc_roc_3;                      //0000064C
+	HAL_Reg32 foc_roc_4;                      //00000650
+	HAL_Reg32 foc_roc_5;                      //00000654
+	HAL_Reg32 foc_roc_6;                      //00000658
+	HAL_Reg32 foc_roc_7;                      //0000065C
+	HAL_Reg32 foc_roc_8;                      //00000660
+	HAL_Reg32 foc_roc_9;                      //00000664
+	HAL_Reg32 foc_roc_10;                     //00000668
+	HAL_Reg32 foc_roc_11;                     //0000066C
+	HAL_Reg32 foc_roc_12;                     //00000670
+	HAL_Reg32 foc_roc_13;                     //00000674
+	HAL_Reg32 foc_roc_14;                     //00000678
+	HAL_Reg32 foc_roc_15;                     //0000067C
+	HAL_Reg32 foc_roc_16;                     //00000680
+	HAL_Reg32 foc_roc_17;                     //00000684
+	HAL_Reg32 foc_roc_18;                     //00000688
+	HAL_Reg32 foc_roc_19;                     //0000068C
+	HAL_Reg32 foc_roc_20;                     //00000690
+	HAL_Reg32 foc_roc_21;                     //00000694
+	HAL_Reg32 foc_roc_22;                     //00000698
+	HAL_Reg32 foc_roc_23;                     //0000069C
+	HAL_Reg32 foc_roc_24;                     //000006A0
+	HAL_Reg32 foc_roc_25;                     //000006A4
+	HAL_Reg32 foc_roc_26;                     //000006A8
+	HAL_Reg32 foc_roc_27;                     //000006AC
+	HAL_Reg32 foc_roc_28;                     //000006B0
+	HAL_Reg32 foc_roc_29;                     //000006B4
+	HAL_Reg32 foc_roc_30;                     //000006B8
+	HAL_Reg32 foc_roc_31;                     //000006BC
+	HAL_Reg32 foc_roc_32;                     //000006C0
+	HAL_Reg32 foc_roc_33;                     //000006C4
+	HAL_Reg32 foc_roc_34;                     //000006C8
+	HAL_Reg32 foc_roc_35;                     //000006CC
+	HAL_Reg32 reserved_6D0;                   //000006D0
+	HAL_Reg32 reserved_6D4;                   //000006D4
+	HAL_Reg32 reserved_6D8;                   //000006D8
+	HAL_Reg32 reserved_6DC;                   //000006DC
+	HAL_Reg32 reserved_6E0;                   //000006E0
+	HAL_Reg32 reserved_6E4;                   //000006E4
+	HAL_Reg32 reserved_6E8;                   //000006E8
+	HAL_Reg32 reserved_6EC;                   //000006EC
+	HAL_Reg32 reserved_6F0;                   //000006F0
+	HAL_Reg32 reserved_6F4;                   //000006F4
+	HAL_Reg32 reserved_6F8;                   //000006F8
+	HAL_Reg32 reserved_6FC;                   //000006FC
+	HAL_Reg32 reserved_700;                   //00000700
+	HAL_Reg32 reserved_704;                   //00000704
+	HAL_Reg32 reserved_708;                   //00000708
+	HAL_Reg32 reserved_70C;                   //0000070C
+	HAL_Reg32 reserved_710;                   //00000710
+	HAL_Reg32 reserved_714;                   //00000714
+	HAL_Reg32 reserved_718;                   //00000718
+	HAL_Reg32 reserved_71C;                   //0000071C
+	HAL_Reg32 reserved_720;                   //00000720
+	HAL_Reg32 reserved_724;                   //00000724
+	HAL_Reg32 Offset0_0;                      //00000728
+	HAL_Reg32 Offset0_1;                      //0000072C
+	HAL_Reg32 Offset1_0;                      //00000730
+	HAL_Reg32 Offset1_1;                      //00000734
+	HAL_Reg32 Offset2_0;                      //00000738
+	HAL_Reg32 Offset2_1;                      //0000073C
+	HAL_Reg32 Pread0RS;                       //00000740
+	HAL_Reg32 Pread1RS;                       //00000744
+	HAL_Reg32 Pbias0RS;                       //00000748
+	HAL_Reg32 Pbias1RS;                       //0000074C
+	HAL_Reg32 Pbias0pRS;                      //00000750
+	HAL_Reg32 Pbias1pRS;                      //00000754
+	HAL_Reg32 PRead0WS;                       //00000758
+	HAL_Reg32 PRead1WS;                       //0000075C
+	HAL_Reg32 Pbias0WS;                       //00000760
+	HAL_Reg32 Pbias1WS;                       //00000764
+	HAL_Reg32 Pbias0pWS;                      //00000768
+	HAL_Reg32 Pbias1pWS;                      //0000076C
+	HAL_Reg32 Gthr_read;                      //00000770
+	HAL_Reg32 Gthr_write;                     //00000774
+	HAL_Reg32 Gdelta_write;                   //00000778
+	HAL_Reg32 Thresh_reference;               //0000077C
+	HAL_Reg32 Thresh_open_loop_value;         //00000780
+	HAL_Reg32 Delta_open_loop_value;          //00000784
+	HAL_Reg32 Att0_0;                         //00000788
+	HAL_Reg32 Att0_1;                         //0000078C
+	HAL_Reg32 Att1_0;                         //00000790
+	HAL_Reg32 Att1_1;                         //00000794
+	HAL_Reg32 Att2_0;                         //00000798
+	HAL_Reg32 Att2_1;                         //0000079C
+	HAL_Reg32 reserved_7A0;                   //000007A0
+	HAL_Reg32 T2D;                            //000007A4
+	HAL_Reg32 power_in;                       //000007A8
+	HAL_Reg32 Thresh_error_msb;               //000007AC
+	HAL_Reg32 Delta_error_msb;                //000007B0
+	HAL_Reg32 reserved_7B4;                   //000007B4
+	HAL_Reg32 power_ref0;                     //000007B8
+	HAL_Reg32 power_ref1;                     //000007BC
+	HAL_Reg32 power_0;                        //000007C0
+	HAL_Reg32 power_1;                        //000007C4
+	HAL_Reg32 power_2;                        //000007C8
+	HAL_Reg32 power_3;                        //000007CC
+	HAL_Reg32 power_4;                        //000007D0
+	HAL_Reg32 power_5;                        //000007D4
+	HAL_Reg32 power_6;                        //000007D8
+	HAL_Reg32 power_7;                        //000007DC
+	HAL_Reg32 power_8;                        //000007E0
+	HAL_Reg32 power_9;                        //000007E4
+	HAL_Reg32 power_10;                       //000007E8
+	HAL_Reg32 power_11;                       //000007EC
+	HAL_Reg32 power_12;                       //000007F0
+	HAL_Reg32 power_13;                       //000007F4
+	HAL_Reg32 power_14;                       //000007F8
+	HAL_Reg32 power_15;                       //000007FC
+};
+// Register K0_a
+#define HAL_SRVDSP_K0_a_REGISTER    (HAL_SRVDSPREG_MAP->K0_a)
+#define HAL_SRVDSP_K0_a_LSB         0
+#define HAL_SRVDSP_K0_a_MSB         15
+#define HAL_SRVDSP_K0_a_MASK        0x0000FFFF
+#define HAL_SRVDSP_K0_a_TYPE        SInt16
+#define HAL_SRVDSP_K0_a             HAL_SRVDSP_K0_a_MASK
+#define HAL_SRVDSP_K0_a_READABLE    1
+#define HAL_SRVDSP_K0_a_WRITABLE    1
+#define HAL_SRVDSP_K0_a_SIGNED      1
+#define HAL_SRVDSP_K0_a_ADR         0xB0000600
+
+// Register K1_a
+#define HAL_SRVDSP_K1_a_REGISTER    (HAL_SRVDSPREG_MAP->K1_a)
+#define HAL_SRVDSP_K1_a_LSB         0
+#define HAL_SRVDSP_K1_a_MSB         15
+#define HAL_SRVDSP_K1_a_MASK        0x0000FFFF
+#define HAL_SRVDSP_K1_a_TYPE        SInt16
+#define HAL_SRVDSP_K1_a             HAL_SRVDSP_K1_a_MASK
+#define HAL_SRVDSP_K1_a_READABLE    1
+#define HAL_SRVDSP_K1_a_WRITABLE    1
+#define HAL_SRVDSP_K1_a_SIGNED      1
+#define HAL_SRVDSP_K1_a_ADR         0xB0000604
+
+// Register K1_aa
+#define HAL_SRVDSP_K1_aa_REGISTER    (HAL_SRVDSPREG_MAP->K1_aa)
+#define HAL_SRVDSP_K1_aa_LSB         0
+#define HAL_SRVDSP_K1_aa_MSB         15
+#define HAL_SRVDSP_K1_aa_MASK        0x0000FFFF
+#define HAL_SRVDSP_K1_aa_TYPE        SInt16
+#define HAL_SRVDSP_K1_aa             HAL_SRVDSP_K1_aa_MASK
+#define HAL_SRVDSP_K1_aa_READABLE    1
+#define HAL_SRVDSP_K1_aa_WRITABLE    1
+#define HAL_SRVDSP_K1_aa_SIGNED      1
+#define HAL_SRVDSP_K1_aa_ADR         0xB0000608
+
+// Register K_1_a
+#define HAL_SRVDSP_K_1_a_REGISTER    (HAL_SRVDSPREG_MAP->K_1_a)
+#define HAL_SRVDSP_K_1_a_LSB         0
+#define HAL_SRVDSP_K_1_a_MSB         15
+#define HAL_SRVDSP_K_1_a_MASK        0x0000FFFF
+#define HAL_SRVDSP_K_1_a_TYPE        SInt16
+#define HAL_SRVDSP_K_1_a             HAL_SRVDSP_K_1_a_MASK
+#define HAL_SRVDSP_K_1_a_READABLE    1
+#define HAL_SRVDSP_K_1_a_WRITABLE    1
+#define HAL_SRVDSP_K_1_a_SIGNED      1
+#define HAL_SRVDSP_K_1_a_ADR         0xB000060C
+
+// Register cadr_acu
+#define HAL_SRVDSP_cadr_acu_REGISTER    (HAL_SRVDSPREG_MAP->cadr_acu)
+#define HAL_SRVDSP_cadr_acu_LSB         0
+#define HAL_SRVDSP_cadr_acu_MSB         15
+#define HAL_SRVDSP_cadr_acu_MASK        0x0000FFFF
+#define HAL_SRVDSP_cadr_acu_TYPE        SInt16
+#define HAL_SRVDSP_cadr_acu             HAL_SRVDSP_cadr_acu_MASK
+#define HAL_SRVDSP_cadr_acu_READABLE    1
+#define HAL_SRVDSP_cadr_acu_WRITABLE    1
+#define HAL_SRVDSP_cadr_acu_SIGNED      1
+#define HAL_SRVDSP_cadr_acu_ADR         0xB0000610
+
+// Register radr_acu1
+#define HAL_SRVDSP_radr_acu1_REGISTER    (HAL_SRVDSPREG_MAP->radr_acu1)
+#define HAL_SRVDSP_radr_acu1_LSB         0
+#define HAL_SRVDSP_radr_acu1_MSB         15
+#define HAL_SRVDSP_radr_acu1_MASK        0x0000FFFF
+#define HAL_SRVDSP_radr_acu1_TYPE        SInt16
+#define HAL_SRVDSP_radr_acu1             HAL_SRVDSP_radr_acu1_MASK
+#define HAL_SRVDSP_radr_acu1_READABLE    1
+#define HAL_SRVDSP_radr_acu1_WRITABLE    1
+#define HAL_SRVDSP_radr_acu1_SIGNED      1
+#define HAL_SRVDSP_radr_acu1_ADR         0xB0000614
+
+// Register radr_acu2
+#define HAL_SRVDSP_radr_acu2_REGISTER    (HAL_SRVDSPREG_MAP->radr_acu2)
+#define HAL_SRVDSP_radr_acu2_LSB         0
+#define HAL_SRVDSP_radr_acu2_MSB         15
+#define HAL_SRVDSP_radr_acu2_MASK        0x0000FFFF
+#define HAL_SRVDSP_radr_acu2_TYPE        SInt16
+#define HAL_SRVDSP_radr_acu2             HAL_SRVDSP_radr_acu2_MASK
+#define HAL_SRVDSP_radr_acu2_READABLE    1
+#define HAL_SRVDSP_radr_acu2_WRITABLE    1
+#define HAL_SRVDSP_radr_acu2_SIGNED      1
+#define HAL_SRVDSP_radr_acu2_ADR         0xB0000618
+
+// Register ktg
+#define HAL_SRVDSP_ktg_REGISTER    (HAL_SRVDSPREG_MAP->ktg)
+#define HAL_SRVDSP_ktg_LSB         0
+#define HAL_SRVDSP_ktg_MSB         15
+#define HAL_SRVDSP_ktg_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktg_TYPE        SInt16
+#define HAL_SRVDSP_ktg             HAL_SRVDSP_ktg_MASK
+#define HAL_SRVDSP_ktg_READABLE    1
+#define HAL_SRVDSP_ktg_WRITABLE    1
+#define HAL_SRVDSP_ktg_SIGNED      1
+#define HAL_SRVDSP_ktg_ADR         0xB000061C
+
+// Register kt11
+#define HAL_SRVDSP_kt11_REGISTER    (HAL_SRVDSPREG_MAP->kt11)
+#define HAL_SRVDSP_kt11_LSB         0
+#define HAL_SRVDSP_kt11_MSB         15
+#define HAL_SRVDSP_kt11_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt11_TYPE        SInt16
+#define HAL_SRVDSP_kt11             HAL_SRVDSP_kt11_MASK
+#define HAL_SRVDSP_kt11_READABLE    1
+#define HAL_SRVDSP_kt11_WRITABLE    1
+#define HAL_SRVDSP_kt11_SIGNED      1
+#define HAL_SRVDSP_kt11_ADR         0xB0000620
+
+// Register ktu11
+#define HAL_SRVDSP_ktu11_REGISTER    (HAL_SRVDSPREG_MAP->ktu11)
+#define HAL_SRVDSP_ktu11_LSB         0
+#define HAL_SRVDSP_ktu11_MSB         15
+#define HAL_SRVDSP_ktu11_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktu11_TYPE        SInt16
+#define HAL_SRVDSP_ktu11             HAL_SRVDSP_ktu11_MASK
+#define HAL_SRVDSP_ktu11_READABLE    1
+#define HAL_SRVDSP_ktu11_WRITABLE    1
+#define HAL_SRVDSP_ktu11_SIGNED      1
+#define HAL_SRVDSP_ktu11_ADR         0xB0000624
+
+// Register ktw11
+#define HAL_SRVDSP_ktw11_REGISTER    (HAL_SRVDSPREG_MAP->ktw11)
+#define HAL_SRVDSP_ktw11_LSB         0
+#define HAL_SRVDSP_ktw11_MSB         15
+#define HAL_SRVDSP_ktw11_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktw11_TYPE        SInt16
+#define HAL_SRVDSP_ktw11             HAL_SRVDSP_ktw11_MASK
+#define HAL_SRVDSP_ktw11_READABLE    1
+#define HAL_SRVDSP_ktw11_WRITABLE    1
+#define HAL_SRVDSP_ktw11_SIGNED      1
+#define HAL_SRVDSP_ktw11_ADR         0xB0000628
+
+// Register ktwuxc11
+#define HAL_SRVDSP_ktwuxc11_REGISTER    (HAL_SRVDSPREG_MAP->ktwuxc11)
+#define HAL_SRVDSP_ktwuxc11_LSB         0
+#define HAL_SRVDSP_ktwuxc11_MSB         15
+#define HAL_SRVDSP_ktwuxc11_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktwuxc11_TYPE        SInt16
+#define HAL_SRVDSP_ktwuxc11             HAL_SRVDSP_ktwuxc11_MASK
+#define HAL_SRVDSP_ktwuxc11_READABLE    1
+#define HAL_SRVDSP_ktwuxc11_WRITABLE    1
+#define HAL_SRVDSP_ktwuxc11_SIGNED      1
+#define HAL_SRVDSP_ktwuxc11_ADR         0xB000062C
+
+// Register kt12
+#define HAL_SRVDSP_kt12_REGISTER    (HAL_SRVDSPREG_MAP->kt12)
+#define HAL_SRVDSP_kt12_LSB         0
+#define HAL_SRVDSP_kt12_MSB         15
+#define HAL_SRVDSP_kt12_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt12_TYPE        SInt16
+#define HAL_SRVDSP_kt12             HAL_SRVDSP_kt12_MASK
+#define HAL_SRVDSP_kt12_READABLE    1
+#define HAL_SRVDSP_kt12_WRITABLE    1
+#define HAL_SRVDSP_kt12_SIGNED      1
+#define HAL_SRVDSP_kt12_ADR         0xB0000630
+
+// Register ktu12
+#define HAL_SRVDSP_ktu12_REGISTER    (HAL_SRVDSPREG_MAP->ktu12)
+#define HAL_SRVDSP_ktu12_LSB         0
+#define HAL_SRVDSP_ktu12_MSB         15
+#define HAL_SRVDSP_ktu12_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktu12_TYPE        SInt16
+#define HAL_SRVDSP_ktu12             HAL_SRVDSP_ktu12_MASK
+#define HAL_SRVDSP_ktu12_READABLE    1
+#define HAL_SRVDSP_ktu12_WRITABLE    1
+#define HAL_SRVDSP_ktu12_SIGNED      1
+#define HAL_SRVDSP_ktu12_ADR         0xB0000634
+
+// Register ktw12
+#define HAL_SRVDSP_ktw12_REGISTER    (HAL_SRVDSPREG_MAP->ktw12)
+#define HAL_SRVDSP_ktw12_LSB         0
+#define HAL_SRVDSP_ktw12_MSB         15
+#define HAL_SRVDSP_ktw12_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktw12_TYPE        SInt16
+#define HAL_SRVDSP_ktw12             HAL_SRVDSP_ktw12_MASK
+#define HAL_SRVDSP_ktw12_READABLE    1
+#define HAL_SRVDSP_ktw12_WRITABLE    1
+#define HAL_SRVDSP_ktw12_SIGNED      1
+#define HAL_SRVDSP_ktw12_ADR         0xB0000638
+
+// Register ktwuxc12
+#define HAL_SRVDSP_ktwuxc12_REGISTER    (HAL_SRVDSPREG_MAP->ktwuxc12)
+#define HAL_SRVDSP_ktwuxc12_LSB         0
+#define HAL_SRVDSP_ktwuxc12_MSB         15
+#define HAL_SRVDSP_ktwuxc12_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktwuxc12_TYPE        SInt16
+#define HAL_SRVDSP_ktwuxc12             HAL_SRVDSP_ktwuxc12_MASK
+#define HAL_SRVDSP_ktwuxc12_READABLE    1
+#define HAL_SRVDSP_ktwuxc12_WRITABLE    1
+#define HAL_SRVDSP_ktwuxc12_SIGNED      1
+#define HAL_SRVDSP_ktwuxc12_ADR         0xB000063C
+
+// Register kt13
+#define HAL_SRVDSP_kt13_REGISTER    (HAL_SRVDSPREG_MAP->kt13)
+#define HAL_SRVDSP_kt13_LSB         0
+#define HAL_SRVDSP_kt13_MSB         15
+#define HAL_SRVDSP_kt13_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt13_TYPE        SInt16
+#define HAL_SRVDSP_kt13             HAL_SRVDSP_kt13_MASK
+#define HAL_SRVDSP_kt13_READABLE    1
+#define HAL_SRVDSP_kt13_WRITABLE    1
+#define HAL_SRVDSP_kt13_SIGNED      1
+#define HAL_SRVDSP_kt13_ADR         0xB0000640
+
+// Register ktu13
+#define HAL_SRVDSP_ktu13_REGISTER    (HAL_SRVDSPREG_MAP->ktu13)
+#define HAL_SRVDSP_ktu13_LSB         0
+#define HAL_SRVDSP_ktu13_MSB         15
+#define HAL_SRVDSP_ktu13_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktu13_TYPE        SInt16
+#define HAL_SRVDSP_ktu13             HAL_SRVDSP_ktu13_MASK
+#define HAL_SRVDSP_ktu13_READABLE    1
+#define HAL_SRVDSP_ktu13_WRITABLE    1
+#define HAL_SRVDSP_ktu13_SIGNED      1
+#define HAL_SRVDSP_ktu13_ADR         0xB0000644
+
+// Register ktw13
+#define HAL_SRVDSP_ktw13_REGISTER    (HAL_SRVDSPREG_MAP->ktw13)
+#define HAL_SRVDSP_ktw13_LSB         0
+#define HAL_SRVDSP_ktw13_MSB         15
+#define HAL_SRVDSP_ktw13_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktw13_TYPE        SInt16
+#define HAL_SRVDSP_ktw13             HAL_SRVDSP_ktw13_MASK
+#define HAL_SRVDSP_ktw13_READABLE    1
+#define HAL_SRVDSP_ktw13_WRITABLE    1
+#define HAL_SRVDSP_ktw13_SIGNED      1
+#define HAL_SRVDSP_ktw13_ADR         0xB0000648
+
+// Register ktwuxc13
+#define HAL_SRVDSP_ktwuxc13_REGISTER    (HAL_SRVDSPREG_MAP->ktwuxc13)
+#define HAL_SRVDSP_ktwuxc13_LSB         0
+#define HAL_SRVDSP_ktwuxc13_MSB         15
+#define HAL_SRVDSP_ktwuxc13_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktwuxc13_TYPE        SInt16
+#define HAL_SRVDSP_ktwuxc13             HAL_SRVDSP_ktwuxc13_MASK
+#define HAL_SRVDSP_ktwuxc13_READABLE    1
+#define HAL_SRVDSP_ktwuxc13_WRITABLE    1
+#define HAL_SRVDSP_ktwuxc13_SIGNED      1
+#define HAL_SRVDSP_ktwuxc13_ADR         0xB000064C
+
+// Register kt14
+#define HAL_SRVDSP_kt14_REGISTER    (HAL_SRVDSPREG_MAP->kt14)
+#define HAL_SRVDSP_kt14_LSB         0
+#define HAL_SRVDSP_kt14_MSB         15
+#define HAL_SRVDSP_kt14_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt14_TYPE        SInt16
+#define HAL_SRVDSP_kt14             HAL_SRVDSP_kt14_MASK
+#define HAL_SRVDSP_kt14_READABLE    1
+#define HAL_SRVDSP_kt14_WRITABLE    1
+#define HAL_SRVDSP_kt14_SIGNED      1
+#define HAL_SRVDSP_kt14_ADR         0xB0000650
+
+// Register ktu14
+#define HAL_SRVDSP_ktu14_REGISTER    (HAL_SRVDSPREG_MAP->ktu14)
+#define HAL_SRVDSP_ktu14_LSB         0
+#define HAL_SRVDSP_ktu14_MSB         15
+#define HAL_SRVDSP_ktu14_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktu14_TYPE        SInt16
+#define HAL_SRVDSP_ktu14             HAL_SRVDSP_ktu14_MASK
+#define HAL_SRVDSP_ktu14_READABLE    1
+#define HAL_SRVDSP_ktu14_WRITABLE    1
+#define HAL_SRVDSP_ktu14_SIGNED      1
+#define HAL_SRVDSP_ktu14_ADR         0xB0000654
+
+// Register ktw14
+#define HAL_SRVDSP_ktw14_REGISTER    (HAL_SRVDSPREG_MAP->ktw14)
+#define HAL_SRVDSP_ktw14_LSB         0
+#define HAL_SRVDSP_ktw14_MSB         15
+#define HAL_SRVDSP_ktw14_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktw14_TYPE        SInt16
+#define HAL_SRVDSP_ktw14             HAL_SRVDSP_ktw14_MASK
+#define HAL_SRVDSP_ktw14_READABLE    1
+#define HAL_SRVDSP_ktw14_WRITABLE    1
+#define HAL_SRVDSP_ktw14_SIGNED      1
+#define HAL_SRVDSP_ktw14_ADR         0xB0000658
+
+// Register ktwuxc14
+#define HAL_SRVDSP_ktwuxc14_REGISTER    (HAL_SRVDSPREG_MAP->ktwuxc14)
+#define HAL_SRVDSP_ktwuxc14_LSB         0
+#define HAL_SRVDSP_ktwuxc14_MSB         15
+#define HAL_SRVDSP_ktwuxc14_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktwuxc14_TYPE        SInt16
+#define HAL_SRVDSP_ktwuxc14             HAL_SRVDSP_ktwuxc14_MASK
+#define HAL_SRVDSP_ktwuxc14_READABLE    1
+#define HAL_SRVDSP_ktwuxc14_WRITABLE    1
+#define HAL_SRVDSP_ktwuxc14_SIGNED      1
+#define HAL_SRVDSP_ktwuxc14_ADR         0xB000065C
+
+// Register kt15
+#define HAL_SRVDSP_kt15_REGISTER    (HAL_SRVDSPREG_MAP->kt15)
+#define HAL_SRVDSP_kt15_LSB         0
+#define HAL_SRVDSP_kt15_MSB         15
+#define HAL_SRVDSP_kt15_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt15_TYPE        SInt16
+#define HAL_SRVDSP_kt15             HAL_SRVDSP_kt15_MASK
+#define HAL_SRVDSP_kt15_READABLE    1
+#define HAL_SRVDSP_kt15_WRITABLE    1
+#define HAL_SRVDSP_kt15_SIGNED      1
+#define HAL_SRVDSP_kt15_ADR         0xB0000660
+
+// Register ktu15
+#define HAL_SRVDSP_ktu15_REGISTER    (HAL_SRVDSPREG_MAP->ktu15)
+#define HAL_SRVDSP_ktu15_LSB         0
+#define HAL_SRVDSP_ktu15_MSB         15
+#define HAL_SRVDSP_ktu15_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktu15_TYPE        SInt16
+#define HAL_SRVDSP_ktu15             HAL_SRVDSP_ktu15_MASK
+#define HAL_SRVDSP_ktu15_READABLE    1
+#define HAL_SRVDSP_ktu15_WRITABLE    1
+#define HAL_SRVDSP_ktu15_SIGNED      1
+#define HAL_SRVDSP_ktu15_ADR         0xB0000664
+
+// Register ktw15
+#define HAL_SRVDSP_ktw15_REGISTER    (HAL_SRVDSPREG_MAP->ktw15)
+#define HAL_SRVDSP_ktw15_LSB         0
+#define HAL_SRVDSP_ktw15_MSB         15
+#define HAL_SRVDSP_ktw15_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktw15_TYPE        SInt16
+#define HAL_SRVDSP_ktw15             HAL_SRVDSP_ktw15_MASK
+#define HAL_SRVDSP_ktw15_READABLE    1
+#define HAL_SRVDSP_ktw15_WRITABLE    1
+#define HAL_SRVDSP_ktw15_SIGNED      1
+#define HAL_SRVDSP_ktw15_ADR         0xB0000668
+
+// Register ktwuxc15
+#define HAL_SRVDSP_ktwuxc15_REGISTER    (HAL_SRVDSPREG_MAP->ktwuxc15)
+#define HAL_SRVDSP_ktwuxc15_LSB         0
+#define HAL_SRVDSP_ktwuxc15_MSB         15
+#define HAL_SRVDSP_ktwuxc15_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktwuxc15_TYPE        SInt16
+#define HAL_SRVDSP_ktwuxc15             HAL_SRVDSP_ktwuxc15_MASK
+#define HAL_SRVDSP_ktwuxc15_READABLE    1
+#define HAL_SRVDSP_ktwuxc15_WRITABLE    1
+#define HAL_SRVDSP_ktwuxc15_SIGNED      1
+#define HAL_SRVDSP_ktwuxc15_ADR         0xB000066C
+
+// Register kt16
+#define HAL_SRVDSP_kt16_REGISTER    (HAL_SRVDSPREG_MAP->kt16)
+#define HAL_SRVDSP_kt16_LSB         0
+#define HAL_SRVDSP_kt16_MSB         15
+#define HAL_SRVDSP_kt16_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt16_TYPE        SInt16
+#define HAL_SRVDSP_kt16             HAL_SRVDSP_kt16_MASK
+#define HAL_SRVDSP_kt16_READABLE    1
+#define HAL_SRVDSP_kt16_WRITABLE    1
+#define HAL_SRVDSP_kt16_SIGNED      1
+#define HAL_SRVDSP_kt16_ADR         0xB0000670
+
+// Register ktu16
+#define HAL_SRVDSP_ktu16_REGISTER    (HAL_SRVDSPREG_MAP->ktu16)
+#define HAL_SRVDSP_ktu16_LSB         0
+#define HAL_SRVDSP_ktu16_MSB         15
+#define HAL_SRVDSP_ktu16_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktu16_TYPE        SInt16
+#define HAL_SRVDSP_ktu16             HAL_SRVDSP_ktu16_MASK
+#define HAL_SRVDSP_ktu16_READABLE    1
+#define HAL_SRVDSP_ktu16_WRITABLE    1
+#define HAL_SRVDSP_ktu16_SIGNED      1
+#define HAL_SRVDSP_ktu16_ADR         0xB0000674
+
+// Register ktw16
+#define HAL_SRVDSP_ktw16_REGISTER    (HAL_SRVDSPREG_MAP->ktw16)
+#define HAL_SRVDSP_ktw16_LSB         0
+#define HAL_SRVDSP_ktw16_MSB         15
+#define HAL_SRVDSP_ktw16_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktw16_TYPE        SInt16
+#define HAL_SRVDSP_ktw16             HAL_SRVDSP_ktw16_MASK
+#define HAL_SRVDSP_ktw16_READABLE    1
+#define HAL_SRVDSP_ktw16_WRITABLE    1
+#define HAL_SRVDSP_ktw16_SIGNED      1
+#define HAL_SRVDSP_ktw16_ADR         0xB0000678
+
+// Register ktwuxc16
+#define HAL_SRVDSP_ktwuxc16_REGISTER    (HAL_SRVDSPREG_MAP->ktwuxc16)
+#define HAL_SRVDSP_ktwuxc16_LSB         0
+#define HAL_SRVDSP_ktwuxc16_MSB         15
+#define HAL_SRVDSP_ktwuxc16_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktwuxc16_TYPE        SInt16
+#define HAL_SRVDSP_ktwuxc16             HAL_SRVDSP_ktwuxc16_MASK
+#define HAL_SRVDSP_ktwuxc16_READABLE    1
+#define HAL_SRVDSP_ktwuxc16_WRITABLE    1
+#define HAL_SRVDSP_ktwuxc16_SIGNED      1
+#define HAL_SRVDSP_ktwuxc16_ADR         0xB000067C
+
+// Register kt17
+#define HAL_SRVDSP_kt17_REGISTER    (HAL_SRVDSPREG_MAP->kt17)
+#define HAL_SRVDSP_kt17_LSB         0
+#define HAL_SRVDSP_kt17_MSB         15
+#define HAL_SRVDSP_kt17_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt17_TYPE        SInt16
+#define HAL_SRVDSP_kt17             HAL_SRVDSP_kt17_MASK
+#define HAL_SRVDSP_kt17_READABLE    1
+#define HAL_SRVDSP_kt17_WRITABLE    1
+#define HAL_SRVDSP_kt17_SIGNED      1
+#define HAL_SRVDSP_kt17_ADR         0xB0000680
+
+// Register ktu17
+#define HAL_SRVDSP_ktu17_REGISTER    (HAL_SRVDSPREG_MAP->ktu17)
+#define HAL_SRVDSP_ktu17_LSB         0
+#define HAL_SRVDSP_ktu17_MSB         15
+#define HAL_SRVDSP_ktu17_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktu17_TYPE        SInt16
+#define HAL_SRVDSP_ktu17             HAL_SRVDSP_ktu17_MASK
+#define HAL_SRVDSP_ktu17_READABLE    1
+#define HAL_SRVDSP_ktu17_WRITABLE    1
+#define HAL_SRVDSP_ktu17_SIGNED      1
+#define HAL_SRVDSP_ktu17_ADR         0xB0000684
+
+// Register ktw17
+#define HAL_SRVDSP_ktw17_REGISTER    (HAL_SRVDSPREG_MAP->ktw17)
+#define HAL_SRVDSP_ktw17_LSB         0
+#define HAL_SRVDSP_ktw17_MSB         15
+#define HAL_SRVDSP_ktw17_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktw17_TYPE        SInt16
+#define HAL_SRVDSP_ktw17             HAL_SRVDSP_ktw17_MASK
+#define HAL_SRVDSP_ktw17_READABLE    1
+#define HAL_SRVDSP_ktw17_WRITABLE    1
+#define HAL_SRVDSP_ktw17_SIGNED      1
+#define HAL_SRVDSP_ktw17_ADR         0xB0000688
+
+// Register ktwuxc17
+#define HAL_SRVDSP_ktwuxc17_REGISTER    (HAL_SRVDSPREG_MAP->ktwuxc17)
+#define HAL_SRVDSP_ktwuxc17_LSB         0
+#define HAL_SRVDSP_ktwuxc17_MSB         15
+#define HAL_SRVDSP_ktwuxc17_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktwuxc17_TYPE        SInt16
+#define HAL_SRVDSP_ktwuxc17             HAL_SRVDSP_ktwuxc17_MASK
+#define HAL_SRVDSP_ktwuxc17_READABLE    1
+#define HAL_SRVDSP_ktwuxc17_WRITABLE    1
+#define HAL_SRVDSP_ktwuxc17_SIGNED      1
+#define HAL_SRVDSP_ktwuxc17_ADR         0xB000068C
+
+// Register kt18
+#define HAL_SRVDSP_kt18_REGISTER    (HAL_SRVDSPREG_MAP->kt18)
+#define HAL_SRVDSP_kt18_LSB         0
+#define HAL_SRVDSP_kt18_MSB         15
+#define HAL_SRVDSP_kt18_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt18_TYPE        SInt16
+#define HAL_SRVDSP_kt18             HAL_SRVDSP_kt18_MASK
+#define HAL_SRVDSP_kt18_READABLE    1
+#define HAL_SRVDSP_kt18_WRITABLE    1
+#define HAL_SRVDSP_kt18_SIGNED      1
+#define HAL_SRVDSP_kt18_ADR         0xB0000690
+
+// Register ktu18
+#define HAL_SRVDSP_ktu18_REGISTER    (HAL_SRVDSPREG_MAP->ktu18)
+#define HAL_SRVDSP_ktu18_LSB         0
+#define HAL_SRVDSP_ktu18_MSB         15
+#define HAL_SRVDSP_ktu18_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktu18_TYPE        SInt16
+#define HAL_SRVDSP_ktu18             HAL_SRVDSP_ktu18_MASK
+#define HAL_SRVDSP_ktu18_READABLE    1
+#define HAL_SRVDSP_ktu18_WRITABLE    1
+#define HAL_SRVDSP_ktu18_SIGNED      1
+#define HAL_SRVDSP_ktu18_ADR         0xB0000694
+
+// Register ktw18
+#define HAL_SRVDSP_ktw18_REGISTER    (HAL_SRVDSPREG_MAP->ktw18)
+#define HAL_SRVDSP_ktw18_LSB         0
+#define HAL_SRVDSP_ktw18_MSB         15
+#define HAL_SRVDSP_ktw18_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktw18_TYPE        SInt16
+#define HAL_SRVDSP_ktw18             HAL_SRVDSP_ktw18_MASK
+#define HAL_SRVDSP_ktw18_READABLE    1
+#define HAL_SRVDSP_ktw18_WRITABLE    1
+#define HAL_SRVDSP_ktw18_SIGNED      1
+#define HAL_SRVDSP_ktw18_ADR         0xB0000698
+
+// Register ktwuxc18
+#define HAL_SRVDSP_ktwuxc18_REGISTER    (HAL_SRVDSPREG_MAP->ktwuxc18)
+#define HAL_SRVDSP_ktwuxc18_LSB         0
+#define HAL_SRVDSP_ktwuxc18_MSB         15
+#define HAL_SRVDSP_ktwuxc18_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktwuxc18_TYPE        SInt16
+#define HAL_SRVDSP_ktwuxc18             HAL_SRVDSP_ktwuxc18_MASK
+#define HAL_SRVDSP_ktwuxc18_READABLE    1
+#define HAL_SRVDSP_ktwuxc18_WRITABLE    1
+#define HAL_SRVDSP_ktwuxc18_SIGNED      1
+#define HAL_SRVDSP_ktwuxc18_ADR         0xB000069C
+
+// Register kt19
+#define HAL_SRVDSP_kt19_REGISTER    (HAL_SRVDSPREG_MAP->kt19)
+#define HAL_SRVDSP_kt19_LSB         0
+#define HAL_SRVDSP_kt19_MSB         15
+#define HAL_SRVDSP_kt19_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt19_TYPE        SInt16
+#define HAL_SRVDSP_kt19             HAL_SRVDSP_kt19_MASK
+#define HAL_SRVDSP_kt19_READABLE    1
+#define HAL_SRVDSP_kt19_WRITABLE    1
+#define HAL_SRVDSP_kt19_SIGNED      1
+#define HAL_SRVDSP_kt19_ADR         0xB00006A0
+
+// Register ktu19
+#define HAL_SRVDSP_ktu19_REGISTER    (HAL_SRVDSPREG_MAP->ktu19)
+#define HAL_SRVDSP_ktu19_LSB         0
+#define HAL_SRVDSP_ktu19_MSB         15
+#define HAL_SRVDSP_ktu19_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktu19_TYPE        SInt16
+#define HAL_SRVDSP_ktu19             HAL_SRVDSP_ktu19_MASK
+#define HAL_SRVDSP_ktu19_READABLE    1
+#define HAL_SRVDSP_ktu19_WRITABLE    1
+#define HAL_SRVDSP_ktu19_SIGNED      1
+#define HAL_SRVDSP_ktu19_ADR         0xB00006A4
+
+// Register ktw19
+#define HAL_SRVDSP_ktw19_REGISTER    (HAL_SRVDSPREG_MAP->ktw19)
+#define HAL_SRVDSP_ktw19_LSB         0
+#define HAL_SRVDSP_ktw19_MSB         15
+#define HAL_SRVDSP_ktw19_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktw19_TYPE        SInt16
+#define HAL_SRVDSP_ktw19             HAL_SRVDSP_ktw19_MASK
+#define HAL_SRVDSP_ktw19_READABLE    1
+#define HAL_SRVDSP_ktw19_WRITABLE    1
+#define HAL_SRVDSP_ktw19_SIGNED      1
+#define HAL_SRVDSP_ktw19_ADR         0xB00006A8
+
+// Register ktwuxc19
+#define HAL_SRVDSP_ktwuxc19_REGISTER    (HAL_SRVDSPREG_MAP->ktwuxc19)
+#define HAL_SRVDSP_ktwuxc19_LSB         0
+#define HAL_SRVDSP_ktwuxc19_MSB         15
+#define HAL_SRVDSP_ktwuxc19_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktwuxc19_TYPE        SInt16
+#define HAL_SRVDSP_ktwuxc19             HAL_SRVDSP_ktwuxc19_MASK
+#define HAL_SRVDSP_ktwuxc19_READABLE    1
+#define HAL_SRVDSP_ktwuxc19_WRITABLE    1
+#define HAL_SRVDSP_ktwuxc19_SIGNED      1
+#define HAL_SRVDSP_ktwuxc19_ADR         0xB00006AC
+
+// Register kt1A
+#define HAL_SRVDSP_kt1A_REGISTER    (HAL_SRVDSPREG_MAP->kt1A)
+#define HAL_SRVDSP_kt1A_LSB         0
+#define HAL_SRVDSP_kt1A_MSB         15
+#define HAL_SRVDSP_kt1A_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt1A_TYPE        SInt16
+#define HAL_SRVDSP_kt1A             HAL_SRVDSP_kt1A_MASK
+#define HAL_SRVDSP_kt1A_READABLE    1
+#define HAL_SRVDSP_kt1A_WRITABLE    1
+#define HAL_SRVDSP_kt1A_SIGNED      1
+#define HAL_SRVDSP_kt1A_ADR         0xB00006B0
+
+// Register ktu1A
+#define HAL_SRVDSP_ktu1A_REGISTER    (HAL_SRVDSPREG_MAP->ktu1A)
+#define HAL_SRVDSP_ktu1A_LSB         0
+#define HAL_SRVDSP_ktu1A_MSB         15
+#define HAL_SRVDSP_ktu1A_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktu1A_TYPE        SInt16
+#define HAL_SRVDSP_ktu1A             HAL_SRVDSP_ktu1A_MASK
+#define HAL_SRVDSP_ktu1A_READABLE    1
+#define HAL_SRVDSP_ktu1A_WRITABLE    1
+#define HAL_SRVDSP_ktu1A_SIGNED      1
+#define HAL_SRVDSP_ktu1A_ADR         0xB00006B4
+
+// Register ktw1A
+#define HAL_SRVDSP_ktw1A_REGISTER    (HAL_SRVDSPREG_MAP->ktw1A)
+#define HAL_SRVDSP_ktw1A_LSB         0
+#define HAL_SRVDSP_ktw1A_MSB         15
+#define HAL_SRVDSP_ktw1A_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktw1A_TYPE        SInt16
+#define HAL_SRVDSP_ktw1A             HAL_SRVDSP_ktw1A_MASK
+#define HAL_SRVDSP_ktw1A_READABLE    1
+#define HAL_SRVDSP_ktw1A_WRITABLE    1
+#define HAL_SRVDSP_ktw1A_SIGNED      1
+#define HAL_SRVDSP_ktw1A_ADR         0xB00006B8
+
+// Register ktwuxc1A
+#define HAL_SRVDSP_ktwuxc1A_REGISTER    (HAL_SRVDSPREG_MAP->ktwuxc1A)
+#define HAL_SRVDSP_ktwuxc1A_LSB         0
+#define HAL_SRVDSP_ktwuxc1A_MSB         15
+#define HAL_SRVDSP_ktwuxc1A_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktwuxc1A_TYPE        SInt16
+#define HAL_SRVDSP_ktwuxc1A             HAL_SRVDSP_ktwuxc1A_MASK
+#define HAL_SRVDSP_ktwuxc1A_READABLE    1
+#define HAL_SRVDSP_ktwuxc1A_WRITABLE    1
+#define HAL_SRVDSP_ktwuxc1A_SIGNED      1
+#define HAL_SRVDSP_ktwuxc1A_ADR         0xB00006BC
+
+// Register src_trk_prescale
+#define HAL_SRVDSP_src_trk_prescale_REGISTER    (HAL_SRVDSPREG_MAP->src_trk_prescale)
+#define HAL_SRVDSP_src_trk_prescale_LSB         0
+#define HAL_SRVDSP_src_trk_prescale_MSB         15
+#define HAL_SRVDSP_src_trk_prescale_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_trk_prescale_TYPE        SInt16
+#define HAL_SRVDSP_src_trk_prescale             HAL_SRVDSP_src_trk_prescale_MASK
+#define HAL_SRVDSP_src_trk_prescale_READABLE    1
+#define HAL_SRVDSP_src_trk_prescale_WRITABLE    1
+#define HAL_SRVDSP_src_trk_prescale_SIGNED      1
+#define HAL_SRVDSP_src_trk_prescale_ADR         0xB00006C0
+
+// Register reserved_C4
+#define HAL_SRVDSP_reserved_C4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_C4)
+#define HAL_SRVDSP_reserved_C4_LSB         0
+#define HAL_SRVDSP_reserved_C4_MSB         15
+#define HAL_SRVDSP_reserved_C4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_C4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_C4             HAL_SRVDSP_reserved_C4_MASK
+#define HAL_SRVDSP_reserved_C4_READABLE    1
+#define HAL_SRVDSP_reserved_C4_WRITABLE    1
+#define HAL_SRVDSP_reserved_C4_SIGNED      1
+#define HAL_SRVDSP_reserved_C4_ADR         0xB00006C4
+
+// Register reserved_C8
+#define HAL_SRVDSP_reserved_C8_REGISTER    (HAL_SRVDSPREG_MAP->reserved_C8)
+#define HAL_SRVDSP_reserved_C8_LSB         0
+#define HAL_SRVDSP_reserved_C8_MSB         15
+#define HAL_SRVDSP_reserved_C8_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_C8_TYPE        SInt16
+#define HAL_SRVDSP_reserved_C8             HAL_SRVDSP_reserved_C8_MASK
+#define HAL_SRVDSP_reserved_C8_READABLE    1
+#define HAL_SRVDSP_reserved_C8_WRITABLE    1
+#define HAL_SRVDSP_reserved_C8_SIGNED      1
+#define HAL_SRVDSP_reserved_C8_ADR         0xB00006C8
+
+// Register reserved_CC
+#define HAL_SRVDSP_reserved_CC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_CC)
+#define HAL_SRVDSP_reserved_CC_LSB         0
+#define HAL_SRVDSP_reserved_CC_MSB         15
+#define HAL_SRVDSP_reserved_CC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_CC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_CC             HAL_SRVDSP_reserved_CC_MASK
+#define HAL_SRVDSP_reserved_CC_READABLE    1
+#define HAL_SRVDSP_reserved_CC_WRITABLE    1
+#define HAL_SRVDSP_reserved_CC_SIGNED      1
+#define HAL_SRVDSP_reserved_CC_ADR         0xB00006CC
+
+// Register kt1c
+#define HAL_SRVDSP_kt1c_REGISTER    (HAL_SRVDSPREG_MAP->kt1c)
+#define HAL_SRVDSP_kt1c_LSB         0
+#define HAL_SRVDSP_kt1c_MSB         15
+#define HAL_SRVDSP_kt1c_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt1c_TYPE        SInt16
+#define HAL_SRVDSP_kt1c             HAL_SRVDSP_kt1c_MASK
+#define HAL_SRVDSP_kt1c_READABLE    1
+#define HAL_SRVDSP_kt1c_WRITABLE    1
+#define HAL_SRVDSP_kt1c_SIGNED      1
+#define HAL_SRVDSP_kt1c_ADR         0xB00006D0
+
+// Register ktc1c
+#define HAL_SRVDSP_ktc1c_REGISTER    (HAL_SRVDSPREG_MAP->ktc1c)
+#define HAL_SRVDSP_ktc1c_LSB         0
+#define HAL_SRVDSP_ktc1c_MSB         15
+#define HAL_SRVDSP_ktc1c_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktc1c_TYPE        SInt16
+#define HAL_SRVDSP_ktc1c             HAL_SRVDSP_ktc1c_MASK
+#define HAL_SRVDSP_ktc1c_READABLE    1
+#define HAL_SRVDSP_ktc1c_WRITABLE    1
+#define HAL_SRVDSP_ktc1c_SIGNED      1
+#define HAL_SRVDSP_ktc1c_ADR         0xB00006D4
+
+// Register kt1d
+#define HAL_SRVDSP_kt1d_REGISTER    (HAL_SRVDSPREG_MAP->kt1d)
+#define HAL_SRVDSP_kt1d_LSB         0
+#define HAL_SRVDSP_kt1d_MSB         15
+#define HAL_SRVDSP_kt1d_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt1d_TYPE        SInt16
+#define HAL_SRVDSP_kt1d             HAL_SRVDSP_kt1d_MASK
+#define HAL_SRVDSP_kt1d_READABLE    1
+#define HAL_SRVDSP_kt1d_WRITABLE    1
+#define HAL_SRVDSP_kt1d_SIGNED      1
+#define HAL_SRVDSP_kt1d_ADR         0xB00006D8
+
+// Register ktc1d
+#define HAL_SRVDSP_ktc1d_REGISTER    (HAL_SRVDSPREG_MAP->ktc1d)
+#define HAL_SRVDSP_ktc1d_LSB         0
+#define HAL_SRVDSP_ktc1d_MSB         15
+#define HAL_SRVDSP_ktc1d_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktc1d_TYPE        SInt16
+#define HAL_SRVDSP_ktc1d             HAL_SRVDSP_ktc1d_MASK
+#define HAL_SRVDSP_ktc1d_READABLE    1
+#define HAL_SRVDSP_ktc1d_WRITABLE    1
+#define HAL_SRVDSP_ktc1d_SIGNED      1
+#define HAL_SRVDSP_ktc1d_ADR         0xB00006DC
+
+// Register kt1e
+#define HAL_SRVDSP_kt1e_REGISTER    (HAL_SRVDSPREG_MAP->kt1e)
+#define HAL_SRVDSP_kt1e_LSB         0
+#define HAL_SRVDSP_kt1e_MSB         15
+#define HAL_SRVDSP_kt1e_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt1e_TYPE        SInt16
+#define HAL_SRVDSP_kt1e             HAL_SRVDSP_kt1e_MASK
+#define HAL_SRVDSP_kt1e_READABLE    1
+#define HAL_SRVDSP_kt1e_WRITABLE    1
+#define HAL_SRVDSP_kt1e_SIGNED      1
+#define HAL_SRVDSP_kt1e_ADR         0xB00006E0
+
+// Register ktc1e
+#define HAL_SRVDSP_ktc1e_REGISTER    (HAL_SRVDSPREG_MAP->ktc1e)
+#define HAL_SRVDSP_ktc1e_LSB         0
+#define HAL_SRVDSP_ktc1e_MSB         15
+#define HAL_SRVDSP_ktc1e_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktc1e_TYPE        SInt16
+#define HAL_SRVDSP_ktc1e             HAL_SRVDSP_ktc1e_MASK
+#define HAL_SRVDSP_ktc1e_READABLE    1
+#define HAL_SRVDSP_ktc1e_WRITABLE    1
+#define HAL_SRVDSP_ktc1e_SIGNED      1
+#define HAL_SRVDSP_ktc1e_ADR         0xB00006E4
+
+// Register kt1f
+#define HAL_SRVDSP_kt1f_REGISTER    (HAL_SRVDSPREG_MAP->kt1f)
+#define HAL_SRVDSP_kt1f_LSB         0
+#define HAL_SRVDSP_kt1f_MSB         15
+#define HAL_SRVDSP_kt1f_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt1f_TYPE        SInt16
+#define HAL_SRVDSP_kt1f             HAL_SRVDSP_kt1f_MASK
+#define HAL_SRVDSP_kt1f_READABLE    1
+#define HAL_SRVDSP_kt1f_WRITABLE    1
+#define HAL_SRVDSP_kt1f_SIGNED      1
+#define HAL_SRVDSP_kt1f_ADR         0xB00006E8
+
+// Register ktc1f
+#define HAL_SRVDSP_ktc1f_REGISTER    (HAL_SRVDSPREG_MAP->ktc1f)
+#define HAL_SRVDSP_ktc1f_LSB         0
+#define HAL_SRVDSP_ktc1f_MSB         15
+#define HAL_SRVDSP_ktc1f_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktc1f_TYPE        SInt16
+#define HAL_SRVDSP_ktc1f             HAL_SRVDSP_ktc1f_MASK
+#define HAL_SRVDSP_ktc1f_READABLE    1
+#define HAL_SRVDSP_ktc1f_WRITABLE    1
+#define HAL_SRVDSP_ktc1f_SIGNED      1
+#define HAL_SRVDSP_ktc1f_ADR         0xB00006EC
+
+// Register kt1B
+#define HAL_SRVDSP_kt1B_REGISTER    (HAL_SRVDSPREG_MAP->kt1B)
+#define HAL_SRVDSP_kt1B_LSB         0
+#define HAL_SRVDSP_kt1B_MSB         15
+#define HAL_SRVDSP_kt1B_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt1B_TYPE        SInt16
+#define HAL_SRVDSP_kt1B             HAL_SRVDSP_kt1B_MASK
+#define HAL_SRVDSP_kt1B_READABLE    1
+#define HAL_SRVDSP_kt1B_WRITABLE    1
+#define HAL_SRVDSP_kt1B_SIGNED      1
+#define HAL_SRVDSP_kt1B_ADR         0xB00006F0
+
+// Register reserved_F4
+#define HAL_SRVDSP_reserved_F4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_F4)
+#define HAL_SRVDSP_reserved_F4_LSB         0
+#define HAL_SRVDSP_reserved_F4_MSB         15
+#define HAL_SRVDSP_reserved_F4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_F4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_F4             HAL_SRVDSP_reserved_F4_MASK
+#define HAL_SRVDSP_reserved_F4_READABLE    1
+#define HAL_SRVDSP_reserved_F4_WRITABLE    1
+#define HAL_SRVDSP_reserved_F4_SIGNED      1
+#define HAL_SRVDSP_reserved_F4_ADR         0xB00006F4
+
+// Register reserved_F8
+#define HAL_SRVDSP_reserved_F8_REGISTER    (HAL_SRVDSPREG_MAP->reserved_F8)
+#define HAL_SRVDSP_reserved_F8_LSB         0
+#define HAL_SRVDSP_reserved_F8_MSB         15
+#define HAL_SRVDSP_reserved_F8_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_F8_TYPE        SInt16
+#define HAL_SRVDSP_reserved_F8             HAL_SRVDSP_reserved_F8_MASK
+#define HAL_SRVDSP_reserved_F8_READABLE    1
+#define HAL_SRVDSP_reserved_F8_WRITABLE    1
+#define HAL_SRVDSP_reserved_F8_SIGNED      1
+#define HAL_SRVDSP_reserved_F8_ADR         0xB00006F8
+
+// Register reserved_FC
+#define HAL_SRVDSP_reserved_FC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_FC)
+#define HAL_SRVDSP_reserved_FC_LSB         0
+#define HAL_SRVDSP_reserved_FC_MSB         15
+#define HAL_SRVDSP_reserved_FC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_FC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_FC             HAL_SRVDSP_reserved_FC_MASK
+#define HAL_SRVDSP_reserved_FC_READABLE    1
+#define HAL_SRVDSP_reserved_FC_WRITABLE    1
+#define HAL_SRVDSP_reserved_FC_SIGNED      1
+#define HAL_SRVDSP_reserved_FC_ADR         0xB00006FC
+
+// Register src_kt2
+#define HAL_SRVDSP_src_kt2_REGISTER    (HAL_SRVDSPREG_MAP->src_kt2)
+#define HAL_SRVDSP_src_kt2_LSB         0
+#define HAL_SRVDSP_src_kt2_MSB         15
+#define HAL_SRVDSP_src_kt2_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_kt2_TYPE        SInt16
+#define HAL_SRVDSP_src_kt2             HAL_SRVDSP_src_kt2_MASK
+#define HAL_SRVDSP_src_kt2_READABLE    1
+#define HAL_SRVDSP_src_kt2_WRITABLE    1
+#define HAL_SRVDSP_src_kt2_SIGNED      1
+#define HAL_SRVDSP_src_kt2_ADR         0xB0000700
+
+// Register reserved_104
+#define HAL_SRVDSP_reserved_104_REGISTER    (HAL_SRVDSPREG_MAP->reserved_104)
+#define HAL_SRVDSP_reserved_104_LSB         0
+#define HAL_SRVDSP_reserved_104_MSB         15
+#define HAL_SRVDSP_reserved_104_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_104_TYPE        SInt16
+#define HAL_SRVDSP_reserved_104             HAL_SRVDSP_reserved_104_MASK
+#define HAL_SRVDSP_reserved_104_READABLE    1
+#define HAL_SRVDSP_reserved_104_WRITABLE    1
+#define HAL_SRVDSP_reserved_104_SIGNED      1
+#define HAL_SRVDSP_reserved_104_ADR         0xB0000704
+
+// Register reserved_108
+#define HAL_SRVDSP_reserved_108_REGISTER    (HAL_SRVDSPREG_MAP->reserved_108)
+#define HAL_SRVDSP_reserved_108_LSB         0
+#define HAL_SRVDSP_reserved_108_MSB         15
+#define HAL_SRVDSP_reserved_108_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_108_TYPE        SInt16
+#define HAL_SRVDSP_reserved_108             HAL_SRVDSP_reserved_108_MASK
+#define HAL_SRVDSP_reserved_108_READABLE    1
+#define HAL_SRVDSP_reserved_108_WRITABLE    1
+#define HAL_SRVDSP_reserved_108_SIGNED      1
+#define HAL_SRVDSP_reserved_108_ADR         0xB0000708
+
+// Register reserved_10C
+#define HAL_SRVDSP_reserved_10C_REGISTER    (HAL_SRVDSPREG_MAP->reserved_10C)
+#define HAL_SRVDSP_reserved_10C_LSB         0
+#define HAL_SRVDSP_reserved_10C_MSB         15
+#define HAL_SRVDSP_reserved_10C_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_10C_TYPE        SInt16
+#define HAL_SRVDSP_reserved_10C             HAL_SRVDSP_reserved_10C_MASK
+#define HAL_SRVDSP_reserved_10C_READABLE    1
+#define HAL_SRVDSP_reserved_10C_WRITABLE    1
+#define HAL_SRVDSP_reserved_10C_SIGNED      1
+#define HAL_SRVDSP_reserved_10C_ADR         0xB000070C
+
+// Register reserved_110
+#define HAL_SRVDSP_reserved_110_REGISTER    (HAL_SRVDSPREG_MAP->reserved_110)
+#define HAL_SRVDSP_reserved_110_LSB         0
+#define HAL_SRVDSP_reserved_110_MSB         15
+#define HAL_SRVDSP_reserved_110_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_110_TYPE        SInt16
+#define HAL_SRVDSP_reserved_110             HAL_SRVDSP_reserved_110_MASK
+#define HAL_SRVDSP_reserved_110_READABLE    1
+#define HAL_SRVDSP_reserved_110_WRITABLE    1
+#define HAL_SRVDSP_reserved_110_SIGNED      1
+#define HAL_SRVDSP_reserved_110_ADR         0xB0000710
+
+// Register reserved_114
+#define HAL_SRVDSP_reserved_114_REGISTER    (HAL_SRVDSPREG_MAP->reserved_114)
+#define HAL_SRVDSP_reserved_114_LSB         0
+#define HAL_SRVDSP_reserved_114_MSB         15
+#define HAL_SRVDSP_reserved_114_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_114_TYPE        SInt16
+#define HAL_SRVDSP_reserved_114             HAL_SRVDSP_reserved_114_MASK
+#define HAL_SRVDSP_reserved_114_READABLE    1
+#define HAL_SRVDSP_reserved_114_WRITABLE    1
+#define HAL_SRVDSP_reserved_114_SIGNED      1
+#define HAL_SRVDSP_reserved_114_ADR         0xB0000714
+
+// Register reserved_118
+#define HAL_SRVDSP_reserved_118_REGISTER    (HAL_SRVDSPREG_MAP->reserved_118)
+#define HAL_SRVDSP_reserved_118_LSB         0
+#define HAL_SRVDSP_reserved_118_MSB         15
+#define HAL_SRVDSP_reserved_118_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_118_TYPE        SInt16
+#define HAL_SRVDSP_reserved_118             HAL_SRVDSP_reserved_118_MASK
+#define HAL_SRVDSP_reserved_118_READABLE    1
+#define HAL_SRVDSP_reserved_118_WRITABLE    1
+#define HAL_SRVDSP_reserved_118_SIGNED      1
+#define HAL_SRVDSP_reserved_118_ADR         0xB0000718
+
+// Register reserved_11C
+#define HAL_SRVDSP_reserved_11C_REGISTER    (HAL_SRVDSPREG_MAP->reserved_11C)
+#define HAL_SRVDSP_reserved_11C_LSB         0
+#define HAL_SRVDSP_reserved_11C_MSB         15
+#define HAL_SRVDSP_reserved_11C_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_11C_TYPE        SInt16
+#define HAL_SRVDSP_reserved_11C             HAL_SRVDSP_reserved_11C_MASK
+#define HAL_SRVDSP_reserved_11C_READABLE    1
+#define HAL_SRVDSP_reserved_11C_WRITABLE    1
+#define HAL_SRVDSP_reserved_11C_SIGNED      1
+#define HAL_SRVDSP_reserved_11C_ADR         0xB000071C
+
+// Register kt10
+#define HAL_SRVDSP_kt10_REGISTER    (HAL_SRVDSPREG_MAP->kt10)
+#define HAL_SRVDSP_kt10_LSB         0
+#define HAL_SRVDSP_kt10_MSB         15
+#define HAL_SRVDSP_kt10_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt10_TYPE        SInt16
+#define HAL_SRVDSP_kt10             HAL_SRVDSP_kt10_MASK
+#define HAL_SRVDSP_kt10_READABLE    1
+#define HAL_SRVDSP_kt10_WRITABLE    1
+#define HAL_SRVDSP_kt10_SIGNED      1
+#define HAL_SRVDSP_kt10_ADR         0xB0000720
+
+// Register kt20
+#define HAL_SRVDSP_kt20_REGISTER    (HAL_SRVDSPREG_MAP->kt20)
+#define HAL_SRVDSP_kt20_LSB         0
+#define HAL_SRVDSP_kt20_MSB         15
+#define HAL_SRVDSP_kt20_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt20_TYPE        SInt16
+#define HAL_SRVDSP_kt20             HAL_SRVDSP_kt20_MASK
+#define HAL_SRVDSP_kt20_READABLE    1
+#define HAL_SRVDSP_kt20_WRITABLE    1
+#define HAL_SRVDSP_kt20_SIGNED      1
+#define HAL_SRVDSP_kt20_ADR         0xB0000724
+
+// Register kt21
+#define HAL_SRVDSP_kt21_REGISTER    (HAL_SRVDSPREG_MAP->kt21)
+#define HAL_SRVDSP_kt21_LSB         0
+#define HAL_SRVDSP_kt21_MSB         15
+#define HAL_SRVDSP_kt21_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt21_TYPE        SInt16
+#define HAL_SRVDSP_kt21             HAL_SRVDSP_kt21_MASK
+#define HAL_SRVDSP_kt21_READABLE    1
+#define HAL_SRVDSP_kt21_WRITABLE    1
+#define HAL_SRVDSP_kt21_SIGNED      1
+#define HAL_SRVDSP_kt21_ADR         0xB0000728
+
+// Register kt22
+#define HAL_SRVDSP_kt22_REGISTER    (HAL_SRVDSPREG_MAP->kt22)
+#define HAL_SRVDSP_kt22_LSB         0
+#define HAL_SRVDSP_kt22_MSB         15
+#define HAL_SRVDSP_kt22_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt22_TYPE        SInt16
+#define HAL_SRVDSP_kt22             HAL_SRVDSP_kt22_MASK
+#define HAL_SRVDSP_kt22_READABLE    1
+#define HAL_SRVDSP_kt22_WRITABLE    1
+#define HAL_SRVDSP_kt22_SIGNED      1
+#define HAL_SRVDSP_kt22_ADR         0xB000072C
+
+// Register kt30
+#define HAL_SRVDSP_kt30_REGISTER    (HAL_SRVDSPREG_MAP->kt30)
+#define HAL_SRVDSP_kt30_LSB         0
+#define HAL_SRVDSP_kt30_MSB         15
+#define HAL_SRVDSP_kt30_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt30_TYPE        SInt16
+#define HAL_SRVDSP_kt30             HAL_SRVDSP_kt30_MASK
+#define HAL_SRVDSP_kt30_READABLE    1
+#define HAL_SRVDSP_kt30_WRITABLE    1
+#define HAL_SRVDSP_kt30_SIGNED      1
+#define HAL_SRVDSP_kt30_ADR         0xB0000730
+
+// Register kt31
+#define HAL_SRVDSP_kt31_REGISTER    (HAL_SRVDSPREG_MAP->kt31)
+#define HAL_SRVDSP_kt31_LSB         0
+#define HAL_SRVDSP_kt31_MSB         15
+#define HAL_SRVDSP_kt31_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt31_TYPE        SInt16
+#define HAL_SRVDSP_kt31             HAL_SRVDSP_kt31_MASK
+#define HAL_SRVDSP_kt31_READABLE    1
+#define HAL_SRVDSP_kt31_WRITABLE    1
+#define HAL_SRVDSP_kt31_SIGNED      1
+#define HAL_SRVDSP_kt31_ADR         0xB0000734
+
+// Register kt32
+#define HAL_SRVDSP_kt32_REGISTER    (HAL_SRVDSPREG_MAP->kt32)
+#define HAL_SRVDSP_kt32_LSB         0
+#define HAL_SRVDSP_kt32_MSB         15
+#define HAL_SRVDSP_kt32_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt32_TYPE        SInt16
+#define HAL_SRVDSP_kt32             HAL_SRVDSP_kt32_MASK
+#define HAL_SRVDSP_kt32_READABLE    1
+#define HAL_SRVDSP_kt32_WRITABLE    1
+#define HAL_SRVDSP_kt32_SIGNED      1
+#define HAL_SRVDSP_kt32_ADR         0xB0000738
+
+// Register kt33
+#define HAL_SRVDSP_kt33_REGISTER    (HAL_SRVDSPREG_MAP->kt33)
+#define HAL_SRVDSP_kt33_LSB         0
+#define HAL_SRVDSP_kt33_MSB         15
+#define HAL_SRVDSP_kt33_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt33_TYPE        SInt16
+#define HAL_SRVDSP_kt33             HAL_SRVDSP_kt33_MASK
+#define HAL_SRVDSP_kt33_READABLE    1
+#define HAL_SRVDSP_kt33_WRITABLE    1
+#define HAL_SRVDSP_kt33_SIGNED      1
+#define HAL_SRVDSP_kt33_ADR         0xB000073C
+
+// Register kt34
+#define HAL_SRVDSP_kt34_REGISTER    (HAL_SRVDSPREG_MAP->kt34)
+#define HAL_SRVDSP_kt34_LSB         0
+#define HAL_SRVDSP_kt34_MSB         15
+#define HAL_SRVDSP_kt34_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt34_TYPE        SInt16
+#define HAL_SRVDSP_kt34             HAL_SRVDSP_kt34_MASK
+#define HAL_SRVDSP_kt34_READABLE    1
+#define HAL_SRVDSP_kt34_WRITABLE    1
+#define HAL_SRVDSP_kt34_SIGNED      1
+#define HAL_SRVDSP_kt34_ADR         0xB0000740
+
+// Register kt35
+#define HAL_SRVDSP_kt35_REGISTER    (HAL_SRVDSPREG_MAP->kt35)
+#define HAL_SRVDSP_kt35_LSB         0
+#define HAL_SRVDSP_kt35_MSB         15
+#define HAL_SRVDSP_kt35_MASK        0x0000FFFF
+#define HAL_SRVDSP_kt35_TYPE        SInt16
+#define HAL_SRVDSP_kt35             HAL_SRVDSP_kt35_MASK
+#define HAL_SRVDSP_kt35_READABLE    1
+#define HAL_SRVDSP_kt35_WRITABLE    1
+#define HAL_SRVDSP_kt35_SIGNED      1
+#define HAL_SRVDSP_kt35_ADR         0xB0000744
+
+// Register ktb10
+#define HAL_SRVDSP_ktb10_REGISTER    (HAL_SRVDSPREG_MAP->ktb10)
+#define HAL_SRVDSP_ktb10_LSB         0
+#define HAL_SRVDSP_ktb10_MSB         15
+#define HAL_SRVDSP_ktb10_MASK        0x0000FFFF
+#define HAL_SRVDSP_ktb10_TYPE        SInt16
+#define HAL_SRVDSP_ktb10             HAL_SRVDSP_ktb10_MASK
+#define HAL_SRVDSP_ktb10_READABLE    1
+#define HAL_SRVDSP_ktb10_WRITABLE    1
+#define HAL_SRVDSP_ktb10_SIGNED      1
+#define HAL_SRVDSP_ktb10_ADR         0xB0000748
+
+// Register krb10
+#define HAL_SRVDSP_krb10_REGISTER    (HAL_SRVDSPREG_MAP->krb10)
+#define HAL_SRVDSP_krb10_LSB         0
+#define HAL_SRVDSP_krb10_MSB         15
+#define HAL_SRVDSP_krb10_MASK        0x0000FFFF
+#define HAL_SRVDSP_krb10_TYPE        SInt16
+#define HAL_SRVDSP_krb10             HAL_SRVDSP_krb10_MASK
+#define HAL_SRVDSP_krb10_READABLE    1
+#define HAL_SRVDSP_krb10_WRITABLE    1
+#define HAL_SRVDSP_krb10_SIGNED      1
+#define HAL_SRVDSP_krb10_ADR         0xB000074C
+
+// Register kspd_0
+#define HAL_SRVDSP_kspd_0_REGISTER    (HAL_SRVDSPREG_MAP->kspd_0)
+#define HAL_SRVDSP_kspd_0_LSB         0
+#define HAL_SRVDSP_kspd_0_MSB         15
+#define HAL_SRVDSP_kspd_0_MASK        0x0000FFFF
+#define HAL_SRVDSP_kspd_0_TYPE        SInt16
+#define HAL_SRVDSP_kspd_0             HAL_SRVDSP_kspd_0_MASK
+#define HAL_SRVDSP_kspd_0_READABLE    1
+#define HAL_SRVDSP_kspd_0_WRITABLE    1
+#define HAL_SRVDSP_kspd_0_SIGNED      1
+#define HAL_SRVDSP_kspd_0_ADR         0xB0000750
+
+// Register kspd_4
+#define HAL_SRVDSP_kspd_4_REGISTER    (HAL_SRVDSPREG_MAP->kspd_4)
+#define HAL_SRVDSP_kspd_4_LSB         0
+#define HAL_SRVDSP_kspd_4_MSB         15
+#define HAL_SRVDSP_kspd_4_MASK        0x0000FFFF
+#define HAL_SRVDSP_kspd_4_TYPE        SInt16
+#define HAL_SRVDSP_kspd_4             HAL_SRVDSP_kspd_4_MASK
+#define HAL_SRVDSP_kspd_4_READABLE    1
+#define HAL_SRVDSP_kspd_4_WRITABLE    1
+#define HAL_SRVDSP_kspd_4_SIGNED      1
+#define HAL_SRVDSP_kspd_4_ADR         0xB0000754
+
+// Register kspd_8
+#define HAL_SRVDSP_kspd_8_REGISTER    (HAL_SRVDSPREG_MAP->kspd_8)
+#define HAL_SRVDSP_kspd_8_LSB         0
+#define HAL_SRVDSP_kspd_8_MSB         15
+#define HAL_SRVDSP_kspd_8_MASK        0x0000FFFF
+#define HAL_SRVDSP_kspd_8_TYPE        SInt16
+#define HAL_SRVDSP_kspd_8             HAL_SRVDSP_kspd_8_MASK
+#define HAL_SRVDSP_kspd_8_READABLE    1
+#define HAL_SRVDSP_kspd_8_WRITABLE    1
+#define HAL_SRVDSP_kspd_8_SIGNED      1
+#define HAL_SRVDSP_kspd_8_ADR         0xB0000758
+
+// Register kspd_16
+#define HAL_SRVDSP_kspd_16_REGISTER    (HAL_SRVDSPREG_MAP->kspd_16)
+#define HAL_SRVDSP_kspd_16_LSB         0
+#define HAL_SRVDSP_kspd_16_MSB         15
+#define HAL_SRVDSP_kspd_16_MASK        0x0000FFFF
+#define HAL_SRVDSP_kspd_16_TYPE        SInt16
+#define HAL_SRVDSP_kspd_16             HAL_SRVDSP_kspd_16_MASK
+#define HAL_SRVDSP_kspd_16_READABLE    1
+#define HAL_SRVDSP_kspd_16_WRITABLE    1
+#define HAL_SRVDSP_kspd_16_SIGNED      1
+#define HAL_SRVDSP_kspd_16_ADR         0xB000075C
+
+// Register kspd_32
+#define HAL_SRVDSP_kspd_32_REGISTER    (HAL_SRVDSPREG_MAP->kspd_32)
+#define HAL_SRVDSP_kspd_32_LSB         0
+#define HAL_SRVDSP_kspd_32_MSB         15
+#define HAL_SRVDSP_kspd_32_MASK        0x0000FFFF
+#define HAL_SRVDSP_kspd_32_TYPE        SInt16
+#define HAL_SRVDSP_kspd_32             HAL_SRVDSP_kspd_32_MASK
+#define HAL_SRVDSP_kspd_32_READABLE    1
+#define HAL_SRVDSP_kspd_32_WRITABLE    1
+#define HAL_SRVDSP_kspd_32_SIGNED      1
+#define HAL_SRVDSP_kspd_32_ADR         0xB0000760
+
+// Register kspd_64
+#define HAL_SRVDSP_kspd_64_REGISTER    (HAL_SRVDSPREG_MAP->kspd_64)
+#define HAL_SRVDSP_kspd_64_LSB         0
+#define HAL_SRVDSP_kspd_64_MSB         15
+#define HAL_SRVDSP_kspd_64_MASK        0x0000FFFF
+#define HAL_SRVDSP_kspd_64_TYPE        SInt16
+#define HAL_SRVDSP_kspd_64             HAL_SRVDSP_kspd_64_MASK
+#define HAL_SRVDSP_kspd_64_READABLE    1
+#define HAL_SRVDSP_kspd_64_WRITABLE    1
+#define HAL_SRVDSP_kspd_64_SIGNED      1
+#define HAL_SRVDSP_kspd_64_ADR         0xB0000764
+
+// Register kspd_128
+#define HAL_SRVDSP_kspd_128_REGISTER    (HAL_SRVDSPREG_MAP->kspd_128)
+#define HAL_SRVDSP_kspd_128_LSB         0
+#define HAL_SRVDSP_kspd_128_MSB         15
+#define HAL_SRVDSP_kspd_128_MASK        0x0000FFFF
+#define HAL_SRVDSP_kspd_128_TYPE        SInt16
+#define HAL_SRVDSP_kspd_128             HAL_SRVDSP_kspd_128_MASK
+#define HAL_SRVDSP_kspd_128_READABLE    1
+#define HAL_SRVDSP_kspd_128_WRITABLE    1
+#define HAL_SRVDSP_kspd_128_SIGNED      1
+#define HAL_SRVDSP_kspd_128_ADR         0xB0000768
+
+// Register kspd_256
+#define HAL_SRVDSP_kspd_256_REGISTER    (HAL_SRVDSPREG_MAP->kspd_256)
+#define HAL_SRVDSP_kspd_256_LSB         0
+#define HAL_SRVDSP_kspd_256_MSB         15
+#define HAL_SRVDSP_kspd_256_MASK        0x0000FFFF
+#define HAL_SRVDSP_kspd_256_TYPE        SInt16
+#define HAL_SRVDSP_kspd_256             HAL_SRVDSP_kspd_256_MASK
+#define HAL_SRVDSP_kspd_256_READABLE    1
+#define HAL_SRVDSP_kspd_256_WRITABLE    1
+#define HAL_SRVDSP_kspd_256_SIGNED      1
+#define HAL_SRVDSP_kspd_256_ADR         0xB000076C
+
+// Register kspd_512
+#define HAL_SRVDSP_kspd_512_REGISTER    (HAL_SRVDSPREG_MAP->kspd_512)
+#define HAL_SRVDSP_kspd_512_LSB         0
+#define HAL_SRVDSP_kspd_512_MSB         15
+#define HAL_SRVDSP_kspd_512_MASK        0x0000FFFF
+#define HAL_SRVDSP_kspd_512_TYPE        SInt16
+#define HAL_SRVDSP_kspd_512             HAL_SRVDSP_kspd_512_MASK
+#define HAL_SRVDSP_kspd_512_READABLE    1
+#define HAL_SRVDSP_kspd_512_WRITABLE    1
+#define HAL_SRVDSP_kspd_512_SIGNED      1
+#define HAL_SRVDSP_kspd_512_ADR         0xB0000770
+
+// Register kspd_1024
+#define HAL_SRVDSP_kspd_1024_REGISTER    (HAL_SRVDSPREG_MAP->kspd_1024)
+#define HAL_SRVDSP_kspd_1024_LSB         0
+#define HAL_SRVDSP_kspd_1024_MSB         15
+#define HAL_SRVDSP_kspd_1024_MASK        0x0000FFFF
+#define HAL_SRVDSP_kspd_1024_TYPE        SInt16
+#define HAL_SRVDSP_kspd_1024             HAL_SRVDSP_kspd_1024_MASK
+#define HAL_SRVDSP_kspd_1024_READABLE    1
+#define HAL_SRVDSP_kspd_1024_WRITABLE    1
+#define HAL_SRVDSP_kspd_1024_SIGNED      1
+#define HAL_SRVDSP_kspd_1024_ADR         0xB0000774
+
+// Register dummy_kspd
+#define HAL_SRVDSP_dummy_kspd_REGISTER    (HAL_SRVDSPREG_MAP->dummy_kspd)
+#define HAL_SRVDSP_dummy_kspd_LSB         0
+#define HAL_SRVDSP_dummy_kspd_MSB         15
+#define HAL_SRVDSP_dummy_kspd_MASK        0x0000FFFF
+#define HAL_SRVDSP_dummy_kspd_TYPE        SInt16
+#define HAL_SRVDSP_dummy_kspd             HAL_SRVDSP_dummy_kspd_MASK
+#define HAL_SRVDSP_dummy_kspd_READABLE    1
+#define HAL_SRVDSP_dummy_kspd_WRITABLE    1
+#define HAL_SRVDSP_dummy_kspd_SIGNED      1
+#define HAL_SRVDSP_dummy_kspd_ADR         0xB0000778
+
+// Register kspd_addr_start
+#define HAL_SRVDSP_kspd_addr_start_REGISTER    (HAL_SRVDSPREG_MAP->kspd_addr_start)
+#define HAL_SRVDSP_kspd_addr_start_LSB         0
+#define HAL_SRVDSP_kspd_addr_start_MSB         15
+#define HAL_SRVDSP_kspd_addr_start_MASK        0x0000FFFF
+#define HAL_SRVDSP_kspd_addr_start_TYPE        SInt16
+#define HAL_SRVDSP_kspd_addr_start             HAL_SRVDSP_kspd_addr_start_MASK
+#define HAL_SRVDSP_kspd_addr_start_READABLE    1
+#define HAL_SRVDSP_kspd_addr_start_WRITABLE    1
+#define HAL_SRVDSP_kspd_addr_start_SIGNED      1
+#define HAL_SRVDSP_kspd_addr_start_ADR         0xB000077C
+
+// Register debug2_gain
+#define HAL_SRVDSP_debug2_gain_REGISTER    (HAL_SRVDSPREG_MAP->debug2_gain)
+#define HAL_SRVDSP_debug2_gain_LSB         0
+#define HAL_SRVDSP_debug2_gain_MSB         15
+#define HAL_SRVDSP_debug2_gain_MASK        0x0000FFFF
+#define HAL_SRVDSP_debug2_gain_TYPE        SInt16
+#define HAL_SRVDSP_debug2_gain             HAL_SRVDSP_debug2_gain_MASK
+#define HAL_SRVDSP_debug2_gain_READABLE    1
+#define HAL_SRVDSP_debug2_gain_WRITABLE    1
+#define HAL_SRVDSP_debug2_gain_SIGNED      1
+#define HAL_SRVDSP_debug2_gain_ADR         0xB0000780
+
+// Register debug3_gain
+#define HAL_SRVDSP_debug3_gain_REGISTER    (HAL_SRVDSPREG_MAP->debug3_gain)
+#define HAL_SRVDSP_debug3_gain_LSB         0
+#define HAL_SRVDSP_debug3_gain_MSB         15
+#define HAL_SRVDSP_debug3_gain_MASK        0x0000FFFF
+#define HAL_SRVDSP_debug3_gain_TYPE        SInt16
+#define HAL_SRVDSP_debug3_gain             HAL_SRVDSP_debug3_gain_MASK
+#define HAL_SRVDSP_debug3_gain_READABLE    1
+#define HAL_SRVDSP_debug3_gain_WRITABLE    1
+#define HAL_SRVDSP_debug3_gain_SIGNED      1
+#define HAL_SRVDSP_debug3_gain_ADR         0xB0000784
+
+// Register temp_debug
+#define HAL_SRVDSP_temp_debug_REGISTER    (HAL_SRVDSPREG_MAP->temp_debug)
+#define HAL_SRVDSP_temp_debug_LSB         0
+#define HAL_SRVDSP_temp_debug_MSB         15
+#define HAL_SRVDSP_temp_debug_MASK        0x0000FFFF
+#define HAL_SRVDSP_temp_debug_TYPE        SInt16
+#define HAL_SRVDSP_temp_debug             HAL_SRVDSP_temp_debug_MASK
+#define HAL_SRVDSP_temp_debug_READABLE    1
+#define HAL_SRVDSP_temp_debug_WRITABLE    1
+#define HAL_SRVDSP_temp_debug_SIGNED      1
+#define HAL_SRVDSP_temp_debug_ADR         0xB0000788
+
+// Register reserved_18C
+#define HAL_SRVDSP_reserved_18C_REGISTER    (HAL_SRVDSPREG_MAP->reserved_18C)
+#define HAL_SRVDSP_reserved_18C_LSB         0
+#define HAL_SRVDSP_reserved_18C_MSB         15
+#define HAL_SRVDSP_reserved_18C_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_18C_TYPE        SInt16
+#define HAL_SRVDSP_reserved_18C             HAL_SRVDSP_reserved_18C_MASK
+#define HAL_SRVDSP_reserved_18C_READABLE    1
+#define HAL_SRVDSP_reserved_18C_WRITABLE    1
+#define HAL_SRVDSP_reserved_18C_SIGNED      1
+#define HAL_SRVDSP_reserved_18C_ADR         0xB000078C
+
+// Register reserved_190
+#define HAL_SRVDSP_reserved_190_REGISTER    (HAL_SRVDSPREG_MAP->reserved_190)
+#define HAL_SRVDSP_reserved_190_LSB         0
+#define HAL_SRVDSP_reserved_190_MSB         15
+#define HAL_SRVDSP_reserved_190_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_190_TYPE        SInt16
+#define HAL_SRVDSP_reserved_190             HAL_SRVDSP_reserved_190_MASK
+#define HAL_SRVDSP_reserved_190_READABLE    1
+#define HAL_SRVDSP_reserved_190_WRITABLE    1
+#define HAL_SRVDSP_reserved_190_SIGNED      1
+#define HAL_SRVDSP_reserved_190_ADR         0xB0000790
+
+// Register reserved_194
+#define HAL_SRVDSP_reserved_194_REGISTER    (HAL_SRVDSPREG_MAP->reserved_194)
+#define HAL_SRVDSP_reserved_194_LSB         0
+#define HAL_SRVDSP_reserved_194_MSB         15
+#define HAL_SRVDSP_reserved_194_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_194_TYPE        SInt16
+#define HAL_SRVDSP_reserved_194             HAL_SRVDSP_reserved_194_MASK
+#define HAL_SRVDSP_reserved_194_READABLE    1
+#define HAL_SRVDSP_reserved_194_WRITABLE    1
+#define HAL_SRVDSP_reserved_194_SIGNED      1
+#define HAL_SRVDSP_reserved_194_ADR         0xB0000794
+
+// Register reserved_198
+#define HAL_SRVDSP_reserved_198_REGISTER    (HAL_SRVDSPREG_MAP->reserved_198)
+#define HAL_SRVDSP_reserved_198_LSB         0
+#define HAL_SRVDSP_reserved_198_MSB         15
+#define HAL_SRVDSP_reserved_198_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_198_TYPE        SInt16
+#define HAL_SRVDSP_reserved_198             HAL_SRVDSP_reserved_198_MASK
+#define HAL_SRVDSP_reserved_198_READABLE    1
+#define HAL_SRVDSP_reserved_198_WRITABLE    1
+#define HAL_SRVDSP_reserved_198_SIGNED      1
+#define HAL_SRVDSP_reserved_198_ADR         0xB0000798
+
+// Register reserved_19C
+#define HAL_SRVDSP_reserved_19C_REGISTER    (HAL_SRVDSPREG_MAP->reserved_19C)
+#define HAL_SRVDSP_reserved_19C_LSB         0
+#define HAL_SRVDSP_reserved_19C_MSB         15
+#define HAL_SRVDSP_reserved_19C_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_19C_TYPE        SInt16
+#define HAL_SRVDSP_reserved_19C             HAL_SRVDSP_reserved_19C_MASK
+#define HAL_SRVDSP_reserved_19C_READABLE    1
+#define HAL_SRVDSP_reserved_19C_WRITABLE    1
+#define HAL_SRVDSP_reserved_19C_SIGNED      1
+#define HAL_SRVDSP_reserved_19C_ADR         0xB000079C
+
+// Register reserved_1A0
+#define HAL_SRVDSP_reserved_1A0_REGISTER    (HAL_SRVDSPREG_MAP->reserved_1A0)
+#define HAL_SRVDSP_reserved_1A0_LSB         0
+#define HAL_SRVDSP_reserved_1A0_MSB         15
+#define HAL_SRVDSP_reserved_1A0_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_1A0_TYPE        SInt16
+#define HAL_SRVDSP_reserved_1A0             HAL_SRVDSP_reserved_1A0_MASK
+#define HAL_SRVDSP_reserved_1A0_READABLE    1
+#define HAL_SRVDSP_reserved_1A0_WRITABLE    1
+#define HAL_SRVDSP_reserved_1A0_SIGNED      1
+#define HAL_SRVDSP_reserved_1A0_ADR         0xB00007A0
+
+// Register reserved_1A4
+#define HAL_SRVDSP_reserved_1A4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_1A4)
+#define HAL_SRVDSP_reserved_1A4_LSB         0
+#define HAL_SRVDSP_reserved_1A4_MSB         15
+#define HAL_SRVDSP_reserved_1A4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_1A4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_1A4             HAL_SRVDSP_reserved_1A4_MASK
+#define HAL_SRVDSP_reserved_1A4_READABLE    1
+#define HAL_SRVDSP_reserved_1A4_WRITABLE    1
+#define HAL_SRVDSP_reserved_1A4_SIGNED      1
+#define HAL_SRVDSP_reserved_1A4_ADR         0xB00007A4
+
+// Register reserved_1A8
+#define HAL_SRVDSP_reserved_1A8_REGISTER    (HAL_SRVDSPREG_MAP->reserved_1A8)
+#define HAL_SRVDSP_reserved_1A8_LSB         0
+#define HAL_SRVDSP_reserved_1A8_MSB         15
+#define HAL_SRVDSP_reserved_1A8_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_1A8_TYPE        SInt16
+#define HAL_SRVDSP_reserved_1A8             HAL_SRVDSP_reserved_1A8_MASK
+#define HAL_SRVDSP_reserved_1A8_READABLE    1
+#define HAL_SRVDSP_reserved_1A8_WRITABLE    1
+#define HAL_SRVDSP_reserved_1A8_SIGNED      1
+#define HAL_SRVDSP_reserved_1A8_ADR         0xB00007A8
+
+// Register trk_pwr_limit_inv
+#define HAL_SRVDSP_trk_pwr_limit_inv_REGISTER    (HAL_SRVDSPREG_MAP->trk_pwr_limit_inv)
+#define HAL_SRVDSP_trk_pwr_limit_inv_LSB         0
+#define HAL_SRVDSP_trk_pwr_limit_inv_MSB         15
+#define HAL_SRVDSP_trk_pwr_limit_inv_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_pwr_limit_inv_TYPE        SInt16
+#define HAL_SRVDSP_trk_pwr_limit_inv             HAL_SRVDSP_trk_pwr_limit_inv_MASK
+#define HAL_SRVDSP_trk_pwr_limit_inv_READABLE    1
+#define HAL_SRVDSP_trk_pwr_limit_inv_WRITABLE    1
+#define HAL_SRVDSP_trk_pwr_limit_inv_SIGNED      1
+#define HAL_SRVDSP_trk_pwr_limit_inv_ADR         0xB00007AC
+
+// Register foc_pwr_limit_inv
+#define HAL_SRVDSP_foc_pwr_limit_inv_REGISTER    (HAL_SRVDSPREG_MAP->foc_pwr_limit_inv)
+#define HAL_SRVDSP_foc_pwr_limit_inv_LSB         0
+#define HAL_SRVDSP_foc_pwr_limit_inv_MSB         15
+#define HAL_SRVDSP_foc_pwr_limit_inv_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_pwr_limit_inv_TYPE        SInt16
+#define HAL_SRVDSP_foc_pwr_limit_inv             HAL_SRVDSP_foc_pwr_limit_inv_MASK
+#define HAL_SRVDSP_foc_pwr_limit_inv_READABLE    1
+#define HAL_SRVDSP_foc_pwr_limit_inv_WRITABLE    1
+#define HAL_SRVDSP_foc_pwr_limit_inv_SIGNED      1
+#define HAL_SRVDSP_foc_pwr_limit_inv_ADR         0xB00007B0
+
+// Register tilt_pwr_limit_inv
+#define HAL_SRVDSP_tilt_pwr_limit_inv_REGISTER    (HAL_SRVDSPREG_MAP->tilt_pwr_limit_inv)
+#define HAL_SRVDSP_tilt_pwr_limit_inv_LSB         0
+#define HAL_SRVDSP_tilt_pwr_limit_inv_MSB         15
+#define HAL_SRVDSP_tilt_pwr_limit_inv_MASK        0x0000FFFF
+#define HAL_SRVDSP_tilt_pwr_limit_inv_TYPE        SInt16
+#define HAL_SRVDSP_tilt_pwr_limit_inv             HAL_SRVDSP_tilt_pwr_limit_inv_MASK
+#define HAL_SRVDSP_tilt_pwr_limit_inv_READABLE    1
+#define HAL_SRVDSP_tilt_pwr_limit_inv_WRITABLE    1
+#define HAL_SRVDSP_tilt_pwr_limit_inv_SIGNED      1
+#define HAL_SRVDSP_tilt_pwr_limit_inv_ADR         0xB00007B4
+
+// Register trksum_pwr_limit_inv
+#define HAL_SRVDSP_trksum_pwr_limit_inv_REGISTER    (HAL_SRVDSPREG_MAP->trksum_pwr_limit_inv)
+#define HAL_SRVDSP_trksum_pwr_limit_inv_LSB         0
+#define HAL_SRVDSP_trksum_pwr_limit_inv_MSB         15
+#define HAL_SRVDSP_trksum_pwr_limit_inv_MASK        0x0000FFFF
+#define HAL_SRVDSP_trksum_pwr_limit_inv_TYPE        SInt16
+#define HAL_SRVDSP_trksum_pwr_limit_inv             HAL_SRVDSP_trksum_pwr_limit_inv_MASK
+#define HAL_SRVDSP_trksum_pwr_limit_inv_READABLE    1
+#define HAL_SRVDSP_trksum_pwr_limit_inv_WRITABLE    1
+#define HAL_SRVDSP_trksum_pwr_limit_inv_SIGNED      1
+#define HAL_SRVDSP_trksum_pwr_limit_inv_ADR         0xB00007B8
+
+// Register focsum_pwr_limit_inv
+#define HAL_SRVDSP_focsum_pwr_limit_inv_REGISTER    (HAL_SRVDSPREG_MAP->focsum_pwr_limit_inv)
+#define HAL_SRVDSP_focsum_pwr_limit_inv_LSB         0
+#define HAL_SRVDSP_focsum_pwr_limit_inv_MSB         15
+#define HAL_SRVDSP_focsum_pwr_limit_inv_MASK        0x0000FFFF
+#define HAL_SRVDSP_focsum_pwr_limit_inv_TYPE        SInt16
+#define HAL_SRVDSP_focsum_pwr_limit_inv             HAL_SRVDSP_focsum_pwr_limit_inv_MASK
+#define HAL_SRVDSP_focsum_pwr_limit_inv_READABLE    1
+#define HAL_SRVDSP_focsum_pwr_limit_inv_WRITABLE    1
+#define HAL_SRVDSP_focsum_pwr_limit_inv_SIGNED      1
+#define HAL_SRVDSP_focsum_pwr_limit_inv_ADR         0xB00007BC
+
+// Register tiltsum_pwr_limit_inv
+#define HAL_SRVDSP_tiltsum_pwr_limit_inv_REGISTER    (HAL_SRVDSPREG_MAP->tiltsum_pwr_limit_inv)
+#define HAL_SRVDSP_tiltsum_pwr_limit_inv_LSB         0
+#define HAL_SRVDSP_tiltsum_pwr_limit_inv_MSB         15
+#define HAL_SRVDSP_tiltsum_pwr_limit_inv_MASK        0x0000FFFF
+#define HAL_SRVDSP_tiltsum_pwr_limit_inv_TYPE        SInt16
+#define HAL_SRVDSP_tiltsum_pwr_limit_inv             HAL_SRVDSP_tiltsum_pwr_limit_inv_MASK
+#define HAL_SRVDSP_tiltsum_pwr_limit_inv_READABLE    1
+#define HAL_SRVDSP_tiltsum_pwr_limit_inv_WRITABLE    1
+#define HAL_SRVDSP_tiltsum_pwr_limit_inv_SIGNED      1
+#define HAL_SRVDSP_tiltsum_pwr_limit_inv_ADR         0xB00007C0
+
+// Register actdiss_tau
+#define HAL_SRVDSP_actdiss_tau_REGISTER    (HAL_SRVDSPREG_MAP->actdiss_tau)
+#define HAL_SRVDSP_actdiss_tau_LSB         0
+#define HAL_SRVDSP_actdiss_tau_MSB         15
+#define HAL_SRVDSP_actdiss_tau_MASK        0x0000FFFF
+#define HAL_SRVDSP_actdiss_tau_TYPE        SInt16
+#define HAL_SRVDSP_actdiss_tau             HAL_SRVDSP_actdiss_tau_MASK
+#define HAL_SRVDSP_actdiss_tau_READABLE    1
+#define HAL_SRVDSP_actdiss_tau_WRITABLE    1
+#define HAL_SRVDSP_actdiss_tau_SIGNED      1
+#define HAL_SRVDSP_actdiss_tau_ADR         0xB00007C4
+
+// Register actdiss_timescale
+#define HAL_SRVDSP_actdiss_timescale_REGISTER    (HAL_SRVDSPREG_MAP->actdiss_timescale)
+#define HAL_SRVDSP_actdiss_timescale_LSB         0
+#define HAL_SRVDSP_actdiss_timescale_MSB         15
+#define HAL_SRVDSP_actdiss_timescale_MASK        0x0000FFFF
+#define HAL_SRVDSP_actdiss_timescale_TYPE        SInt16
+#define HAL_SRVDSP_actdiss_timescale             HAL_SRVDSP_actdiss_timescale_MASK
+#define HAL_SRVDSP_actdiss_timescale_READABLE    1
+#define HAL_SRVDSP_actdiss_timescale_WRITABLE    1
+#define HAL_SRVDSP_actdiss_timescale_SIGNED      1
+#define HAL_SRVDSP_actdiss_timescale_ADR         0xB00007C8
+
+// Register trk_actdiss_acc_msb
+#define HAL_SRVDSP_trk_actdiss_acc_msb_REGISTER    (HAL_SRVDSPREG_MAP->trk_actdiss_acc_msb)
+#define HAL_SRVDSP_trk_actdiss_acc_msb_LSB         0
+#define HAL_SRVDSP_trk_actdiss_acc_msb_MSB         15
+#define HAL_SRVDSP_trk_actdiss_acc_msb_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_actdiss_acc_msb_TYPE        SInt16
+#define HAL_SRVDSP_trk_actdiss_acc_msb             HAL_SRVDSP_trk_actdiss_acc_msb_MASK
+#define HAL_SRVDSP_trk_actdiss_acc_msb_READABLE    1
+#define HAL_SRVDSP_trk_actdiss_acc_msb_WRITABLE    1
+#define HAL_SRVDSP_trk_actdiss_acc_msb_SIGNED      1
+#define HAL_SRVDSP_trk_actdiss_acc_msb_ADR         0xB00007CC
+
+// Register foc_actdiss_acc_msb
+#define HAL_SRVDSP_foc_actdiss_acc_msb_REGISTER    (HAL_SRVDSPREG_MAP->foc_actdiss_acc_msb)
+#define HAL_SRVDSP_foc_actdiss_acc_msb_LSB         0
+#define HAL_SRVDSP_foc_actdiss_acc_msb_MSB         15
+#define HAL_SRVDSP_foc_actdiss_acc_msb_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_actdiss_acc_msb_TYPE        SInt16
+#define HAL_SRVDSP_foc_actdiss_acc_msb             HAL_SRVDSP_foc_actdiss_acc_msb_MASK
+#define HAL_SRVDSP_foc_actdiss_acc_msb_READABLE    1
+#define HAL_SRVDSP_foc_actdiss_acc_msb_WRITABLE    1
+#define HAL_SRVDSP_foc_actdiss_acc_msb_SIGNED      1
+#define HAL_SRVDSP_foc_actdiss_acc_msb_ADR         0xB00007D0
+
+// Register tilt_actdiss_acc_msb
+#define HAL_SRVDSP_tilt_actdiss_acc_msb_REGISTER    (HAL_SRVDSPREG_MAP->tilt_actdiss_acc_msb)
+#define HAL_SRVDSP_tilt_actdiss_acc_msb_LSB         0
+#define HAL_SRVDSP_tilt_actdiss_acc_msb_MSB         15
+#define HAL_SRVDSP_tilt_actdiss_acc_msb_MASK        0x0000FFFF
+#define HAL_SRVDSP_tilt_actdiss_acc_msb_TYPE        SInt16
+#define HAL_SRVDSP_tilt_actdiss_acc_msb             HAL_SRVDSP_tilt_actdiss_acc_msb_MASK
+#define HAL_SRVDSP_tilt_actdiss_acc_msb_READABLE    1
+#define HAL_SRVDSP_tilt_actdiss_acc_msb_WRITABLE    1
+#define HAL_SRVDSP_tilt_actdiss_acc_msb_SIGNED      1
+#define HAL_SRVDSP_tilt_actdiss_acc_msb_ADR         0xB00007D4
+
+// Register sum_actdiss_acc_msb
+#define HAL_SRVDSP_sum_actdiss_acc_msb_REGISTER    (HAL_SRVDSPREG_MAP->sum_actdiss_acc_msb)
+#define HAL_SRVDSP_sum_actdiss_acc_msb_LSB         0
+#define HAL_SRVDSP_sum_actdiss_acc_msb_MSB         15
+#define HAL_SRVDSP_sum_actdiss_acc_msb_MASK        0x0000FFFF
+#define HAL_SRVDSP_sum_actdiss_acc_msb_TYPE        SInt16
+#define HAL_SRVDSP_sum_actdiss_acc_msb             HAL_SRVDSP_sum_actdiss_acc_msb_MASK
+#define HAL_SRVDSP_sum_actdiss_acc_msb_READABLE    1
+#define HAL_SRVDSP_sum_actdiss_acc_msb_WRITABLE    1
+#define HAL_SRVDSP_sum_actdiss_acc_msb_SIGNED      1
+#define HAL_SRVDSP_sum_actdiss_acc_msb_ADR         0xB00007D8
+
+// Register reserved_1DC
+#define HAL_SRVDSP_reserved_1DC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_1DC)
+#define HAL_SRVDSP_reserved_1DC_LSB         0
+#define HAL_SRVDSP_reserved_1DC_MSB         15
+#define HAL_SRVDSP_reserved_1DC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_1DC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_1DC             HAL_SRVDSP_reserved_1DC_MASK
+#define HAL_SRVDSP_reserved_1DC_READABLE    1
+#define HAL_SRVDSP_reserved_1DC_WRITABLE    1
+#define HAL_SRVDSP_reserved_1DC_SIGNED      1
+#define HAL_SRVDSP_reserved_1DC_ADR         0xB00007DC
+
+// Register debug0
+#define HAL_SRVDSP_debug0_REGISTER    (HAL_SRVDSPREG_MAP->debug0)
+#define HAL_SRVDSP_debug0_LSB         0
+#define HAL_SRVDSP_debug0_MSB         15
+#define HAL_SRVDSP_debug0_MASK        0x0000FFFF
+#define HAL_SRVDSP_debug0_TYPE        SInt16
+#define HAL_SRVDSP_debug0             HAL_SRVDSP_debug0_MASK
+#define HAL_SRVDSP_debug0_READABLE    1
+#define HAL_SRVDSP_debug0_WRITABLE    1
+#define HAL_SRVDSP_debug0_SIGNED      1
+#define HAL_SRVDSP_debug0_ADR         0xB00007E0
+
+// Register debug1
+#define HAL_SRVDSP_debug1_REGISTER    (HAL_SRVDSPREG_MAP->debug1)
+#define HAL_SRVDSP_debug1_LSB         0
+#define HAL_SRVDSP_debug1_MSB         15
+#define HAL_SRVDSP_debug1_MASK        0x0000FFFF
+#define HAL_SRVDSP_debug1_TYPE        SInt16
+#define HAL_SRVDSP_debug1             HAL_SRVDSP_debug1_MASK
+#define HAL_SRVDSP_debug1_READABLE    1
+#define HAL_SRVDSP_debug1_WRITABLE    1
+#define HAL_SRVDSP_debug1_SIGNED      1
+#define HAL_SRVDSP_debug1_ADR         0xB00007E4
+
+// Register debug2
+#define HAL_SRVDSP_debug2_REGISTER    (HAL_SRVDSPREG_MAP->debug2)
+#define HAL_SRVDSP_debug2_LSB         0
+#define HAL_SRVDSP_debug2_MSB         15
+#define HAL_SRVDSP_debug2_MASK        0x0000FFFF
+#define HAL_SRVDSP_debug2_TYPE        SInt16
+#define HAL_SRVDSP_debug2             HAL_SRVDSP_debug2_MASK
+#define HAL_SRVDSP_debug2_READABLE    1
+#define HAL_SRVDSP_debug2_WRITABLE    1
+#define HAL_SRVDSP_debug2_SIGNED      1
+#define HAL_SRVDSP_debug2_ADR         0xB00007E8
+
+// Register debug3
+#define HAL_SRVDSP_debug3_REGISTER    (HAL_SRVDSPREG_MAP->debug3)
+#define HAL_SRVDSP_debug3_LSB         0
+#define HAL_SRVDSP_debug3_MSB         15
+#define HAL_SRVDSP_debug3_MASK        0x0000FFFF
+#define HAL_SRVDSP_debug3_TYPE        SInt16
+#define HAL_SRVDSP_debug3             HAL_SRVDSP_debug3_MASK
+#define HAL_SRVDSP_debug3_READABLE    1
+#define HAL_SRVDSP_debug3_WRITABLE    1
+#define HAL_SRVDSP_debug3_SIGNED      1
+#define HAL_SRVDSP_debug3_ADR         0xB00007EC
+
+// Register pwr_dummy
+#define HAL_SRVDSP_pwr_dummy_REGISTER    (HAL_SRVDSPREG_MAP->pwr_dummy)
+#define HAL_SRVDSP_pwr_dummy_LSB         0
+#define HAL_SRVDSP_pwr_dummy_MSB         15
+#define HAL_SRVDSP_pwr_dummy_MASK        0x0000FFFF
+#define HAL_SRVDSP_pwr_dummy_TYPE        SInt16
+#define HAL_SRVDSP_pwr_dummy             HAL_SRVDSP_pwr_dummy_MASK
+#define HAL_SRVDSP_pwr_dummy_READABLE    1
+#define HAL_SRVDSP_pwr_dummy_WRITABLE    1
+#define HAL_SRVDSP_pwr_dummy_SIGNED      1
+#define HAL_SRVDSP_pwr_dummy_ADR         0xB00007F0
+
+// Register FOO
+#define HAL_SRVDSP_FOO_REGISTER    (HAL_SRVDSPREG_MAP->FOO)
+#define HAL_SRVDSP_FOO_LSB         0
+#define HAL_SRVDSP_FOO_MSB         15
+#define HAL_SRVDSP_FOO_MASK        0x0000FFFF
+#define HAL_SRVDSP_FOO_TYPE        SInt16
+#define HAL_SRVDSP_FOO             HAL_SRVDSP_FOO_MASK
+#define HAL_SRVDSP_FOO_READABLE    1
+#define HAL_SRVDSP_FOO_WRITABLE    1
+#define HAL_SRVDSP_FOO_SIGNED      1
+#define HAL_SRVDSP_FOO_ADR         0xB00007F4
+
+// Register TRO
+#define HAL_SRVDSP_TRO_REGISTER    (HAL_SRVDSPREG_MAP->TRO)
+#define HAL_SRVDSP_TRO_LSB         0
+#define HAL_SRVDSP_TRO_MSB         15
+#define HAL_SRVDSP_TRO_MASK        0x0000FFFF
+#define HAL_SRVDSP_TRO_TYPE        SInt16
+#define HAL_SRVDSP_TRO             HAL_SRVDSP_TRO_MASK
+#define HAL_SRVDSP_TRO_READABLE    1
+#define HAL_SRVDSP_TRO_WRITABLE    1
+#define HAL_SRVDSP_TRO_SIGNED      1
+#define HAL_SRVDSP_TRO_ADR         0xB00007F8
+
+// Register TILT
+#define HAL_SRVDSP_TILT_REGISTER    (HAL_SRVDSPREG_MAP->TILT)
+#define HAL_SRVDSP_TILT_LSB         0
+#define HAL_SRVDSP_TILT_MSB         15
+#define HAL_SRVDSP_TILT_MASK        0x0000FFFF
+#define HAL_SRVDSP_TILT_TYPE        SInt16
+#define HAL_SRVDSP_TILT             HAL_SRVDSP_TILT_MASK
+#define HAL_SRVDSP_TILT_READABLE    1
+#define HAL_SRVDSP_TILT_WRITABLE    1
+#define HAL_SRVDSP_TILT_SIGNED      1
+#define HAL_SRVDSP_TILT_ADR         0xB00007FC
+
+// Register K0_b
+#define HAL_SRVDSP_K0_b_REGISTER    (HAL_SRVDSPREG_MAP->K0_b)
+#define HAL_SRVDSP_K0_b_LSB         0
+#define HAL_SRVDSP_K0_b_MSB         15
+#define HAL_SRVDSP_K0_b_MASK        0x0000FFFF
+#define HAL_SRVDSP_K0_b_TYPE        SInt16
+#define HAL_SRVDSP_K0_b             HAL_SRVDSP_K0_b_MASK
+#define HAL_SRVDSP_K0_b_READABLE    1
+#define HAL_SRVDSP_K0_b_WRITABLE    1
+#define HAL_SRVDSP_K0_b_SIGNED      1
+#define HAL_SRVDSP_K0_b_ADR         0xB0000800
+
+// Register K1_b
+#define HAL_SRVDSP_K1_b_REGISTER    (HAL_SRVDSPREG_MAP->K1_b)
+#define HAL_SRVDSP_K1_b_LSB         0
+#define HAL_SRVDSP_K1_b_MSB         15
+#define HAL_SRVDSP_K1_b_MASK        0x0000FFFF
+#define HAL_SRVDSP_K1_b_TYPE        SInt16
+#define HAL_SRVDSP_K1_b             HAL_SRVDSP_K1_b_MASK
+#define HAL_SRVDSP_K1_b_READABLE    1
+#define HAL_SRVDSP_K1_b_WRITABLE    1
+#define HAL_SRVDSP_K1_b_SIGNED      1
+#define HAL_SRVDSP_K1_b_ADR         0xB0000804
+
+// Register K1_bb
+#define HAL_SRVDSP_K1_bb_REGISTER    (HAL_SRVDSPREG_MAP->K1_bb)
+#define HAL_SRVDSP_K1_bb_LSB         0
+#define HAL_SRVDSP_K1_bb_MSB         15
+#define HAL_SRVDSP_K1_bb_MASK        0x0000FFFF
+#define HAL_SRVDSP_K1_bb_TYPE        SInt16
+#define HAL_SRVDSP_K1_bb             HAL_SRVDSP_K1_bb_MASK
+#define HAL_SRVDSP_K1_bb_READABLE    1
+#define HAL_SRVDSP_K1_bb_WRITABLE    1
+#define HAL_SRVDSP_K1_bb_SIGNED      1
+#define HAL_SRVDSP_K1_bb_ADR         0xB0000808
+
+// Register K_1_b
+#define HAL_SRVDSP_K_1_b_REGISTER    (HAL_SRVDSPREG_MAP->K_1_b)
+#define HAL_SRVDSP_K_1_b_LSB         0
+#define HAL_SRVDSP_K_1_b_MSB         15
+#define HAL_SRVDSP_K_1_b_MASK        0x0000FFFF
+#define HAL_SRVDSP_K_1_b_TYPE        SInt16
+#define HAL_SRVDSP_K_1_b             HAL_SRVDSP_K_1_b_MASK
+#define HAL_SRVDSP_K_1_b_READABLE    1
+#define HAL_SRVDSP_K_1_b_WRITABLE    1
+#define HAL_SRVDSP_K_1_b_SIGNED      1
+#define HAL_SRVDSP_K_1_b_ADR         0xB000080C
+
+// Register val_0008
+#define HAL_SRVDSP_val_0008_REGISTER    (HAL_SRVDSPREG_MAP->val_0008)
+#define HAL_SRVDSP_val_0008_LSB         0
+#define HAL_SRVDSP_val_0008_MSB         15
+#define HAL_SRVDSP_val_0008_MASK        0x0000FFFF
+#define HAL_SRVDSP_val_0008_TYPE        SInt16
+#define HAL_SRVDSP_val_0008             HAL_SRVDSP_val_0008_MASK
+#define HAL_SRVDSP_val_0008_READABLE    1
+#define HAL_SRVDSP_val_0008_WRITABLE    1
+#define HAL_SRVDSP_val_0008_SIGNED      1
+#define HAL_SRVDSP_val_0008_ADR         0xB0000810
+
+// Register val_0001
+#define HAL_SRVDSP_val_0001_REGISTER    (HAL_SRVDSPREG_MAP->val_0001)
+#define HAL_SRVDSP_val_0001_LSB         0
+#define HAL_SRVDSP_val_0001_MSB         15
+#define HAL_SRVDSP_val_0001_MASK        0x0000FFFF
+#define HAL_SRVDSP_val_0001_TYPE        SInt16
+#define HAL_SRVDSP_val_0001             HAL_SRVDSP_val_0001_MASK
+#define HAL_SRVDSP_val_0001_READABLE    1
+#define HAL_SRVDSP_val_0001_WRITABLE    1
+#define HAL_SRVDSP_val_0001_SIGNED      1
+#define HAL_SRVDSP_val_0001_ADR         0xB0000814
+
+// Register val_FFFF
+#define HAL_SRVDSP_val_FFFF_REGISTER    (HAL_SRVDSPREG_MAP->val_FFFF)
+#define HAL_SRVDSP_val_FFFF_LSB         0
+#define HAL_SRVDSP_val_FFFF_MSB         15
+#define HAL_SRVDSP_val_FFFF_MASK        0x0000FFFF
+#define HAL_SRVDSP_val_FFFF_TYPE        SInt16
+#define HAL_SRVDSP_val_FFFF             HAL_SRVDSP_val_FFFF_MASK
+#define HAL_SRVDSP_val_FFFF_READABLE    1
+#define HAL_SRVDSP_val_FFFF_WRITABLE    1
+#define HAL_SRVDSP_val_FFFF_SIGNED      1
+#define HAL_SRVDSP_val_FFFF_ADR         0xB0000818
+
+// Register kfg
+#define HAL_SRVDSP_kfg_REGISTER    (HAL_SRVDSPREG_MAP->kfg)
+#define HAL_SRVDSP_kfg_LSB         0
+#define HAL_SRVDSP_kfg_MSB         15
+#define HAL_SRVDSP_kfg_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfg_TYPE        SInt16
+#define HAL_SRVDSP_kfg             HAL_SRVDSP_kfg_MASK
+#define HAL_SRVDSP_kfg_READABLE    1
+#define HAL_SRVDSP_kfg_WRITABLE    1
+#define HAL_SRVDSP_kfg_SIGNED      1
+#define HAL_SRVDSP_kfg_ADR         0xB000081C
+
+// Register kf11
+#define HAL_SRVDSP_kf11_REGISTER    (HAL_SRVDSPREG_MAP->kf11)
+#define HAL_SRVDSP_kf11_LSB         0
+#define HAL_SRVDSP_kf11_MSB         15
+#define HAL_SRVDSP_kf11_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf11_TYPE        SInt16
+#define HAL_SRVDSP_kf11             HAL_SRVDSP_kf11_MASK
+#define HAL_SRVDSP_kf11_READABLE    1
+#define HAL_SRVDSP_kf11_WRITABLE    1
+#define HAL_SRVDSP_kf11_SIGNED      1
+#define HAL_SRVDSP_kf11_ADR         0xB0000820
+
+// Register kfu11
+#define HAL_SRVDSP_kfu11_REGISTER    (HAL_SRVDSPREG_MAP->kfu11)
+#define HAL_SRVDSP_kfu11_LSB         0
+#define HAL_SRVDSP_kfu11_MSB         15
+#define HAL_SRVDSP_kfu11_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfu11_TYPE        SInt16
+#define HAL_SRVDSP_kfu11             HAL_SRVDSP_kfu11_MASK
+#define HAL_SRVDSP_kfu11_READABLE    1
+#define HAL_SRVDSP_kfu11_WRITABLE    1
+#define HAL_SRVDSP_kfu11_SIGNED      1
+#define HAL_SRVDSP_kfu11_ADR         0xB0000824
+
+// Register kfw11
+#define HAL_SRVDSP_kfw11_REGISTER    (HAL_SRVDSPREG_MAP->kfw11)
+#define HAL_SRVDSP_kfw11_LSB         0
+#define HAL_SRVDSP_kfw11_MSB         15
+#define HAL_SRVDSP_kfw11_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfw11_TYPE        SInt16
+#define HAL_SRVDSP_kfw11             HAL_SRVDSP_kfw11_MASK
+#define HAL_SRVDSP_kfw11_READABLE    1
+#define HAL_SRVDSP_kfw11_WRITABLE    1
+#define HAL_SRVDSP_kfw11_SIGNED      1
+#define HAL_SRVDSP_kfw11_ADR         0xB0000828
+
+// Register kfwux11
+#define HAL_SRVDSP_kfwux11_REGISTER    (HAL_SRVDSPREG_MAP->kfwux11)
+#define HAL_SRVDSP_kfwux11_LSB         0
+#define HAL_SRVDSP_kfwux11_MSB         15
+#define HAL_SRVDSP_kfwux11_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfwux11_TYPE        SInt16
+#define HAL_SRVDSP_kfwux11             HAL_SRVDSP_kfwux11_MASK
+#define HAL_SRVDSP_kfwux11_READABLE    1
+#define HAL_SRVDSP_kfwux11_WRITABLE    1
+#define HAL_SRVDSP_kfwux11_SIGNED      1
+#define HAL_SRVDSP_kfwux11_ADR         0xB000082C
+
+// Register kf12
+#define HAL_SRVDSP_kf12_REGISTER    (HAL_SRVDSPREG_MAP->kf12)
+#define HAL_SRVDSP_kf12_LSB         0
+#define HAL_SRVDSP_kf12_MSB         15
+#define HAL_SRVDSP_kf12_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf12_TYPE        SInt16
+#define HAL_SRVDSP_kf12             HAL_SRVDSP_kf12_MASK
+#define HAL_SRVDSP_kf12_READABLE    1
+#define HAL_SRVDSP_kf12_WRITABLE    1
+#define HAL_SRVDSP_kf12_SIGNED      1
+#define HAL_SRVDSP_kf12_ADR         0xB0000830
+
+// Register kfu12
+#define HAL_SRVDSP_kfu12_REGISTER    (HAL_SRVDSPREG_MAP->kfu12)
+#define HAL_SRVDSP_kfu12_LSB         0
+#define HAL_SRVDSP_kfu12_MSB         15
+#define HAL_SRVDSP_kfu12_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfu12_TYPE        SInt16
+#define HAL_SRVDSP_kfu12             HAL_SRVDSP_kfu12_MASK
+#define HAL_SRVDSP_kfu12_READABLE    1
+#define HAL_SRVDSP_kfu12_WRITABLE    1
+#define HAL_SRVDSP_kfu12_SIGNED      1
+#define HAL_SRVDSP_kfu12_ADR         0xB0000834
+
+// Register kfw12
+#define HAL_SRVDSP_kfw12_REGISTER    (HAL_SRVDSPREG_MAP->kfw12)
+#define HAL_SRVDSP_kfw12_LSB         0
+#define HAL_SRVDSP_kfw12_MSB         15
+#define HAL_SRVDSP_kfw12_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfw12_TYPE        SInt16
+#define HAL_SRVDSP_kfw12             HAL_SRVDSP_kfw12_MASK
+#define HAL_SRVDSP_kfw12_READABLE    1
+#define HAL_SRVDSP_kfw12_WRITABLE    1
+#define HAL_SRVDSP_kfw12_SIGNED      1
+#define HAL_SRVDSP_kfw12_ADR         0xB0000838
+
+// Register kfwux12
+#define HAL_SRVDSP_kfwux12_REGISTER    (HAL_SRVDSPREG_MAP->kfwux12)
+#define HAL_SRVDSP_kfwux12_LSB         0
+#define HAL_SRVDSP_kfwux12_MSB         15
+#define HAL_SRVDSP_kfwux12_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfwux12_TYPE        SInt16
+#define HAL_SRVDSP_kfwux12             HAL_SRVDSP_kfwux12_MASK
+#define HAL_SRVDSP_kfwux12_READABLE    1
+#define HAL_SRVDSP_kfwux12_WRITABLE    1
+#define HAL_SRVDSP_kfwux12_SIGNED      1
+#define HAL_SRVDSP_kfwux12_ADR         0xB000083C
+
+// Register kf13
+#define HAL_SRVDSP_kf13_REGISTER    (HAL_SRVDSPREG_MAP->kf13)
+#define HAL_SRVDSP_kf13_LSB         0
+#define HAL_SRVDSP_kf13_MSB         15
+#define HAL_SRVDSP_kf13_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf13_TYPE        SInt16
+#define HAL_SRVDSP_kf13             HAL_SRVDSP_kf13_MASK
+#define HAL_SRVDSP_kf13_READABLE    1
+#define HAL_SRVDSP_kf13_WRITABLE    1
+#define HAL_SRVDSP_kf13_SIGNED      1
+#define HAL_SRVDSP_kf13_ADR         0xB0000840
+
+// Register kfu13
+#define HAL_SRVDSP_kfu13_REGISTER    (HAL_SRVDSPREG_MAP->kfu13)
+#define HAL_SRVDSP_kfu13_LSB         0
+#define HAL_SRVDSP_kfu13_MSB         15
+#define HAL_SRVDSP_kfu13_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfu13_TYPE        SInt16
+#define HAL_SRVDSP_kfu13             HAL_SRVDSP_kfu13_MASK
+#define HAL_SRVDSP_kfu13_READABLE    1
+#define HAL_SRVDSP_kfu13_WRITABLE    1
+#define HAL_SRVDSP_kfu13_SIGNED      1
+#define HAL_SRVDSP_kfu13_ADR         0xB0000844
+
+// Register kfw13
+#define HAL_SRVDSP_kfw13_REGISTER    (HAL_SRVDSPREG_MAP->kfw13)
+#define HAL_SRVDSP_kfw13_LSB         0
+#define HAL_SRVDSP_kfw13_MSB         15
+#define HAL_SRVDSP_kfw13_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfw13_TYPE        SInt16
+#define HAL_SRVDSP_kfw13             HAL_SRVDSP_kfw13_MASK
+#define HAL_SRVDSP_kfw13_READABLE    1
+#define HAL_SRVDSP_kfw13_WRITABLE    1
+#define HAL_SRVDSP_kfw13_SIGNED      1
+#define HAL_SRVDSP_kfw13_ADR         0xB0000848
+
+// Register kfwux13
+#define HAL_SRVDSP_kfwux13_REGISTER    (HAL_SRVDSPREG_MAP->kfwux13)
+#define HAL_SRVDSP_kfwux13_LSB         0
+#define HAL_SRVDSP_kfwux13_MSB         15
+#define HAL_SRVDSP_kfwux13_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfwux13_TYPE        SInt16
+#define HAL_SRVDSP_kfwux13             HAL_SRVDSP_kfwux13_MASK
+#define HAL_SRVDSP_kfwux13_READABLE    1
+#define HAL_SRVDSP_kfwux13_WRITABLE    1
+#define HAL_SRVDSP_kfwux13_SIGNED      1
+#define HAL_SRVDSP_kfwux13_ADR         0xB000084C
+
+// Register kf14
+#define HAL_SRVDSP_kf14_REGISTER    (HAL_SRVDSPREG_MAP->kf14)
+#define HAL_SRVDSP_kf14_LSB         0
+#define HAL_SRVDSP_kf14_MSB         15
+#define HAL_SRVDSP_kf14_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf14_TYPE        SInt16
+#define HAL_SRVDSP_kf14             HAL_SRVDSP_kf14_MASK
+#define HAL_SRVDSP_kf14_READABLE    1
+#define HAL_SRVDSP_kf14_WRITABLE    1
+#define HAL_SRVDSP_kf14_SIGNED      1
+#define HAL_SRVDSP_kf14_ADR         0xB0000850
+
+// Register kfu14
+#define HAL_SRVDSP_kfu14_REGISTER    (HAL_SRVDSPREG_MAP->kfu14)
+#define HAL_SRVDSP_kfu14_LSB         0
+#define HAL_SRVDSP_kfu14_MSB         15
+#define HAL_SRVDSP_kfu14_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfu14_TYPE        SInt16
+#define HAL_SRVDSP_kfu14             HAL_SRVDSP_kfu14_MASK
+#define HAL_SRVDSP_kfu14_READABLE    1
+#define HAL_SRVDSP_kfu14_WRITABLE    1
+#define HAL_SRVDSP_kfu14_SIGNED      1
+#define HAL_SRVDSP_kfu14_ADR         0xB0000854
+
+// Register kfw14
+#define HAL_SRVDSP_kfw14_REGISTER    (HAL_SRVDSPREG_MAP->kfw14)
+#define HAL_SRVDSP_kfw14_LSB         0
+#define HAL_SRVDSP_kfw14_MSB         15
+#define HAL_SRVDSP_kfw14_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfw14_TYPE        SInt16
+#define HAL_SRVDSP_kfw14             HAL_SRVDSP_kfw14_MASK
+#define HAL_SRVDSP_kfw14_READABLE    1
+#define HAL_SRVDSP_kfw14_WRITABLE    1
+#define HAL_SRVDSP_kfw14_SIGNED      1
+#define HAL_SRVDSP_kfw14_ADR         0xB0000858
+
+// Register kfwux14
+#define HAL_SRVDSP_kfwux14_REGISTER    (HAL_SRVDSPREG_MAP->kfwux14)
+#define HAL_SRVDSP_kfwux14_LSB         0
+#define HAL_SRVDSP_kfwux14_MSB         15
+#define HAL_SRVDSP_kfwux14_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfwux14_TYPE        SInt16
+#define HAL_SRVDSP_kfwux14             HAL_SRVDSP_kfwux14_MASK
+#define HAL_SRVDSP_kfwux14_READABLE    1
+#define HAL_SRVDSP_kfwux14_WRITABLE    1
+#define HAL_SRVDSP_kfwux14_SIGNED      1
+#define HAL_SRVDSP_kfwux14_ADR         0xB000085C
+
+// Register kf15
+#define HAL_SRVDSP_kf15_REGISTER    (HAL_SRVDSPREG_MAP->kf15)
+#define HAL_SRVDSP_kf15_LSB         0
+#define HAL_SRVDSP_kf15_MSB         15
+#define HAL_SRVDSP_kf15_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf15_TYPE        SInt16
+#define HAL_SRVDSP_kf15             HAL_SRVDSP_kf15_MASK
+#define HAL_SRVDSP_kf15_READABLE    1
+#define HAL_SRVDSP_kf15_WRITABLE    1
+#define HAL_SRVDSP_kf15_SIGNED      1
+#define HAL_SRVDSP_kf15_ADR         0xB0000860
+
+// Register kfu15
+#define HAL_SRVDSP_kfu15_REGISTER    (HAL_SRVDSPREG_MAP->kfu15)
+#define HAL_SRVDSP_kfu15_LSB         0
+#define HAL_SRVDSP_kfu15_MSB         15
+#define HAL_SRVDSP_kfu15_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfu15_TYPE        SInt16
+#define HAL_SRVDSP_kfu15             HAL_SRVDSP_kfu15_MASK
+#define HAL_SRVDSP_kfu15_READABLE    1
+#define HAL_SRVDSP_kfu15_WRITABLE    1
+#define HAL_SRVDSP_kfu15_SIGNED      1
+#define HAL_SRVDSP_kfu15_ADR         0xB0000864
+
+// Register kfw15
+#define HAL_SRVDSP_kfw15_REGISTER    (HAL_SRVDSPREG_MAP->kfw15)
+#define HAL_SRVDSP_kfw15_LSB         0
+#define HAL_SRVDSP_kfw15_MSB         15
+#define HAL_SRVDSP_kfw15_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfw15_TYPE        SInt16
+#define HAL_SRVDSP_kfw15             HAL_SRVDSP_kfw15_MASK
+#define HAL_SRVDSP_kfw15_READABLE    1
+#define HAL_SRVDSP_kfw15_WRITABLE    1
+#define HAL_SRVDSP_kfw15_SIGNED      1
+#define HAL_SRVDSP_kfw15_ADR         0xB0000868
+
+// Register kfwux15
+#define HAL_SRVDSP_kfwux15_REGISTER    (HAL_SRVDSPREG_MAP->kfwux15)
+#define HAL_SRVDSP_kfwux15_LSB         0
+#define HAL_SRVDSP_kfwux15_MSB         15
+#define HAL_SRVDSP_kfwux15_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfwux15_TYPE        SInt16
+#define HAL_SRVDSP_kfwux15             HAL_SRVDSP_kfwux15_MASK
+#define HAL_SRVDSP_kfwux15_READABLE    1
+#define HAL_SRVDSP_kfwux15_WRITABLE    1
+#define HAL_SRVDSP_kfwux15_SIGNED      1
+#define HAL_SRVDSP_kfwux15_ADR         0xB000086C
+
+// Register kf16
+#define HAL_SRVDSP_kf16_REGISTER    (HAL_SRVDSPREG_MAP->kf16)
+#define HAL_SRVDSP_kf16_LSB         0
+#define HAL_SRVDSP_kf16_MSB         15
+#define HAL_SRVDSP_kf16_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf16_TYPE        SInt16
+#define HAL_SRVDSP_kf16             HAL_SRVDSP_kf16_MASK
+#define HAL_SRVDSP_kf16_READABLE    1
+#define HAL_SRVDSP_kf16_WRITABLE    1
+#define HAL_SRVDSP_kf16_SIGNED      1
+#define HAL_SRVDSP_kf16_ADR         0xB0000870
+
+// Register kfu16
+#define HAL_SRVDSP_kfu16_REGISTER    (HAL_SRVDSPREG_MAP->kfu16)
+#define HAL_SRVDSP_kfu16_LSB         0
+#define HAL_SRVDSP_kfu16_MSB         15
+#define HAL_SRVDSP_kfu16_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfu16_TYPE        SInt16
+#define HAL_SRVDSP_kfu16             HAL_SRVDSP_kfu16_MASK
+#define HAL_SRVDSP_kfu16_READABLE    1
+#define HAL_SRVDSP_kfu16_WRITABLE    1
+#define HAL_SRVDSP_kfu16_SIGNED      1
+#define HAL_SRVDSP_kfu16_ADR         0xB0000874
+
+// Register kfw16
+#define HAL_SRVDSP_kfw16_REGISTER    (HAL_SRVDSPREG_MAP->kfw16)
+#define HAL_SRVDSP_kfw16_LSB         0
+#define HAL_SRVDSP_kfw16_MSB         15
+#define HAL_SRVDSP_kfw16_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfw16_TYPE        SInt16
+#define HAL_SRVDSP_kfw16             HAL_SRVDSP_kfw16_MASK
+#define HAL_SRVDSP_kfw16_READABLE    1
+#define HAL_SRVDSP_kfw16_WRITABLE    1
+#define HAL_SRVDSP_kfw16_SIGNED      1
+#define HAL_SRVDSP_kfw16_ADR         0xB0000878
+
+// Register kfwux16
+#define HAL_SRVDSP_kfwux16_REGISTER    (HAL_SRVDSPREG_MAP->kfwux16)
+#define HAL_SRVDSP_kfwux16_LSB         0
+#define HAL_SRVDSP_kfwux16_MSB         15
+#define HAL_SRVDSP_kfwux16_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfwux16_TYPE        SInt16
+#define HAL_SRVDSP_kfwux16             HAL_SRVDSP_kfwux16_MASK
+#define HAL_SRVDSP_kfwux16_READABLE    1
+#define HAL_SRVDSP_kfwux16_WRITABLE    1
+#define HAL_SRVDSP_kfwux16_SIGNED      1
+#define HAL_SRVDSP_kfwux16_ADR         0xB000087C
+
+// Register kf17
+#define HAL_SRVDSP_kf17_REGISTER    (HAL_SRVDSPREG_MAP->kf17)
+#define HAL_SRVDSP_kf17_LSB         0
+#define HAL_SRVDSP_kf17_MSB         15
+#define HAL_SRVDSP_kf17_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf17_TYPE        SInt16
+#define HAL_SRVDSP_kf17             HAL_SRVDSP_kf17_MASK
+#define HAL_SRVDSP_kf17_READABLE    1
+#define HAL_SRVDSP_kf17_WRITABLE    1
+#define HAL_SRVDSP_kf17_SIGNED      1
+#define HAL_SRVDSP_kf17_ADR         0xB0000880
+
+// Register kfu17
+#define HAL_SRVDSP_kfu17_REGISTER    (HAL_SRVDSPREG_MAP->kfu17)
+#define HAL_SRVDSP_kfu17_LSB         0
+#define HAL_SRVDSP_kfu17_MSB         15
+#define HAL_SRVDSP_kfu17_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfu17_TYPE        SInt16
+#define HAL_SRVDSP_kfu17             HAL_SRVDSP_kfu17_MASK
+#define HAL_SRVDSP_kfu17_READABLE    1
+#define HAL_SRVDSP_kfu17_WRITABLE    1
+#define HAL_SRVDSP_kfu17_SIGNED      1
+#define HAL_SRVDSP_kfu17_ADR         0xB0000884
+
+// Register kfw17
+#define HAL_SRVDSP_kfw17_REGISTER    (HAL_SRVDSPREG_MAP->kfw17)
+#define HAL_SRVDSP_kfw17_LSB         0
+#define HAL_SRVDSP_kfw17_MSB         15
+#define HAL_SRVDSP_kfw17_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfw17_TYPE        SInt16
+#define HAL_SRVDSP_kfw17             HAL_SRVDSP_kfw17_MASK
+#define HAL_SRVDSP_kfw17_READABLE    1
+#define HAL_SRVDSP_kfw17_WRITABLE    1
+#define HAL_SRVDSP_kfw17_SIGNED      1
+#define HAL_SRVDSP_kfw17_ADR         0xB0000888
+
+// Register kfwux17
+#define HAL_SRVDSP_kfwux17_REGISTER    (HAL_SRVDSPREG_MAP->kfwux17)
+#define HAL_SRVDSP_kfwux17_LSB         0
+#define HAL_SRVDSP_kfwux17_MSB         15
+#define HAL_SRVDSP_kfwux17_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfwux17_TYPE        SInt16
+#define HAL_SRVDSP_kfwux17             HAL_SRVDSP_kfwux17_MASK
+#define HAL_SRVDSP_kfwux17_READABLE    1
+#define HAL_SRVDSP_kfwux17_WRITABLE    1
+#define HAL_SRVDSP_kfwux17_SIGNED      1
+#define HAL_SRVDSP_kfwux17_ADR         0xB000088C
+
+// Register reserved_290
+#define HAL_SRVDSP_reserved_290_REGISTER    (HAL_SRVDSPREG_MAP->reserved_290)
+#define HAL_SRVDSP_reserved_290_LSB         0
+#define HAL_SRVDSP_reserved_290_MSB         15
+#define HAL_SRVDSP_reserved_290_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_290_TYPE        SInt16
+#define HAL_SRVDSP_reserved_290             HAL_SRVDSP_reserved_290_MASK
+#define HAL_SRVDSP_reserved_290_READABLE    1
+#define HAL_SRVDSP_reserved_290_WRITABLE    1
+#define HAL_SRVDSP_reserved_290_SIGNED      1
+#define HAL_SRVDSP_reserved_290_ADR         0xB0000890
+
+// Register reserved_294
+#define HAL_SRVDSP_reserved_294_REGISTER    (HAL_SRVDSPREG_MAP->reserved_294)
+#define HAL_SRVDSP_reserved_294_LSB         0
+#define HAL_SRVDSP_reserved_294_MSB         15
+#define HAL_SRVDSP_reserved_294_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_294_TYPE        SInt16
+#define HAL_SRVDSP_reserved_294             HAL_SRVDSP_reserved_294_MASK
+#define HAL_SRVDSP_reserved_294_READABLE    1
+#define HAL_SRVDSP_reserved_294_WRITABLE    1
+#define HAL_SRVDSP_reserved_294_SIGNED      1
+#define HAL_SRVDSP_reserved_294_ADR         0xB0000894
+
+// Register reserved_298
+#define HAL_SRVDSP_reserved_298_REGISTER    (HAL_SRVDSPREG_MAP->reserved_298)
+#define HAL_SRVDSP_reserved_298_LSB         0
+#define HAL_SRVDSP_reserved_298_MSB         15
+#define HAL_SRVDSP_reserved_298_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_298_TYPE        SInt16
+#define HAL_SRVDSP_reserved_298             HAL_SRVDSP_reserved_298_MASK
+#define HAL_SRVDSP_reserved_298_READABLE    1
+#define HAL_SRVDSP_reserved_298_WRITABLE    1
+#define HAL_SRVDSP_reserved_298_SIGNED      1
+#define HAL_SRVDSP_reserved_298_ADR         0xB0000898
+
+// Register fcs_foo_alfa
+#define HAL_SRVDSP_fcs_foo_alfa_REGISTER    (HAL_SRVDSPREG_MAP->fcs_foo_alfa)
+#define HAL_SRVDSP_fcs_foo_alfa_LSB         0
+#define HAL_SRVDSP_fcs_foo_alfa_MSB         15
+#define HAL_SRVDSP_fcs_foo_alfa_MASK        0x0000FFFF
+#define HAL_SRVDSP_fcs_foo_alfa_TYPE        SInt16
+#define HAL_SRVDSP_fcs_foo_alfa             HAL_SRVDSP_fcs_foo_alfa_MASK
+#define HAL_SRVDSP_fcs_foo_alfa_READABLE    1
+#define HAL_SRVDSP_fcs_foo_alfa_WRITABLE    1
+#define HAL_SRVDSP_fcs_foo_alfa_SIGNED      1
+#define HAL_SRVDSP_fcs_foo_alfa_ADR         0xB000089C
+
+// Register fcs_vel_thresh
+#define HAL_SRVDSP_fcs_vel_thresh_REGISTER    (HAL_SRVDSPREG_MAP->fcs_vel_thresh)
+#define HAL_SRVDSP_fcs_vel_thresh_LSB         0
+#define HAL_SRVDSP_fcs_vel_thresh_MSB         15
+#define HAL_SRVDSP_fcs_vel_thresh_MASK        0x0000FFFF
+#define HAL_SRVDSP_fcs_vel_thresh_TYPE        SInt16
+#define HAL_SRVDSP_fcs_vel_thresh             HAL_SRVDSP_fcs_vel_thresh_MASK
+#define HAL_SRVDSP_fcs_vel_thresh_READABLE    1
+#define HAL_SRVDSP_fcs_vel_thresh_WRITABLE    1
+#define HAL_SRVDSP_fcs_vel_thresh_SIGNED      1
+#define HAL_SRVDSP_fcs_vel_thresh_ADR         0xB00008A0
+
+// Register fcs_vel_gain
+#define HAL_SRVDSP_fcs_vel_gain_REGISTER    (HAL_SRVDSPREG_MAP->fcs_vel_gain)
+#define HAL_SRVDSP_fcs_vel_gain_LSB         0
+#define HAL_SRVDSP_fcs_vel_gain_MSB         15
+#define HAL_SRVDSP_fcs_vel_gain_MASK        0x0000FFFF
+#define HAL_SRVDSP_fcs_vel_gain_TYPE        SInt16
+#define HAL_SRVDSP_fcs_vel_gain             HAL_SRVDSP_fcs_vel_gain_MASK
+#define HAL_SRVDSP_fcs_vel_gain_READABLE    1
+#define HAL_SRVDSP_fcs_vel_gain_WRITABLE    1
+#define HAL_SRVDSP_fcs_vel_gain_SIGNED      1
+#define HAL_SRVDSP_fcs_vel_gain_ADR         0xB00008A4
+
+// Register fcs_leak
+#define HAL_SRVDSP_fcs_leak_REGISTER    (HAL_SRVDSPREG_MAP->fcs_leak)
+#define HAL_SRVDSP_fcs_leak_LSB         0
+#define HAL_SRVDSP_fcs_leak_MSB         15
+#define HAL_SRVDSP_fcs_leak_MASK        0x0000FFFF
+#define HAL_SRVDSP_fcs_leak_TYPE        SInt16
+#define HAL_SRVDSP_fcs_leak             HAL_SRVDSP_fcs_leak_MASK
+#define HAL_SRVDSP_fcs_leak_READABLE    1
+#define HAL_SRVDSP_fcs_leak_WRITABLE    1
+#define HAL_SRVDSP_fcs_leak_SIGNED      1
+#define HAL_SRVDSP_fcs_leak_ADR         0xB00008A8
+
+// Register reserved_2AC
+#define HAL_SRVDSP_reserved_2AC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_2AC)
+#define HAL_SRVDSP_reserved_2AC_LSB         0
+#define HAL_SRVDSP_reserved_2AC_MSB         15
+#define HAL_SRVDSP_reserved_2AC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_2AC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_2AC             HAL_SRVDSP_reserved_2AC_MASK
+#define HAL_SRVDSP_reserved_2AC_READABLE    1
+#define HAL_SRVDSP_reserved_2AC_WRITABLE    1
+#define HAL_SRVDSP_reserved_2AC_SIGNED      1
+#define HAL_SRVDSP_reserved_2AC_ADR         0xB00008AC
+
+// Register src_kf2
+#define HAL_SRVDSP_src_kf2_REGISTER    (HAL_SRVDSPREG_MAP->src_kf2)
+#define HAL_SRVDSP_src_kf2_LSB         0
+#define HAL_SRVDSP_src_kf2_MSB         15
+#define HAL_SRVDSP_src_kf2_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_kf2_TYPE        SInt16
+#define HAL_SRVDSP_src_kf2             HAL_SRVDSP_src_kf2_MASK
+#define HAL_SRVDSP_src_kf2_READABLE    1
+#define HAL_SRVDSP_src_kf2_WRITABLE    1
+#define HAL_SRVDSP_src_kf2_SIGNED      1
+#define HAL_SRVDSP_src_kf2_ADR         0xB00008B0
+
+// Register reserved_2B4
+#define HAL_SRVDSP_reserved_2B4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_2B4)
+#define HAL_SRVDSP_reserved_2B4_LSB         0
+#define HAL_SRVDSP_reserved_2B4_MSB         15
+#define HAL_SRVDSP_reserved_2B4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_2B4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_2B4             HAL_SRVDSP_reserved_2B4_MASK
+#define HAL_SRVDSP_reserved_2B4_READABLE    1
+#define HAL_SRVDSP_reserved_2B4_WRITABLE    1
+#define HAL_SRVDSP_reserved_2B4_SIGNED      1
+#define HAL_SRVDSP_reserved_2B4_ADR         0xB00008B4
+
+// Register reserved_2B8
+#define HAL_SRVDSP_reserved_2B8_REGISTER    (HAL_SRVDSPREG_MAP->reserved_2B8)
+#define HAL_SRVDSP_reserved_2B8_LSB         0
+#define HAL_SRVDSP_reserved_2B8_MSB         15
+#define HAL_SRVDSP_reserved_2B8_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_2B8_TYPE        SInt16
+#define HAL_SRVDSP_reserved_2B8             HAL_SRVDSP_reserved_2B8_MASK
+#define HAL_SRVDSP_reserved_2B8_READABLE    1
+#define HAL_SRVDSP_reserved_2B8_WRITABLE    1
+#define HAL_SRVDSP_reserved_2B8_SIGNED      1
+#define HAL_SRVDSP_reserved_2B8_ADR         0xB00008B8
+
+// Register reserved_2BC
+#define HAL_SRVDSP_reserved_2BC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_2BC)
+#define HAL_SRVDSP_reserved_2BC_LSB         0
+#define HAL_SRVDSP_reserved_2BC_MSB         15
+#define HAL_SRVDSP_reserved_2BC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_2BC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_2BC             HAL_SRVDSP_reserved_2BC_MASK
+#define HAL_SRVDSP_reserved_2BC_READABLE    1
+#define HAL_SRVDSP_reserved_2BC_WRITABLE    1
+#define HAL_SRVDSP_reserved_2BC_SIGNED      1
+#define HAL_SRVDSP_reserved_2BC_ADR         0xB00008BC
+
+// Register src_foc_prescale
+#define HAL_SRVDSP_src_foc_prescale_REGISTER    (HAL_SRVDSPREG_MAP->src_foc_prescale)
+#define HAL_SRVDSP_src_foc_prescale_LSB         0
+#define HAL_SRVDSP_src_foc_prescale_MSB         15
+#define HAL_SRVDSP_src_foc_prescale_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_foc_prescale_TYPE        SInt16
+#define HAL_SRVDSP_src_foc_prescale             HAL_SRVDSP_src_foc_prescale_MASK
+#define HAL_SRVDSP_src_foc_prescale_READABLE    1
+#define HAL_SRVDSP_src_foc_prescale_WRITABLE    1
+#define HAL_SRVDSP_src_foc_prescale_SIGNED      1
+#define HAL_SRVDSP_src_foc_prescale_ADR         0xB00008C0
+
+// Register reserved_2C4
+#define HAL_SRVDSP_reserved_2C4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_2C4)
+#define HAL_SRVDSP_reserved_2C4_LSB         0
+#define HAL_SRVDSP_reserved_2C4_MSB         15
+#define HAL_SRVDSP_reserved_2C4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_2C4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_2C4             HAL_SRVDSP_reserved_2C4_MASK
+#define HAL_SRVDSP_reserved_2C4_READABLE    1
+#define HAL_SRVDSP_reserved_2C4_WRITABLE    1
+#define HAL_SRVDSP_reserved_2C4_SIGNED      1
+#define HAL_SRVDSP_reserved_2C4_ADR         0xB00008C4
+
+// Register reserved_2C8
+#define HAL_SRVDSP_reserved_2C8_REGISTER    (HAL_SRVDSPREG_MAP->reserved_2C8)
+#define HAL_SRVDSP_reserved_2C8_LSB         0
+#define HAL_SRVDSP_reserved_2C8_MSB         15
+#define HAL_SRVDSP_reserved_2C8_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_2C8_TYPE        SInt16
+#define HAL_SRVDSP_reserved_2C8             HAL_SRVDSP_reserved_2C8_MASK
+#define HAL_SRVDSP_reserved_2C8_READABLE    1
+#define HAL_SRVDSP_reserved_2C8_WRITABLE    1
+#define HAL_SRVDSP_reserved_2C8_SIGNED      1
+#define HAL_SRVDSP_reserved_2C8_ADR         0xB00008C8
+
+// Register reserved_2CC
+#define HAL_SRVDSP_reserved_2CC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_2CC)
+#define HAL_SRVDSP_reserved_2CC_LSB         0
+#define HAL_SRVDSP_reserved_2CC_MSB         15
+#define HAL_SRVDSP_reserved_2CC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_2CC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_2CC             HAL_SRVDSP_reserved_2CC_MASK
+#define HAL_SRVDSP_reserved_2CC_READABLE    1
+#define HAL_SRVDSP_reserved_2CC_WRITABLE    1
+#define HAL_SRVDSP_reserved_2CC_SIGNED      1
+#define HAL_SRVDSP_reserved_2CC_ADR         0xB00008CC
+
+// Register kf1c
+#define HAL_SRVDSP_kf1c_REGISTER    (HAL_SRVDSPREG_MAP->kf1c)
+#define HAL_SRVDSP_kf1c_LSB         0
+#define HAL_SRVDSP_kf1c_MSB         15
+#define HAL_SRVDSP_kf1c_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf1c_TYPE        SInt16
+#define HAL_SRVDSP_kf1c             HAL_SRVDSP_kf1c_MASK
+#define HAL_SRVDSP_kf1c_READABLE    1
+#define HAL_SRVDSP_kf1c_WRITABLE    1
+#define HAL_SRVDSP_kf1c_SIGNED      1
+#define HAL_SRVDSP_kf1c_ADR         0xB00008D0
+
+// Register kf1d
+#define HAL_SRVDSP_kf1d_REGISTER    (HAL_SRVDSPREG_MAP->kf1d)
+#define HAL_SRVDSP_kf1d_LSB         0
+#define HAL_SRVDSP_kf1d_MSB         15
+#define HAL_SRVDSP_kf1d_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf1d_TYPE        SInt16
+#define HAL_SRVDSP_kf1d             HAL_SRVDSP_kf1d_MASK
+#define HAL_SRVDSP_kf1d_READABLE    1
+#define HAL_SRVDSP_kf1d_WRITABLE    1
+#define HAL_SRVDSP_kf1d_SIGNED      1
+#define HAL_SRVDSP_kf1d_ADR         0xB00008D4
+
+// Register kf1e
+#define HAL_SRVDSP_kf1e_REGISTER    (HAL_SRVDSPREG_MAP->kf1e)
+#define HAL_SRVDSP_kf1e_LSB         0
+#define HAL_SRVDSP_kf1e_MSB         15
+#define HAL_SRVDSP_kf1e_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf1e_TYPE        SInt16
+#define HAL_SRVDSP_kf1e             HAL_SRVDSP_kf1e_MASK
+#define HAL_SRVDSP_kf1e_READABLE    1
+#define HAL_SRVDSP_kf1e_WRITABLE    1
+#define HAL_SRVDSP_kf1e_SIGNED      1
+#define HAL_SRVDSP_kf1e_ADR         0xB00008D8
+
+// Register kf1f
+#define HAL_SRVDSP_kf1f_REGISTER    (HAL_SRVDSPREG_MAP->kf1f)
+#define HAL_SRVDSP_kf1f_LSB         0
+#define HAL_SRVDSP_kf1f_MSB         15
+#define HAL_SRVDSP_kf1f_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf1f_TYPE        SInt16
+#define HAL_SRVDSP_kf1f             HAL_SRVDSP_kf1f_MASK
+#define HAL_SRVDSP_kf1f_READABLE    1
+#define HAL_SRVDSP_kf1f_WRITABLE    1
+#define HAL_SRVDSP_kf1f_SIGNED      1
+#define HAL_SRVDSP_kf1f_ADR         0xB00008DC
+
+// Register kf10
+#define HAL_SRVDSP_kf10_REGISTER    (HAL_SRVDSPREG_MAP->kf10)
+#define HAL_SRVDSP_kf10_LSB         0
+#define HAL_SRVDSP_kf10_MSB         15
+#define HAL_SRVDSP_kf10_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf10_TYPE        SInt16
+#define HAL_SRVDSP_kf10             HAL_SRVDSP_kf10_MASK
+#define HAL_SRVDSP_kf10_READABLE    1
+#define HAL_SRVDSP_kf10_WRITABLE    1
+#define HAL_SRVDSP_kf10_SIGNED      1
+#define HAL_SRVDSP_kf10_ADR         0xB00008E0
+
+// Register kf18
+#define HAL_SRVDSP_kf18_REGISTER    (HAL_SRVDSPREG_MAP->kf18)
+#define HAL_SRVDSP_kf18_LSB         0
+#define HAL_SRVDSP_kf18_MSB         15
+#define HAL_SRVDSP_kf18_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf18_TYPE        SInt16
+#define HAL_SRVDSP_kf18             HAL_SRVDSP_kf18_MASK
+#define HAL_SRVDSP_kf18_READABLE    1
+#define HAL_SRVDSP_kf18_WRITABLE    1
+#define HAL_SRVDSP_kf18_SIGNED      1
+#define HAL_SRVDSP_kf18_ADR         0xB00008E4
+
+// Register kf20
+#define HAL_SRVDSP_kf20_REGISTER    (HAL_SRVDSPREG_MAP->kf20)
+#define HAL_SRVDSP_kf20_LSB         0
+#define HAL_SRVDSP_kf20_MSB         15
+#define HAL_SRVDSP_kf20_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf20_TYPE        SInt16
+#define HAL_SRVDSP_kf20             HAL_SRVDSP_kf20_MASK
+#define HAL_SRVDSP_kf20_READABLE    1
+#define HAL_SRVDSP_kf20_WRITABLE    1
+#define HAL_SRVDSP_kf20_SIGNED      1
+#define HAL_SRVDSP_kf20_ADR         0xB00008E8
+
+// Register kf21
+#define HAL_SRVDSP_kf21_REGISTER    (HAL_SRVDSPREG_MAP->kf21)
+#define HAL_SRVDSP_kf21_LSB         0
+#define HAL_SRVDSP_kf21_MSB         15
+#define HAL_SRVDSP_kf21_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf21_TYPE        SInt16
+#define HAL_SRVDSP_kf21             HAL_SRVDSP_kf21_MASK
+#define HAL_SRVDSP_kf21_READABLE    1
+#define HAL_SRVDSP_kf21_WRITABLE    1
+#define HAL_SRVDSP_kf21_SIGNED      1
+#define HAL_SRVDSP_kf21_ADR         0xB00008EC
+
+// Register kf22
+#define HAL_SRVDSP_kf22_REGISTER    (HAL_SRVDSPREG_MAP->kf22)
+#define HAL_SRVDSP_kf22_LSB         0
+#define HAL_SRVDSP_kf22_MSB         15
+#define HAL_SRVDSP_kf22_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf22_TYPE        SInt16
+#define HAL_SRVDSP_kf22             HAL_SRVDSP_kf22_MASK
+#define HAL_SRVDSP_kf22_READABLE    1
+#define HAL_SRVDSP_kf22_WRITABLE    1
+#define HAL_SRVDSP_kf22_SIGNED      1
+#define HAL_SRVDSP_kf22_ADR         0xB00008F0
+
+// Register kf30
+#define HAL_SRVDSP_kf30_REGISTER    (HAL_SRVDSPREG_MAP->kf30)
+#define HAL_SRVDSP_kf30_LSB         0
+#define HAL_SRVDSP_kf30_MSB         15
+#define HAL_SRVDSP_kf30_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf30_TYPE        SInt16
+#define HAL_SRVDSP_kf30             HAL_SRVDSP_kf30_MASK
+#define HAL_SRVDSP_kf30_READABLE    1
+#define HAL_SRVDSP_kf30_WRITABLE    1
+#define HAL_SRVDSP_kf30_SIGNED      1
+#define HAL_SRVDSP_kf30_ADR         0xB00008F4
+
+// Register kf31
+#define HAL_SRVDSP_kf31_REGISTER    (HAL_SRVDSPREG_MAP->kf31)
+#define HAL_SRVDSP_kf31_LSB         0
+#define HAL_SRVDSP_kf31_MSB         15
+#define HAL_SRVDSP_kf31_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf31_TYPE        SInt16
+#define HAL_SRVDSP_kf31             HAL_SRVDSP_kf31_MASK
+#define HAL_SRVDSP_kf31_READABLE    1
+#define HAL_SRVDSP_kf31_WRITABLE    1
+#define HAL_SRVDSP_kf31_SIGNED      1
+#define HAL_SRVDSP_kf31_ADR         0xB00008F8
+
+// Register kf32
+#define HAL_SRVDSP_kf32_REGISTER    (HAL_SRVDSPREG_MAP->kf32)
+#define HAL_SRVDSP_kf32_LSB         0
+#define HAL_SRVDSP_kf32_MSB         15
+#define HAL_SRVDSP_kf32_MASK        0x0000FFFF
+#define HAL_SRVDSP_kf32_TYPE        SInt16
+#define HAL_SRVDSP_kf32             HAL_SRVDSP_kf32_MASK
+#define HAL_SRVDSP_kf32_READABLE    1
+#define HAL_SRVDSP_kf32_WRITABLE    1
+#define HAL_SRVDSP_kf32_SIGNED      1
+#define HAL_SRVDSP_kf32_ADR         0xB00008FC
+
+// Register kfb20
+#define HAL_SRVDSP_kfb20_REGISTER    (HAL_SRVDSPREG_MAP->kfb20)
+#define HAL_SRVDSP_kfb20_LSB         0
+#define HAL_SRVDSP_kfb20_MSB         15
+#define HAL_SRVDSP_kfb20_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfb20_TYPE        SInt16
+#define HAL_SRVDSP_kfb20             HAL_SRVDSP_kfb20_MASK
+#define HAL_SRVDSP_kfb20_READABLE    1
+#define HAL_SRVDSP_kfb20_WRITABLE    1
+#define HAL_SRVDSP_kfb20_SIGNED      1
+#define HAL_SRVDSP_kfb20_ADR         0xB0000900
+
+// Register kfb21
+#define HAL_SRVDSP_kfb21_REGISTER    (HAL_SRVDSPREG_MAP->kfb21)
+#define HAL_SRVDSP_kfb21_LSB         0
+#define HAL_SRVDSP_kfb21_MSB         15
+#define HAL_SRVDSP_kfb21_MASK        0x0000FFFF
+#define HAL_SRVDSP_kfb21_TYPE        SInt16
+#define HAL_SRVDSP_kfb21             HAL_SRVDSP_kfb21_MASK
+#define HAL_SRVDSP_kfb21_READABLE    1
+#define HAL_SRVDSP_kfb21_WRITABLE    1
+#define HAL_SRVDSP_kfb21_SIGNED      1
+#define HAL_SRVDSP_kfb21_ADR         0xB0000904
+
+// Register fcs2_leak
+#define HAL_SRVDSP_fcs2_leak_REGISTER    (HAL_SRVDSPREG_MAP->fcs2_leak)
+#define HAL_SRVDSP_fcs2_leak_LSB         0
+#define HAL_SRVDSP_fcs2_leak_MSB         15
+#define HAL_SRVDSP_fcs2_leak_MASK        0x0000FFFF
+#define HAL_SRVDSP_fcs2_leak_TYPE        SInt16
+#define HAL_SRVDSP_fcs2_leak             HAL_SRVDSP_fcs2_leak_MASK
+#define HAL_SRVDSP_fcs2_leak_READABLE    1
+#define HAL_SRVDSP_fcs2_leak_WRITABLE    1
+#define HAL_SRVDSP_fcs2_leak_SIGNED      1
+#define HAL_SRVDSP_fcs2_leak_ADR         0xB0000908
+
+// Register fooffset2
+#define HAL_SRVDSP_fooffset2_REGISTER    (HAL_SRVDSPREG_MAP->fooffset2)
+#define HAL_SRVDSP_fooffset2_LSB         0
+#define HAL_SRVDSP_fooffset2_MSB         15
+#define HAL_SRVDSP_fooffset2_MASK        0x0000FFFF
+#define HAL_SRVDSP_fooffset2_TYPE        SInt16
+#define HAL_SRVDSP_fooffset2             HAL_SRVDSP_fooffset2_MASK
+#define HAL_SRVDSP_fooffset2_READABLE    1
+#define HAL_SRVDSP_fooffset2_WRITABLE    1
+#define HAL_SRVDSP_fooffset2_SIGNED      1
+#define HAL_SRVDSP_fooffset2_ADR         0xB000090C
+
+// Register kb10
+#define HAL_SRVDSP_kb10_REGISTER    (HAL_SRVDSPREG_MAP->kb10)
+#define HAL_SRVDSP_kb10_LSB         0
+#define HAL_SRVDSP_kb10_MSB         15
+#define HAL_SRVDSP_kb10_MASK        0x0000FFFF
+#define HAL_SRVDSP_kb10_TYPE        SInt16
+#define HAL_SRVDSP_kb10             HAL_SRVDSP_kb10_MASK
+#define HAL_SRVDSP_kb10_READABLE    1
+#define HAL_SRVDSP_kb10_WRITABLE    1
+#define HAL_SRVDSP_kb10_SIGNED      1
+#define HAL_SRVDSP_kb10_ADR         0xB0000910
+
+// Register kb11
+#define HAL_SRVDSP_kb11_REGISTER    (HAL_SRVDSPREG_MAP->kb11)
+#define HAL_SRVDSP_kb11_LSB         0
+#define HAL_SRVDSP_kb11_MSB         15
+#define HAL_SRVDSP_kb11_MASK        0x0000FFFF
+#define HAL_SRVDSP_kb11_TYPE        SInt16
+#define HAL_SRVDSP_kb11             HAL_SRVDSP_kb11_MASK
+#define HAL_SRVDSP_kb11_READABLE    1
+#define HAL_SRVDSP_kb11_WRITABLE    1
+#define HAL_SRVDSP_kb11_SIGNED      1
+#define HAL_SRVDSP_kb11_ADR         0xB0000914
+
+// Register kb12
+#define HAL_SRVDSP_kb12_REGISTER    (HAL_SRVDSPREG_MAP->kb12)
+#define HAL_SRVDSP_kb12_LSB         0
+#define HAL_SRVDSP_kb12_MSB         15
+#define HAL_SRVDSP_kb12_MASK        0x0000FFFF
+#define HAL_SRVDSP_kb12_TYPE        SInt16
+#define HAL_SRVDSP_kb12             HAL_SRVDSP_kb12_MASK
+#define HAL_SRVDSP_kb12_READABLE    1
+#define HAL_SRVDSP_kb12_WRITABLE    1
+#define HAL_SRVDSP_kb12_SIGNED      1
+#define HAL_SRVDSP_kb12_ADR         0xB0000918
+
+// Register kb20
+#define HAL_SRVDSP_kb20_REGISTER    (HAL_SRVDSPREG_MAP->kb20)
+#define HAL_SRVDSP_kb20_LSB         0
+#define HAL_SRVDSP_kb20_MSB         15
+#define HAL_SRVDSP_kb20_MASK        0x0000FFFF
+#define HAL_SRVDSP_kb20_TYPE        SInt16
+#define HAL_SRVDSP_kb20             HAL_SRVDSP_kb20_MASK
+#define HAL_SRVDSP_kb20_READABLE    1
+#define HAL_SRVDSP_kb20_WRITABLE    1
+#define HAL_SRVDSP_kb20_SIGNED      1
+#define HAL_SRVDSP_kb20_ADR         0xB000091C
+
+// Register kb21
+#define HAL_SRVDSP_kb21_REGISTER    (HAL_SRVDSPREG_MAP->kb21)
+#define HAL_SRVDSP_kb21_LSB         0
+#define HAL_SRVDSP_kb21_MSB         15
+#define HAL_SRVDSP_kb21_MASK        0x0000FFFF
+#define HAL_SRVDSP_kb21_TYPE        SInt16
+#define HAL_SRVDSP_kb21             HAL_SRVDSP_kb21_MASK
+#define HAL_SRVDSP_kb21_READABLE    1
+#define HAL_SRVDSP_kb21_WRITABLE    1
+#define HAL_SRVDSP_kb21_SIGNED      1
+#define HAL_SRVDSP_kb21_ADR         0xB0000920
+
+// Register kb22
+#define HAL_SRVDSP_kb22_REGISTER    (HAL_SRVDSPREG_MAP->kb22)
+#define HAL_SRVDSP_kb22_LSB         0
+#define HAL_SRVDSP_kb22_MSB         15
+#define HAL_SRVDSP_kb22_MASK        0x0000FFFF
+#define HAL_SRVDSP_kb22_TYPE        SInt16
+#define HAL_SRVDSP_kb22             HAL_SRVDSP_kb22_MASK
+#define HAL_SRVDSP_kb22_READABLE    1
+#define HAL_SRVDSP_kb22_WRITABLE    1
+#define HAL_SRVDSP_kb22_SIGNED      1
+#define HAL_SRVDSP_kb22_ADR         0xB0000924
+
+// Register klg10
+#define HAL_SRVDSP_klg10_REGISTER    (HAL_SRVDSPREG_MAP->klg10)
+#define HAL_SRVDSP_klg10_LSB         0
+#define HAL_SRVDSP_klg10_MSB         15
+#define HAL_SRVDSP_klg10_MASK        0x0000FFFF
+#define HAL_SRVDSP_klg10_TYPE        SInt16
+#define HAL_SRVDSP_klg10             HAL_SRVDSP_klg10_MASK
+#define HAL_SRVDSP_klg10_READABLE    1
+#define HAL_SRVDSP_klg10_WRITABLE    1
+#define HAL_SRVDSP_klg10_SIGNED      1
+#define HAL_SRVDSP_klg10_ADR         0xB0000928
+
+// Register klg11
+#define HAL_SRVDSP_klg11_REGISTER    (HAL_SRVDSPREG_MAP->klg11)
+#define HAL_SRVDSP_klg11_LSB         0
+#define HAL_SRVDSP_klg11_MSB         15
+#define HAL_SRVDSP_klg11_MASK        0x0000FFFF
+#define HAL_SRVDSP_klg11_TYPE        SInt16
+#define HAL_SRVDSP_klg11             HAL_SRVDSP_klg11_MASK
+#define HAL_SRVDSP_klg11_READABLE    1
+#define HAL_SRVDSP_klg11_WRITABLE    1
+#define HAL_SRVDSP_klg11_SIGNED      1
+#define HAL_SRVDSP_klg11_ADR         0xB000092C
+
+// Register klg12
+#define HAL_SRVDSP_klg12_REGISTER    (HAL_SRVDSPREG_MAP->klg12)
+#define HAL_SRVDSP_klg12_LSB         0
+#define HAL_SRVDSP_klg12_MSB         15
+#define HAL_SRVDSP_klg12_MASK        0x0000FFFF
+#define HAL_SRVDSP_klg12_TYPE        SInt16
+#define HAL_SRVDSP_klg12             HAL_SRVDSP_klg12_MASK
+#define HAL_SRVDSP_klg12_READABLE    1
+#define HAL_SRVDSP_klg12_WRITABLE    1
+#define HAL_SRVDSP_klg12_SIGNED      1
+#define HAL_SRVDSP_klg12_ADR         0xB0000930
+
+// Register klg13
+#define HAL_SRVDSP_klg13_REGISTER    (HAL_SRVDSPREG_MAP->klg13)
+#define HAL_SRVDSP_klg13_LSB         0
+#define HAL_SRVDSP_klg13_MSB         15
+#define HAL_SRVDSP_klg13_MASK        0x0000FFFF
+#define HAL_SRVDSP_klg13_TYPE        SInt16
+#define HAL_SRVDSP_klg13             HAL_SRVDSP_klg13_MASK
+#define HAL_SRVDSP_klg13_READABLE    1
+#define HAL_SRVDSP_klg13_WRITABLE    1
+#define HAL_SRVDSP_klg13_SIGNED      1
+#define HAL_SRVDSP_klg13_ADR         0xB0000934
+
+// Register klg14
+#define HAL_SRVDSP_klg14_REGISTER    (HAL_SRVDSPREG_MAP->klg14)
+#define HAL_SRVDSP_klg14_LSB         0
+#define HAL_SRVDSP_klg14_MSB         15
+#define HAL_SRVDSP_klg14_MASK        0x0000FFFF
+#define HAL_SRVDSP_klg14_TYPE        SInt16
+#define HAL_SRVDSP_klg14             HAL_SRVDSP_klg14_MASK
+#define HAL_SRVDSP_klg14_READABLE    1
+#define HAL_SRVDSP_klg14_WRITABLE    1
+#define HAL_SRVDSP_klg14_SIGNED      1
+#define HAL_SRVDSP_klg14_ADR         0xB0000938
+
+// Register reserved_33C
+#define HAL_SRVDSP_reserved_33C_REGISTER    (HAL_SRVDSPREG_MAP->reserved_33C)
+#define HAL_SRVDSP_reserved_33C_LSB         0
+#define HAL_SRVDSP_reserved_33C_MSB         15
+#define HAL_SRVDSP_reserved_33C_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_33C_TYPE        SInt16
+#define HAL_SRVDSP_reserved_33C             HAL_SRVDSP_reserved_33C_MASK
+#define HAL_SRVDSP_reserved_33C_READABLE    1
+#define HAL_SRVDSP_reserved_33C_WRITABLE    1
+#define HAL_SRVDSP_reserved_33C_SIGNED      1
+#define HAL_SRVDSP_reserved_33C_ADR         0xB000093C
+
+// Register ks10
+#define HAL_SRVDSP_ks10_REGISTER    (HAL_SRVDSPREG_MAP->ks10)
+#define HAL_SRVDSP_ks10_LSB         0
+#define HAL_SRVDSP_ks10_MSB         15
+#define HAL_SRVDSP_ks10_MASK        0x0000FFFF
+#define HAL_SRVDSP_ks10_TYPE        SInt16
+#define HAL_SRVDSP_ks10             HAL_SRVDSP_ks10_MASK
+#define HAL_SRVDSP_ks10_READABLE    1
+#define HAL_SRVDSP_ks10_WRITABLE    1
+#define HAL_SRVDSP_ks10_SIGNED      1
+#define HAL_SRVDSP_ks10_ADR         0xB0000940
+
+// Register ks11
+#define HAL_SRVDSP_ks11_REGISTER    (HAL_SRVDSPREG_MAP->ks11)
+#define HAL_SRVDSP_ks11_LSB         0
+#define HAL_SRVDSP_ks11_MSB         15
+#define HAL_SRVDSP_ks11_MASK        0x0000FFFF
+#define HAL_SRVDSP_ks11_TYPE        SInt16
+#define HAL_SRVDSP_ks11             HAL_SRVDSP_ks11_MASK
+#define HAL_SRVDSP_ks11_READABLE    1
+#define HAL_SRVDSP_ks11_WRITABLE    1
+#define HAL_SRVDSP_ks11_SIGNED      1
+#define HAL_SRVDSP_ks11_ADR         0xB0000944
+
+// Register ks12
+#define HAL_SRVDSP_ks12_REGISTER    (HAL_SRVDSPREG_MAP->ks12)
+#define HAL_SRVDSP_ks12_LSB         0
+#define HAL_SRVDSP_ks12_MSB         15
+#define HAL_SRVDSP_ks12_MASK        0x0000FFFF
+#define HAL_SRVDSP_ks12_TYPE        SInt16
+#define HAL_SRVDSP_ks12             HAL_SRVDSP_ks12_MASK
+#define HAL_SRVDSP_ks12_READABLE    1
+#define HAL_SRVDSP_ks12_WRITABLE    1
+#define HAL_SRVDSP_ks12_SIGNED      1
+#define HAL_SRVDSP_ks12_ADR         0xB0000948
+
+// Register ks13
+#define HAL_SRVDSP_ks13_REGISTER    (HAL_SRVDSPREG_MAP->ks13)
+#define HAL_SRVDSP_ks13_LSB         0
+#define HAL_SRVDSP_ks13_MSB         15
+#define HAL_SRVDSP_ks13_MASK        0x0000FFFF
+#define HAL_SRVDSP_ks13_TYPE        SInt16
+#define HAL_SRVDSP_ks13             HAL_SRVDSP_ks13_MASK
+#define HAL_SRVDSP_ks13_READABLE    1
+#define HAL_SRVDSP_ks13_WRITABLE    1
+#define HAL_SRVDSP_ks13_SIGNED      1
+#define HAL_SRVDSP_ks13_ADR         0xB000094C
+
+// Register ks14
+#define HAL_SRVDSP_ks14_REGISTER    (HAL_SRVDSPREG_MAP->ks14)
+#define HAL_SRVDSP_ks14_LSB         0
+#define HAL_SRVDSP_ks14_MSB         15
+#define HAL_SRVDSP_ks14_MASK        0x0000FFFF
+#define HAL_SRVDSP_ks14_TYPE        SInt16
+#define HAL_SRVDSP_ks14             HAL_SRVDSP_ks14_MASK
+#define HAL_SRVDSP_ks14_READABLE    1
+#define HAL_SRVDSP_ks14_WRITABLE    1
+#define HAL_SRVDSP_ks14_SIGNED      1
+#define HAL_SRVDSP_ks14_ADR         0xB0000950
+
+// Register ks15
+#define HAL_SRVDSP_ks15_REGISTER    (HAL_SRVDSPREG_MAP->ks15)
+#define HAL_SRVDSP_ks15_LSB         0
+#define HAL_SRVDSP_ks15_MSB         15
+#define HAL_SRVDSP_ks15_MASK        0x0000FFFF
+#define HAL_SRVDSP_ks15_TYPE        SInt16
+#define HAL_SRVDSP_ks15             HAL_SRVDSP_ks15_MASK
+#define HAL_SRVDSP_ks15_READABLE    1
+#define HAL_SRVDSP_ks15_WRITABLE    1
+#define HAL_SRVDSP_ks15_SIGNED      1
+#define HAL_SRVDSP_ks15_ADR         0xB0000954
+
+// Register ks16
+#define HAL_SRVDSP_ks16_REGISTER    (HAL_SRVDSPREG_MAP->ks16)
+#define HAL_SRVDSP_ks16_LSB         0
+#define HAL_SRVDSP_ks16_MSB         15
+#define HAL_SRVDSP_ks16_MASK        0x0000FFFF
+#define HAL_SRVDSP_ks16_TYPE        SInt16
+#define HAL_SRVDSP_ks16             HAL_SRVDSP_ks16_MASK
+#define HAL_SRVDSP_ks16_READABLE    1
+#define HAL_SRVDSP_ks16_WRITABLE    1
+#define HAL_SRVDSP_ks16_SIGNED      1
+#define HAL_SRVDSP_ks16_ADR         0xB0000958
+
+// Register ks17
+#define HAL_SRVDSP_ks17_REGISTER    (HAL_SRVDSPREG_MAP->ks17)
+#define HAL_SRVDSP_ks17_LSB         0
+#define HAL_SRVDSP_ks17_MSB         15
+#define HAL_SRVDSP_ks17_MASK        0x0000FFFF
+#define HAL_SRVDSP_ks17_TYPE        SInt16
+#define HAL_SRVDSP_ks17             HAL_SRVDSP_ks17_MASK
+#define HAL_SRVDSP_ks17_READABLE    1
+#define HAL_SRVDSP_ks17_WRITABLE    1
+#define HAL_SRVDSP_ks17_SIGNED      1
+#define HAL_SRVDSP_ks17_ADR         0xB000095C
+
+// Register reserved_360
+#define HAL_SRVDSP_reserved_360_REGISTER    (HAL_SRVDSPREG_MAP->reserved_360)
+#define HAL_SRVDSP_reserved_360_LSB         0
+#define HAL_SRVDSP_reserved_360_MSB         15
+#define HAL_SRVDSP_reserved_360_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_360_TYPE        SInt16
+#define HAL_SRVDSP_reserved_360             HAL_SRVDSP_reserved_360_MASK
+#define HAL_SRVDSP_reserved_360_READABLE    1
+#define HAL_SRVDSP_reserved_360_WRITABLE    1
+#define HAL_SRVDSP_reserved_360_SIGNED      1
+#define HAL_SRVDSP_reserved_360_ADR         0xB0000960
+
+// Register reserved_364
+#define HAL_SRVDSP_reserved_364_REGISTER    (HAL_SRVDSPREG_MAP->reserved_364)
+#define HAL_SRVDSP_reserved_364_LSB         0
+#define HAL_SRVDSP_reserved_364_MSB         15
+#define HAL_SRVDSP_reserved_364_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_364_TYPE        SInt16
+#define HAL_SRVDSP_reserved_364             HAL_SRVDSP_reserved_364_MASK
+#define HAL_SRVDSP_reserved_364_READABLE    1
+#define HAL_SRVDSP_reserved_364_WRITABLE    1
+#define HAL_SRVDSP_reserved_364_SIGNED      1
+#define HAL_SRVDSP_reserved_364_ADR         0xB0000964
+
+// Register reserved_368
+#define HAL_SRVDSP_reserved_368_REGISTER    (HAL_SRVDSPREG_MAP->reserved_368)
+#define HAL_SRVDSP_reserved_368_LSB         0
+#define HAL_SRVDSP_reserved_368_MSB         15
+#define HAL_SRVDSP_reserved_368_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_368_TYPE        SInt16
+#define HAL_SRVDSP_reserved_368             HAL_SRVDSP_reserved_368_MASK
+#define HAL_SRVDSP_reserved_368_READABLE    1
+#define HAL_SRVDSP_reserved_368_WRITABLE    1
+#define HAL_SRVDSP_reserved_368_SIGNED      1
+#define HAL_SRVDSP_reserved_368_ADR         0xB0000968
+
+// Register reserved_36C
+#define HAL_SRVDSP_reserved_36C_REGISTER    (HAL_SRVDSPREG_MAP->reserved_36C)
+#define HAL_SRVDSP_reserved_36C_LSB         0
+#define HAL_SRVDSP_reserved_36C_MSB         15
+#define HAL_SRVDSP_reserved_36C_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_36C_TYPE        SInt16
+#define HAL_SRVDSP_reserved_36C             HAL_SRVDSP_reserved_36C_MASK
+#define HAL_SRVDSP_reserved_36C_READABLE    1
+#define HAL_SRVDSP_reserved_36C_WRITABLE    1
+#define HAL_SRVDSP_reserved_36C_SIGNED      1
+#define HAL_SRVDSP_reserved_36C_ADR         0xB000096C
+
+// Register reserved_370
+#define HAL_SRVDSP_reserved_370_REGISTER    (HAL_SRVDSPREG_MAP->reserved_370)
+#define HAL_SRVDSP_reserved_370_LSB         0
+#define HAL_SRVDSP_reserved_370_MSB         15
+#define HAL_SRVDSP_reserved_370_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_370_TYPE        SInt16
+#define HAL_SRVDSP_reserved_370             HAL_SRVDSP_reserved_370_MASK
+#define HAL_SRVDSP_reserved_370_READABLE    1
+#define HAL_SRVDSP_reserved_370_WRITABLE    1
+#define HAL_SRVDSP_reserved_370_SIGNED      1
+#define HAL_SRVDSP_reserved_370_ADR         0xB0000970
+
+// Register reserved_374
+#define HAL_SRVDSP_reserved_374_REGISTER    (HAL_SRVDSPREG_MAP->reserved_374)
+#define HAL_SRVDSP_reserved_374_LSB         0
+#define HAL_SRVDSP_reserved_374_MSB         15
+#define HAL_SRVDSP_reserved_374_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_374_TYPE        SInt16
+#define HAL_SRVDSP_reserved_374             HAL_SRVDSP_reserved_374_MASK
+#define HAL_SRVDSP_reserved_374_READABLE    1
+#define HAL_SRVDSP_reserved_374_WRITABLE    1
+#define HAL_SRVDSP_reserved_374_SIGNED      1
+#define HAL_SRVDSP_reserved_374_ADR         0xB0000974
+
+// Register reserved_378
+#define HAL_SRVDSP_reserved_378_REGISTER    (HAL_SRVDSPREG_MAP->reserved_378)
+#define HAL_SRVDSP_reserved_378_LSB         0
+#define HAL_SRVDSP_reserved_378_MSB         15
+#define HAL_SRVDSP_reserved_378_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_378_TYPE        SInt16
+#define HAL_SRVDSP_reserved_378             HAL_SRVDSP_reserved_378_MASK
+#define HAL_SRVDSP_reserved_378_READABLE    1
+#define HAL_SRVDSP_reserved_378_WRITABLE    1
+#define HAL_SRVDSP_reserved_378_SIGNED      1
+#define HAL_SRVDSP_reserved_378_ADR         0xB0000978
+
+// Register reserved_37C
+#define HAL_SRVDSP_reserved_37C_REGISTER    (HAL_SRVDSPREG_MAP->reserved_37C)
+#define HAL_SRVDSP_reserved_37C_LSB         0
+#define HAL_SRVDSP_reserved_37C_MSB         15
+#define HAL_SRVDSP_reserved_37C_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_37C_TYPE        SInt16
+#define HAL_SRVDSP_reserved_37C             HAL_SRVDSP_reserved_37C_MASK
+#define HAL_SRVDSP_reserved_37C_READABLE    1
+#define HAL_SRVDSP_reserved_37C_WRITABLE    1
+#define HAL_SRVDSP_reserved_37C_SIGNED      1
+#define HAL_SRVDSP_reserved_37C_ADR         0xB000097C
+
+// Register reserved_380
+#define HAL_SRVDSP_reserved_380_REGISTER    (HAL_SRVDSPREG_MAP->reserved_380)
+#define HAL_SRVDSP_reserved_380_LSB         0
+#define HAL_SRVDSP_reserved_380_MSB         15
+#define HAL_SRVDSP_reserved_380_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_380_TYPE        SInt16
+#define HAL_SRVDSP_reserved_380             HAL_SRVDSP_reserved_380_MASK
+#define HAL_SRVDSP_reserved_380_READABLE    1
+#define HAL_SRVDSP_reserved_380_WRITABLE    1
+#define HAL_SRVDSP_reserved_380_SIGNED      1
+#define HAL_SRVDSP_reserved_380_ADR         0xB0000980
+
+// Register reserved_384
+#define HAL_SRVDSP_reserved_384_REGISTER    (HAL_SRVDSPREG_MAP->reserved_384)
+#define HAL_SRVDSP_reserved_384_LSB         0
+#define HAL_SRVDSP_reserved_384_MSB         15
+#define HAL_SRVDSP_reserved_384_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_384_TYPE        SInt16
+#define HAL_SRVDSP_reserved_384             HAL_SRVDSP_reserved_384_MASK
+#define HAL_SRVDSP_reserved_384_READABLE    1
+#define HAL_SRVDSP_reserved_384_WRITABLE    1
+#define HAL_SRVDSP_reserved_384_SIGNED      1
+#define HAL_SRVDSP_reserved_384_ADR         0xB0000984
+
+// Register reserved_388
+#define HAL_SRVDSP_reserved_388_REGISTER    (HAL_SRVDSPREG_MAP->reserved_388)
+#define HAL_SRVDSP_reserved_388_LSB         0
+#define HAL_SRVDSP_reserved_388_MSB         15
+#define HAL_SRVDSP_reserved_388_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_388_TYPE        SInt16
+#define HAL_SRVDSP_reserved_388             HAL_SRVDSP_reserved_388_MASK
+#define HAL_SRVDSP_reserved_388_READABLE    1
+#define HAL_SRVDSP_reserved_388_WRITABLE    1
+#define HAL_SRVDSP_reserved_388_SIGNED      1
+#define HAL_SRVDSP_reserved_388_ADR         0xB0000988
+
+// Register reserved_38C
+#define HAL_SRVDSP_reserved_38C_REGISTER    (HAL_SRVDSPREG_MAP->reserved_38C)
+#define HAL_SRVDSP_reserved_38C_LSB         0
+#define HAL_SRVDSP_reserved_38C_MSB         15
+#define HAL_SRVDSP_reserved_38C_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_38C_TYPE        SInt16
+#define HAL_SRVDSP_reserved_38C             HAL_SRVDSP_reserved_38C_MASK
+#define HAL_SRVDSP_reserved_38C_READABLE    1
+#define HAL_SRVDSP_reserved_38C_WRITABLE    1
+#define HAL_SRVDSP_reserved_38C_SIGNED      1
+#define HAL_SRVDSP_reserved_38C_ADR         0xB000098C
+
+// Register reserved_390
+#define HAL_SRVDSP_reserved_390_REGISTER    (HAL_SRVDSPREG_MAP->reserved_390)
+#define HAL_SRVDSP_reserved_390_LSB         0
+#define HAL_SRVDSP_reserved_390_MSB         15
+#define HAL_SRVDSP_reserved_390_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_390_TYPE        SInt16
+#define HAL_SRVDSP_reserved_390             HAL_SRVDSP_reserved_390_MASK
+#define HAL_SRVDSP_reserved_390_READABLE    1
+#define HAL_SRVDSP_reserved_390_WRITABLE    1
+#define HAL_SRVDSP_reserved_390_SIGNED      1
+#define HAL_SRVDSP_reserved_390_ADR         0xB0000990
+
+// Register reserved_394
+#define HAL_SRVDSP_reserved_394_REGISTER    (HAL_SRVDSPREG_MAP->reserved_394)
+#define HAL_SRVDSP_reserved_394_LSB         0
+#define HAL_SRVDSP_reserved_394_MSB         15
+#define HAL_SRVDSP_reserved_394_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_394_TYPE        SInt16
+#define HAL_SRVDSP_reserved_394             HAL_SRVDSP_reserved_394_MASK
+#define HAL_SRVDSP_reserved_394_READABLE    1
+#define HAL_SRVDSP_reserved_394_WRITABLE    1
+#define HAL_SRVDSP_reserved_394_SIGNED      1
+#define HAL_SRVDSP_reserved_394_ADR         0xB0000994
+
+// Register reserved_398
+#define HAL_SRVDSP_reserved_398_REGISTER    (HAL_SRVDSPREG_MAP->reserved_398)
+#define HAL_SRVDSP_reserved_398_LSB         0
+#define HAL_SRVDSP_reserved_398_MSB         15
+#define HAL_SRVDSP_reserved_398_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_398_TYPE        SInt16
+#define HAL_SRVDSP_reserved_398             HAL_SRVDSP_reserved_398_MASK
+#define HAL_SRVDSP_reserved_398_READABLE    1
+#define HAL_SRVDSP_reserved_398_WRITABLE    1
+#define HAL_SRVDSP_reserved_398_SIGNED      1
+#define HAL_SRVDSP_reserved_398_ADR         0xB0000998
+
+// Register reserved_39C
+#define HAL_SRVDSP_reserved_39C_REGISTER    (HAL_SRVDSPREG_MAP->reserved_39C)
+#define HAL_SRVDSP_reserved_39C_LSB         0
+#define HAL_SRVDSP_reserved_39C_MSB         15
+#define HAL_SRVDSP_reserved_39C_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_39C_TYPE        SInt16
+#define HAL_SRVDSP_reserved_39C             HAL_SRVDSP_reserved_39C_MASK
+#define HAL_SRVDSP_reserved_39C_READABLE    1
+#define HAL_SRVDSP_reserved_39C_WRITABLE    1
+#define HAL_SRVDSP_reserved_39C_SIGNED      1
+#define HAL_SRVDSP_reserved_39C_ADR         0xB000099C
+
+// Register reserved_3A0
+#define HAL_SRVDSP_reserved_3A0_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3A0)
+#define HAL_SRVDSP_reserved_3A0_LSB         0
+#define HAL_SRVDSP_reserved_3A0_MSB         15
+#define HAL_SRVDSP_reserved_3A0_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3A0_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3A0             HAL_SRVDSP_reserved_3A0_MASK
+#define HAL_SRVDSP_reserved_3A0_READABLE    1
+#define HAL_SRVDSP_reserved_3A0_WRITABLE    1
+#define HAL_SRVDSP_reserved_3A0_SIGNED      1
+#define HAL_SRVDSP_reserved_3A0_ADR         0xB00009A0
+
+// Register reserved_3A4
+#define HAL_SRVDSP_reserved_3A4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3A4)
+#define HAL_SRVDSP_reserved_3A4_LSB         0
+#define HAL_SRVDSP_reserved_3A4_MSB         15
+#define HAL_SRVDSP_reserved_3A4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3A4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3A4             HAL_SRVDSP_reserved_3A4_MASK
+#define HAL_SRVDSP_reserved_3A4_READABLE    1
+#define HAL_SRVDSP_reserved_3A4_WRITABLE    1
+#define HAL_SRVDSP_reserved_3A4_SIGNED      1
+#define HAL_SRVDSP_reserved_3A4_ADR         0xB00009A4
+
+// Register reserved_3A8
+#define HAL_SRVDSP_reserved_3A8_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3A8)
+#define HAL_SRVDSP_reserved_3A8_LSB         0
+#define HAL_SRVDSP_reserved_3A8_MSB         15
+#define HAL_SRVDSP_reserved_3A8_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3A8_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3A8             HAL_SRVDSP_reserved_3A8_MASK
+#define HAL_SRVDSP_reserved_3A8_READABLE    1
+#define HAL_SRVDSP_reserved_3A8_WRITABLE    1
+#define HAL_SRVDSP_reserved_3A8_SIGNED      1
+#define HAL_SRVDSP_reserved_3A8_ADR         0xB00009A8
+
+// Register reserved_3AC
+#define HAL_SRVDSP_reserved_3AC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3AC)
+#define HAL_SRVDSP_reserved_3AC_LSB         0
+#define HAL_SRVDSP_reserved_3AC_MSB         15
+#define HAL_SRVDSP_reserved_3AC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3AC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3AC             HAL_SRVDSP_reserved_3AC_MASK
+#define HAL_SRVDSP_reserved_3AC_READABLE    1
+#define HAL_SRVDSP_reserved_3AC_WRITABLE    1
+#define HAL_SRVDSP_reserved_3AC_SIGNED      1
+#define HAL_SRVDSP_reserved_3AC_ADR         0xB00009AC
+
+// Register reserved_3B0
+#define HAL_SRVDSP_reserved_3B0_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3B0)
+#define HAL_SRVDSP_reserved_3B0_LSB         0
+#define HAL_SRVDSP_reserved_3B0_MSB         15
+#define HAL_SRVDSP_reserved_3B0_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3B0_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3B0             HAL_SRVDSP_reserved_3B0_MASK
+#define HAL_SRVDSP_reserved_3B0_READABLE    1
+#define HAL_SRVDSP_reserved_3B0_WRITABLE    1
+#define HAL_SRVDSP_reserved_3B0_SIGNED      1
+#define HAL_SRVDSP_reserved_3B0_ADR         0xB00009B0
+
+// Register reserved_3B4
+#define HAL_SRVDSP_reserved_3B4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3B4)
+#define HAL_SRVDSP_reserved_3B4_LSB         0
+#define HAL_SRVDSP_reserved_3B4_MSB         15
+#define HAL_SRVDSP_reserved_3B4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3B4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3B4             HAL_SRVDSP_reserved_3B4_MASK
+#define HAL_SRVDSP_reserved_3B4_READABLE    1
+#define HAL_SRVDSP_reserved_3B4_WRITABLE    1
+#define HAL_SRVDSP_reserved_3B4_SIGNED      1
+#define HAL_SRVDSP_reserved_3B4_ADR         0xB00009B4
+
+// Register reserved_3B8
+#define HAL_SRVDSP_reserved_3B8_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3B8)
+#define HAL_SRVDSP_reserved_3B8_LSB         0
+#define HAL_SRVDSP_reserved_3B8_MSB         15
+#define HAL_SRVDSP_reserved_3B8_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3B8_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3B8             HAL_SRVDSP_reserved_3B8_MASK
+#define HAL_SRVDSP_reserved_3B8_READABLE    1
+#define HAL_SRVDSP_reserved_3B8_WRITABLE    1
+#define HAL_SRVDSP_reserved_3B8_SIGNED      1
+#define HAL_SRVDSP_reserved_3B8_ADR         0xB00009B8
+
+// Register reserved_3BC
+#define HAL_SRVDSP_reserved_3BC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3BC)
+#define HAL_SRVDSP_reserved_3BC_LSB         0
+#define HAL_SRVDSP_reserved_3BC_MSB         15
+#define HAL_SRVDSP_reserved_3BC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3BC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3BC             HAL_SRVDSP_reserved_3BC_MASK
+#define HAL_SRVDSP_reserved_3BC_READABLE    1
+#define HAL_SRVDSP_reserved_3BC_WRITABLE    1
+#define HAL_SRVDSP_reserved_3BC_SIGNED      1
+#define HAL_SRVDSP_reserved_3BC_ADR         0xB00009BC
+
+// Register reserved_3C0
+#define HAL_SRVDSP_reserved_3C0_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3C0)
+#define HAL_SRVDSP_reserved_3C0_LSB         0
+#define HAL_SRVDSP_reserved_3C0_MSB         15
+#define HAL_SRVDSP_reserved_3C0_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3C0_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3C0             HAL_SRVDSP_reserved_3C0_MASK
+#define HAL_SRVDSP_reserved_3C0_READABLE    1
+#define HAL_SRVDSP_reserved_3C0_WRITABLE    1
+#define HAL_SRVDSP_reserved_3C0_SIGNED      1
+#define HAL_SRVDSP_reserved_3C0_ADR         0xB00009C0
+
+// Register reserved_3C4
+#define HAL_SRVDSP_reserved_3C4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3C4)
+#define HAL_SRVDSP_reserved_3C4_LSB         0
+#define HAL_SRVDSP_reserved_3C4_MSB         15
+#define HAL_SRVDSP_reserved_3C4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3C4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3C4             HAL_SRVDSP_reserved_3C4_MASK
+#define HAL_SRVDSP_reserved_3C4_READABLE    1
+#define HAL_SRVDSP_reserved_3C4_WRITABLE    1
+#define HAL_SRVDSP_reserved_3C4_SIGNED      1
+#define HAL_SRVDSP_reserved_3C4_ADR         0xB00009C4
+
+// Register reserved_3C8
+#define HAL_SRVDSP_reserved_3C8_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3C8)
+#define HAL_SRVDSP_reserved_3C8_LSB         0
+#define HAL_SRVDSP_reserved_3C8_MSB         15
+#define HAL_SRVDSP_reserved_3C8_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3C8_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3C8             HAL_SRVDSP_reserved_3C8_MASK
+#define HAL_SRVDSP_reserved_3C8_READABLE    1
+#define HAL_SRVDSP_reserved_3C8_WRITABLE    1
+#define HAL_SRVDSP_reserved_3C8_SIGNED      1
+#define HAL_SRVDSP_reserved_3C8_ADR         0xB00009C8
+
+// Register reserved_3CC
+#define HAL_SRVDSP_reserved_3CC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3CC)
+#define HAL_SRVDSP_reserved_3CC_LSB         0
+#define HAL_SRVDSP_reserved_3CC_MSB         15
+#define HAL_SRVDSP_reserved_3CC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3CC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3CC             HAL_SRVDSP_reserved_3CC_MASK
+#define HAL_SRVDSP_reserved_3CC_READABLE    1
+#define HAL_SRVDSP_reserved_3CC_WRITABLE    1
+#define HAL_SRVDSP_reserved_3CC_SIGNED      1
+#define HAL_SRVDSP_reserved_3CC_ADR         0xB00009CC
+
+// Register reserved_3D0
+#define HAL_SRVDSP_reserved_3D0_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3D0)
+#define HAL_SRVDSP_reserved_3D0_LSB         0
+#define HAL_SRVDSP_reserved_3D0_MSB         15
+#define HAL_SRVDSP_reserved_3D0_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3D0_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3D0             HAL_SRVDSP_reserved_3D0_MASK
+#define HAL_SRVDSP_reserved_3D0_READABLE    1
+#define HAL_SRVDSP_reserved_3D0_WRITABLE    1
+#define HAL_SRVDSP_reserved_3D0_SIGNED      1
+#define HAL_SRVDSP_reserved_3D0_ADR         0xB00009D0
+
+// Register reserved_3D4
+#define HAL_SRVDSP_reserved_3D4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3D4)
+#define HAL_SRVDSP_reserved_3D4_LSB         0
+#define HAL_SRVDSP_reserved_3D4_MSB         15
+#define HAL_SRVDSP_reserved_3D4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3D4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3D4             HAL_SRVDSP_reserved_3D4_MASK
+#define HAL_SRVDSP_reserved_3D4_READABLE    1
+#define HAL_SRVDSP_reserved_3D4_WRITABLE    1
+#define HAL_SRVDSP_reserved_3D4_SIGNED      1
+#define HAL_SRVDSP_reserved_3D4_ADR         0xB00009D4
+
+// Register reserved_3D8
+#define HAL_SRVDSP_reserved_3D8_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3D8)
+#define HAL_SRVDSP_reserved_3D8_LSB         0
+#define HAL_SRVDSP_reserved_3D8_MSB         15
+#define HAL_SRVDSP_reserved_3D8_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3D8_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3D8             HAL_SRVDSP_reserved_3D8_MASK
+#define HAL_SRVDSP_reserved_3D8_READABLE    1
+#define HAL_SRVDSP_reserved_3D8_WRITABLE    1
+#define HAL_SRVDSP_reserved_3D8_SIGNED      1
+#define HAL_SRVDSP_reserved_3D8_ADR         0xB00009D8
+
+// Register reserved_3DC
+#define HAL_SRVDSP_reserved_3DC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3DC)
+#define HAL_SRVDSP_reserved_3DC_LSB         0
+#define HAL_SRVDSP_reserved_3DC_MSB         15
+#define HAL_SRVDSP_reserved_3DC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3DC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3DC             HAL_SRVDSP_reserved_3DC_MASK
+#define HAL_SRVDSP_reserved_3DC_READABLE    1
+#define HAL_SRVDSP_reserved_3DC_WRITABLE    1
+#define HAL_SRVDSP_reserved_3DC_SIGNED      1
+#define HAL_SRVDSP_reserved_3DC_ADR         0xB00009DC
+
+// Register reserved_3E0
+#define HAL_SRVDSP_reserved_3E0_REGISTER    (HAL_SRVDSPREG_MAP->reserved_3E0)
+#define HAL_SRVDSP_reserved_3E0_LSB         0
+#define HAL_SRVDSP_reserved_3E0_MSB         15
+#define HAL_SRVDSP_reserved_3E0_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_3E0_TYPE        SInt16
+#define HAL_SRVDSP_reserved_3E0             HAL_SRVDSP_reserved_3E0_MASK
+#define HAL_SRVDSP_reserved_3E0_READABLE    1
+#define HAL_SRVDSP_reserved_3E0_WRITABLE    1
+#define HAL_SRVDSP_reserved_3E0_SIGNED      1
+#define HAL_SRVDSP_reserved_3E0_ADR         0xB00009E0
+
+// Register cadr_addr
+#define HAL_SRVDSP_cadr_addr_REGISTER    (HAL_SRVDSPREG_MAP->cadr_addr)
+#define HAL_SRVDSP_cadr_addr_LSB         0
+#define HAL_SRVDSP_cadr_addr_MSB         15
+#define HAL_SRVDSP_cadr_addr_MASK        0x0000FFFF
+#define HAL_SRVDSP_cadr_addr_TYPE        SInt16
+#define HAL_SRVDSP_cadr_addr             HAL_SRVDSP_cadr_addr_MASK
+#define HAL_SRVDSP_cadr_addr_READABLE    1
+#define HAL_SRVDSP_cadr_addr_WRITABLE    1
+#define HAL_SRVDSP_cadr_addr_SIGNED      1
+#define HAL_SRVDSP_cadr_addr_ADR         0xB00009E4
+
+// Register bank0
+#define HAL_SRVDSP_bank0_REGISTER    (HAL_SRVDSPREG_MAP->bank0)
+#define HAL_SRVDSP_bank0_LSB         0
+#define HAL_SRVDSP_bank0_MSB         15
+#define HAL_SRVDSP_bank0_MASK        0x0000FFFF
+#define HAL_SRVDSP_bank0_TYPE        SInt16
+#define HAL_SRVDSP_bank0             HAL_SRVDSP_bank0_MASK
+#define HAL_SRVDSP_bank0_READABLE    1
+#define HAL_SRVDSP_bank0_WRITABLE    1
+#define HAL_SRVDSP_bank0_SIGNED      1
+#define HAL_SRVDSP_bank0_ADR         0xB00009E8
+
+// Register bank1
+#define HAL_SRVDSP_bank1_REGISTER    (HAL_SRVDSPREG_MAP->bank1)
+#define HAL_SRVDSP_bank1_LSB         0
+#define HAL_SRVDSP_bank1_MSB         15
+#define HAL_SRVDSP_bank1_MASK        0x0000FFFF
+#define HAL_SRVDSP_bank1_TYPE        SInt16
+#define HAL_SRVDSP_bank1             HAL_SRVDSP_bank1_MASK
+#define HAL_SRVDSP_bank1_READABLE    1
+#define HAL_SRVDSP_bank1_WRITABLE    1
+#define HAL_SRVDSP_bank1_SIGNED      1
+#define HAL_SRVDSP_bank1_ADR         0xB00009EC
+
+// Register bank2
+#define HAL_SRVDSP_bank2_REGISTER    (HAL_SRVDSPREG_MAP->bank2)
+#define HAL_SRVDSP_bank2_LSB         0
+#define HAL_SRVDSP_bank2_MSB         15
+#define HAL_SRVDSP_bank2_MASK        0x0000FFFF
+#define HAL_SRVDSP_bank2_TYPE        SInt16
+#define HAL_SRVDSP_bank2             HAL_SRVDSP_bank2_MASK
+#define HAL_SRVDSP_bank2_READABLE    1
+#define HAL_SRVDSP_bank2_WRITABLE    1
+#define HAL_SRVDSP_bank2_SIGNED      1
+#define HAL_SRVDSP_bank2_ADR         0xB00009F0
+
+// Register bank3
+#define HAL_SRVDSP_bank3_REGISTER    (HAL_SRVDSPREG_MAP->bank3)
+#define HAL_SRVDSP_bank3_LSB         0
+#define HAL_SRVDSP_bank3_MSB         15
+#define HAL_SRVDSP_bank3_MASK        0x0000FFFF
+#define HAL_SRVDSP_bank3_TYPE        SInt16
+#define HAL_SRVDSP_bank3             HAL_SRVDSP_bank3_MASK
+#define HAL_SRVDSP_bank3_READABLE    1
+#define HAL_SRVDSP_bank3_WRITABLE    1
+#define HAL_SRVDSP_bank3_SIGNED      1
+#define HAL_SRVDSP_bank3_ADR         0xB00009F4
+
+// Register testxx
+#define HAL_SRVDSP_testxx_REGISTER    (HAL_SRVDSPREG_MAP->testxx)
+#define HAL_SRVDSP_testxx_LSB         0
+#define HAL_SRVDSP_testxx_MSB         15
+#define HAL_SRVDSP_testxx_MASK        0x0000FFFF
+#define HAL_SRVDSP_testxx_TYPE        SInt16
+#define HAL_SRVDSP_testxx             HAL_SRVDSP_testxx_MASK
+#define HAL_SRVDSP_testxx_READABLE    1
+#define HAL_SRVDSP_testxx_WRITABLE    1
+#define HAL_SRVDSP_testxx_SIGNED      1
+#define HAL_SRVDSP_testxx_ADR         0xB00009F8
+
+// Register testyy
+#define HAL_SRVDSP_testyy_REGISTER    (HAL_SRVDSPREG_MAP->testyy)
+#define HAL_SRVDSP_testyy_LSB         0
+#define HAL_SRVDSP_testyy_MSB         15
+#define HAL_SRVDSP_testyy_MASK        0x0000FFFF
+#define HAL_SRVDSP_testyy_TYPE        SInt16
+#define HAL_SRVDSP_testyy             HAL_SRVDSP_testyy_MASK
+#define HAL_SRVDSP_testyy_READABLE    1
+#define HAL_SRVDSP_testyy_WRITABLE    1
+#define HAL_SRVDSP_testyy_SIGNED      1
+#define HAL_SRVDSP_testyy_ADR         0xB00009FC
+
+// Register K0_c
+#define HAL_SRVDSP_K0_c_REGISTER    (HAL_SRVDSPREG_MAP->K0_c)
+#define HAL_SRVDSP_K0_c_LSB         0
+#define HAL_SRVDSP_K0_c_MSB         15
+#define HAL_SRVDSP_K0_c_MASK        0x0000FFFF
+#define HAL_SRVDSP_K0_c_TYPE        SInt16
+#define HAL_SRVDSP_K0_c             HAL_SRVDSP_K0_c_MASK
+#define HAL_SRVDSP_K0_c_READABLE    1
+#define HAL_SRVDSP_K0_c_WRITABLE    1
+#define HAL_SRVDSP_K0_c_SIGNED      1
+#define HAL_SRVDSP_K0_c_ADR         0xB0000A00
+
+// Register K1_c
+#define HAL_SRVDSP_K1_c_REGISTER    (HAL_SRVDSPREG_MAP->K1_c)
+#define HAL_SRVDSP_K1_c_LSB         0
+#define HAL_SRVDSP_K1_c_MSB         15
+#define HAL_SRVDSP_K1_c_MASK        0x0000FFFF
+#define HAL_SRVDSP_K1_c_TYPE        SInt16
+#define HAL_SRVDSP_K1_c             HAL_SRVDSP_K1_c_MASK
+#define HAL_SRVDSP_K1_c_READABLE    1
+#define HAL_SRVDSP_K1_c_WRITABLE    1
+#define HAL_SRVDSP_K1_c_SIGNED      1
+#define HAL_SRVDSP_K1_c_ADR         0xB0000A04
+
+// Register K1_cc
+#define HAL_SRVDSP_K1_cc_REGISTER    (HAL_SRVDSPREG_MAP->K1_cc)
+#define HAL_SRVDSP_K1_cc_LSB         0
+#define HAL_SRVDSP_K1_cc_MSB         15
+#define HAL_SRVDSP_K1_cc_MASK        0x0000FFFF
+#define HAL_SRVDSP_K1_cc_TYPE        SInt16
+#define HAL_SRVDSP_K1_cc             HAL_SRVDSP_K1_cc_MASK
+#define HAL_SRVDSP_K1_cc_READABLE    1
+#define HAL_SRVDSP_K1_cc_WRITABLE    1
+#define HAL_SRVDSP_K1_cc_SIGNED      1
+#define HAL_SRVDSP_K1_cc_ADR         0xB0000A08
+
+// Register K_1c
+#define HAL_SRVDSP_K_1c_REGISTER    (HAL_SRVDSPREG_MAP->K_1c)
+#define HAL_SRVDSP_K_1c_LSB         0
+#define HAL_SRVDSP_K_1c_MSB         15
+#define HAL_SRVDSP_K_1c_MASK        0x0000FFFF
+#define HAL_SRVDSP_K_1c_TYPE        SInt16
+#define HAL_SRVDSP_K_1c             HAL_SRVDSP_K_1c_MASK
+#define HAL_SRVDSP_K_1c_READABLE    1
+#define HAL_SRVDSP_K_1c_WRITABLE    1
+#define HAL_SRVDSP_K_1c_SIGNED      1
+#define HAL_SRVDSP_K_1c_ADR         0xB0000A0C
+
+// Register src_trk_alfa
+#define HAL_SRVDSP_src_trk_alfa_REGISTER    (HAL_SRVDSPREG_MAP->src_trk_alfa)
+#define HAL_SRVDSP_src_trk_alfa_LSB         0
+#define HAL_SRVDSP_src_trk_alfa_MSB         15
+#define HAL_SRVDSP_src_trk_alfa_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_trk_alfa_TYPE        SInt16
+#define HAL_SRVDSP_src_trk_alfa             HAL_SRVDSP_src_trk_alfa_MASK
+#define HAL_SRVDSP_src_trk_alfa_READABLE    1
+#define HAL_SRVDSP_src_trk_alfa_WRITABLE    1
+#define HAL_SRVDSP_src_trk_alfa_SIGNED      1
+#define HAL_SRVDSP_src_trk_alfa_ADR         0xB0000A10
+
+// Register src_trk_tap
+#define HAL_SRVDSP_src_trk_tap_REGISTER    (HAL_SRVDSPREG_MAP->src_trk_tap)
+#define HAL_SRVDSP_src_trk_tap_LSB         0
+#define HAL_SRVDSP_src_trk_tap_MSB         15
+#define HAL_SRVDSP_src_trk_tap_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_trk_tap_TYPE        SInt16
+#define HAL_SRVDSP_src_trk_tap             HAL_SRVDSP_src_trk_tap_MASK
+#define HAL_SRVDSP_src_trk_tap_READABLE    1
+#define HAL_SRVDSP_src_trk_tap_WRITABLE    1
+#define HAL_SRVDSP_src_trk_tap_SIGNED      1
+#define HAL_SRVDSP_src_trk_tap_ADR         0xB0000A14
+
+// Register src_kt
+#define HAL_SRVDSP_src_kt_REGISTER    (HAL_SRVDSPREG_MAP->src_kt)
+#define HAL_SRVDSP_src_kt_LSB         0
+#define HAL_SRVDSP_src_kt_MSB         15
+#define HAL_SRVDSP_src_kt_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_kt_TYPE        SInt16
+#define HAL_SRVDSP_src_kt             HAL_SRVDSP_src_kt_MASK
+#define HAL_SRVDSP_src_kt_READABLE    1
+#define HAL_SRVDSP_src_kt_WRITABLE    1
+#define HAL_SRVDSP_src_kt_SIGNED      1
+#define HAL_SRVDSP_src_kt_ADR         0xB0000A18
+
+// Register src_trk_tap1
+#define HAL_SRVDSP_src_trk_tap1_REGISTER    (HAL_SRVDSPREG_MAP->src_trk_tap1)
+#define HAL_SRVDSP_src_trk_tap1_LSB         0
+#define HAL_SRVDSP_src_trk_tap1_MSB         15
+#define HAL_SRVDSP_src_trk_tap1_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_trk_tap1_TYPE        SInt16
+#define HAL_SRVDSP_src_trk_tap1             HAL_SRVDSP_src_trk_tap1_MASK
+#define HAL_SRVDSP_src_trk_tap1_READABLE    1
+#define HAL_SRVDSP_src_trk_tap1_WRITABLE    1
+#define HAL_SRVDSP_src_trk_tap1_SIGNED      1
+#define HAL_SRVDSP_src_trk_tap1_ADR         0xB0000A1C
+
+// Register src_trk_tap2
+#define HAL_SRVDSP_src_trk_tap2_REGISTER    (HAL_SRVDSPREG_MAP->src_trk_tap2)
+#define HAL_SRVDSP_src_trk_tap2_LSB         0
+#define HAL_SRVDSP_src_trk_tap2_MSB         15
+#define HAL_SRVDSP_src_trk_tap2_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_trk_tap2_TYPE        SInt16
+#define HAL_SRVDSP_src_trk_tap2             HAL_SRVDSP_src_trk_tap2_MASK
+#define HAL_SRVDSP_src_trk_tap2_READABLE    1
+#define HAL_SRVDSP_src_trk_tap2_WRITABLE    1
+#define HAL_SRVDSP_src_trk_tap2_SIGNED      1
+#define HAL_SRVDSP_src_trk_tap2_ADR         0xB0000A20
+
+// Register trk_roc_m1
+#define HAL_SRVDSP_trk_roc_m1_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_m1)
+#define HAL_SRVDSP_trk_roc_m1_LSB         0
+#define HAL_SRVDSP_trk_roc_m1_MSB         15
+#define HAL_SRVDSP_trk_roc_m1_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_m1_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_m1             HAL_SRVDSP_trk_roc_m1_MASK
+#define HAL_SRVDSP_trk_roc_m1_READABLE    1
+#define HAL_SRVDSP_trk_roc_m1_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_m1_SIGNED      1
+#define HAL_SRVDSP_trk_roc_m1_ADR         0xB0000A24
+
+// Register trk_roc_m2
+#define HAL_SRVDSP_trk_roc_m2_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_m2)
+#define HAL_SRVDSP_trk_roc_m2_LSB         0
+#define HAL_SRVDSP_trk_roc_m2_MSB         15
+#define HAL_SRVDSP_trk_roc_m2_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_m2_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_m2             HAL_SRVDSP_trk_roc_m2_MASK
+#define HAL_SRVDSP_trk_roc_m2_READABLE    1
+#define HAL_SRVDSP_trk_roc_m2_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_m2_SIGNED      1
+#define HAL_SRVDSP_trk_roc_m2_ADR         0xB0000A28
+
+// Register src_trk_fg
+#define HAL_SRVDSP_src_trk_fg_REGISTER    (HAL_SRVDSPREG_MAP->src_trk_fg)
+#define HAL_SRVDSP_src_trk_fg_LSB         0
+#define HAL_SRVDSP_src_trk_fg_MSB         15
+#define HAL_SRVDSP_src_trk_fg_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_trk_fg_TYPE        SInt16
+#define HAL_SRVDSP_src_trk_fg             HAL_SRVDSP_src_trk_fg_MASK
+#define HAL_SRVDSP_src_trk_fg_READABLE    1
+#define HAL_SRVDSP_src_trk_fg_WRITABLE    1
+#define HAL_SRVDSP_src_trk_fg_SIGNED      1
+#define HAL_SRVDSP_src_trk_fg_ADR         0xB0000A2C
+
+// Register src_trk_fir1
+#define HAL_SRVDSP_src_trk_fir1_REGISTER    (HAL_SRVDSPREG_MAP->src_trk_fir1)
+#define HAL_SRVDSP_src_trk_fir1_LSB         0
+#define HAL_SRVDSP_src_trk_fir1_MSB         15
+#define HAL_SRVDSP_src_trk_fir1_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_trk_fir1_TYPE        SInt16
+#define HAL_SRVDSP_src_trk_fir1             HAL_SRVDSP_src_trk_fir1_MASK
+#define HAL_SRVDSP_src_trk_fir1_READABLE    1
+#define HAL_SRVDSP_src_trk_fir1_WRITABLE    1
+#define HAL_SRVDSP_src_trk_fir1_SIGNED      1
+#define HAL_SRVDSP_src_trk_fir1_ADR         0xB0000A30
+
+// Register src_trk_fir2
+#define HAL_SRVDSP_src_trk_fir2_REGISTER    (HAL_SRVDSPREG_MAP->src_trk_fir2)
+#define HAL_SRVDSP_src_trk_fir2_LSB         0
+#define HAL_SRVDSP_src_trk_fir2_MSB         15
+#define HAL_SRVDSP_src_trk_fir2_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_trk_fir2_TYPE        SInt16
+#define HAL_SRVDSP_src_trk_fir2             HAL_SRVDSP_src_trk_fir2_MASK
+#define HAL_SRVDSP_src_trk_fir2_READABLE    1
+#define HAL_SRVDSP_src_trk_fir2_WRITABLE    1
+#define HAL_SRVDSP_src_trk_fir2_SIGNED      1
+#define HAL_SRVDSP_src_trk_fir2_ADR         0xB0000A34
+
+// Register src_trk_balance
+#define HAL_SRVDSP_src_trk_balance_REGISTER    (HAL_SRVDSPREG_MAP->src_trk_balance)
+#define HAL_SRVDSP_src_trk_balance_LSB         0
+#define HAL_SRVDSP_src_trk_balance_MSB         15
+#define HAL_SRVDSP_src_trk_balance_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_trk_balance_TYPE        SInt16
+#define HAL_SRVDSP_src_trk_balance             HAL_SRVDSP_src_trk_balance_MASK
+#define HAL_SRVDSP_src_trk_balance_READABLE    1
+#define HAL_SRVDSP_src_trk_balance_WRITABLE    1
+#define HAL_SRVDSP_src_trk_balance_SIGNED      1
+#define HAL_SRVDSP_src_trk_balance_ADR         0xB0000A38
+
+// Register src_foc_balance
+#define HAL_SRVDSP_src_foc_balance_REGISTER    (HAL_SRVDSPREG_MAP->src_foc_balance)
+#define HAL_SRVDSP_src_foc_balance_LSB         0
+#define HAL_SRVDSP_src_foc_balance_MSB         15
+#define HAL_SRVDSP_src_foc_balance_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_foc_balance_TYPE        SInt16
+#define HAL_SRVDSP_src_foc_balance             HAL_SRVDSP_src_foc_balance_MASK
+#define HAL_SRVDSP_src_foc_balance_READABLE    1
+#define HAL_SRVDSP_src_foc_balance_WRITABLE    1
+#define HAL_SRVDSP_src_foc_balance_SIGNED      1
+#define HAL_SRVDSP_src_foc_balance_ADR         0xB0000A3C
+
+// Register trk_roc_0
+#define HAL_SRVDSP_trk_roc_0_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_0)
+#define HAL_SRVDSP_trk_roc_0_LSB         0
+#define HAL_SRVDSP_trk_roc_0_MSB         15
+#define HAL_SRVDSP_trk_roc_0_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_0_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_0             HAL_SRVDSP_trk_roc_0_MASK
+#define HAL_SRVDSP_trk_roc_0_READABLE    1
+#define HAL_SRVDSP_trk_roc_0_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_0_SIGNED      1
+#define HAL_SRVDSP_trk_roc_0_ADR         0xB0000A40
+
+// Register trk_roc_1
+#define HAL_SRVDSP_trk_roc_1_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_1)
+#define HAL_SRVDSP_trk_roc_1_LSB         0
+#define HAL_SRVDSP_trk_roc_1_MSB         15
+#define HAL_SRVDSP_trk_roc_1_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_1_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_1             HAL_SRVDSP_trk_roc_1_MASK
+#define HAL_SRVDSP_trk_roc_1_READABLE    1
+#define HAL_SRVDSP_trk_roc_1_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_1_SIGNED      1
+#define HAL_SRVDSP_trk_roc_1_ADR         0xB0000A44
+
+// Register trk_roc_2
+#define HAL_SRVDSP_trk_roc_2_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_2)
+#define HAL_SRVDSP_trk_roc_2_LSB         0
+#define HAL_SRVDSP_trk_roc_2_MSB         15
+#define HAL_SRVDSP_trk_roc_2_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_2_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_2             HAL_SRVDSP_trk_roc_2_MASK
+#define HAL_SRVDSP_trk_roc_2_READABLE    1
+#define HAL_SRVDSP_trk_roc_2_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_2_SIGNED      1
+#define HAL_SRVDSP_trk_roc_2_ADR         0xB0000A48
+
+// Register trk_roc_3
+#define HAL_SRVDSP_trk_roc_3_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_3)
+#define HAL_SRVDSP_trk_roc_3_LSB         0
+#define HAL_SRVDSP_trk_roc_3_MSB         15
+#define HAL_SRVDSP_trk_roc_3_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_3_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_3             HAL_SRVDSP_trk_roc_3_MASK
+#define HAL_SRVDSP_trk_roc_3_READABLE    1
+#define HAL_SRVDSP_trk_roc_3_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_3_SIGNED      1
+#define HAL_SRVDSP_trk_roc_3_ADR         0xB0000A4C
+
+// Register trk_roc_4
+#define HAL_SRVDSP_trk_roc_4_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_4)
+#define HAL_SRVDSP_trk_roc_4_LSB         0
+#define HAL_SRVDSP_trk_roc_4_MSB         15
+#define HAL_SRVDSP_trk_roc_4_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_4_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_4             HAL_SRVDSP_trk_roc_4_MASK
+#define HAL_SRVDSP_trk_roc_4_READABLE    1
+#define HAL_SRVDSP_trk_roc_4_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_4_SIGNED      1
+#define HAL_SRVDSP_trk_roc_4_ADR         0xB0000A50
+
+// Register trk_roc_5
+#define HAL_SRVDSP_trk_roc_5_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_5)
+#define HAL_SRVDSP_trk_roc_5_LSB         0
+#define HAL_SRVDSP_trk_roc_5_MSB         15
+#define HAL_SRVDSP_trk_roc_5_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_5_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_5             HAL_SRVDSP_trk_roc_5_MASK
+#define HAL_SRVDSP_trk_roc_5_READABLE    1
+#define HAL_SRVDSP_trk_roc_5_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_5_SIGNED      1
+#define HAL_SRVDSP_trk_roc_5_ADR         0xB0000A54
+
+// Register trk_roc_6
+#define HAL_SRVDSP_trk_roc_6_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_6)
+#define HAL_SRVDSP_trk_roc_6_LSB         0
+#define HAL_SRVDSP_trk_roc_6_MSB         15
+#define HAL_SRVDSP_trk_roc_6_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_6_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_6             HAL_SRVDSP_trk_roc_6_MASK
+#define HAL_SRVDSP_trk_roc_6_READABLE    1
+#define HAL_SRVDSP_trk_roc_6_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_6_SIGNED      1
+#define HAL_SRVDSP_trk_roc_6_ADR         0xB0000A58
+
+// Register trk_roc_7
+#define HAL_SRVDSP_trk_roc_7_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_7)
+#define HAL_SRVDSP_trk_roc_7_LSB         0
+#define HAL_SRVDSP_trk_roc_7_MSB         15
+#define HAL_SRVDSP_trk_roc_7_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_7_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_7             HAL_SRVDSP_trk_roc_7_MASK
+#define HAL_SRVDSP_trk_roc_7_READABLE    1
+#define HAL_SRVDSP_trk_roc_7_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_7_SIGNED      1
+#define HAL_SRVDSP_trk_roc_7_ADR         0xB0000A5C
+
+// Register trk_roc_8
+#define HAL_SRVDSP_trk_roc_8_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_8)
+#define HAL_SRVDSP_trk_roc_8_LSB         0
+#define HAL_SRVDSP_trk_roc_8_MSB         15
+#define HAL_SRVDSP_trk_roc_8_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_8_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_8             HAL_SRVDSP_trk_roc_8_MASK
+#define HAL_SRVDSP_trk_roc_8_READABLE    1
+#define HAL_SRVDSP_trk_roc_8_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_8_SIGNED      1
+#define HAL_SRVDSP_trk_roc_8_ADR         0xB0000A60
+
+// Register trk_roc_9
+#define HAL_SRVDSP_trk_roc_9_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_9)
+#define HAL_SRVDSP_trk_roc_9_LSB         0
+#define HAL_SRVDSP_trk_roc_9_MSB         15
+#define HAL_SRVDSP_trk_roc_9_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_9_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_9             HAL_SRVDSP_trk_roc_9_MASK
+#define HAL_SRVDSP_trk_roc_9_READABLE    1
+#define HAL_SRVDSP_trk_roc_9_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_9_SIGNED      1
+#define HAL_SRVDSP_trk_roc_9_ADR         0xB0000A64
+
+// Register trk_roc_10
+#define HAL_SRVDSP_trk_roc_10_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_10)
+#define HAL_SRVDSP_trk_roc_10_LSB         0
+#define HAL_SRVDSP_trk_roc_10_MSB         15
+#define HAL_SRVDSP_trk_roc_10_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_10_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_10             HAL_SRVDSP_trk_roc_10_MASK
+#define HAL_SRVDSP_trk_roc_10_READABLE    1
+#define HAL_SRVDSP_trk_roc_10_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_10_SIGNED      1
+#define HAL_SRVDSP_trk_roc_10_ADR         0xB0000A68
+
+// Register trk_roc_11
+#define HAL_SRVDSP_trk_roc_11_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_11)
+#define HAL_SRVDSP_trk_roc_11_LSB         0
+#define HAL_SRVDSP_trk_roc_11_MSB         15
+#define HAL_SRVDSP_trk_roc_11_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_11_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_11             HAL_SRVDSP_trk_roc_11_MASK
+#define HAL_SRVDSP_trk_roc_11_READABLE    1
+#define HAL_SRVDSP_trk_roc_11_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_11_SIGNED      1
+#define HAL_SRVDSP_trk_roc_11_ADR         0xB0000A6C
+
+// Register trk_roc_12
+#define HAL_SRVDSP_trk_roc_12_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_12)
+#define HAL_SRVDSP_trk_roc_12_LSB         0
+#define HAL_SRVDSP_trk_roc_12_MSB         15
+#define HAL_SRVDSP_trk_roc_12_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_12_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_12             HAL_SRVDSP_trk_roc_12_MASK
+#define HAL_SRVDSP_trk_roc_12_READABLE    1
+#define HAL_SRVDSP_trk_roc_12_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_12_SIGNED      1
+#define HAL_SRVDSP_trk_roc_12_ADR         0xB0000A70
+
+// Register trk_roc_13
+#define HAL_SRVDSP_trk_roc_13_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_13)
+#define HAL_SRVDSP_trk_roc_13_LSB         0
+#define HAL_SRVDSP_trk_roc_13_MSB         15
+#define HAL_SRVDSP_trk_roc_13_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_13_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_13             HAL_SRVDSP_trk_roc_13_MASK
+#define HAL_SRVDSP_trk_roc_13_READABLE    1
+#define HAL_SRVDSP_trk_roc_13_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_13_SIGNED      1
+#define HAL_SRVDSP_trk_roc_13_ADR         0xB0000A74
+
+// Register trk_roc_14
+#define HAL_SRVDSP_trk_roc_14_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_14)
+#define HAL_SRVDSP_trk_roc_14_LSB         0
+#define HAL_SRVDSP_trk_roc_14_MSB         15
+#define HAL_SRVDSP_trk_roc_14_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_14_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_14             HAL_SRVDSP_trk_roc_14_MASK
+#define HAL_SRVDSP_trk_roc_14_READABLE    1
+#define HAL_SRVDSP_trk_roc_14_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_14_SIGNED      1
+#define HAL_SRVDSP_trk_roc_14_ADR         0xB0000A78
+
+// Register trk_roc_15
+#define HAL_SRVDSP_trk_roc_15_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_15)
+#define HAL_SRVDSP_trk_roc_15_LSB         0
+#define HAL_SRVDSP_trk_roc_15_MSB         15
+#define HAL_SRVDSP_trk_roc_15_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_15_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_15             HAL_SRVDSP_trk_roc_15_MASK
+#define HAL_SRVDSP_trk_roc_15_READABLE    1
+#define HAL_SRVDSP_trk_roc_15_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_15_SIGNED      1
+#define HAL_SRVDSP_trk_roc_15_ADR         0xB0000A7C
+
+// Register trk_roc_16
+#define HAL_SRVDSP_trk_roc_16_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_16)
+#define HAL_SRVDSP_trk_roc_16_LSB         0
+#define HAL_SRVDSP_trk_roc_16_MSB         15
+#define HAL_SRVDSP_trk_roc_16_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_16_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_16             HAL_SRVDSP_trk_roc_16_MASK
+#define HAL_SRVDSP_trk_roc_16_READABLE    1
+#define HAL_SRVDSP_trk_roc_16_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_16_SIGNED      1
+#define HAL_SRVDSP_trk_roc_16_ADR         0xB0000A80
+
+// Register trk_roc_17
+#define HAL_SRVDSP_trk_roc_17_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_17)
+#define HAL_SRVDSP_trk_roc_17_LSB         0
+#define HAL_SRVDSP_trk_roc_17_MSB         15
+#define HAL_SRVDSP_trk_roc_17_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_17_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_17             HAL_SRVDSP_trk_roc_17_MASK
+#define HAL_SRVDSP_trk_roc_17_READABLE    1
+#define HAL_SRVDSP_trk_roc_17_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_17_SIGNED      1
+#define HAL_SRVDSP_trk_roc_17_ADR         0xB0000A84
+
+// Register trk_roc_18
+#define HAL_SRVDSP_trk_roc_18_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_18)
+#define HAL_SRVDSP_trk_roc_18_LSB         0
+#define HAL_SRVDSP_trk_roc_18_MSB         15
+#define HAL_SRVDSP_trk_roc_18_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_18_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_18             HAL_SRVDSP_trk_roc_18_MASK
+#define HAL_SRVDSP_trk_roc_18_READABLE    1
+#define HAL_SRVDSP_trk_roc_18_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_18_SIGNED      1
+#define HAL_SRVDSP_trk_roc_18_ADR         0xB0000A88
+
+// Register trk_roc_19
+#define HAL_SRVDSP_trk_roc_19_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_19)
+#define HAL_SRVDSP_trk_roc_19_LSB         0
+#define HAL_SRVDSP_trk_roc_19_MSB         15
+#define HAL_SRVDSP_trk_roc_19_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_19_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_19             HAL_SRVDSP_trk_roc_19_MASK
+#define HAL_SRVDSP_trk_roc_19_READABLE    1
+#define HAL_SRVDSP_trk_roc_19_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_19_SIGNED      1
+#define HAL_SRVDSP_trk_roc_19_ADR         0xB0000A8C
+
+// Register trk_roc_20
+#define HAL_SRVDSP_trk_roc_20_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_20)
+#define HAL_SRVDSP_trk_roc_20_LSB         0
+#define HAL_SRVDSP_trk_roc_20_MSB         15
+#define HAL_SRVDSP_trk_roc_20_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_20_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_20             HAL_SRVDSP_trk_roc_20_MASK
+#define HAL_SRVDSP_trk_roc_20_READABLE    1
+#define HAL_SRVDSP_trk_roc_20_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_20_SIGNED      1
+#define HAL_SRVDSP_trk_roc_20_ADR         0xB0000A90
+
+// Register trk_roc_21
+#define HAL_SRVDSP_trk_roc_21_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_21)
+#define HAL_SRVDSP_trk_roc_21_LSB         0
+#define HAL_SRVDSP_trk_roc_21_MSB         15
+#define HAL_SRVDSP_trk_roc_21_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_21_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_21             HAL_SRVDSP_trk_roc_21_MASK
+#define HAL_SRVDSP_trk_roc_21_READABLE    1
+#define HAL_SRVDSP_trk_roc_21_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_21_SIGNED      1
+#define HAL_SRVDSP_trk_roc_21_ADR         0xB0000A94
+
+// Register trk_roc_22
+#define HAL_SRVDSP_trk_roc_22_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_22)
+#define HAL_SRVDSP_trk_roc_22_LSB         0
+#define HAL_SRVDSP_trk_roc_22_MSB         15
+#define HAL_SRVDSP_trk_roc_22_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_22_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_22             HAL_SRVDSP_trk_roc_22_MASK
+#define HAL_SRVDSP_trk_roc_22_READABLE    1
+#define HAL_SRVDSP_trk_roc_22_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_22_SIGNED      1
+#define HAL_SRVDSP_trk_roc_22_ADR         0xB0000A98
+
+// Register trk_roc_23
+#define HAL_SRVDSP_trk_roc_23_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_23)
+#define HAL_SRVDSP_trk_roc_23_LSB         0
+#define HAL_SRVDSP_trk_roc_23_MSB         15
+#define HAL_SRVDSP_trk_roc_23_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_23_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_23             HAL_SRVDSP_trk_roc_23_MASK
+#define HAL_SRVDSP_trk_roc_23_READABLE    1
+#define HAL_SRVDSP_trk_roc_23_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_23_SIGNED      1
+#define HAL_SRVDSP_trk_roc_23_ADR         0xB0000A9C
+
+// Register trk_roc_24
+#define HAL_SRVDSP_trk_roc_24_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_24)
+#define HAL_SRVDSP_trk_roc_24_LSB         0
+#define HAL_SRVDSP_trk_roc_24_MSB         15
+#define HAL_SRVDSP_trk_roc_24_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_24_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_24             HAL_SRVDSP_trk_roc_24_MASK
+#define HAL_SRVDSP_trk_roc_24_READABLE    1
+#define HAL_SRVDSP_trk_roc_24_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_24_SIGNED      1
+#define HAL_SRVDSP_trk_roc_24_ADR         0xB0000AA0
+
+// Register trk_roc_25
+#define HAL_SRVDSP_trk_roc_25_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_25)
+#define HAL_SRVDSP_trk_roc_25_LSB         0
+#define HAL_SRVDSP_trk_roc_25_MSB         15
+#define HAL_SRVDSP_trk_roc_25_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_25_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_25             HAL_SRVDSP_trk_roc_25_MASK
+#define HAL_SRVDSP_trk_roc_25_READABLE    1
+#define HAL_SRVDSP_trk_roc_25_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_25_SIGNED      1
+#define HAL_SRVDSP_trk_roc_25_ADR         0xB0000AA4
+
+// Register trk_roc_26
+#define HAL_SRVDSP_trk_roc_26_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_26)
+#define HAL_SRVDSP_trk_roc_26_LSB         0
+#define HAL_SRVDSP_trk_roc_26_MSB         15
+#define HAL_SRVDSP_trk_roc_26_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_26_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_26             HAL_SRVDSP_trk_roc_26_MASK
+#define HAL_SRVDSP_trk_roc_26_READABLE    1
+#define HAL_SRVDSP_trk_roc_26_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_26_SIGNED      1
+#define HAL_SRVDSP_trk_roc_26_ADR         0xB0000AA8
+
+// Register trk_roc_27
+#define HAL_SRVDSP_trk_roc_27_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_27)
+#define HAL_SRVDSP_trk_roc_27_LSB         0
+#define HAL_SRVDSP_trk_roc_27_MSB         15
+#define HAL_SRVDSP_trk_roc_27_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_27_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_27             HAL_SRVDSP_trk_roc_27_MASK
+#define HAL_SRVDSP_trk_roc_27_READABLE    1
+#define HAL_SRVDSP_trk_roc_27_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_27_SIGNED      1
+#define HAL_SRVDSP_trk_roc_27_ADR         0xB0000AAC
+
+// Register trk_roc_28
+#define HAL_SRVDSP_trk_roc_28_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_28)
+#define HAL_SRVDSP_trk_roc_28_LSB         0
+#define HAL_SRVDSP_trk_roc_28_MSB         15
+#define HAL_SRVDSP_trk_roc_28_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_28_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_28             HAL_SRVDSP_trk_roc_28_MASK
+#define HAL_SRVDSP_trk_roc_28_READABLE    1
+#define HAL_SRVDSP_trk_roc_28_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_28_SIGNED      1
+#define HAL_SRVDSP_trk_roc_28_ADR         0xB0000AB0
+
+// Register trk_roc_29
+#define HAL_SRVDSP_trk_roc_29_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_29)
+#define HAL_SRVDSP_trk_roc_29_LSB         0
+#define HAL_SRVDSP_trk_roc_29_MSB         15
+#define HAL_SRVDSP_trk_roc_29_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_29_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_29             HAL_SRVDSP_trk_roc_29_MASK
+#define HAL_SRVDSP_trk_roc_29_READABLE    1
+#define HAL_SRVDSP_trk_roc_29_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_29_SIGNED      1
+#define HAL_SRVDSP_trk_roc_29_ADR         0xB0000AB4
+
+// Register trk_roc_30
+#define HAL_SRVDSP_trk_roc_30_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_30)
+#define HAL_SRVDSP_trk_roc_30_LSB         0
+#define HAL_SRVDSP_trk_roc_30_MSB         15
+#define HAL_SRVDSP_trk_roc_30_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_30_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_30             HAL_SRVDSP_trk_roc_30_MASK
+#define HAL_SRVDSP_trk_roc_30_READABLE    1
+#define HAL_SRVDSP_trk_roc_30_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_30_SIGNED      1
+#define HAL_SRVDSP_trk_roc_30_ADR         0xB0000AB8
+
+// Register trk_roc_31
+#define HAL_SRVDSP_trk_roc_31_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_31)
+#define HAL_SRVDSP_trk_roc_31_LSB         0
+#define HAL_SRVDSP_trk_roc_31_MSB         15
+#define HAL_SRVDSP_trk_roc_31_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_31_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_31             HAL_SRVDSP_trk_roc_31_MASK
+#define HAL_SRVDSP_trk_roc_31_READABLE    1
+#define HAL_SRVDSP_trk_roc_31_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_31_SIGNED      1
+#define HAL_SRVDSP_trk_roc_31_ADR         0xB0000ABC
+
+// Register trk_roc_32
+#define HAL_SRVDSP_trk_roc_32_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_32)
+#define HAL_SRVDSP_trk_roc_32_LSB         0
+#define HAL_SRVDSP_trk_roc_32_MSB         15
+#define HAL_SRVDSP_trk_roc_32_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_32_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_32             HAL_SRVDSP_trk_roc_32_MASK
+#define HAL_SRVDSP_trk_roc_32_READABLE    1
+#define HAL_SRVDSP_trk_roc_32_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_32_SIGNED      1
+#define HAL_SRVDSP_trk_roc_32_ADR         0xB0000AC0
+
+// Register trk_roc_33
+#define HAL_SRVDSP_trk_roc_33_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_33)
+#define HAL_SRVDSP_trk_roc_33_LSB         0
+#define HAL_SRVDSP_trk_roc_33_MSB         15
+#define HAL_SRVDSP_trk_roc_33_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_33_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_33             HAL_SRVDSP_trk_roc_33_MASK
+#define HAL_SRVDSP_trk_roc_33_READABLE    1
+#define HAL_SRVDSP_trk_roc_33_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_33_SIGNED      1
+#define HAL_SRVDSP_trk_roc_33_ADR         0xB0000AC4
+
+// Register trk_roc_34
+#define HAL_SRVDSP_trk_roc_34_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_34)
+#define HAL_SRVDSP_trk_roc_34_LSB         0
+#define HAL_SRVDSP_trk_roc_34_MSB         15
+#define HAL_SRVDSP_trk_roc_34_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_34_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_34             HAL_SRVDSP_trk_roc_34_MASK
+#define HAL_SRVDSP_trk_roc_34_READABLE    1
+#define HAL_SRVDSP_trk_roc_34_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_34_SIGNED      1
+#define HAL_SRVDSP_trk_roc_34_ADR         0xB0000AC8
+
+// Register trk_roc_35
+#define HAL_SRVDSP_trk_roc_35_REGISTER    (HAL_SRVDSPREG_MAP->trk_roc_35)
+#define HAL_SRVDSP_trk_roc_35_LSB         0
+#define HAL_SRVDSP_trk_roc_35_MSB         15
+#define HAL_SRVDSP_trk_roc_35_MASK        0x0000FFFF
+#define HAL_SRVDSP_trk_roc_35_TYPE        SInt16
+#define HAL_SRVDSP_trk_roc_35             HAL_SRVDSP_trk_roc_35_MASK
+#define HAL_SRVDSP_trk_roc_35_READABLE    1
+#define HAL_SRVDSP_trk_roc_35_WRITABLE    1
+#define HAL_SRVDSP_trk_roc_35_SIGNED      1
+#define HAL_SRVDSP_trk_roc_35_ADR         0xB0000ACC
+
+// Register te_roc_0
+#define HAL_SRVDSP_te_roc_0_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_0)
+#define HAL_SRVDSP_te_roc_0_LSB         0
+#define HAL_SRVDSP_te_roc_0_MSB         15
+#define HAL_SRVDSP_te_roc_0_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_0_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_0             HAL_SRVDSP_te_roc_0_MASK
+#define HAL_SRVDSP_te_roc_0_READABLE    1
+#define HAL_SRVDSP_te_roc_0_WRITABLE    1
+#define HAL_SRVDSP_te_roc_0_SIGNED      1
+#define HAL_SRVDSP_te_roc_0_ADR         0xB0000AD0
+
+// Register te_roc_1
+#define HAL_SRVDSP_te_roc_1_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_1)
+#define HAL_SRVDSP_te_roc_1_LSB         0
+#define HAL_SRVDSP_te_roc_1_MSB         15
+#define HAL_SRVDSP_te_roc_1_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_1_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_1             HAL_SRVDSP_te_roc_1_MASK
+#define HAL_SRVDSP_te_roc_1_READABLE    1
+#define HAL_SRVDSP_te_roc_1_WRITABLE    1
+#define HAL_SRVDSP_te_roc_1_SIGNED      1
+#define HAL_SRVDSP_te_roc_1_ADR         0xB0000AD4
+
+// Register te_roc_2
+#define HAL_SRVDSP_te_roc_2_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_2)
+#define HAL_SRVDSP_te_roc_2_LSB         0
+#define HAL_SRVDSP_te_roc_2_MSB         15
+#define HAL_SRVDSP_te_roc_2_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_2_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_2             HAL_SRVDSP_te_roc_2_MASK
+#define HAL_SRVDSP_te_roc_2_READABLE    1
+#define HAL_SRVDSP_te_roc_2_WRITABLE    1
+#define HAL_SRVDSP_te_roc_2_SIGNED      1
+#define HAL_SRVDSP_te_roc_2_ADR         0xB0000AD8
+
+// Register te_roc_3
+#define HAL_SRVDSP_te_roc_3_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_3)
+#define HAL_SRVDSP_te_roc_3_LSB         0
+#define HAL_SRVDSP_te_roc_3_MSB         15
+#define HAL_SRVDSP_te_roc_3_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_3_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_3             HAL_SRVDSP_te_roc_3_MASK
+#define HAL_SRVDSP_te_roc_3_READABLE    1
+#define HAL_SRVDSP_te_roc_3_WRITABLE    1
+#define HAL_SRVDSP_te_roc_3_SIGNED      1
+#define HAL_SRVDSP_te_roc_3_ADR         0xB0000ADC
+
+// Register te_roc_4
+#define HAL_SRVDSP_te_roc_4_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_4)
+#define HAL_SRVDSP_te_roc_4_LSB         0
+#define HAL_SRVDSP_te_roc_4_MSB         15
+#define HAL_SRVDSP_te_roc_4_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_4_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_4             HAL_SRVDSP_te_roc_4_MASK
+#define HAL_SRVDSP_te_roc_4_READABLE    1
+#define HAL_SRVDSP_te_roc_4_WRITABLE    1
+#define HAL_SRVDSP_te_roc_4_SIGNED      1
+#define HAL_SRVDSP_te_roc_4_ADR         0xB0000AE0
+
+// Register te_roc_5
+#define HAL_SRVDSP_te_roc_5_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_5)
+#define HAL_SRVDSP_te_roc_5_LSB         0
+#define HAL_SRVDSP_te_roc_5_MSB         15
+#define HAL_SRVDSP_te_roc_5_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_5_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_5             HAL_SRVDSP_te_roc_5_MASK
+#define HAL_SRVDSP_te_roc_5_READABLE    1
+#define HAL_SRVDSP_te_roc_5_WRITABLE    1
+#define HAL_SRVDSP_te_roc_5_SIGNED      1
+#define HAL_SRVDSP_te_roc_5_ADR         0xB0000AE4
+
+// Register te_roc_6
+#define HAL_SRVDSP_te_roc_6_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_6)
+#define HAL_SRVDSP_te_roc_6_LSB         0
+#define HAL_SRVDSP_te_roc_6_MSB         15
+#define HAL_SRVDSP_te_roc_6_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_6_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_6             HAL_SRVDSP_te_roc_6_MASK
+#define HAL_SRVDSP_te_roc_6_READABLE    1
+#define HAL_SRVDSP_te_roc_6_WRITABLE    1
+#define HAL_SRVDSP_te_roc_6_SIGNED      1
+#define HAL_SRVDSP_te_roc_6_ADR         0xB0000AE8
+
+// Register te_roc_7
+#define HAL_SRVDSP_te_roc_7_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_7)
+#define HAL_SRVDSP_te_roc_7_LSB         0
+#define HAL_SRVDSP_te_roc_7_MSB         15
+#define HAL_SRVDSP_te_roc_7_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_7_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_7             HAL_SRVDSP_te_roc_7_MASK
+#define HAL_SRVDSP_te_roc_7_READABLE    1
+#define HAL_SRVDSP_te_roc_7_WRITABLE    1
+#define HAL_SRVDSP_te_roc_7_SIGNED      1
+#define HAL_SRVDSP_te_roc_7_ADR         0xB0000AEC
+
+// Register te_roc_8
+#define HAL_SRVDSP_te_roc_8_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_8)
+#define HAL_SRVDSP_te_roc_8_LSB         0
+#define HAL_SRVDSP_te_roc_8_MSB         15
+#define HAL_SRVDSP_te_roc_8_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_8_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_8             HAL_SRVDSP_te_roc_8_MASK
+#define HAL_SRVDSP_te_roc_8_READABLE    1
+#define HAL_SRVDSP_te_roc_8_WRITABLE    1
+#define HAL_SRVDSP_te_roc_8_SIGNED      1
+#define HAL_SRVDSP_te_roc_8_ADR         0xB0000AF0
+
+// Register te_roc_9
+#define HAL_SRVDSP_te_roc_9_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_9)
+#define HAL_SRVDSP_te_roc_9_LSB         0
+#define HAL_SRVDSP_te_roc_9_MSB         15
+#define HAL_SRVDSP_te_roc_9_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_9_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_9             HAL_SRVDSP_te_roc_9_MASK
+#define HAL_SRVDSP_te_roc_9_READABLE    1
+#define HAL_SRVDSP_te_roc_9_WRITABLE    1
+#define HAL_SRVDSP_te_roc_9_SIGNED      1
+#define HAL_SRVDSP_te_roc_9_ADR         0xB0000AF4
+
+// Register te_roc_10
+#define HAL_SRVDSP_te_roc_10_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_10)
+#define HAL_SRVDSP_te_roc_10_LSB         0
+#define HAL_SRVDSP_te_roc_10_MSB         15
+#define HAL_SRVDSP_te_roc_10_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_10_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_10             HAL_SRVDSP_te_roc_10_MASK
+#define HAL_SRVDSP_te_roc_10_READABLE    1
+#define HAL_SRVDSP_te_roc_10_WRITABLE    1
+#define HAL_SRVDSP_te_roc_10_SIGNED      1
+#define HAL_SRVDSP_te_roc_10_ADR         0xB0000AF8
+
+// Register te_roc_11
+#define HAL_SRVDSP_te_roc_11_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_11)
+#define HAL_SRVDSP_te_roc_11_LSB         0
+#define HAL_SRVDSP_te_roc_11_MSB         15
+#define HAL_SRVDSP_te_roc_11_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_11_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_11             HAL_SRVDSP_te_roc_11_MASK
+#define HAL_SRVDSP_te_roc_11_READABLE    1
+#define HAL_SRVDSP_te_roc_11_WRITABLE    1
+#define HAL_SRVDSP_te_roc_11_SIGNED      1
+#define HAL_SRVDSP_te_roc_11_ADR         0xB0000AFC
+
+// Register te_roc_12
+#define HAL_SRVDSP_te_roc_12_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_12)
+#define HAL_SRVDSP_te_roc_12_LSB         0
+#define HAL_SRVDSP_te_roc_12_MSB         15
+#define HAL_SRVDSP_te_roc_12_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_12_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_12             HAL_SRVDSP_te_roc_12_MASK
+#define HAL_SRVDSP_te_roc_12_READABLE    1
+#define HAL_SRVDSP_te_roc_12_WRITABLE    1
+#define HAL_SRVDSP_te_roc_12_SIGNED      1
+#define HAL_SRVDSP_te_roc_12_ADR         0xB0000B00
+
+// Register te_roc_13
+#define HAL_SRVDSP_te_roc_13_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_13)
+#define HAL_SRVDSP_te_roc_13_LSB         0
+#define HAL_SRVDSP_te_roc_13_MSB         15
+#define HAL_SRVDSP_te_roc_13_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_13_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_13             HAL_SRVDSP_te_roc_13_MASK
+#define HAL_SRVDSP_te_roc_13_READABLE    1
+#define HAL_SRVDSP_te_roc_13_WRITABLE    1
+#define HAL_SRVDSP_te_roc_13_SIGNED      1
+#define HAL_SRVDSP_te_roc_13_ADR         0xB0000B04
+
+// Register te_roc_14
+#define HAL_SRVDSP_te_roc_14_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_14)
+#define HAL_SRVDSP_te_roc_14_LSB         0
+#define HAL_SRVDSP_te_roc_14_MSB         15
+#define HAL_SRVDSP_te_roc_14_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_14_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_14             HAL_SRVDSP_te_roc_14_MASK
+#define HAL_SRVDSP_te_roc_14_READABLE    1
+#define HAL_SRVDSP_te_roc_14_WRITABLE    1
+#define HAL_SRVDSP_te_roc_14_SIGNED      1
+#define HAL_SRVDSP_te_roc_14_ADR         0xB0000B08
+
+// Register te_roc_15
+#define HAL_SRVDSP_te_roc_15_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_15)
+#define HAL_SRVDSP_te_roc_15_LSB         0
+#define HAL_SRVDSP_te_roc_15_MSB         15
+#define HAL_SRVDSP_te_roc_15_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_15_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_15             HAL_SRVDSP_te_roc_15_MASK
+#define HAL_SRVDSP_te_roc_15_READABLE    1
+#define HAL_SRVDSP_te_roc_15_WRITABLE    1
+#define HAL_SRVDSP_te_roc_15_SIGNED      1
+#define HAL_SRVDSP_te_roc_15_ADR         0xB0000B0C
+
+// Register te_roc_16
+#define HAL_SRVDSP_te_roc_16_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_16)
+#define HAL_SRVDSP_te_roc_16_LSB         0
+#define HAL_SRVDSP_te_roc_16_MSB         15
+#define HAL_SRVDSP_te_roc_16_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_16_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_16             HAL_SRVDSP_te_roc_16_MASK
+#define HAL_SRVDSP_te_roc_16_READABLE    1
+#define HAL_SRVDSP_te_roc_16_WRITABLE    1
+#define HAL_SRVDSP_te_roc_16_SIGNED      1
+#define HAL_SRVDSP_te_roc_16_ADR         0xB0000B10
+
+// Register te_roc_17
+#define HAL_SRVDSP_te_roc_17_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_17)
+#define HAL_SRVDSP_te_roc_17_LSB         0
+#define HAL_SRVDSP_te_roc_17_MSB         15
+#define HAL_SRVDSP_te_roc_17_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_17_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_17             HAL_SRVDSP_te_roc_17_MASK
+#define HAL_SRVDSP_te_roc_17_READABLE    1
+#define HAL_SRVDSP_te_roc_17_WRITABLE    1
+#define HAL_SRVDSP_te_roc_17_SIGNED      1
+#define HAL_SRVDSP_te_roc_17_ADR         0xB0000B14
+
+// Register te_roc_18
+#define HAL_SRVDSP_te_roc_18_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_18)
+#define HAL_SRVDSP_te_roc_18_LSB         0
+#define HAL_SRVDSP_te_roc_18_MSB         15
+#define HAL_SRVDSP_te_roc_18_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_18_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_18             HAL_SRVDSP_te_roc_18_MASK
+#define HAL_SRVDSP_te_roc_18_READABLE    1
+#define HAL_SRVDSP_te_roc_18_WRITABLE    1
+#define HAL_SRVDSP_te_roc_18_SIGNED      1
+#define HAL_SRVDSP_te_roc_18_ADR         0xB0000B18
+
+// Register te_roc_19
+#define HAL_SRVDSP_te_roc_19_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_19)
+#define HAL_SRVDSP_te_roc_19_LSB         0
+#define HAL_SRVDSP_te_roc_19_MSB         15
+#define HAL_SRVDSP_te_roc_19_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_19_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_19             HAL_SRVDSP_te_roc_19_MASK
+#define HAL_SRVDSP_te_roc_19_READABLE    1
+#define HAL_SRVDSP_te_roc_19_WRITABLE    1
+#define HAL_SRVDSP_te_roc_19_SIGNED      1
+#define HAL_SRVDSP_te_roc_19_ADR         0xB0000B1C
+
+// Register te_roc_20
+#define HAL_SRVDSP_te_roc_20_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_20)
+#define HAL_SRVDSP_te_roc_20_LSB         0
+#define HAL_SRVDSP_te_roc_20_MSB         15
+#define HAL_SRVDSP_te_roc_20_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_20_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_20             HAL_SRVDSP_te_roc_20_MASK
+#define HAL_SRVDSP_te_roc_20_READABLE    1
+#define HAL_SRVDSP_te_roc_20_WRITABLE    1
+#define HAL_SRVDSP_te_roc_20_SIGNED      1
+#define HAL_SRVDSP_te_roc_20_ADR         0xB0000B20
+
+// Register te_roc_21
+#define HAL_SRVDSP_te_roc_21_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_21)
+#define HAL_SRVDSP_te_roc_21_LSB         0
+#define HAL_SRVDSP_te_roc_21_MSB         15
+#define HAL_SRVDSP_te_roc_21_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_21_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_21             HAL_SRVDSP_te_roc_21_MASK
+#define HAL_SRVDSP_te_roc_21_READABLE    1
+#define HAL_SRVDSP_te_roc_21_WRITABLE    1
+#define HAL_SRVDSP_te_roc_21_SIGNED      1
+#define HAL_SRVDSP_te_roc_21_ADR         0xB0000B24
+
+// Register te_roc_22
+#define HAL_SRVDSP_te_roc_22_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_22)
+#define HAL_SRVDSP_te_roc_22_LSB         0
+#define HAL_SRVDSP_te_roc_22_MSB         15
+#define HAL_SRVDSP_te_roc_22_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_22_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_22             HAL_SRVDSP_te_roc_22_MASK
+#define HAL_SRVDSP_te_roc_22_READABLE    1
+#define HAL_SRVDSP_te_roc_22_WRITABLE    1
+#define HAL_SRVDSP_te_roc_22_SIGNED      1
+#define HAL_SRVDSP_te_roc_22_ADR         0xB0000B28
+
+// Register te_roc_23
+#define HAL_SRVDSP_te_roc_23_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_23)
+#define HAL_SRVDSP_te_roc_23_LSB         0
+#define HAL_SRVDSP_te_roc_23_MSB         15
+#define HAL_SRVDSP_te_roc_23_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_23_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_23             HAL_SRVDSP_te_roc_23_MASK
+#define HAL_SRVDSP_te_roc_23_READABLE    1
+#define HAL_SRVDSP_te_roc_23_WRITABLE    1
+#define HAL_SRVDSP_te_roc_23_SIGNED      1
+#define HAL_SRVDSP_te_roc_23_ADR         0xB0000B2C
+
+// Register te_roc_24
+#define HAL_SRVDSP_te_roc_24_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_24)
+#define HAL_SRVDSP_te_roc_24_LSB         0
+#define HAL_SRVDSP_te_roc_24_MSB         15
+#define HAL_SRVDSP_te_roc_24_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_24_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_24             HAL_SRVDSP_te_roc_24_MASK
+#define HAL_SRVDSP_te_roc_24_READABLE    1
+#define HAL_SRVDSP_te_roc_24_WRITABLE    1
+#define HAL_SRVDSP_te_roc_24_SIGNED      1
+#define HAL_SRVDSP_te_roc_24_ADR         0xB0000B30
+
+// Register te_roc_25
+#define HAL_SRVDSP_te_roc_25_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_25)
+#define HAL_SRVDSP_te_roc_25_LSB         0
+#define HAL_SRVDSP_te_roc_25_MSB         15
+#define HAL_SRVDSP_te_roc_25_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_25_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_25             HAL_SRVDSP_te_roc_25_MASK
+#define HAL_SRVDSP_te_roc_25_READABLE    1
+#define HAL_SRVDSP_te_roc_25_WRITABLE    1
+#define HAL_SRVDSP_te_roc_25_SIGNED      1
+#define HAL_SRVDSP_te_roc_25_ADR         0xB0000B34
+
+// Register te_roc_26
+#define HAL_SRVDSP_te_roc_26_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_26)
+#define HAL_SRVDSP_te_roc_26_LSB         0
+#define HAL_SRVDSP_te_roc_26_MSB         15
+#define HAL_SRVDSP_te_roc_26_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_26_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_26             HAL_SRVDSP_te_roc_26_MASK
+#define HAL_SRVDSP_te_roc_26_READABLE    1
+#define HAL_SRVDSP_te_roc_26_WRITABLE    1
+#define HAL_SRVDSP_te_roc_26_SIGNED      1
+#define HAL_SRVDSP_te_roc_26_ADR         0xB0000B38
+
+// Register te_roc_27
+#define HAL_SRVDSP_te_roc_27_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_27)
+#define HAL_SRVDSP_te_roc_27_LSB         0
+#define HAL_SRVDSP_te_roc_27_MSB         15
+#define HAL_SRVDSP_te_roc_27_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_27_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_27             HAL_SRVDSP_te_roc_27_MASK
+#define HAL_SRVDSP_te_roc_27_READABLE    1
+#define HAL_SRVDSP_te_roc_27_WRITABLE    1
+#define HAL_SRVDSP_te_roc_27_SIGNED      1
+#define HAL_SRVDSP_te_roc_27_ADR         0xB0000B3C
+
+// Register te_roc_28
+#define HAL_SRVDSP_te_roc_28_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_28)
+#define HAL_SRVDSP_te_roc_28_LSB         0
+#define HAL_SRVDSP_te_roc_28_MSB         15
+#define HAL_SRVDSP_te_roc_28_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_28_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_28             HAL_SRVDSP_te_roc_28_MASK
+#define HAL_SRVDSP_te_roc_28_READABLE    1
+#define HAL_SRVDSP_te_roc_28_WRITABLE    1
+#define HAL_SRVDSP_te_roc_28_SIGNED      1
+#define HAL_SRVDSP_te_roc_28_ADR         0xB0000B40
+
+// Register te_roc_29
+#define HAL_SRVDSP_te_roc_29_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_29)
+#define HAL_SRVDSP_te_roc_29_LSB         0
+#define HAL_SRVDSP_te_roc_29_MSB         15
+#define HAL_SRVDSP_te_roc_29_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_29_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_29             HAL_SRVDSP_te_roc_29_MASK
+#define HAL_SRVDSP_te_roc_29_READABLE    1
+#define HAL_SRVDSP_te_roc_29_WRITABLE    1
+#define HAL_SRVDSP_te_roc_29_SIGNED      1
+#define HAL_SRVDSP_te_roc_29_ADR         0xB0000B44
+
+// Register te_roc_30
+#define HAL_SRVDSP_te_roc_30_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_30)
+#define HAL_SRVDSP_te_roc_30_LSB         0
+#define HAL_SRVDSP_te_roc_30_MSB         15
+#define HAL_SRVDSP_te_roc_30_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_30_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_30             HAL_SRVDSP_te_roc_30_MASK
+#define HAL_SRVDSP_te_roc_30_READABLE    1
+#define HAL_SRVDSP_te_roc_30_WRITABLE    1
+#define HAL_SRVDSP_te_roc_30_SIGNED      1
+#define HAL_SRVDSP_te_roc_30_ADR         0xB0000B48
+
+// Register te_roc_31
+#define HAL_SRVDSP_te_roc_31_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_31)
+#define HAL_SRVDSP_te_roc_31_LSB         0
+#define HAL_SRVDSP_te_roc_31_MSB         15
+#define HAL_SRVDSP_te_roc_31_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_31_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_31             HAL_SRVDSP_te_roc_31_MASK
+#define HAL_SRVDSP_te_roc_31_READABLE    1
+#define HAL_SRVDSP_te_roc_31_WRITABLE    1
+#define HAL_SRVDSP_te_roc_31_SIGNED      1
+#define HAL_SRVDSP_te_roc_31_ADR         0xB0000B4C
+
+// Register te_roc_32
+#define HAL_SRVDSP_te_roc_32_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_32)
+#define HAL_SRVDSP_te_roc_32_LSB         0
+#define HAL_SRVDSP_te_roc_32_MSB         15
+#define HAL_SRVDSP_te_roc_32_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_32_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_32             HAL_SRVDSP_te_roc_32_MASK
+#define HAL_SRVDSP_te_roc_32_READABLE    1
+#define HAL_SRVDSP_te_roc_32_WRITABLE    1
+#define HAL_SRVDSP_te_roc_32_SIGNED      1
+#define HAL_SRVDSP_te_roc_32_ADR         0xB0000B50
+
+// Register te_roc_33
+#define HAL_SRVDSP_te_roc_33_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_33)
+#define HAL_SRVDSP_te_roc_33_LSB         0
+#define HAL_SRVDSP_te_roc_33_MSB         15
+#define HAL_SRVDSP_te_roc_33_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_33_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_33             HAL_SRVDSP_te_roc_33_MASK
+#define HAL_SRVDSP_te_roc_33_READABLE    1
+#define HAL_SRVDSP_te_roc_33_WRITABLE    1
+#define HAL_SRVDSP_te_roc_33_SIGNED      1
+#define HAL_SRVDSP_te_roc_33_ADR         0xB0000B54
+
+// Register te_roc_34
+#define HAL_SRVDSP_te_roc_34_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_34)
+#define HAL_SRVDSP_te_roc_34_LSB         0
+#define HAL_SRVDSP_te_roc_34_MSB         15
+#define HAL_SRVDSP_te_roc_34_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_34_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_34             HAL_SRVDSP_te_roc_34_MASK
+#define HAL_SRVDSP_te_roc_34_READABLE    1
+#define HAL_SRVDSP_te_roc_34_WRITABLE    1
+#define HAL_SRVDSP_te_roc_34_SIGNED      1
+#define HAL_SRVDSP_te_roc_34_ADR         0xB0000B58
+
+// Register te_roc_35
+#define HAL_SRVDSP_te_roc_35_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_35)
+#define HAL_SRVDSP_te_roc_35_LSB         0
+#define HAL_SRVDSP_te_roc_35_MSB         15
+#define HAL_SRVDSP_te_roc_35_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_35_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_35             HAL_SRVDSP_te_roc_35_MASK
+#define HAL_SRVDSP_te_roc_35_READABLE    1
+#define HAL_SRVDSP_te_roc_35_WRITABLE    1
+#define HAL_SRVDSP_te_roc_35_SIGNED      1
+#define HAL_SRVDSP_te_roc_35_ADR         0xB0000B5C
+
+// Register reserved_560
+#define HAL_SRVDSP_reserved_560_REGISTER    (HAL_SRVDSPREG_MAP->reserved_560)
+#define HAL_SRVDSP_reserved_560_LSB         0
+#define HAL_SRVDSP_reserved_560_MSB         15
+#define HAL_SRVDSP_reserved_560_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_560_TYPE        SInt16
+#define HAL_SRVDSP_reserved_560             HAL_SRVDSP_reserved_560_MASK
+#define HAL_SRVDSP_reserved_560_READABLE    1
+#define HAL_SRVDSP_reserved_560_WRITABLE    1
+#define HAL_SRVDSP_reserved_560_SIGNED      1
+#define HAL_SRVDSP_reserved_560_ADR         0xB0000B60
+
+// Register reserved_564
+#define HAL_SRVDSP_reserved_564_REGISTER    (HAL_SRVDSPREG_MAP->reserved_564)
+#define HAL_SRVDSP_reserved_564_LSB         0
+#define HAL_SRVDSP_reserved_564_MSB         15
+#define HAL_SRVDSP_reserved_564_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_564_TYPE        SInt16
+#define HAL_SRVDSP_reserved_564             HAL_SRVDSP_reserved_564_MASK
+#define HAL_SRVDSP_reserved_564_READABLE    1
+#define HAL_SRVDSP_reserved_564_WRITABLE    1
+#define HAL_SRVDSP_reserved_564_SIGNED      1
+#define HAL_SRVDSP_reserved_564_ADR         0xB0000B64
+
+// Register src_x
+#define HAL_SRVDSP_src_x_REGISTER    (HAL_SRVDSPREG_MAP->src_x)
+#define HAL_SRVDSP_src_x_LSB         0
+#define HAL_SRVDSP_src_x_MSB         15
+#define HAL_SRVDSP_src_x_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_x_TYPE        SInt16
+#define HAL_SRVDSP_src_x             HAL_SRVDSP_src_x_MASK
+#define HAL_SRVDSP_src_x_READABLE    1
+#define HAL_SRVDSP_src_x_WRITABLE    1
+#define HAL_SRVDSP_src_x_SIGNED      1
+#define HAL_SRVDSP_src_x_ADR         0xB0000B68
+
+// Register dummy
+#define HAL_SRVDSP_dummy_REGISTER    (HAL_SRVDSPREG_MAP->dummy)
+#define HAL_SRVDSP_dummy_LSB         0
+#define HAL_SRVDSP_dummy_MSB         15
+#define HAL_SRVDSP_dummy_MASK        0x0000FFFF
+#define HAL_SRVDSP_dummy_TYPE        SInt16
+#define HAL_SRVDSP_dummy             HAL_SRVDSP_dummy_MASK
+#define HAL_SRVDSP_dummy_READABLE    1
+#define HAL_SRVDSP_dummy_WRITABLE    1
+#define HAL_SRVDSP_dummy_SIGNED      1
+#define HAL_SRVDSP_dummy_ADR         0xB0000B6C
+
+// Register a4096
+#define HAL_SRVDSP_a4096_REGISTER    (HAL_SRVDSPREG_MAP->a4096)
+#define HAL_SRVDSP_a4096_LSB         0
+#define HAL_SRVDSP_a4096_MSB         15
+#define HAL_SRVDSP_a4096_MASK        0x0000FFFF
+#define HAL_SRVDSP_a4096_TYPE        SInt16
+#define HAL_SRVDSP_a4096             HAL_SRVDSP_a4096_MASK
+#define HAL_SRVDSP_a4096_READABLE    1
+#define HAL_SRVDSP_a4096_WRITABLE    1
+#define HAL_SRVDSP_a4096_SIGNED      1
+#define HAL_SRVDSP_a4096_ADR         0xB0000B70
+
+// Register src_tap8
+#define HAL_SRVDSP_src_tap8_REGISTER    (HAL_SRVDSPREG_MAP->src_tap8)
+#define HAL_SRVDSP_src_tap8_LSB         0
+#define HAL_SRVDSP_src_tap8_MSB         15
+#define HAL_SRVDSP_src_tap8_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_tap8_TYPE        SInt16
+#define HAL_SRVDSP_src_tap8             HAL_SRVDSP_src_tap8_MASK
+#define HAL_SRVDSP_src_tap8_READABLE    1
+#define HAL_SRVDSP_src_tap8_WRITABLE    1
+#define HAL_SRVDSP_src_tap8_SIGNED      1
+#define HAL_SRVDSP_src_tap8_ADR         0xB0000B74
+
+// Register frot_step
+#define HAL_SRVDSP_frot_step_REGISTER    (HAL_SRVDSPREG_MAP->frot_step)
+#define HAL_SRVDSP_frot_step_LSB         0
+#define HAL_SRVDSP_frot_step_MSB         15
+#define HAL_SRVDSP_frot_step_MASK        0x0000FFFF
+#define HAL_SRVDSP_frot_step_TYPE        SInt16
+#define HAL_SRVDSP_frot_step             HAL_SRVDSP_frot_step_MASK
+#define HAL_SRVDSP_frot_step_READABLE    1
+#define HAL_SRVDSP_frot_step_WRITABLE    1
+#define HAL_SRVDSP_frot_step_SIGNED      1
+#define HAL_SRVDSP_frot_step_ADR         0xB0000B78
+
+// Register frot8x
+#define HAL_SRVDSP_frot8x_REGISTER    (HAL_SRVDSPREG_MAP->frot8x)
+#define HAL_SRVDSP_frot8x_LSB         0
+#define HAL_SRVDSP_frot8x_MSB         15
+#define HAL_SRVDSP_frot8x_MASK        0x0000FFFF
+#define HAL_SRVDSP_frot8x_TYPE        SInt16
+#define HAL_SRVDSP_frot8x             HAL_SRVDSP_frot8x_MASK
+#define HAL_SRVDSP_frot8x_READABLE    1
+#define HAL_SRVDSP_frot8x_WRITABLE    1
+#define HAL_SRVDSP_frot8x_SIGNED      1
+#define HAL_SRVDSP_frot8x_ADR         0xB0000B7C
+
+// Register kdf10
+#define HAL_SRVDSP_kdf10_REGISTER    (HAL_SRVDSPREG_MAP->kdf10)
+#define HAL_SRVDSP_kdf10_LSB         0
+#define HAL_SRVDSP_kdf10_MSB         15
+#define HAL_SRVDSP_kdf10_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdf10_TYPE        SInt16
+#define HAL_SRVDSP_kdf10             HAL_SRVDSP_kdf10_MASK
+#define HAL_SRVDSP_kdf10_READABLE    1
+#define HAL_SRVDSP_kdf10_WRITABLE    1
+#define HAL_SRVDSP_kdf10_SIGNED      1
+#define HAL_SRVDSP_kdf10_ADR         0xB0000B80
+
+// Register kdd10
+#define HAL_SRVDSP_kdd10_REGISTER    (HAL_SRVDSPREG_MAP->kdd10)
+#define HAL_SRVDSP_kdd10_LSB         0
+#define HAL_SRVDSP_kdd10_MSB         15
+#define HAL_SRVDSP_kdd10_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdd10_TYPE        SInt16
+#define HAL_SRVDSP_kdd10             HAL_SRVDSP_kdd10_MASK
+#define HAL_SRVDSP_kdd10_READABLE    1
+#define HAL_SRVDSP_kdd10_WRITABLE    1
+#define HAL_SRVDSP_kdd10_SIGNED      1
+#define HAL_SRVDSP_kdd10_ADR         0xB0000B84
+
+// Register kdw10
+#define HAL_SRVDSP_kdw10_REGISTER    (HAL_SRVDSPREG_MAP->kdw10)
+#define HAL_SRVDSP_kdw10_LSB         0
+#define HAL_SRVDSP_kdw10_MSB         15
+#define HAL_SRVDSP_kdw10_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdw10_TYPE        SInt16
+#define HAL_SRVDSP_kdw10             HAL_SRVDSP_kdw10_MASK
+#define HAL_SRVDSP_kdw10_READABLE    1
+#define HAL_SRVDSP_kdw10_WRITABLE    1
+#define HAL_SRVDSP_kdw10_SIGNED      1
+#define HAL_SRVDSP_kdw10_ADR         0xB0000B88
+
+// Register kdf11
+#define HAL_SRVDSP_kdf11_REGISTER    (HAL_SRVDSPREG_MAP->kdf11)
+#define HAL_SRVDSP_kdf11_LSB         0
+#define HAL_SRVDSP_kdf11_MSB         15
+#define HAL_SRVDSP_kdf11_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdf11_TYPE        SInt16
+#define HAL_SRVDSP_kdf11             HAL_SRVDSP_kdf11_MASK
+#define HAL_SRVDSP_kdf11_READABLE    1
+#define HAL_SRVDSP_kdf11_WRITABLE    1
+#define HAL_SRVDSP_kdf11_SIGNED      1
+#define HAL_SRVDSP_kdf11_ADR         0xB0000B8C
+
+// Register kdd11
+#define HAL_SRVDSP_kdd11_REGISTER    (HAL_SRVDSPREG_MAP->kdd11)
+#define HAL_SRVDSP_kdd11_LSB         0
+#define HAL_SRVDSP_kdd11_MSB         15
+#define HAL_SRVDSP_kdd11_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdd11_TYPE        SInt16
+#define HAL_SRVDSP_kdd11             HAL_SRVDSP_kdd11_MASK
+#define HAL_SRVDSP_kdd11_READABLE    1
+#define HAL_SRVDSP_kdd11_WRITABLE    1
+#define HAL_SRVDSP_kdd11_SIGNED      1
+#define HAL_SRVDSP_kdd11_ADR         0xB0000B90
+
+// Register kdw11
+#define HAL_SRVDSP_kdw11_REGISTER    (HAL_SRVDSPREG_MAP->kdw11)
+#define HAL_SRVDSP_kdw11_LSB         0
+#define HAL_SRVDSP_kdw11_MSB         15
+#define HAL_SRVDSP_kdw11_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdw11_TYPE        SInt16
+#define HAL_SRVDSP_kdw11             HAL_SRVDSP_kdw11_MASK
+#define HAL_SRVDSP_kdw11_READABLE    1
+#define HAL_SRVDSP_kdw11_WRITABLE    1
+#define HAL_SRVDSP_kdw11_SIGNED      1
+#define HAL_SRVDSP_kdw11_ADR         0xB0000B94
+
+// Register kdf12
+#define HAL_SRVDSP_kdf12_REGISTER    (HAL_SRVDSPREG_MAP->kdf12)
+#define HAL_SRVDSP_kdf12_LSB         0
+#define HAL_SRVDSP_kdf12_MSB         15
+#define HAL_SRVDSP_kdf12_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdf12_TYPE        SInt16
+#define HAL_SRVDSP_kdf12             HAL_SRVDSP_kdf12_MASK
+#define HAL_SRVDSP_kdf12_READABLE    1
+#define HAL_SRVDSP_kdf12_WRITABLE    1
+#define HAL_SRVDSP_kdf12_SIGNED      1
+#define HAL_SRVDSP_kdf12_ADR         0xB0000B98
+
+// Register kdd12
+#define HAL_SRVDSP_kdd12_REGISTER    (HAL_SRVDSPREG_MAP->kdd12)
+#define HAL_SRVDSP_kdd12_LSB         0
+#define HAL_SRVDSP_kdd12_MSB         15
+#define HAL_SRVDSP_kdd12_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdd12_TYPE        SInt16
+#define HAL_SRVDSP_kdd12             HAL_SRVDSP_kdd12_MASK
+#define HAL_SRVDSP_kdd12_READABLE    1
+#define HAL_SRVDSP_kdd12_WRITABLE    1
+#define HAL_SRVDSP_kdd12_SIGNED      1
+#define HAL_SRVDSP_kdd12_ADR         0xB0000B9C
+
+// Register kdw12
+#define HAL_SRVDSP_kdw12_REGISTER    (HAL_SRVDSPREG_MAP->kdw12)
+#define HAL_SRVDSP_kdw12_LSB         0
+#define HAL_SRVDSP_kdw12_MSB         15
+#define HAL_SRVDSP_kdw12_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdw12_TYPE        SInt16
+#define HAL_SRVDSP_kdw12             HAL_SRVDSP_kdw12_MASK
+#define HAL_SRVDSP_kdw12_READABLE    1
+#define HAL_SRVDSP_kdw12_WRITABLE    1
+#define HAL_SRVDSP_kdw12_SIGNED      1
+#define HAL_SRVDSP_kdw12_ADR         0xB0000BA0
+
+// Register kdf13
+#define HAL_SRVDSP_kdf13_REGISTER    (HAL_SRVDSPREG_MAP->kdf13)
+#define HAL_SRVDSP_kdf13_LSB         0
+#define HAL_SRVDSP_kdf13_MSB         15
+#define HAL_SRVDSP_kdf13_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdf13_TYPE        SInt16
+#define HAL_SRVDSP_kdf13             HAL_SRVDSP_kdf13_MASK
+#define HAL_SRVDSP_kdf13_READABLE    1
+#define HAL_SRVDSP_kdf13_WRITABLE    1
+#define HAL_SRVDSP_kdf13_SIGNED      1
+#define HAL_SRVDSP_kdf13_ADR         0xB0000BA4
+
+// Register kdd13
+#define HAL_SRVDSP_kdd13_REGISTER    (HAL_SRVDSPREG_MAP->kdd13)
+#define HAL_SRVDSP_kdd13_LSB         0
+#define HAL_SRVDSP_kdd13_MSB         15
+#define HAL_SRVDSP_kdd13_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdd13_TYPE        SInt16
+#define HAL_SRVDSP_kdd13             HAL_SRVDSP_kdd13_MASK
+#define HAL_SRVDSP_kdd13_READABLE    1
+#define HAL_SRVDSP_kdd13_WRITABLE    1
+#define HAL_SRVDSP_kdd13_SIGNED      1
+#define HAL_SRVDSP_kdd13_ADR         0xB0000BA8
+
+// Register kdw13
+#define HAL_SRVDSP_kdw13_REGISTER    (HAL_SRVDSPREG_MAP->kdw13)
+#define HAL_SRVDSP_kdw13_LSB         0
+#define HAL_SRVDSP_kdw13_MSB         15
+#define HAL_SRVDSP_kdw13_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdw13_TYPE        SInt16
+#define HAL_SRVDSP_kdw13             HAL_SRVDSP_kdw13_MASK
+#define HAL_SRVDSP_kdw13_READABLE    1
+#define HAL_SRVDSP_kdw13_WRITABLE    1
+#define HAL_SRVDSP_kdw13_SIGNED      1
+#define HAL_SRVDSP_kdw13_ADR         0xB0000BAC
+
+// Register kdf14
+#define HAL_SRVDSP_kdf14_REGISTER    (HAL_SRVDSPREG_MAP->kdf14)
+#define HAL_SRVDSP_kdf14_LSB         0
+#define HAL_SRVDSP_kdf14_MSB         15
+#define HAL_SRVDSP_kdf14_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdf14_TYPE        SInt16
+#define HAL_SRVDSP_kdf14             HAL_SRVDSP_kdf14_MASK
+#define HAL_SRVDSP_kdf14_READABLE    1
+#define HAL_SRVDSP_kdf14_WRITABLE    1
+#define HAL_SRVDSP_kdf14_SIGNED      1
+#define HAL_SRVDSP_kdf14_ADR         0xB0000BB0
+
+// Register kdd14
+#define HAL_SRVDSP_kdd14_REGISTER    (HAL_SRVDSPREG_MAP->kdd14)
+#define HAL_SRVDSP_kdd14_LSB         0
+#define HAL_SRVDSP_kdd14_MSB         15
+#define HAL_SRVDSP_kdd14_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdd14_TYPE        SInt16
+#define HAL_SRVDSP_kdd14             HAL_SRVDSP_kdd14_MASK
+#define HAL_SRVDSP_kdd14_READABLE    1
+#define HAL_SRVDSP_kdd14_WRITABLE    1
+#define HAL_SRVDSP_kdd14_SIGNED      1
+#define HAL_SRVDSP_kdd14_ADR         0xB0000BB4
+
+// Register kdw14
+#define HAL_SRVDSP_kdw14_REGISTER    (HAL_SRVDSPREG_MAP->kdw14)
+#define HAL_SRVDSP_kdw14_LSB         0
+#define HAL_SRVDSP_kdw14_MSB         15
+#define HAL_SRVDSP_kdw14_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdw14_TYPE        SInt16
+#define HAL_SRVDSP_kdw14             HAL_SRVDSP_kdw14_MASK
+#define HAL_SRVDSP_kdw14_READABLE    1
+#define HAL_SRVDSP_kdw14_WRITABLE    1
+#define HAL_SRVDSP_kdw14_SIGNED      1
+#define HAL_SRVDSP_kdw14_ADR         0xB0000BB8
+
+// Register kdf15
+#define HAL_SRVDSP_kdf15_REGISTER    (HAL_SRVDSPREG_MAP->kdf15)
+#define HAL_SRVDSP_kdf15_LSB         0
+#define HAL_SRVDSP_kdf15_MSB         15
+#define HAL_SRVDSP_kdf15_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdf15_TYPE        SInt16
+#define HAL_SRVDSP_kdf15             HAL_SRVDSP_kdf15_MASK
+#define HAL_SRVDSP_kdf15_READABLE    1
+#define HAL_SRVDSP_kdf15_WRITABLE    1
+#define HAL_SRVDSP_kdf15_SIGNED      1
+#define HAL_SRVDSP_kdf15_ADR         0xB0000BBC
+
+// Register kdd15
+#define HAL_SRVDSP_kdd15_REGISTER    (HAL_SRVDSPREG_MAP->kdd15)
+#define HAL_SRVDSP_kdd15_LSB         0
+#define HAL_SRVDSP_kdd15_MSB         15
+#define HAL_SRVDSP_kdd15_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdd15_TYPE        SInt16
+#define HAL_SRVDSP_kdd15             HAL_SRVDSP_kdd15_MASK
+#define HAL_SRVDSP_kdd15_READABLE    1
+#define HAL_SRVDSP_kdd15_WRITABLE    1
+#define HAL_SRVDSP_kdd15_SIGNED      1
+#define HAL_SRVDSP_kdd15_ADR         0xB0000BC0
+
+// Register kdw15
+#define HAL_SRVDSP_kdw15_REGISTER    (HAL_SRVDSPREG_MAP->kdw15)
+#define HAL_SRVDSP_kdw15_LSB         0
+#define HAL_SRVDSP_kdw15_MSB         15
+#define HAL_SRVDSP_kdw15_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdw15_TYPE        SInt16
+#define HAL_SRVDSP_kdw15             HAL_SRVDSP_kdw15_MASK
+#define HAL_SRVDSP_kdw15_READABLE    1
+#define HAL_SRVDSP_kdw15_WRITABLE    1
+#define HAL_SRVDSP_kdw15_SIGNED      1
+#define HAL_SRVDSP_kdw15_ADR         0xB0000BC4
+
+// Register kdf16
+#define HAL_SRVDSP_kdf16_REGISTER    (HAL_SRVDSPREG_MAP->kdf16)
+#define HAL_SRVDSP_kdf16_LSB         0
+#define HAL_SRVDSP_kdf16_MSB         15
+#define HAL_SRVDSP_kdf16_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdf16_TYPE        SInt16
+#define HAL_SRVDSP_kdf16             HAL_SRVDSP_kdf16_MASK
+#define HAL_SRVDSP_kdf16_READABLE    1
+#define HAL_SRVDSP_kdf16_WRITABLE    1
+#define HAL_SRVDSP_kdf16_SIGNED      1
+#define HAL_SRVDSP_kdf16_ADR         0xB0000BC8
+
+// Register kdd16
+#define HAL_SRVDSP_kdd16_REGISTER    (HAL_SRVDSPREG_MAP->kdd16)
+#define HAL_SRVDSP_kdd16_LSB         0
+#define HAL_SRVDSP_kdd16_MSB         15
+#define HAL_SRVDSP_kdd16_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdd16_TYPE        SInt16
+#define HAL_SRVDSP_kdd16             HAL_SRVDSP_kdd16_MASK
+#define HAL_SRVDSP_kdd16_READABLE    1
+#define HAL_SRVDSP_kdd16_WRITABLE    1
+#define HAL_SRVDSP_kdd16_SIGNED      1
+#define HAL_SRVDSP_kdd16_ADR         0xB0000BCC
+
+// Register kdw16
+#define HAL_SRVDSP_kdw16_REGISTER    (HAL_SRVDSPREG_MAP->kdw16)
+#define HAL_SRVDSP_kdw16_LSB         0
+#define HAL_SRVDSP_kdw16_MSB         15
+#define HAL_SRVDSP_kdw16_MASK        0x0000FFFF
+#define HAL_SRVDSP_kdw16_TYPE        SInt16
+#define HAL_SRVDSP_kdw16             HAL_SRVDSP_kdw16_MASK
+#define HAL_SRVDSP_kdw16_READABLE    1
+#define HAL_SRVDSP_kdw16_WRITABLE    1
+#define HAL_SRVDSP_kdw16_SIGNED      1
+#define HAL_SRVDSP_kdw16_ADR         0xB0000BD0
+
+// Register reserved_5D4
+#define HAL_SRVDSP_reserved_5D4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_5D4)
+#define HAL_SRVDSP_reserved_5D4_LSB         0
+#define HAL_SRVDSP_reserved_5D4_MSB         15
+#define HAL_SRVDSP_reserved_5D4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_5D4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_5D4             HAL_SRVDSP_reserved_5D4_MASK
+#define HAL_SRVDSP_reserved_5D4_READABLE    1
+#define HAL_SRVDSP_reserved_5D4_WRITABLE    1
+#define HAL_SRVDSP_reserved_5D4_SIGNED      1
+#define HAL_SRVDSP_reserved_5D4_ADR         0xB0000BD4
+
+// Register src_te_alfa
+#define HAL_SRVDSP_src_te_alfa_REGISTER    (HAL_SRVDSPREG_MAP->src_te_alfa)
+#define HAL_SRVDSP_src_te_alfa_LSB         0
+#define HAL_SRVDSP_src_te_alfa_MSB         15
+#define HAL_SRVDSP_src_te_alfa_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_te_alfa_TYPE        SInt16
+#define HAL_SRVDSP_src_te_alfa             HAL_SRVDSP_src_te_alfa_MASK
+#define HAL_SRVDSP_src_te_alfa_READABLE    1
+#define HAL_SRVDSP_src_te_alfa_WRITABLE    1
+#define HAL_SRVDSP_src_te_alfa_SIGNED      1
+#define HAL_SRVDSP_src_te_alfa_ADR         0xB0000BD8
+
+// Register src_te_tap
+#define HAL_SRVDSP_src_te_tap_REGISTER    (HAL_SRVDSPREG_MAP->src_te_tap)
+#define HAL_SRVDSP_src_te_tap_LSB         0
+#define HAL_SRVDSP_src_te_tap_MSB         15
+#define HAL_SRVDSP_src_te_tap_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_te_tap_TYPE        SInt16
+#define HAL_SRVDSP_src_te_tap             HAL_SRVDSP_src_te_tap_MASK
+#define HAL_SRVDSP_src_te_tap_READABLE    1
+#define HAL_SRVDSP_src_te_tap_WRITABLE    1
+#define HAL_SRVDSP_src_te_tap_SIGNED      1
+#define HAL_SRVDSP_src_te_tap_ADR         0xB0000BDC
+
+// Register src_te_prescale
+#define HAL_SRVDSP_src_te_prescale_REGISTER    (HAL_SRVDSPREG_MAP->src_te_prescale)
+#define HAL_SRVDSP_src_te_prescale_LSB         0
+#define HAL_SRVDSP_src_te_prescale_MSB         15
+#define HAL_SRVDSP_src_te_prescale_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_te_prescale_TYPE        SInt16
+#define HAL_SRVDSP_src_te_prescale             HAL_SRVDSP_src_te_prescale_MASK
+#define HAL_SRVDSP_src_te_prescale_READABLE    1
+#define HAL_SRVDSP_src_te_prescale_WRITABLE    1
+#define HAL_SRVDSP_src_te_prescale_SIGNED      1
+#define HAL_SRVDSP_src_te_prescale_ADR         0xB0000BE0
+
+// Register te_roc_m1
+#define HAL_SRVDSP_te_roc_m1_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_m1)
+#define HAL_SRVDSP_te_roc_m1_LSB         0
+#define HAL_SRVDSP_te_roc_m1_MSB         15
+#define HAL_SRVDSP_te_roc_m1_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_m1_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_m1             HAL_SRVDSP_te_roc_m1_MASK
+#define HAL_SRVDSP_te_roc_m1_READABLE    1
+#define HAL_SRVDSP_te_roc_m1_WRITABLE    1
+#define HAL_SRVDSP_te_roc_m1_SIGNED      1
+#define HAL_SRVDSP_te_roc_m1_ADR         0xB0000BE4
+
+// Register te_roc_m2
+#define HAL_SRVDSP_te_roc_m2_REGISTER    (HAL_SRVDSPREG_MAP->te_roc_m2)
+#define HAL_SRVDSP_te_roc_m2_LSB         0
+#define HAL_SRVDSP_te_roc_m2_MSB         15
+#define HAL_SRVDSP_te_roc_m2_MASK        0x0000FFFF
+#define HAL_SRVDSP_te_roc_m2_TYPE        SInt16
+#define HAL_SRVDSP_te_roc_m2             HAL_SRVDSP_te_roc_m2_MASK
+#define HAL_SRVDSP_te_roc_m2_READABLE    1
+#define HAL_SRVDSP_te_roc_m2_WRITABLE    1
+#define HAL_SRVDSP_te_roc_m2_SIGNED      1
+#define HAL_SRVDSP_te_roc_m2_ADR         0xB0000BE8
+
+// Register reserved_5EC
+#define HAL_SRVDSP_reserved_5EC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_5EC)
+#define HAL_SRVDSP_reserved_5EC_LSB         0
+#define HAL_SRVDSP_reserved_5EC_MSB         15
+#define HAL_SRVDSP_reserved_5EC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_5EC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_5EC             HAL_SRVDSP_reserved_5EC_MASK
+#define HAL_SRVDSP_reserved_5EC_READABLE    1
+#define HAL_SRVDSP_reserved_5EC_WRITABLE    1
+#define HAL_SRVDSP_reserved_5EC_SIGNED      1
+#define HAL_SRVDSP_reserved_5EC_ADR         0xB0000BEC
+
+// Register src_te_fir1
+#define HAL_SRVDSP_src_te_fir1_REGISTER    (HAL_SRVDSPREG_MAP->src_te_fir1)
+#define HAL_SRVDSP_src_te_fir1_LSB         0
+#define HAL_SRVDSP_src_te_fir1_MSB         15
+#define HAL_SRVDSP_src_te_fir1_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_te_fir1_TYPE        SInt16
+#define HAL_SRVDSP_src_te_fir1             HAL_SRVDSP_src_te_fir1_MASK
+#define HAL_SRVDSP_src_te_fir1_READABLE    1
+#define HAL_SRVDSP_src_te_fir1_WRITABLE    1
+#define HAL_SRVDSP_src_te_fir1_SIGNED      1
+#define HAL_SRVDSP_src_te_fir1_ADR         0xB0000BF0
+
+// Register src_te_fir2
+#define HAL_SRVDSP_src_te_fir2_REGISTER    (HAL_SRVDSPREG_MAP->src_te_fir2)
+#define HAL_SRVDSP_src_te_fir2_LSB         0
+#define HAL_SRVDSP_src_te_fir2_MSB         15
+#define HAL_SRVDSP_src_te_fir2_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_te_fir2_TYPE        SInt16
+#define HAL_SRVDSP_src_te_fir2             HAL_SRVDSP_src_te_fir2_MASK
+#define HAL_SRVDSP_src_te_fir2_READABLE    1
+#define HAL_SRVDSP_src_te_fir2_WRITABLE    1
+#define HAL_SRVDSP_src_te_fir2_SIGNED      1
+#define HAL_SRVDSP_src_te_fir2_ADR         0xB0000BF4
+
+// Register src_te_balance
+#define HAL_SRVDSP_src_te_balance_REGISTER    (HAL_SRVDSPREG_MAP->src_te_balance)
+#define HAL_SRVDSP_src_te_balance_LSB         0
+#define HAL_SRVDSP_src_te_balance_MSB         15
+#define HAL_SRVDSP_src_te_balance_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_te_balance_TYPE        SInt16
+#define HAL_SRVDSP_src_te_balance             HAL_SRVDSP_src_te_balance_MASK
+#define HAL_SRVDSP_src_te_balance_READABLE    1
+#define HAL_SRVDSP_src_te_balance_WRITABLE    1
+#define HAL_SRVDSP_src_te_balance_SIGNED      1
+#define HAL_SRVDSP_src_te_balance_ADR         0xB0000BF8
+
+// Register reserved_5FC
+#define HAL_SRVDSP_reserved_5FC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_5FC)
+#define HAL_SRVDSP_reserved_5FC_LSB         0
+#define HAL_SRVDSP_reserved_5FC_MSB         15
+#define HAL_SRVDSP_reserved_5FC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_5FC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_5FC             HAL_SRVDSP_reserved_5FC_MASK
+#define HAL_SRVDSP_reserved_5FC_READABLE    1
+#define HAL_SRVDSP_reserved_5FC_WRITABLE    1
+#define HAL_SRVDSP_reserved_5FC_SIGNED      1
+#define HAL_SRVDSP_reserved_5FC_ADR         0xB0000BFC
+
+// Register K0_d
+#define HAL_SRVDSP_K0_d_REGISTER    (HAL_SRVDSPREG_MAP->K0_d)
+#define HAL_SRVDSP_K0_d_LSB         0
+#define HAL_SRVDSP_K0_d_MSB         15
+#define HAL_SRVDSP_K0_d_MASK        0x0000FFFF
+#define HAL_SRVDSP_K0_d_TYPE        SInt16
+#define HAL_SRVDSP_K0_d             HAL_SRVDSP_K0_d_MASK
+#define HAL_SRVDSP_K0_d_READABLE    1
+#define HAL_SRVDSP_K0_d_WRITABLE    1
+#define HAL_SRVDSP_K0_d_SIGNED      1
+#define HAL_SRVDSP_K0_d_ADR         0xB0000C00
+
+// Register K1_d
+#define HAL_SRVDSP_K1_d_REGISTER    (HAL_SRVDSPREG_MAP->K1_d)
+#define HAL_SRVDSP_K1_d_LSB         0
+#define HAL_SRVDSP_K1_d_MSB         15
+#define HAL_SRVDSP_K1_d_MASK        0x0000FFFF
+#define HAL_SRVDSP_K1_d_TYPE        SInt16
+#define HAL_SRVDSP_K1_d             HAL_SRVDSP_K1_d_MASK
+#define HAL_SRVDSP_K1_d_READABLE    1
+#define HAL_SRVDSP_K1_d_WRITABLE    1
+#define HAL_SRVDSP_K1_d_SIGNED      1
+#define HAL_SRVDSP_K1_d_ADR         0xB0000C04
+
+// Register K1_dd
+#define HAL_SRVDSP_K1_dd_REGISTER    (HAL_SRVDSPREG_MAP->K1_dd)
+#define HAL_SRVDSP_K1_dd_LSB         0
+#define HAL_SRVDSP_K1_dd_MSB         15
+#define HAL_SRVDSP_K1_dd_MASK        0x0000FFFF
+#define HAL_SRVDSP_K1_dd_TYPE        SInt16
+#define HAL_SRVDSP_K1_dd             HAL_SRVDSP_K1_dd_MASK
+#define HAL_SRVDSP_K1_dd_READABLE    1
+#define HAL_SRVDSP_K1_dd_WRITABLE    1
+#define HAL_SRVDSP_K1_dd_SIGNED      1
+#define HAL_SRVDSP_K1_dd_ADR         0xB0000C08
+
+// Register K_1_d
+#define HAL_SRVDSP_K_1_d_REGISTER    (HAL_SRVDSPREG_MAP->K_1_d)
+#define HAL_SRVDSP_K_1_d_LSB         0
+#define HAL_SRVDSP_K_1_d_MSB         15
+#define HAL_SRVDSP_K_1_d_MASK        0x0000FFFF
+#define HAL_SRVDSP_K_1_d_TYPE        SInt16
+#define HAL_SRVDSP_K_1_d             HAL_SRVDSP_K_1_d_MASK
+#define HAL_SRVDSP_K_1_d_READABLE    1
+#define HAL_SRVDSP_K_1_d_WRITABLE    1
+#define HAL_SRVDSP_K_1_d_SIGNED      1
+#define HAL_SRVDSP_K_1_d_ADR         0xB0000C0C
+
+// Register src_foc_alfa
+#define HAL_SRVDSP_src_foc_alfa_REGISTER    (HAL_SRVDSPREG_MAP->src_foc_alfa)
+#define HAL_SRVDSP_src_foc_alfa_LSB         0
+#define HAL_SRVDSP_src_foc_alfa_MSB         15
+#define HAL_SRVDSP_src_foc_alfa_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_foc_alfa_TYPE        SInt16
+#define HAL_SRVDSP_src_foc_alfa             HAL_SRVDSP_src_foc_alfa_MASK
+#define HAL_SRVDSP_src_foc_alfa_READABLE    1
+#define HAL_SRVDSP_src_foc_alfa_WRITABLE    1
+#define HAL_SRVDSP_src_foc_alfa_SIGNED      1
+#define HAL_SRVDSP_src_foc_alfa_ADR         0xB0000C10
+
+// Register src_foc_tap
+#define HAL_SRVDSP_src_foc_tap_REGISTER    (HAL_SRVDSPREG_MAP->src_foc_tap)
+#define HAL_SRVDSP_src_foc_tap_LSB         0
+#define HAL_SRVDSP_src_foc_tap_MSB         15
+#define HAL_SRVDSP_src_foc_tap_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_foc_tap_TYPE        SInt16
+#define HAL_SRVDSP_src_foc_tap             HAL_SRVDSP_src_foc_tap_MASK
+#define HAL_SRVDSP_src_foc_tap_READABLE    1
+#define HAL_SRVDSP_src_foc_tap_WRITABLE    1
+#define HAL_SRVDSP_src_foc_tap_SIGNED      1
+#define HAL_SRVDSP_src_foc_tap_ADR         0xB0000C14
+
+// Register src_kf
+#define HAL_SRVDSP_src_kf_REGISTER    (HAL_SRVDSPREG_MAP->src_kf)
+#define HAL_SRVDSP_src_kf_LSB         0
+#define HAL_SRVDSP_src_kf_MSB         15
+#define HAL_SRVDSP_src_kf_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_kf_TYPE        SInt16
+#define HAL_SRVDSP_src_kf             HAL_SRVDSP_src_kf_MASK
+#define HAL_SRVDSP_src_kf_READABLE    1
+#define HAL_SRVDSP_src_kf_WRITABLE    1
+#define HAL_SRVDSP_src_kf_SIGNED      1
+#define HAL_SRVDSP_src_kf_ADR         0xB0000C18
+
+// Register src_foc_tap1
+#define HAL_SRVDSP_src_foc_tap1_REGISTER    (HAL_SRVDSPREG_MAP->src_foc_tap1)
+#define HAL_SRVDSP_src_foc_tap1_LSB         0
+#define HAL_SRVDSP_src_foc_tap1_MSB         15
+#define HAL_SRVDSP_src_foc_tap1_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_foc_tap1_TYPE        SInt16
+#define HAL_SRVDSP_src_foc_tap1             HAL_SRVDSP_src_foc_tap1_MASK
+#define HAL_SRVDSP_src_foc_tap1_READABLE    1
+#define HAL_SRVDSP_src_foc_tap1_WRITABLE    1
+#define HAL_SRVDSP_src_foc_tap1_SIGNED      1
+#define HAL_SRVDSP_src_foc_tap1_ADR         0xB0000C1C
+
+// Register src_foc_tap2
+#define HAL_SRVDSP_src_foc_tap2_REGISTER    (HAL_SRVDSPREG_MAP->src_foc_tap2)
+#define HAL_SRVDSP_src_foc_tap2_LSB         0
+#define HAL_SRVDSP_src_foc_tap2_MSB         15
+#define HAL_SRVDSP_src_foc_tap2_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_foc_tap2_TYPE        SInt16
+#define HAL_SRVDSP_src_foc_tap2             HAL_SRVDSP_src_foc_tap2_MASK
+#define HAL_SRVDSP_src_foc_tap2_READABLE    1
+#define HAL_SRVDSP_src_foc_tap2_WRITABLE    1
+#define HAL_SRVDSP_src_foc_tap2_SIGNED      1
+#define HAL_SRVDSP_src_foc_tap2_ADR         0xB0000C20
+
+// Register foc_roc_m1
+#define HAL_SRVDSP_foc_roc_m1_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_m1)
+#define HAL_SRVDSP_foc_roc_m1_LSB         0
+#define HAL_SRVDSP_foc_roc_m1_MSB         15
+#define HAL_SRVDSP_foc_roc_m1_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_m1_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_m1             HAL_SRVDSP_foc_roc_m1_MASK
+#define HAL_SRVDSP_foc_roc_m1_READABLE    1
+#define HAL_SRVDSP_foc_roc_m1_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_m1_SIGNED      1
+#define HAL_SRVDSP_foc_roc_m1_ADR         0xB0000C24
+
+// Register foc_roc_m2
+#define HAL_SRVDSP_foc_roc_m2_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_m2)
+#define HAL_SRVDSP_foc_roc_m2_LSB         0
+#define HAL_SRVDSP_foc_roc_m2_MSB         15
+#define HAL_SRVDSP_foc_roc_m2_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_m2_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_m2             HAL_SRVDSP_foc_roc_m2_MASK
+#define HAL_SRVDSP_foc_roc_m2_READABLE    1
+#define HAL_SRVDSP_foc_roc_m2_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_m2_SIGNED      1
+#define HAL_SRVDSP_foc_roc_m2_ADR         0xB0000C28
+
+// Register src_foc_fg
+#define HAL_SRVDSP_src_foc_fg_REGISTER    (HAL_SRVDSPREG_MAP->src_foc_fg)
+#define HAL_SRVDSP_src_foc_fg_LSB         0
+#define HAL_SRVDSP_src_foc_fg_MSB         15
+#define HAL_SRVDSP_src_foc_fg_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_foc_fg_TYPE        SInt16
+#define HAL_SRVDSP_src_foc_fg             HAL_SRVDSP_src_foc_fg_MASK
+#define HAL_SRVDSP_src_foc_fg_READABLE    1
+#define HAL_SRVDSP_src_foc_fg_WRITABLE    1
+#define HAL_SRVDSP_src_foc_fg_SIGNED      1
+#define HAL_SRVDSP_src_foc_fg_ADR         0xB0000C2C
+
+// Register src_foc_fir1
+#define HAL_SRVDSP_src_foc_fir1_REGISTER    (HAL_SRVDSPREG_MAP->src_foc_fir1)
+#define HAL_SRVDSP_src_foc_fir1_LSB         0
+#define HAL_SRVDSP_src_foc_fir1_MSB         15
+#define HAL_SRVDSP_src_foc_fir1_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_foc_fir1_TYPE        SInt16
+#define HAL_SRVDSP_src_foc_fir1             HAL_SRVDSP_src_foc_fir1_MASK
+#define HAL_SRVDSP_src_foc_fir1_READABLE    1
+#define HAL_SRVDSP_src_foc_fir1_WRITABLE    1
+#define HAL_SRVDSP_src_foc_fir1_SIGNED      1
+#define HAL_SRVDSP_src_foc_fir1_ADR         0xB0000C30
+
+// Register src_foc_fir2
+#define HAL_SRVDSP_src_foc_fir2_REGISTER    (HAL_SRVDSPREG_MAP->src_foc_fir2)
+#define HAL_SRVDSP_src_foc_fir2_LSB         0
+#define HAL_SRVDSP_src_foc_fir2_MSB         15
+#define HAL_SRVDSP_src_foc_fir2_MASK        0x0000FFFF
+#define HAL_SRVDSP_src_foc_fir2_TYPE        SInt16
+#define HAL_SRVDSP_src_foc_fir2             HAL_SRVDSP_src_foc_fir2_MASK
+#define HAL_SRVDSP_src_foc_fir2_READABLE    1
+#define HAL_SRVDSP_src_foc_fir2_WRITABLE    1
+#define HAL_SRVDSP_src_foc_fir2_SIGNED      1
+#define HAL_SRVDSP_src_foc_fir2_ADR         0xB0000C34
+
+// Register reserved_638
+#define HAL_SRVDSP_reserved_638_REGISTER    (HAL_SRVDSPREG_MAP->reserved_638)
+#define HAL_SRVDSP_reserved_638_LSB         0
+#define HAL_SRVDSP_reserved_638_MSB         15
+#define HAL_SRVDSP_reserved_638_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_638_TYPE        SInt16
+#define HAL_SRVDSP_reserved_638             HAL_SRVDSP_reserved_638_MASK
+#define HAL_SRVDSP_reserved_638_READABLE    1
+#define HAL_SRVDSP_reserved_638_WRITABLE    1
+#define HAL_SRVDSP_reserved_638_SIGNED      1
+#define HAL_SRVDSP_reserved_638_ADR         0xB0000C38
+
+// Register reserved_63C
+#define HAL_SRVDSP_reserved_63C_REGISTER    (HAL_SRVDSPREG_MAP->reserved_63C)
+#define HAL_SRVDSP_reserved_63C_LSB         0
+#define HAL_SRVDSP_reserved_63C_MSB         15
+#define HAL_SRVDSP_reserved_63C_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_63C_TYPE        SInt16
+#define HAL_SRVDSP_reserved_63C             HAL_SRVDSP_reserved_63C_MASK
+#define HAL_SRVDSP_reserved_63C_READABLE    1
+#define HAL_SRVDSP_reserved_63C_WRITABLE    1
+#define HAL_SRVDSP_reserved_63C_SIGNED      1
+#define HAL_SRVDSP_reserved_63C_ADR         0xB0000C3C
+
+// Register foc_roc_0
+#define HAL_SRVDSP_foc_roc_0_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_0)
+#define HAL_SRVDSP_foc_roc_0_LSB         0
+#define HAL_SRVDSP_foc_roc_0_MSB         15
+#define HAL_SRVDSP_foc_roc_0_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_0_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_0             HAL_SRVDSP_foc_roc_0_MASK
+#define HAL_SRVDSP_foc_roc_0_READABLE    1
+#define HAL_SRVDSP_foc_roc_0_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_0_SIGNED      1
+#define HAL_SRVDSP_foc_roc_0_ADR         0xB0000C40
+
+// Register foc_roc_1
+#define HAL_SRVDSP_foc_roc_1_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_1)
+#define HAL_SRVDSP_foc_roc_1_LSB         0
+#define HAL_SRVDSP_foc_roc_1_MSB         15
+#define HAL_SRVDSP_foc_roc_1_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_1_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_1             HAL_SRVDSP_foc_roc_1_MASK
+#define HAL_SRVDSP_foc_roc_1_READABLE    1
+#define HAL_SRVDSP_foc_roc_1_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_1_SIGNED      1
+#define HAL_SRVDSP_foc_roc_1_ADR         0xB0000C44
+
+// Register foc_roc_2
+#define HAL_SRVDSP_foc_roc_2_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_2)
+#define HAL_SRVDSP_foc_roc_2_LSB         0
+#define HAL_SRVDSP_foc_roc_2_MSB         15
+#define HAL_SRVDSP_foc_roc_2_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_2_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_2             HAL_SRVDSP_foc_roc_2_MASK
+#define HAL_SRVDSP_foc_roc_2_READABLE    1
+#define HAL_SRVDSP_foc_roc_2_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_2_SIGNED      1
+#define HAL_SRVDSP_foc_roc_2_ADR         0xB0000C48
+
+// Register foc_roc_3
+#define HAL_SRVDSP_foc_roc_3_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_3)
+#define HAL_SRVDSP_foc_roc_3_LSB         0
+#define HAL_SRVDSP_foc_roc_3_MSB         15
+#define HAL_SRVDSP_foc_roc_3_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_3_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_3             HAL_SRVDSP_foc_roc_3_MASK
+#define HAL_SRVDSP_foc_roc_3_READABLE    1
+#define HAL_SRVDSP_foc_roc_3_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_3_SIGNED      1
+#define HAL_SRVDSP_foc_roc_3_ADR         0xB0000C4C
+
+// Register foc_roc_4
+#define HAL_SRVDSP_foc_roc_4_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_4)
+#define HAL_SRVDSP_foc_roc_4_LSB         0
+#define HAL_SRVDSP_foc_roc_4_MSB         15
+#define HAL_SRVDSP_foc_roc_4_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_4_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_4             HAL_SRVDSP_foc_roc_4_MASK
+#define HAL_SRVDSP_foc_roc_4_READABLE    1
+#define HAL_SRVDSP_foc_roc_4_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_4_SIGNED      1
+#define HAL_SRVDSP_foc_roc_4_ADR         0xB0000C50
+
+// Register foc_roc_5
+#define HAL_SRVDSP_foc_roc_5_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_5)
+#define HAL_SRVDSP_foc_roc_5_LSB         0
+#define HAL_SRVDSP_foc_roc_5_MSB         15
+#define HAL_SRVDSP_foc_roc_5_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_5_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_5             HAL_SRVDSP_foc_roc_5_MASK
+#define HAL_SRVDSP_foc_roc_5_READABLE    1
+#define HAL_SRVDSP_foc_roc_5_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_5_SIGNED      1
+#define HAL_SRVDSP_foc_roc_5_ADR         0xB0000C54
+
+// Register foc_roc_6
+#define HAL_SRVDSP_foc_roc_6_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_6)
+#define HAL_SRVDSP_foc_roc_6_LSB         0
+#define HAL_SRVDSP_foc_roc_6_MSB         15
+#define HAL_SRVDSP_foc_roc_6_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_6_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_6             HAL_SRVDSP_foc_roc_6_MASK
+#define HAL_SRVDSP_foc_roc_6_READABLE    1
+#define HAL_SRVDSP_foc_roc_6_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_6_SIGNED      1
+#define HAL_SRVDSP_foc_roc_6_ADR         0xB0000C58
+
+// Register foc_roc_7
+#define HAL_SRVDSP_foc_roc_7_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_7)
+#define HAL_SRVDSP_foc_roc_7_LSB         0
+#define HAL_SRVDSP_foc_roc_7_MSB         15
+#define HAL_SRVDSP_foc_roc_7_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_7_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_7             HAL_SRVDSP_foc_roc_7_MASK
+#define HAL_SRVDSP_foc_roc_7_READABLE    1
+#define HAL_SRVDSP_foc_roc_7_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_7_SIGNED      1
+#define HAL_SRVDSP_foc_roc_7_ADR         0xB0000C5C
+
+// Register foc_roc_8
+#define HAL_SRVDSP_foc_roc_8_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_8)
+#define HAL_SRVDSP_foc_roc_8_LSB         0
+#define HAL_SRVDSP_foc_roc_8_MSB         15
+#define HAL_SRVDSP_foc_roc_8_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_8_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_8             HAL_SRVDSP_foc_roc_8_MASK
+#define HAL_SRVDSP_foc_roc_8_READABLE    1
+#define HAL_SRVDSP_foc_roc_8_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_8_SIGNED      1
+#define HAL_SRVDSP_foc_roc_8_ADR         0xB0000C60
+
+// Register foc_roc_9
+#define HAL_SRVDSP_foc_roc_9_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_9)
+#define HAL_SRVDSP_foc_roc_9_LSB         0
+#define HAL_SRVDSP_foc_roc_9_MSB         15
+#define HAL_SRVDSP_foc_roc_9_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_9_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_9             HAL_SRVDSP_foc_roc_9_MASK
+#define HAL_SRVDSP_foc_roc_9_READABLE    1
+#define HAL_SRVDSP_foc_roc_9_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_9_SIGNED      1
+#define HAL_SRVDSP_foc_roc_9_ADR         0xB0000C64
+
+// Register foc_roc_10
+#define HAL_SRVDSP_foc_roc_10_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_10)
+#define HAL_SRVDSP_foc_roc_10_LSB         0
+#define HAL_SRVDSP_foc_roc_10_MSB         15
+#define HAL_SRVDSP_foc_roc_10_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_10_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_10             HAL_SRVDSP_foc_roc_10_MASK
+#define HAL_SRVDSP_foc_roc_10_READABLE    1
+#define HAL_SRVDSP_foc_roc_10_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_10_SIGNED      1
+#define HAL_SRVDSP_foc_roc_10_ADR         0xB0000C68
+
+// Register foc_roc_11
+#define HAL_SRVDSP_foc_roc_11_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_11)
+#define HAL_SRVDSP_foc_roc_11_LSB         0
+#define HAL_SRVDSP_foc_roc_11_MSB         15
+#define HAL_SRVDSP_foc_roc_11_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_11_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_11             HAL_SRVDSP_foc_roc_11_MASK
+#define HAL_SRVDSP_foc_roc_11_READABLE    1
+#define HAL_SRVDSP_foc_roc_11_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_11_SIGNED      1
+#define HAL_SRVDSP_foc_roc_11_ADR         0xB0000C6C
+
+// Register foc_roc_12
+#define HAL_SRVDSP_foc_roc_12_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_12)
+#define HAL_SRVDSP_foc_roc_12_LSB         0
+#define HAL_SRVDSP_foc_roc_12_MSB         15
+#define HAL_SRVDSP_foc_roc_12_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_12_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_12             HAL_SRVDSP_foc_roc_12_MASK
+#define HAL_SRVDSP_foc_roc_12_READABLE    1
+#define HAL_SRVDSP_foc_roc_12_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_12_SIGNED      1
+#define HAL_SRVDSP_foc_roc_12_ADR         0xB0000C70
+
+// Register foc_roc_13
+#define HAL_SRVDSP_foc_roc_13_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_13)
+#define HAL_SRVDSP_foc_roc_13_LSB         0
+#define HAL_SRVDSP_foc_roc_13_MSB         15
+#define HAL_SRVDSP_foc_roc_13_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_13_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_13             HAL_SRVDSP_foc_roc_13_MASK
+#define HAL_SRVDSP_foc_roc_13_READABLE    1
+#define HAL_SRVDSP_foc_roc_13_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_13_SIGNED      1
+#define HAL_SRVDSP_foc_roc_13_ADR         0xB0000C74
+
+// Register foc_roc_14
+#define HAL_SRVDSP_foc_roc_14_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_14)
+#define HAL_SRVDSP_foc_roc_14_LSB         0
+#define HAL_SRVDSP_foc_roc_14_MSB         15
+#define HAL_SRVDSP_foc_roc_14_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_14_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_14             HAL_SRVDSP_foc_roc_14_MASK
+#define HAL_SRVDSP_foc_roc_14_READABLE    1
+#define HAL_SRVDSP_foc_roc_14_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_14_SIGNED      1
+#define HAL_SRVDSP_foc_roc_14_ADR         0xB0000C78
+
+// Register foc_roc_15
+#define HAL_SRVDSP_foc_roc_15_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_15)
+#define HAL_SRVDSP_foc_roc_15_LSB         0
+#define HAL_SRVDSP_foc_roc_15_MSB         15
+#define HAL_SRVDSP_foc_roc_15_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_15_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_15             HAL_SRVDSP_foc_roc_15_MASK
+#define HAL_SRVDSP_foc_roc_15_READABLE    1
+#define HAL_SRVDSP_foc_roc_15_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_15_SIGNED      1
+#define HAL_SRVDSP_foc_roc_15_ADR         0xB0000C7C
+
+// Register foc_roc_16
+#define HAL_SRVDSP_foc_roc_16_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_16)
+#define HAL_SRVDSP_foc_roc_16_LSB         0
+#define HAL_SRVDSP_foc_roc_16_MSB         15
+#define HAL_SRVDSP_foc_roc_16_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_16_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_16             HAL_SRVDSP_foc_roc_16_MASK
+#define HAL_SRVDSP_foc_roc_16_READABLE    1
+#define HAL_SRVDSP_foc_roc_16_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_16_SIGNED      1
+#define HAL_SRVDSP_foc_roc_16_ADR         0xB0000C80
+
+// Register foc_roc_17
+#define HAL_SRVDSP_foc_roc_17_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_17)
+#define HAL_SRVDSP_foc_roc_17_LSB         0
+#define HAL_SRVDSP_foc_roc_17_MSB         15
+#define HAL_SRVDSP_foc_roc_17_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_17_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_17             HAL_SRVDSP_foc_roc_17_MASK
+#define HAL_SRVDSP_foc_roc_17_READABLE    1
+#define HAL_SRVDSP_foc_roc_17_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_17_SIGNED      1
+#define HAL_SRVDSP_foc_roc_17_ADR         0xB0000C84
+
+// Register foc_roc_18
+#define HAL_SRVDSP_foc_roc_18_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_18)
+#define HAL_SRVDSP_foc_roc_18_LSB         0
+#define HAL_SRVDSP_foc_roc_18_MSB         15
+#define HAL_SRVDSP_foc_roc_18_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_18_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_18             HAL_SRVDSP_foc_roc_18_MASK
+#define HAL_SRVDSP_foc_roc_18_READABLE    1
+#define HAL_SRVDSP_foc_roc_18_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_18_SIGNED      1
+#define HAL_SRVDSP_foc_roc_18_ADR         0xB0000C88
+
+// Register foc_roc_19
+#define HAL_SRVDSP_foc_roc_19_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_19)
+#define HAL_SRVDSP_foc_roc_19_LSB         0
+#define HAL_SRVDSP_foc_roc_19_MSB         15
+#define HAL_SRVDSP_foc_roc_19_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_19_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_19             HAL_SRVDSP_foc_roc_19_MASK
+#define HAL_SRVDSP_foc_roc_19_READABLE    1
+#define HAL_SRVDSP_foc_roc_19_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_19_SIGNED      1
+#define HAL_SRVDSP_foc_roc_19_ADR         0xB0000C8C
+
+// Register foc_roc_20
+#define HAL_SRVDSP_foc_roc_20_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_20)
+#define HAL_SRVDSP_foc_roc_20_LSB         0
+#define HAL_SRVDSP_foc_roc_20_MSB         15
+#define HAL_SRVDSP_foc_roc_20_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_20_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_20             HAL_SRVDSP_foc_roc_20_MASK
+#define HAL_SRVDSP_foc_roc_20_READABLE    1
+#define HAL_SRVDSP_foc_roc_20_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_20_SIGNED      1
+#define HAL_SRVDSP_foc_roc_20_ADR         0xB0000C90
+
+// Register foc_roc_21
+#define HAL_SRVDSP_foc_roc_21_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_21)
+#define HAL_SRVDSP_foc_roc_21_LSB         0
+#define HAL_SRVDSP_foc_roc_21_MSB         15
+#define HAL_SRVDSP_foc_roc_21_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_21_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_21             HAL_SRVDSP_foc_roc_21_MASK
+#define HAL_SRVDSP_foc_roc_21_READABLE    1
+#define HAL_SRVDSP_foc_roc_21_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_21_SIGNED      1
+#define HAL_SRVDSP_foc_roc_21_ADR         0xB0000C94
+
+// Register foc_roc_22
+#define HAL_SRVDSP_foc_roc_22_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_22)
+#define HAL_SRVDSP_foc_roc_22_LSB         0
+#define HAL_SRVDSP_foc_roc_22_MSB         15
+#define HAL_SRVDSP_foc_roc_22_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_22_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_22             HAL_SRVDSP_foc_roc_22_MASK
+#define HAL_SRVDSP_foc_roc_22_READABLE    1
+#define HAL_SRVDSP_foc_roc_22_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_22_SIGNED      1
+#define HAL_SRVDSP_foc_roc_22_ADR         0xB0000C98
+
+// Register foc_roc_23
+#define HAL_SRVDSP_foc_roc_23_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_23)
+#define HAL_SRVDSP_foc_roc_23_LSB         0
+#define HAL_SRVDSP_foc_roc_23_MSB         15
+#define HAL_SRVDSP_foc_roc_23_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_23_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_23             HAL_SRVDSP_foc_roc_23_MASK
+#define HAL_SRVDSP_foc_roc_23_READABLE    1
+#define HAL_SRVDSP_foc_roc_23_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_23_SIGNED      1
+#define HAL_SRVDSP_foc_roc_23_ADR         0xB0000C9C
+
+// Register foc_roc_24
+#define HAL_SRVDSP_foc_roc_24_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_24)
+#define HAL_SRVDSP_foc_roc_24_LSB         0
+#define HAL_SRVDSP_foc_roc_24_MSB         15
+#define HAL_SRVDSP_foc_roc_24_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_24_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_24             HAL_SRVDSP_foc_roc_24_MASK
+#define HAL_SRVDSP_foc_roc_24_READABLE    1
+#define HAL_SRVDSP_foc_roc_24_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_24_SIGNED      1
+#define HAL_SRVDSP_foc_roc_24_ADR         0xB0000CA0
+
+// Register foc_roc_25
+#define HAL_SRVDSP_foc_roc_25_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_25)
+#define HAL_SRVDSP_foc_roc_25_LSB         0
+#define HAL_SRVDSP_foc_roc_25_MSB         15
+#define HAL_SRVDSP_foc_roc_25_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_25_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_25             HAL_SRVDSP_foc_roc_25_MASK
+#define HAL_SRVDSP_foc_roc_25_READABLE    1
+#define HAL_SRVDSP_foc_roc_25_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_25_SIGNED      1
+#define HAL_SRVDSP_foc_roc_25_ADR         0xB0000CA4
+
+// Register foc_roc_26
+#define HAL_SRVDSP_foc_roc_26_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_26)
+#define HAL_SRVDSP_foc_roc_26_LSB         0
+#define HAL_SRVDSP_foc_roc_26_MSB         15
+#define HAL_SRVDSP_foc_roc_26_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_26_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_26             HAL_SRVDSP_foc_roc_26_MASK
+#define HAL_SRVDSP_foc_roc_26_READABLE    1
+#define HAL_SRVDSP_foc_roc_26_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_26_SIGNED      1
+#define HAL_SRVDSP_foc_roc_26_ADR         0xB0000CA8
+
+// Register foc_roc_27
+#define HAL_SRVDSP_foc_roc_27_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_27)
+#define HAL_SRVDSP_foc_roc_27_LSB         0
+#define HAL_SRVDSP_foc_roc_27_MSB         15
+#define HAL_SRVDSP_foc_roc_27_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_27_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_27             HAL_SRVDSP_foc_roc_27_MASK
+#define HAL_SRVDSP_foc_roc_27_READABLE    1
+#define HAL_SRVDSP_foc_roc_27_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_27_SIGNED      1
+#define HAL_SRVDSP_foc_roc_27_ADR         0xB0000CAC
+
+// Register foc_roc_28
+#define HAL_SRVDSP_foc_roc_28_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_28)
+#define HAL_SRVDSP_foc_roc_28_LSB         0
+#define HAL_SRVDSP_foc_roc_28_MSB         15
+#define HAL_SRVDSP_foc_roc_28_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_28_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_28             HAL_SRVDSP_foc_roc_28_MASK
+#define HAL_SRVDSP_foc_roc_28_READABLE    1
+#define HAL_SRVDSP_foc_roc_28_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_28_SIGNED      1
+#define HAL_SRVDSP_foc_roc_28_ADR         0xB0000CB0
+
+// Register foc_roc_29
+#define HAL_SRVDSP_foc_roc_29_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_29)
+#define HAL_SRVDSP_foc_roc_29_LSB         0
+#define HAL_SRVDSP_foc_roc_29_MSB         15
+#define HAL_SRVDSP_foc_roc_29_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_29_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_29             HAL_SRVDSP_foc_roc_29_MASK
+#define HAL_SRVDSP_foc_roc_29_READABLE    1
+#define HAL_SRVDSP_foc_roc_29_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_29_SIGNED      1
+#define HAL_SRVDSP_foc_roc_29_ADR         0xB0000CB4
+
+// Register foc_roc_30
+#define HAL_SRVDSP_foc_roc_30_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_30)
+#define HAL_SRVDSP_foc_roc_30_LSB         0
+#define HAL_SRVDSP_foc_roc_30_MSB         15
+#define HAL_SRVDSP_foc_roc_30_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_30_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_30             HAL_SRVDSP_foc_roc_30_MASK
+#define HAL_SRVDSP_foc_roc_30_READABLE    1
+#define HAL_SRVDSP_foc_roc_30_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_30_SIGNED      1
+#define HAL_SRVDSP_foc_roc_30_ADR         0xB0000CB8
+
+// Register foc_roc_31
+#define HAL_SRVDSP_foc_roc_31_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_31)
+#define HAL_SRVDSP_foc_roc_31_LSB         0
+#define HAL_SRVDSP_foc_roc_31_MSB         15
+#define HAL_SRVDSP_foc_roc_31_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_31_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_31             HAL_SRVDSP_foc_roc_31_MASK
+#define HAL_SRVDSP_foc_roc_31_READABLE    1
+#define HAL_SRVDSP_foc_roc_31_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_31_SIGNED      1
+#define HAL_SRVDSP_foc_roc_31_ADR         0xB0000CBC
+
+// Register foc_roc_32
+#define HAL_SRVDSP_foc_roc_32_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_32)
+#define HAL_SRVDSP_foc_roc_32_LSB         0
+#define HAL_SRVDSP_foc_roc_32_MSB         15
+#define HAL_SRVDSP_foc_roc_32_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_32_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_32             HAL_SRVDSP_foc_roc_32_MASK
+#define HAL_SRVDSP_foc_roc_32_READABLE    1
+#define HAL_SRVDSP_foc_roc_32_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_32_SIGNED      1
+#define HAL_SRVDSP_foc_roc_32_ADR         0xB0000CC0
+
+// Register foc_roc_33
+#define HAL_SRVDSP_foc_roc_33_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_33)
+#define HAL_SRVDSP_foc_roc_33_LSB         0
+#define HAL_SRVDSP_foc_roc_33_MSB         15
+#define HAL_SRVDSP_foc_roc_33_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_33_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_33             HAL_SRVDSP_foc_roc_33_MASK
+#define HAL_SRVDSP_foc_roc_33_READABLE    1
+#define HAL_SRVDSP_foc_roc_33_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_33_SIGNED      1
+#define HAL_SRVDSP_foc_roc_33_ADR         0xB0000CC4
+
+// Register foc_roc_34
+#define HAL_SRVDSP_foc_roc_34_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_34)
+#define HAL_SRVDSP_foc_roc_34_LSB         0
+#define HAL_SRVDSP_foc_roc_34_MSB         15
+#define HAL_SRVDSP_foc_roc_34_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_34_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_34             HAL_SRVDSP_foc_roc_34_MASK
+#define HAL_SRVDSP_foc_roc_34_READABLE    1
+#define HAL_SRVDSP_foc_roc_34_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_34_SIGNED      1
+#define HAL_SRVDSP_foc_roc_34_ADR         0xB0000CC8
+
+// Register foc_roc_35
+#define HAL_SRVDSP_foc_roc_35_REGISTER    (HAL_SRVDSPREG_MAP->foc_roc_35)
+#define HAL_SRVDSP_foc_roc_35_LSB         0
+#define HAL_SRVDSP_foc_roc_35_MSB         15
+#define HAL_SRVDSP_foc_roc_35_MASK        0x0000FFFF
+#define HAL_SRVDSP_foc_roc_35_TYPE        SInt16
+#define HAL_SRVDSP_foc_roc_35             HAL_SRVDSP_foc_roc_35_MASK
+#define HAL_SRVDSP_foc_roc_35_READABLE    1
+#define HAL_SRVDSP_foc_roc_35_WRITABLE    1
+#define HAL_SRVDSP_foc_roc_35_SIGNED      1
+#define HAL_SRVDSP_foc_roc_35_ADR         0xB0000CCC
+
+// Register reserved_6D0
+#define HAL_SRVDSP_reserved_6D0_REGISTER    (HAL_SRVDSPREG_MAP->reserved_6D0)
+#define HAL_SRVDSP_reserved_6D0_LSB         0
+#define HAL_SRVDSP_reserved_6D0_MSB         15
+#define HAL_SRVDSP_reserved_6D0_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_6D0_TYPE        SInt16
+#define HAL_SRVDSP_reserved_6D0             HAL_SRVDSP_reserved_6D0_MASK
+#define HAL_SRVDSP_reserved_6D0_READABLE    1
+#define HAL_SRVDSP_reserved_6D0_WRITABLE    1
+#define HAL_SRVDSP_reserved_6D0_SIGNED      1
+#define HAL_SRVDSP_reserved_6D0_ADR         0xB0000CD0
+
+// Register reserved_6D4
+#define HAL_SRVDSP_reserved_6D4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_6D4)
+#define HAL_SRVDSP_reserved_6D4_LSB         0
+#define HAL_SRVDSP_reserved_6D4_MSB         15
+#define HAL_SRVDSP_reserved_6D4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_6D4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_6D4             HAL_SRVDSP_reserved_6D4_MASK
+#define HAL_SRVDSP_reserved_6D4_READABLE    1
+#define HAL_SRVDSP_reserved_6D4_WRITABLE    1
+#define HAL_SRVDSP_reserved_6D4_SIGNED      1
+#define HAL_SRVDSP_reserved_6D4_ADR         0xB0000CD4
+
+// Register reserved_6D8
+#define HAL_SRVDSP_reserved_6D8_REGISTER    (HAL_SRVDSPREG_MAP->reserved_6D8)
+#define HAL_SRVDSP_reserved_6D8_LSB         0
+#define HAL_SRVDSP_reserved_6D8_MSB         15
+#define HAL_SRVDSP_reserved_6D8_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_6D8_TYPE        SInt16
+#define HAL_SRVDSP_reserved_6D8             HAL_SRVDSP_reserved_6D8_MASK
+#define HAL_SRVDSP_reserved_6D8_READABLE    1
+#define HAL_SRVDSP_reserved_6D8_WRITABLE    1
+#define HAL_SRVDSP_reserved_6D8_SIGNED      1
+#define HAL_SRVDSP_reserved_6D8_ADR         0xB0000CD8
+
+// Register reserved_6DC
+#define HAL_SRVDSP_reserved_6DC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_6DC)
+#define HAL_SRVDSP_reserved_6DC_LSB         0
+#define HAL_SRVDSP_reserved_6DC_MSB         15
+#define HAL_SRVDSP_reserved_6DC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_6DC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_6DC             HAL_SRVDSP_reserved_6DC_MASK
+#define HAL_SRVDSP_reserved_6DC_READABLE    1
+#define HAL_SRVDSP_reserved_6DC_WRITABLE    1
+#define HAL_SRVDSP_reserved_6DC_SIGNED      1
+#define HAL_SRVDSP_reserved_6DC_ADR         0xB0000CDC
+
+// Register reserved_6E0
+#define HAL_SRVDSP_reserved_6E0_REGISTER    (HAL_SRVDSPREG_MAP->reserved_6E0)
+#define HAL_SRVDSP_reserved_6E0_LSB         0
+#define HAL_SRVDSP_reserved_6E0_MSB         15
+#define HAL_SRVDSP_reserved_6E0_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_6E0_TYPE        SInt16
+#define HAL_SRVDSP_reserved_6E0             HAL_SRVDSP_reserved_6E0_MASK
+#define HAL_SRVDSP_reserved_6E0_READABLE    1
+#define HAL_SRVDSP_reserved_6E0_WRITABLE    1
+#define HAL_SRVDSP_reserved_6E0_SIGNED      1
+#define HAL_SRVDSP_reserved_6E0_ADR         0xB0000CE0
+
+// Register reserved_6E4
+#define HAL_SRVDSP_reserved_6E4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_6E4)
+#define HAL_SRVDSP_reserved_6E4_LSB         0
+#define HAL_SRVDSP_reserved_6E4_MSB         15
+#define HAL_SRVDSP_reserved_6E4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_6E4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_6E4             HAL_SRVDSP_reserved_6E4_MASK
+#define HAL_SRVDSP_reserved_6E4_READABLE    1
+#define HAL_SRVDSP_reserved_6E4_WRITABLE    1
+#define HAL_SRVDSP_reserved_6E4_SIGNED      1
+#define HAL_SRVDSP_reserved_6E4_ADR         0xB0000CE4
+
+// Register reserved_6E8
+#define HAL_SRVDSP_reserved_6E8_REGISTER    (HAL_SRVDSPREG_MAP->reserved_6E8)
+#define HAL_SRVDSP_reserved_6E8_LSB         0
+#define HAL_SRVDSP_reserved_6E8_MSB         15
+#define HAL_SRVDSP_reserved_6E8_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_6E8_TYPE        SInt16
+#define HAL_SRVDSP_reserved_6E8             HAL_SRVDSP_reserved_6E8_MASK
+#define HAL_SRVDSP_reserved_6E8_READABLE    1
+#define HAL_SRVDSP_reserved_6E8_WRITABLE    1
+#define HAL_SRVDSP_reserved_6E8_SIGNED      1
+#define HAL_SRVDSP_reserved_6E8_ADR         0xB0000CE8
+
+// Register reserved_6EC
+#define HAL_SRVDSP_reserved_6EC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_6EC)
+#define HAL_SRVDSP_reserved_6EC_LSB         0
+#define HAL_SRVDSP_reserved_6EC_MSB         15
+#define HAL_SRVDSP_reserved_6EC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_6EC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_6EC             HAL_SRVDSP_reserved_6EC_MASK
+#define HAL_SRVDSP_reserved_6EC_READABLE    1
+#define HAL_SRVDSP_reserved_6EC_WRITABLE    1
+#define HAL_SRVDSP_reserved_6EC_SIGNED      1
+#define HAL_SRVDSP_reserved_6EC_ADR         0xB0000CEC
+
+// Register reserved_6F0
+#define HAL_SRVDSP_reserved_6F0_REGISTER    (HAL_SRVDSPREG_MAP->reserved_6F0)
+#define HAL_SRVDSP_reserved_6F0_LSB         0
+#define HAL_SRVDSP_reserved_6F0_MSB         15
+#define HAL_SRVDSP_reserved_6F0_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_6F0_TYPE        SInt16
+#define HAL_SRVDSP_reserved_6F0             HAL_SRVDSP_reserved_6F0_MASK
+#define HAL_SRVDSP_reserved_6F0_READABLE    1
+#define HAL_SRVDSP_reserved_6F0_WRITABLE    1
+#define HAL_SRVDSP_reserved_6F0_SIGNED      1
+#define HAL_SRVDSP_reserved_6F0_ADR         0xB0000CF0
+
+// Register reserved_6F4
+#define HAL_SRVDSP_reserved_6F4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_6F4)
+#define HAL_SRVDSP_reserved_6F4_LSB         0
+#define HAL_SRVDSP_reserved_6F4_MSB         15
+#define HAL_SRVDSP_reserved_6F4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_6F4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_6F4             HAL_SRVDSP_reserved_6F4_MASK
+#define HAL_SRVDSP_reserved_6F4_READABLE    1
+#define HAL_SRVDSP_reserved_6F4_WRITABLE    1
+#define HAL_SRVDSP_reserved_6F4_SIGNED      1
+#define HAL_SRVDSP_reserved_6F4_ADR         0xB0000CF4
+
+// Register reserved_6F8
+#define HAL_SRVDSP_reserved_6F8_REGISTER    (HAL_SRVDSPREG_MAP->reserved_6F8)
+#define HAL_SRVDSP_reserved_6F8_LSB         0
+#define HAL_SRVDSP_reserved_6F8_MSB         15
+#define HAL_SRVDSP_reserved_6F8_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_6F8_TYPE        SInt16
+#define HAL_SRVDSP_reserved_6F8             HAL_SRVDSP_reserved_6F8_MASK
+#define HAL_SRVDSP_reserved_6F8_READABLE    1
+#define HAL_SRVDSP_reserved_6F8_WRITABLE    1
+#define HAL_SRVDSP_reserved_6F8_SIGNED      1
+#define HAL_SRVDSP_reserved_6F8_ADR         0xB0000CF8
+
+// Register reserved_6FC
+#define HAL_SRVDSP_reserved_6FC_REGISTER    (HAL_SRVDSPREG_MAP->reserved_6FC)
+#define HAL_SRVDSP_reserved_6FC_LSB         0
+#define HAL_SRVDSP_reserved_6FC_MSB         15
+#define HAL_SRVDSP_reserved_6FC_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_6FC_TYPE        SInt16
+#define HAL_SRVDSP_reserved_6FC             HAL_SRVDSP_reserved_6FC_MASK
+#define HAL_SRVDSP_reserved_6FC_READABLE    1
+#define HAL_SRVDSP_reserved_6FC_WRITABLE    1
+#define HAL_SRVDSP_reserved_6FC_SIGNED      1
+#define HAL_SRVDSP_reserved_6FC_ADR         0xB0000CFC
+
+// Register reserved_700
+#define HAL_SRVDSP_reserved_700_REGISTER    (HAL_SRVDSPREG_MAP->reserved_700)
+#define HAL_SRVDSP_reserved_700_LSB         0
+#define HAL_SRVDSP_reserved_700_MSB         15
+#define HAL_SRVDSP_reserved_700_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_700_TYPE        SInt16
+#define HAL_SRVDSP_reserved_700             HAL_SRVDSP_reserved_700_MASK
+#define HAL_SRVDSP_reserved_700_READABLE    1
+#define HAL_SRVDSP_reserved_700_WRITABLE    1
+#define HAL_SRVDSP_reserved_700_SIGNED      1
+#define HAL_SRVDSP_reserved_700_ADR         0xB0000D00
+
+// Register reserved_704
+#define HAL_SRVDSP_reserved_704_REGISTER    (HAL_SRVDSPREG_MAP->reserved_704)
+#define HAL_SRVDSP_reserved_704_LSB         0
+#define HAL_SRVDSP_reserved_704_MSB         15
+#define HAL_SRVDSP_reserved_704_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_704_TYPE        SInt16
+#define HAL_SRVDSP_reserved_704             HAL_SRVDSP_reserved_704_MASK
+#define HAL_SRVDSP_reserved_704_READABLE    1
+#define HAL_SRVDSP_reserved_704_WRITABLE    1
+#define HAL_SRVDSP_reserved_704_SIGNED      1
+#define HAL_SRVDSP_reserved_704_ADR         0xB0000D04
+
+// Register reserved_708
+#define HAL_SRVDSP_reserved_708_REGISTER    (HAL_SRVDSPREG_MAP->reserved_708)
+#define HAL_SRVDSP_reserved_708_LSB         0
+#define HAL_SRVDSP_reserved_708_MSB         15
+#define HAL_SRVDSP_reserved_708_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_708_TYPE        SInt16
+#define HAL_SRVDSP_reserved_708             HAL_SRVDSP_reserved_708_MASK
+#define HAL_SRVDSP_reserved_708_READABLE    1
+#define HAL_SRVDSP_reserved_708_WRITABLE    1
+#define HAL_SRVDSP_reserved_708_SIGNED      1
+#define HAL_SRVDSP_reserved_708_ADR         0xB0000D08
+
+// Register reserved_70C
+#define HAL_SRVDSP_reserved_70C_REGISTER    (HAL_SRVDSPREG_MAP->reserved_70C)
+#define HAL_SRVDSP_reserved_70C_LSB         0
+#define HAL_SRVDSP_reserved_70C_MSB         15
+#define HAL_SRVDSP_reserved_70C_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_70C_TYPE        SInt16
+#define HAL_SRVDSP_reserved_70C             HAL_SRVDSP_reserved_70C_MASK
+#define HAL_SRVDSP_reserved_70C_READABLE    1
+#define HAL_SRVDSP_reserved_70C_WRITABLE    1
+#define HAL_SRVDSP_reserved_70C_SIGNED      1
+#define HAL_SRVDSP_reserved_70C_ADR         0xB0000D0C
+
+// Register reserved_710
+#define HAL_SRVDSP_reserved_710_REGISTER    (HAL_SRVDSPREG_MAP->reserved_710)
+#define HAL_SRVDSP_reserved_710_LSB         0
+#define HAL_SRVDSP_reserved_710_MSB         15
+#define HAL_SRVDSP_reserved_710_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_710_TYPE        SInt16
+#define HAL_SRVDSP_reserved_710             HAL_SRVDSP_reserved_710_MASK
+#define HAL_SRVDSP_reserved_710_READABLE    1
+#define HAL_SRVDSP_reserved_710_WRITABLE    1
+#define HAL_SRVDSP_reserved_710_SIGNED      1
+#define HAL_SRVDSP_reserved_710_ADR         0xB0000D10
+
+// Register reserved_714
+#define HAL_SRVDSP_reserved_714_REGISTER    (HAL_SRVDSPREG_MAP->reserved_714)
+#define HAL_SRVDSP_reserved_714_LSB         0
+#define HAL_SRVDSP_reserved_714_MSB         15
+#define HAL_SRVDSP_reserved_714_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_714_TYPE        SInt16
+#define HAL_SRVDSP_reserved_714             HAL_SRVDSP_reserved_714_MASK
+#define HAL_SRVDSP_reserved_714_READABLE    1
+#define HAL_SRVDSP_reserved_714_WRITABLE    1
+#define HAL_SRVDSP_reserved_714_SIGNED      1
+#define HAL_SRVDSP_reserved_714_ADR         0xB0000D14
+
+// Register reserved_718
+#define HAL_SRVDSP_reserved_718_REGISTER    (HAL_SRVDSPREG_MAP->reserved_718)
+#define HAL_SRVDSP_reserved_718_LSB         0
+#define HAL_SRVDSP_reserved_718_MSB         15
+#define HAL_SRVDSP_reserved_718_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_718_TYPE        SInt16
+#define HAL_SRVDSP_reserved_718             HAL_SRVDSP_reserved_718_MASK
+#define HAL_SRVDSP_reserved_718_READABLE    1
+#define HAL_SRVDSP_reserved_718_WRITABLE    1
+#define HAL_SRVDSP_reserved_718_SIGNED      1
+#define HAL_SRVDSP_reserved_718_ADR         0xB0000D18
+
+// Register reserved_71C
+#define HAL_SRVDSP_reserved_71C_REGISTER    (HAL_SRVDSPREG_MAP->reserved_71C)
+#define HAL_SRVDSP_reserved_71C_LSB         0
+#define HAL_SRVDSP_reserved_71C_MSB         15
+#define HAL_SRVDSP_reserved_71C_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_71C_TYPE        SInt16
+#define HAL_SRVDSP_reserved_71C             HAL_SRVDSP_reserved_71C_MASK
+#define HAL_SRVDSP_reserved_71C_READABLE    1
+#define HAL_SRVDSP_reserved_71C_WRITABLE    1
+#define HAL_SRVDSP_reserved_71C_SIGNED      1
+#define HAL_SRVDSP_reserved_71C_ADR         0xB0000D1C
+
+// Register reserved_720
+#define HAL_SRVDSP_reserved_720_REGISTER    (HAL_SRVDSPREG_MAP->reserved_720)
+#define HAL_SRVDSP_reserved_720_LSB         0
+#define HAL_SRVDSP_reserved_720_MSB         15
+#define HAL_SRVDSP_reserved_720_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_720_TYPE        SInt16
+#define HAL_SRVDSP_reserved_720             HAL_SRVDSP_reserved_720_MASK
+#define HAL_SRVDSP_reserved_720_READABLE    1
+#define HAL_SRVDSP_reserved_720_WRITABLE    1
+#define HAL_SRVDSP_reserved_720_SIGNED      1
+#define HAL_SRVDSP_reserved_720_ADR         0xB0000D20
+
+// Register reserved_724
+#define HAL_SRVDSP_reserved_724_REGISTER    (HAL_SRVDSPREG_MAP->reserved_724)
+#define HAL_SRVDSP_reserved_724_LSB         0
+#define HAL_SRVDSP_reserved_724_MSB         15
+#define HAL_SRVDSP_reserved_724_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_724_TYPE        SInt16
+#define HAL_SRVDSP_reserved_724             HAL_SRVDSP_reserved_724_MASK
+#define HAL_SRVDSP_reserved_724_READABLE    1
+#define HAL_SRVDSP_reserved_724_WRITABLE    1
+#define HAL_SRVDSP_reserved_724_SIGNED      1
+#define HAL_SRVDSP_reserved_724_ADR         0xB0000D24
+
+// Register Offset0_0
+#define HAL_SRVDSP_Offset0_0_REGISTER    (HAL_SRVDSPREG_MAP->Offset0_0)
+#define HAL_SRVDSP_Offset0_0_LSB         0
+#define HAL_SRVDSP_Offset0_0_MSB         15
+#define HAL_SRVDSP_Offset0_0_MASK        0x0000FFFF
+#define HAL_SRVDSP_Offset0_0_TYPE        SInt16
+#define HAL_SRVDSP_Offset0_0             HAL_SRVDSP_Offset0_0_MASK
+#define HAL_SRVDSP_Offset0_0_READABLE    1
+#define HAL_SRVDSP_Offset0_0_WRITABLE    1
+#define HAL_SRVDSP_Offset0_0_SIGNED      1
+#define HAL_SRVDSP_Offset0_0_ADR         0xB0000D28
+
+// Register Offset0_1
+#define HAL_SRVDSP_Offset0_1_REGISTER    (HAL_SRVDSPREG_MAP->Offset0_1)
+#define HAL_SRVDSP_Offset0_1_LSB         0
+#define HAL_SRVDSP_Offset0_1_MSB         15
+#define HAL_SRVDSP_Offset0_1_MASK        0x0000FFFF
+#define HAL_SRVDSP_Offset0_1_TYPE        SInt16
+#define HAL_SRVDSP_Offset0_1             HAL_SRVDSP_Offset0_1_MASK
+#define HAL_SRVDSP_Offset0_1_READABLE    1
+#define HAL_SRVDSP_Offset0_1_WRITABLE    1
+#define HAL_SRVDSP_Offset0_1_SIGNED      1
+#define HAL_SRVDSP_Offset0_1_ADR         0xB0000D2C
+
+// Register Offset1_0
+#define HAL_SRVDSP_Offset1_0_REGISTER    (HAL_SRVDSPREG_MAP->Offset1_0)
+#define HAL_SRVDSP_Offset1_0_LSB         0
+#define HAL_SRVDSP_Offset1_0_MSB         15
+#define HAL_SRVDSP_Offset1_0_MASK        0x0000FFFF
+#define HAL_SRVDSP_Offset1_0_TYPE        SInt16
+#define HAL_SRVDSP_Offset1_0             HAL_SRVDSP_Offset1_0_MASK
+#define HAL_SRVDSP_Offset1_0_READABLE    1
+#define HAL_SRVDSP_Offset1_0_WRITABLE    1
+#define HAL_SRVDSP_Offset1_0_SIGNED      1
+#define HAL_SRVDSP_Offset1_0_ADR         0xB0000D30
+
+// Register Offset1_1
+#define HAL_SRVDSP_Offset1_1_REGISTER    (HAL_SRVDSPREG_MAP->Offset1_1)
+#define HAL_SRVDSP_Offset1_1_LSB         0
+#define HAL_SRVDSP_Offset1_1_MSB         15
+#define HAL_SRVDSP_Offset1_1_MASK        0x0000FFFF
+#define HAL_SRVDSP_Offset1_1_TYPE        SInt16
+#define HAL_SRVDSP_Offset1_1             HAL_SRVDSP_Offset1_1_MASK
+#define HAL_SRVDSP_Offset1_1_READABLE    1
+#define HAL_SRVDSP_Offset1_1_WRITABLE    1
+#define HAL_SRVDSP_Offset1_1_SIGNED      1
+#define HAL_SRVDSP_Offset1_1_ADR         0xB0000D34
+
+// Register Offset2_0
+#define HAL_SRVDSP_Offset2_0_REGISTER    (HAL_SRVDSPREG_MAP->Offset2_0)
+#define HAL_SRVDSP_Offset2_0_LSB         0
+#define HAL_SRVDSP_Offset2_0_MSB         15
+#define HAL_SRVDSP_Offset2_0_MASK        0x0000FFFF
+#define HAL_SRVDSP_Offset2_0_TYPE        SInt16
+#define HAL_SRVDSP_Offset2_0             HAL_SRVDSP_Offset2_0_MASK
+#define HAL_SRVDSP_Offset2_0_READABLE    1
+#define HAL_SRVDSP_Offset2_0_WRITABLE    1
+#define HAL_SRVDSP_Offset2_0_SIGNED      1
+#define HAL_SRVDSP_Offset2_0_ADR         0xB0000D38
+
+// Register Offset2_1
+#define HAL_SRVDSP_Offset2_1_REGISTER    (HAL_SRVDSPREG_MAP->Offset2_1)
+#define HAL_SRVDSP_Offset2_1_LSB         0
+#define HAL_SRVDSP_Offset2_1_MSB         15
+#define HAL_SRVDSP_Offset2_1_MASK        0x0000FFFF
+#define HAL_SRVDSP_Offset2_1_TYPE        SInt16
+#define HAL_SRVDSP_Offset2_1             HAL_SRVDSP_Offset2_1_MASK
+#define HAL_SRVDSP_Offset2_1_READABLE    1
+#define HAL_SRVDSP_Offset2_1_WRITABLE    1
+#define HAL_SRVDSP_Offset2_1_SIGNED      1
+#define HAL_SRVDSP_Offset2_1_ADR         0xB0000D3C
+
+// Register Pread0RS
+#define HAL_SRVDSP_Pread0RS_REGISTER    (HAL_SRVDSPREG_MAP->Pread0RS)
+#define HAL_SRVDSP_Pread0RS_LSB         0
+#define HAL_SRVDSP_Pread0RS_MSB         15
+#define HAL_SRVDSP_Pread0RS_MASK        0x0000FFFF
+#define HAL_SRVDSP_Pread0RS_TYPE        SInt16
+#define HAL_SRVDSP_Pread0RS             HAL_SRVDSP_Pread0RS_MASK
+#define HAL_SRVDSP_Pread0RS_READABLE    1
+#define HAL_SRVDSP_Pread0RS_WRITABLE    1
+#define HAL_SRVDSP_Pread0RS_SIGNED      1
+#define HAL_SRVDSP_Pread0RS_ADR         0xB0000D40
+
+// Register Pread1RS
+#define HAL_SRVDSP_Pread1RS_REGISTER    (HAL_SRVDSPREG_MAP->Pread1RS)
+#define HAL_SRVDSP_Pread1RS_LSB         0
+#define HAL_SRVDSP_Pread1RS_MSB         15
+#define HAL_SRVDSP_Pread1RS_MASK        0x0000FFFF
+#define HAL_SRVDSP_Pread1RS_TYPE        SInt16
+#define HAL_SRVDSP_Pread1RS             HAL_SRVDSP_Pread1RS_MASK
+#define HAL_SRVDSP_Pread1RS_READABLE    1
+#define HAL_SRVDSP_Pread1RS_WRITABLE    1
+#define HAL_SRVDSP_Pread1RS_SIGNED      1
+#define HAL_SRVDSP_Pread1RS_ADR         0xB0000D44
+
+// Register Pbias0RS
+#define HAL_SRVDSP_Pbias0RS_REGISTER    (HAL_SRVDSPREG_MAP->Pbias0RS)
+#define HAL_SRVDSP_Pbias0RS_LSB         0
+#define HAL_SRVDSP_Pbias0RS_MSB         15
+#define HAL_SRVDSP_Pbias0RS_MASK        0x0000FFFF
+#define HAL_SRVDSP_Pbias0RS_TYPE        SInt16
+#define HAL_SRVDSP_Pbias0RS             HAL_SRVDSP_Pbias0RS_MASK
+#define HAL_SRVDSP_Pbias0RS_READABLE    1
+#define HAL_SRVDSP_Pbias0RS_WRITABLE    1
+#define HAL_SRVDSP_Pbias0RS_SIGNED      1
+#define HAL_SRVDSP_Pbias0RS_ADR         0xB0000D48
+
+// Register Pbias1RS
+#define HAL_SRVDSP_Pbias1RS_REGISTER    (HAL_SRVDSPREG_MAP->Pbias1RS)
+#define HAL_SRVDSP_Pbias1RS_LSB         0
+#define HAL_SRVDSP_Pbias1RS_MSB         15
+#define HAL_SRVDSP_Pbias1RS_MASK        0x0000FFFF
+#define HAL_SRVDSP_Pbias1RS_TYPE        SInt16
+#define HAL_SRVDSP_Pbias1RS             HAL_SRVDSP_Pbias1RS_MASK
+#define HAL_SRVDSP_Pbias1RS_READABLE    1
+#define HAL_SRVDSP_Pbias1RS_WRITABLE    1
+#define HAL_SRVDSP_Pbias1RS_SIGNED      1
+#define HAL_SRVDSP_Pbias1RS_ADR         0xB0000D4C
+
+// Register Pbias0pRS
+#define HAL_SRVDSP_Pbias0pRS_REGISTER    (HAL_SRVDSPREG_MAP->Pbias0pRS)
+#define HAL_SRVDSP_Pbias0pRS_LSB         0
+#define HAL_SRVDSP_Pbias0pRS_MSB         15
+#define HAL_SRVDSP_Pbias0pRS_MASK        0x0000FFFF
+#define HAL_SRVDSP_Pbias0pRS_TYPE        SInt16
+#define HAL_SRVDSP_Pbias0pRS             HAL_SRVDSP_Pbias0pRS_MASK
+#define HAL_SRVDSP_Pbias0pRS_READABLE    1
+#define HAL_SRVDSP_Pbias0pRS_WRITABLE    1
+#define HAL_SRVDSP_Pbias0pRS_SIGNED      1
+#define HAL_SRVDSP_Pbias0pRS_ADR         0xB0000D50
+
+// Register Pbias1pRS
+#define HAL_SRVDSP_Pbias1pRS_REGISTER    (HAL_SRVDSPREG_MAP->Pbias1pRS)
+#define HAL_SRVDSP_Pbias1pRS_LSB         0
+#define HAL_SRVDSP_Pbias1pRS_MSB         15
+#define HAL_SRVDSP_Pbias1pRS_MASK        0x0000FFFF
+#define HAL_SRVDSP_Pbias1pRS_TYPE        SInt16
+#define HAL_SRVDSP_Pbias1pRS             HAL_SRVDSP_Pbias1pRS_MASK
+#define HAL_SRVDSP_Pbias1pRS_READABLE    1
+#define HAL_SRVDSP_Pbias1pRS_WRITABLE    1
+#define HAL_SRVDSP_Pbias1pRS_SIGNED      1
+#define HAL_SRVDSP_Pbias1pRS_ADR         0xB0000D54
+
+// Register PRead0WS
+#define HAL_SRVDSP_PRead0WS_REGISTER    (HAL_SRVDSPREG_MAP->PRead0WS)
+#define HAL_SRVDSP_PRead0WS_LSB         0
+#define HAL_SRVDSP_PRead0WS_MSB         15
+#define HAL_SRVDSP_PRead0WS_MASK        0x0000FFFF
+#define HAL_SRVDSP_PRead0WS_TYPE        SInt16
+#define HAL_SRVDSP_PRead0WS             HAL_SRVDSP_PRead0WS_MASK
+#define HAL_SRVDSP_PRead0WS_READABLE    1
+#define HAL_SRVDSP_PRead0WS_WRITABLE    1
+#define HAL_SRVDSP_PRead0WS_SIGNED      1
+#define HAL_SRVDSP_PRead0WS_ADR         0xB0000D58
+
+// Register PRead1WS
+#define HAL_SRVDSP_PRead1WS_REGISTER    (HAL_SRVDSPREG_MAP->PRead1WS)
+#define HAL_SRVDSP_PRead1WS_LSB         0
+#define HAL_SRVDSP_PRead1WS_MSB         15
+#define HAL_SRVDSP_PRead1WS_MASK        0x0000FFFF
+#define HAL_SRVDSP_PRead1WS_TYPE        SInt16
+#define HAL_SRVDSP_PRead1WS             HAL_SRVDSP_PRead1WS_MASK
+#define HAL_SRVDSP_PRead1WS_READABLE    1
+#define HAL_SRVDSP_PRead1WS_WRITABLE    1
+#define HAL_SRVDSP_PRead1WS_SIGNED      1
+#define HAL_SRVDSP_PRead1WS_ADR         0xB0000D5C
+
+// Register Pbias0WS
+#define HAL_SRVDSP_Pbias0WS_REGISTER    (HAL_SRVDSPREG_MAP->Pbias0WS)
+#define HAL_SRVDSP_Pbias0WS_LSB         0
+#define HAL_SRVDSP_Pbias0WS_MSB         15
+#define HAL_SRVDSP_Pbias0WS_MASK        0x0000FFFF
+#define HAL_SRVDSP_Pbias0WS_TYPE        SInt16
+#define HAL_SRVDSP_Pbias0WS             HAL_SRVDSP_Pbias0WS_MASK
+#define HAL_SRVDSP_Pbias0WS_READABLE    1
+#define HAL_SRVDSP_Pbias0WS_WRITABLE    1
+#define HAL_SRVDSP_Pbias0WS_SIGNED      1
+#define HAL_SRVDSP_Pbias0WS_ADR         0xB0000D60
+
+// Register Pbias1WS
+#define HAL_SRVDSP_Pbias1WS_REGISTER    (HAL_SRVDSPREG_MAP->Pbias1WS)
+#define HAL_SRVDSP_Pbias1WS_LSB         0
+#define HAL_SRVDSP_Pbias1WS_MSB         15
+#define HAL_SRVDSP_Pbias1WS_MASK        0x0000FFFF
+#define HAL_SRVDSP_Pbias1WS_TYPE        SInt16
+#define HAL_SRVDSP_Pbias1WS             HAL_SRVDSP_Pbias1WS_MASK
+#define HAL_SRVDSP_Pbias1WS_READABLE    1
+#define HAL_SRVDSP_Pbias1WS_WRITABLE    1
+#define HAL_SRVDSP_Pbias1WS_SIGNED      1
+#define HAL_SRVDSP_Pbias1WS_ADR         0xB0000D64
+
+// Register Pbias0pWS
+#define HAL_SRVDSP_Pbias0pWS_REGISTER    (HAL_SRVDSPREG_MAP->Pbias0pWS)
+#define HAL_SRVDSP_Pbias0pWS_LSB         0
+#define HAL_SRVDSP_Pbias0pWS_MSB         15
+#define HAL_SRVDSP_Pbias0pWS_MASK        0x0000FFFF
+#define HAL_SRVDSP_Pbias0pWS_TYPE        SInt16
+#define HAL_SRVDSP_Pbias0pWS             HAL_SRVDSP_Pbias0pWS_MASK
+#define HAL_SRVDSP_Pbias0pWS_READABLE    1
+#define HAL_SRVDSP_Pbias0pWS_WRITABLE    1
+#define HAL_SRVDSP_Pbias0pWS_SIGNED      1
+#define HAL_SRVDSP_Pbias0pWS_ADR         0xB0000D68
+
+// Register Pbias1pWS
+#define HAL_SRVDSP_Pbias1pWS_REGISTER    (HAL_SRVDSPREG_MAP->Pbias1pWS)
+#define HAL_SRVDSP_Pbias1pWS_LSB         0
+#define HAL_SRVDSP_Pbias1pWS_MSB         15
+#define HAL_SRVDSP_Pbias1pWS_MASK        0x0000FFFF
+#define HAL_SRVDSP_Pbias1pWS_TYPE        SInt16
+#define HAL_SRVDSP_Pbias1pWS             HAL_SRVDSP_Pbias1pWS_MASK
+#define HAL_SRVDSP_Pbias1pWS_READABLE    1
+#define HAL_SRVDSP_Pbias1pWS_WRITABLE    1
+#define HAL_SRVDSP_Pbias1pWS_SIGNED      1
+#define HAL_SRVDSP_Pbias1pWS_ADR         0xB0000D6C
+
+// Register Gthr_read
+#define HAL_SRVDSP_Gthr_read_REGISTER    (HAL_SRVDSPREG_MAP->Gthr_read)
+#define HAL_SRVDSP_Gthr_read_LSB         0
+#define HAL_SRVDSP_Gthr_read_MSB         15
+#define HAL_SRVDSP_Gthr_read_MASK        0x0000FFFF
+#define HAL_SRVDSP_Gthr_read_TYPE        SInt16
+#define HAL_SRVDSP_Gthr_read             HAL_SRVDSP_Gthr_read_MASK
+#define HAL_SRVDSP_Gthr_read_READABLE    1
+#define HAL_SRVDSP_Gthr_read_WRITABLE    1
+#define HAL_SRVDSP_Gthr_read_SIGNED      1
+#define HAL_SRVDSP_Gthr_read_ADR         0xB0000D70
+
+// Register Gthr_write
+#define HAL_SRVDSP_Gthr_write_REGISTER    (HAL_SRVDSPREG_MAP->Gthr_write)
+#define HAL_SRVDSP_Gthr_write_LSB         0
+#define HAL_SRVDSP_Gthr_write_MSB         15
+#define HAL_SRVDSP_Gthr_write_MASK        0x0000FFFF
+#define HAL_SRVDSP_Gthr_write_TYPE        SInt16
+#define HAL_SRVDSP_Gthr_write             HAL_SRVDSP_Gthr_write_MASK
+#define HAL_SRVDSP_Gthr_write_READABLE    1
+#define HAL_SRVDSP_Gthr_write_WRITABLE    1
+#define HAL_SRVDSP_Gthr_write_SIGNED      1
+#define HAL_SRVDSP_Gthr_write_ADR         0xB0000D74
+
+// Register Gdelta_write
+#define HAL_SRVDSP_Gdelta_write_REGISTER    (HAL_SRVDSPREG_MAP->Gdelta_write)
+#define HAL_SRVDSP_Gdelta_write_LSB         0
+#define HAL_SRVDSP_Gdelta_write_MSB         15
+#define HAL_SRVDSP_Gdelta_write_MASK        0x0000FFFF
+#define HAL_SRVDSP_Gdelta_write_TYPE        SInt16
+#define HAL_SRVDSP_Gdelta_write             HAL_SRVDSP_Gdelta_write_MASK
+#define HAL_SRVDSP_Gdelta_write_READABLE    1
+#define HAL_SRVDSP_Gdelta_write_WRITABLE    1
+#define HAL_SRVDSP_Gdelta_write_SIGNED      1
+#define HAL_SRVDSP_Gdelta_write_ADR         0xB0000D78
+
+// Register Thresh_reference
+#define HAL_SRVDSP_Thresh_reference_REGISTER    (HAL_SRVDSPREG_MAP->Thresh_reference)
+#define HAL_SRVDSP_Thresh_reference_LSB         0
+#define HAL_SRVDSP_Thresh_reference_MSB         15
+#define HAL_SRVDSP_Thresh_reference_MASK        0x0000FFFF
+#define HAL_SRVDSP_Thresh_reference_TYPE        SInt16
+#define HAL_SRVDSP_Thresh_reference             HAL_SRVDSP_Thresh_reference_MASK
+#define HAL_SRVDSP_Thresh_reference_READABLE    1
+#define HAL_SRVDSP_Thresh_reference_WRITABLE    1
+#define HAL_SRVDSP_Thresh_reference_SIGNED      1
+#define HAL_SRVDSP_Thresh_reference_ADR         0xB0000D7C
+
+// Register Thresh_open_loop_value
+#define HAL_SRVDSP_Thresh_open_loop_value_REGISTER    (HAL_SRVDSPREG_MAP->Thresh_open_loop_value)
+#define HAL_SRVDSP_Thresh_open_loop_value_LSB         0
+#define HAL_SRVDSP_Thresh_open_loop_value_MSB         15
+#define HAL_SRVDSP_Thresh_open_loop_value_MASK        0x0000FFFF
+#define HAL_SRVDSP_Thresh_open_loop_value_TYPE        SInt16
+#define HAL_SRVDSP_Thresh_open_loop_value             HAL_SRVDSP_Thresh_open_loop_value_MASK
+#define HAL_SRVDSP_Thresh_open_loop_value_READABLE    1
+#define HAL_SRVDSP_Thresh_open_loop_value_WRITABLE    1
+#define HAL_SRVDSP_Thresh_open_loop_value_SIGNED      1
+#define HAL_SRVDSP_Thresh_open_loop_value_ADR         0xB0000D80
+
+// Register Delta_open_loop_value
+#define HAL_SRVDSP_Delta_open_loop_value_REGISTER    (HAL_SRVDSPREG_MAP->Delta_open_loop_value)
+#define HAL_SRVDSP_Delta_open_loop_value_LSB         0
+#define HAL_SRVDSP_Delta_open_loop_value_MSB         15
+#define HAL_SRVDSP_Delta_open_loop_value_MASK        0x0000FFFF
+#define HAL_SRVDSP_Delta_open_loop_value_TYPE        SInt16
+#define HAL_SRVDSP_Delta_open_loop_value             HAL_SRVDSP_Delta_open_loop_value_MASK
+#define HAL_SRVDSP_Delta_open_loop_value_READABLE    1
+#define HAL_SRVDSP_Delta_open_loop_value_WRITABLE    1
+#define HAL_SRVDSP_Delta_open_loop_value_SIGNED      1
+#define HAL_SRVDSP_Delta_open_loop_value_ADR         0xB0000D84
+
+// Register Att0_0
+#define HAL_SRVDSP_Att0_0_REGISTER    (HAL_SRVDSPREG_MAP->Att0_0)
+#define HAL_SRVDSP_Att0_0_LSB         0
+#define HAL_SRVDSP_Att0_0_MSB         15
+#define HAL_SRVDSP_Att0_0_MASK        0x0000FFFF
+#define HAL_SRVDSP_Att0_0_TYPE        SInt16
+#define HAL_SRVDSP_Att0_0             HAL_SRVDSP_Att0_0_MASK
+#define HAL_SRVDSP_Att0_0_READABLE    1
+#define HAL_SRVDSP_Att0_0_WRITABLE    1
+#define HAL_SRVDSP_Att0_0_SIGNED      1
+#define HAL_SRVDSP_Att0_0_ADR         0xB0000D88
+
+// Register Att0_1
+#define HAL_SRVDSP_Att0_1_REGISTER    (HAL_SRVDSPREG_MAP->Att0_1)
+#define HAL_SRVDSP_Att0_1_LSB         0
+#define HAL_SRVDSP_Att0_1_MSB         15
+#define HAL_SRVDSP_Att0_1_MASK        0x0000FFFF
+#define HAL_SRVDSP_Att0_1_TYPE        SInt16
+#define HAL_SRVDSP_Att0_1             HAL_SRVDSP_Att0_1_MASK
+#define HAL_SRVDSP_Att0_1_READABLE    1
+#define HAL_SRVDSP_Att0_1_WRITABLE    1
+#define HAL_SRVDSP_Att0_1_SIGNED      1
+#define HAL_SRVDSP_Att0_1_ADR         0xB0000D8C
+
+// Register Att1_0
+#define HAL_SRVDSP_Att1_0_REGISTER    (HAL_SRVDSPREG_MAP->Att1_0)
+#define HAL_SRVDSP_Att1_0_LSB         0
+#define HAL_SRVDSP_Att1_0_MSB         15
+#define HAL_SRVDSP_Att1_0_MASK        0x0000FFFF
+#define HAL_SRVDSP_Att1_0_TYPE        SInt16
+#define HAL_SRVDSP_Att1_0             HAL_SRVDSP_Att1_0_MASK
+#define HAL_SRVDSP_Att1_0_READABLE    1
+#define HAL_SRVDSP_Att1_0_WRITABLE    1
+#define HAL_SRVDSP_Att1_0_SIGNED      1
+#define HAL_SRVDSP_Att1_0_ADR         0xB0000D90
+
+// Register Att1_1
+#define HAL_SRVDSP_Att1_1_REGISTER    (HAL_SRVDSPREG_MAP->Att1_1)
+#define HAL_SRVDSP_Att1_1_LSB         0
+#define HAL_SRVDSP_Att1_1_MSB         15
+#define HAL_SRVDSP_Att1_1_MASK        0x0000FFFF
+#define HAL_SRVDSP_Att1_1_TYPE        SInt16
+#define HAL_SRVDSP_Att1_1             HAL_SRVDSP_Att1_1_MASK
+#define HAL_SRVDSP_Att1_1_READABLE    1
+#define HAL_SRVDSP_Att1_1_WRITABLE    1
+#define HAL_SRVDSP_Att1_1_SIGNED      1
+#define HAL_SRVDSP_Att1_1_ADR         0xB0000D94
+
+// Register Att2_0
+#define HAL_SRVDSP_Att2_0_REGISTER    (HAL_SRVDSPREG_MAP->Att2_0)
+#define HAL_SRVDSP_Att2_0_LSB         0
+#define HAL_SRVDSP_Att2_0_MSB         15
+#define HAL_SRVDSP_Att2_0_MASK        0x0000FFFF
+#define HAL_SRVDSP_Att2_0_TYPE        SInt16
+#define HAL_SRVDSP_Att2_0             HAL_SRVDSP_Att2_0_MASK
+#define HAL_SRVDSP_Att2_0_READABLE    1
+#define HAL_SRVDSP_Att2_0_WRITABLE    1
+#define HAL_SRVDSP_Att2_0_SIGNED      1
+#define HAL_SRVDSP_Att2_0_ADR         0xB0000D98
+
+// Register Att2_1
+#define HAL_SRVDSP_Att2_1_REGISTER    (HAL_SRVDSPREG_MAP->Att2_1)
+#define HAL_SRVDSP_Att2_1_LSB         0
+#define HAL_SRVDSP_Att2_1_MSB         15
+#define HAL_SRVDSP_Att2_1_MASK        0x0000FFFF
+#define HAL_SRVDSP_Att2_1_TYPE        SInt16
+#define HAL_SRVDSP_Att2_1             HAL_SRVDSP_Att2_1_MASK
+#define HAL_SRVDSP_Att2_1_READABLE    1
+#define HAL_SRVDSP_Att2_1_WRITABLE    1
+#define HAL_SRVDSP_Att2_1_SIGNED      1
+#define HAL_SRVDSP_Att2_1_ADR         0xB0000D9C
+
+// Register reserved_7A0
+#define HAL_SRVDSP_reserved_7A0_REGISTER    (HAL_SRVDSPREG_MAP->reserved_7A0)
+#define HAL_SRVDSP_reserved_7A0_LSB         0
+#define HAL_SRVDSP_reserved_7A0_MSB         15
+#define HAL_SRVDSP_reserved_7A0_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_7A0_TYPE        SInt16
+#define HAL_SRVDSP_reserved_7A0             HAL_SRVDSP_reserved_7A0_MASK
+#define HAL_SRVDSP_reserved_7A0_READABLE    1
+#define HAL_SRVDSP_reserved_7A0_WRITABLE    1
+#define HAL_SRVDSP_reserved_7A0_SIGNED      1
+#define HAL_SRVDSP_reserved_7A0_ADR         0xB0000DA0
+
+// Register T2D
+#define HAL_SRVDSP_T2D_REGISTER    (HAL_SRVDSPREG_MAP->T2D)
+#define HAL_SRVDSP_T2D_LSB         0
+#define HAL_SRVDSP_T2D_MSB         15
+#define HAL_SRVDSP_T2D_MASK        0x0000FFFF
+#define HAL_SRVDSP_T2D_TYPE        SInt16
+#define HAL_SRVDSP_T2D             HAL_SRVDSP_T2D_MASK
+#define HAL_SRVDSP_T2D_READABLE    1
+#define HAL_SRVDSP_T2D_WRITABLE    1
+#define HAL_SRVDSP_T2D_SIGNED      1
+#define HAL_SRVDSP_T2D_ADR         0xB0000DA4
+
+// Register power_in
+#define HAL_SRVDSP_power_in_REGISTER    (HAL_SRVDSPREG_MAP->power_in)
+#define HAL_SRVDSP_power_in_LSB         0
+#define HAL_SRVDSP_power_in_MSB         15
+#define HAL_SRVDSP_power_in_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_in_TYPE        SInt16
+#define HAL_SRVDSP_power_in             HAL_SRVDSP_power_in_MASK
+#define HAL_SRVDSP_power_in_READABLE    1
+#define HAL_SRVDSP_power_in_WRITABLE    1
+#define HAL_SRVDSP_power_in_SIGNED      1
+#define HAL_SRVDSP_power_in_ADR         0xB0000DA8
+
+// Register Thresh_error_msb
+#define HAL_SRVDSP_Thresh_error_msb_REGISTER    (HAL_SRVDSPREG_MAP->Thresh_error_msb)
+#define HAL_SRVDSP_Thresh_error_msb_LSB         0
+#define HAL_SRVDSP_Thresh_error_msb_MSB         15
+#define HAL_SRVDSP_Thresh_error_msb_MASK        0x0000FFFF
+#define HAL_SRVDSP_Thresh_error_msb_TYPE        SInt16
+#define HAL_SRVDSP_Thresh_error_msb             HAL_SRVDSP_Thresh_error_msb_MASK
+#define HAL_SRVDSP_Thresh_error_msb_READABLE    1
+#define HAL_SRVDSP_Thresh_error_msb_WRITABLE    1
+#define HAL_SRVDSP_Thresh_error_msb_SIGNED      1
+#define HAL_SRVDSP_Thresh_error_msb_ADR         0xB0000DAC
+
+// Register Delta_error_msb
+#define HAL_SRVDSP_Delta_error_msb_REGISTER    (HAL_SRVDSPREG_MAP->Delta_error_msb)
+#define HAL_SRVDSP_Delta_error_msb_LSB         0
+#define HAL_SRVDSP_Delta_error_msb_MSB         15
+#define HAL_SRVDSP_Delta_error_msb_MASK        0x0000FFFF
+#define HAL_SRVDSP_Delta_error_msb_TYPE        SInt16
+#define HAL_SRVDSP_Delta_error_msb             HAL_SRVDSP_Delta_error_msb_MASK
+#define HAL_SRVDSP_Delta_error_msb_READABLE    1
+#define HAL_SRVDSP_Delta_error_msb_WRITABLE    1
+#define HAL_SRVDSP_Delta_error_msb_SIGNED      1
+#define HAL_SRVDSP_Delta_error_msb_ADR         0xB0000DB0
+
+// Register reserved_7B4
+#define HAL_SRVDSP_reserved_7B4_REGISTER    (HAL_SRVDSPREG_MAP->reserved_7B4)
+#define HAL_SRVDSP_reserved_7B4_LSB         0
+#define HAL_SRVDSP_reserved_7B4_MSB         15
+#define HAL_SRVDSP_reserved_7B4_MASK        0x0000FFFF
+#define HAL_SRVDSP_reserved_7B4_TYPE        SInt16
+#define HAL_SRVDSP_reserved_7B4             HAL_SRVDSP_reserved_7B4_MASK
+#define HAL_SRVDSP_reserved_7B4_READABLE    1
+#define HAL_SRVDSP_reserved_7B4_WRITABLE    1
+#define HAL_SRVDSP_reserved_7B4_SIGNED      1
+#define HAL_SRVDSP_reserved_7B4_ADR         0xB0000DB4
+
+// Register power_ref0
+#define HAL_SRVDSP_power_ref0_REGISTER    (HAL_SRVDSPREG_MAP->power_ref0)
+#define HAL_SRVDSP_power_ref0_LSB         0
+#define HAL_SRVDSP_power_ref0_MSB         15
+#define HAL_SRVDSP_power_ref0_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_ref0_TYPE        SInt16
+#define HAL_SRVDSP_power_ref0             HAL_SRVDSP_power_ref0_MASK
+#define HAL_SRVDSP_power_ref0_READABLE    1
+#define HAL_SRVDSP_power_ref0_WRITABLE    1
+#define HAL_SRVDSP_power_ref0_SIGNED      1
+#define HAL_SRVDSP_power_ref0_ADR         0xB0000DB8
+
+// Register power_ref1
+#define HAL_SRVDSP_power_ref1_REGISTER    (HAL_SRVDSPREG_MAP->power_ref1)
+#define HAL_SRVDSP_power_ref1_LSB         0
+#define HAL_SRVDSP_power_ref1_MSB         15
+#define HAL_SRVDSP_power_ref1_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_ref1_TYPE        SInt16
+#define HAL_SRVDSP_power_ref1             HAL_SRVDSP_power_ref1_MASK
+#define HAL_SRVDSP_power_ref1_READABLE    1
+#define HAL_SRVDSP_power_ref1_WRITABLE    1
+#define HAL_SRVDSP_power_ref1_SIGNED      1
+#define HAL_SRVDSP_power_ref1_ADR         0xB0000DBC
+
+// Register power_0
+#define HAL_SRVDSP_power_0_REGISTER    (HAL_SRVDSPREG_MAP->power_0)
+#define HAL_SRVDSP_power_0_LSB         0
+#define HAL_SRVDSP_power_0_MSB         15
+#define HAL_SRVDSP_power_0_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_0_TYPE        SInt16
+#define HAL_SRVDSP_power_0             HAL_SRVDSP_power_0_MASK
+#define HAL_SRVDSP_power_0_READABLE    1
+#define HAL_SRVDSP_power_0_WRITABLE    1
+#define HAL_SRVDSP_power_0_SIGNED      1
+#define HAL_SRVDSP_power_0_ADR         0xB0000DC0
+
+// Register power_1
+#define HAL_SRVDSP_power_1_REGISTER    (HAL_SRVDSPREG_MAP->power_1)
+#define HAL_SRVDSP_power_1_LSB         0
+#define HAL_SRVDSP_power_1_MSB         15
+#define HAL_SRVDSP_power_1_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_1_TYPE        SInt16
+#define HAL_SRVDSP_power_1             HAL_SRVDSP_power_1_MASK
+#define HAL_SRVDSP_power_1_READABLE    1
+#define HAL_SRVDSP_power_1_WRITABLE    1
+#define HAL_SRVDSP_power_1_SIGNED      1
+#define HAL_SRVDSP_power_1_ADR         0xB0000DC4
+
+// Register power_2
+#define HAL_SRVDSP_power_2_REGISTER    (HAL_SRVDSPREG_MAP->power_2)
+#define HAL_SRVDSP_power_2_LSB         0
+#define HAL_SRVDSP_power_2_MSB         15
+#define HAL_SRVDSP_power_2_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_2_TYPE        SInt16
+#define HAL_SRVDSP_power_2             HAL_SRVDSP_power_2_MASK
+#define HAL_SRVDSP_power_2_READABLE    1
+#define HAL_SRVDSP_power_2_WRITABLE    1
+#define HAL_SRVDSP_power_2_SIGNED      1
+#define HAL_SRVDSP_power_2_ADR         0xB0000DC8
+
+// Register power_3
+#define HAL_SRVDSP_power_3_REGISTER    (HAL_SRVDSPREG_MAP->power_3)
+#define HAL_SRVDSP_power_3_LSB         0
+#define HAL_SRVDSP_power_3_MSB         15
+#define HAL_SRVDSP_power_3_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_3_TYPE        SInt16
+#define HAL_SRVDSP_power_3             HAL_SRVDSP_power_3_MASK
+#define HAL_SRVDSP_power_3_READABLE    1
+#define HAL_SRVDSP_power_3_WRITABLE    1
+#define HAL_SRVDSP_power_3_SIGNED      1
+#define HAL_SRVDSP_power_3_ADR         0xB0000DCC
+
+// Register power_4
+#define HAL_SRVDSP_power_4_REGISTER    (HAL_SRVDSPREG_MAP->power_4)
+#define HAL_SRVDSP_power_4_LSB         0
+#define HAL_SRVDSP_power_4_MSB         15
+#define HAL_SRVDSP_power_4_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_4_TYPE        SInt16
+#define HAL_SRVDSP_power_4             HAL_SRVDSP_power_4_MASK
+#define HAL_SRVDSP_power_4_READABLE    1
+#define HAL_SRVDSP_power_4_WRITABLE    1
+#define HAL_SRVDSP_power_4_SIGNED      1
+#define HAL_SRVDSP_power_4_ADR         0xB0000DD0
+
+// Register power_5
+#define HAL_SRVDSP_power_5_REGISTER    (HAL_SRVDSPREG_MAP->power_5)
+#define HAL_SRVDSP_power_5_LSB         0
+#define HAL_SRVDSP_power_5_MSB         15
+#define HAL_SRVDSP_power_5_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_5_TYPE        SInt16
+#define HAL_SRVDSP_power_5             HAL_SRVDSP_power_5_MASK
+#define HAL_SRVDSP_power_5_READABLE    1
+#define HAL_SRVDSP_power_5_WRITABLE    1
+#define HAL_SRVDSP_power_5_SIGNED      1
+#define HAL_SRVDSP_power_5_ADR         0xB0000DD4
+
+// Register power_6
+#define HAL_SRVDSP_power_6_REGISTER    (HAL_SRVDSPREG_MAP->power_6)
+#define HAL_SRVDSP_power_6_LSB         0
+#define HAL_SRVDSP_power_6_MSB         15
+#define HAL_SRVDSP_power_6_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_6_TYPE        SInt16
+#define HAL_SRVDSP_power_6             HAL_SRVDSP_power_6_MASK
+#define HAL_SRVDSP_power_6_READABLE    1
+#define HAL_SRVDSP_power_6_WRITABLE    1
+#define HAL_SRVDSP_power_6_SIGNED      1
+#define HAL_SRVDSP_power_6_ADR         0xB0000DD8
+
+// Register power_7
+#define HAL_SRVDSP_power_7_REGISTER    (HAL_SRVDSPREG_MAP->power_7)
+#define HAL_SRVDSP_power_7_LSB         0
+#define HAL_SRVDSP_power_7_MSB         15
+#define HAL_SRVDSP_power_7_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_7_TYPE        SInt16
+#define HAL_SRVDSP_power_7             HAL_SRVDSP_power_7_MASK
+#define HAL_SRVDSP_power_7_READABLE    1
+#define HAL_SRVDSP_power_7_WRITABLE    1
+#define HAL_SRVDSP_power_7_SIGNED      1
+#define HAL_SRVDSP_power_7_ADR         0xB0000DDC
+
+// Register power_8
+#define HAL_SRVDSP_power_8_REGISTER    (HAL_SRVDSPREG_MAP->power_8)
+#define HAL_SRVDSP_power_8_LSB         0
+#define HAL_SRVDSP_power_8_MSB         15
+#define HAL_SRVDSP_power_8_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_8_TYPE        SInt16
+#define HAL_SRVDSP_power_8             HAL_SRVDSP_power_8_MASK
+#define HAL_SRVDSP_power_8_READABLE    1
+#define HAL_SRVDSP_power_8_WRITABLE    1
+#define HAL_SRVDSP_power_8_SIGNED      1
+#define HAL_SRVDSP_power_8_ADR         0xB0000DE0
+
+// Register power_9
+#define HAL_SRVDSP_power_9_REGISTER    (HAL_SRVDSPREG_MAP->power_9)
+#define HAL_SRVDSP_power_9_LSB         0
+#define HAL_SRVDSP_power_9_MSB         15
+#define HAL_SRVDSP_power_9_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_9_TYPE        SInt16
+#define HAL_SRVDSP_power_9             HAL_SRVDSP_power_9_MASK
+#define HAL_SRVDSP_power_9_READABLE    1
+#define HAL_SRVDSP_power_9_WRITABLE    1
+#define HAL_SRVDSP_power_9_SIGNED      1
+#define HAL_SRVDSP_power_9_ADR         0xB0000DE4
+
+// Register power_10
+#define HAL_SRVDSP_power_10_REGISTER    (HAL_SRVDSPREG_MAP->power_10)
+#define HAL_SRVDSP_power_10_LSB         0
+#define HAL_SRVDSP_power_10_MSB         15
+#define HAL_SRVDSP_power_10_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_10_TYPE        SInt16
+#define HAL_SRVDSP_power_10             HAL_SRVDSP_power_10_MASK
+#define HAL_SRVDSP_power_10_READABLE    1
+#define HAL_SRVDSP_power_10_WRITABLE    1
+#define HAL_SRVDSP_power_10_SIGNED      1
+#define HAL_SRVDSP_power_10_ADR         0xB0000DE8
+
+// Register power_11
+#define HAL_SRVDSP_power_11_REGISTER    (HAL_SRVDSPREG_MAP->power_11)
+#define HAL_SRVDSP_power_11_LSB         0
+#define HAL_SRVDSP_power_11_MSB         15
+#define HAL_SRVDSP_power_11_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_11_TYPE        SInt16
+#define HAL_SRVDSP_power_11             HAL_SRVDSP_power_11_MASK
+#define HAL_SRVDSP_power_11_READABLE    1
+#define HAL_SRVDSP_power_11_WRITABLE    1
+#define HAL_SRVDSP_power_11_SIGNED      1
+#define HAL_SRVDSP_power_11_ADR         0xB0000DEC
+
+// Register power_12
+#define HAL_SRVDSP_power_12_REGISTER    (HAL_SRVDSPREG_MAP->power_12)
+#define HAL_SRVDSP_power_12_LSB         0
+#define HAL_SRVDSP_power_12_MSB         15
+#define HAL_SRVDSP_power_12_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_12_TYPE        SInt16
+#define HAL_SRVDSP_power_12             HAL_SRVDSP_power_12_MASK
+#define HAL_SRVDSP_power_12_READABLE    1
+#define HAL_SRVDSP_power_12_WRITABLE    1
+#define HAL_SRVDSP_power_12_SIGNED      1
+#define HAL_SRVDSP_power_12_ADR         0xB0000DF0
+
+// Register power_13
+#define HAL_SRVDSP_power_13_REGISTER    (HAL_SRVDSPREG_MAP->power_13)
+#define HAL_SRVDSP_power_13_LSB         0
+#define HAL_SRVDSP_power_13_MSB         15
+#define HAL_SRVDSP_power_13_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_13_TYPE        SInt16
+#define HAL_SRVDSP_power_13             HAL_SRVDSP_power_13_MASK
+#define HAL_SRVDSP_power_13_READABLE    1
+#define HAL_SRVDSP_power_13_WRITABLE    1
+#define HAL_SRVDSP_power_13_SIGNED      1
+#define HAL_SRVDSP_power_13_ADR         0xB0000DF4
+
+// Register power_14
+#define HAL_SRVDSP_power_14_REGISTER    (HAL_SRVDSPREG_MAP->power_14)
+#define HAL_SRVDSP_power_14_LSB         0
+#define HAL_SRVDSP_power_14_MSB         15
+#define HAL_SRVDSP_power_14_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_14_TYPE        SInt16
+#define HAL_SRVDSP_power_14             HAL_SRVDSP_power_14_MASK
+#define HAL_SRVDSP_power_14_READABLE    1
+#define HAL_SRVDSP_power_14_WRITABLE    1
+#define HAL_SRVDSP_power_14_SIGNED      1
+#define HAL_SRVDSP_power_14_ADR         0xB0000DF8
+
+// Register power_15
+#define HAL_SRVDSP_power_15_REGISTER    (HAL_SRVDSPREG_MAP->power_15)
+#define HAL_SRVDSP_power_15_LSB         0
+#define HAL_SRVDSP_power_15_MSB         15
+#define HAL_SRVDSP_power_15_MASK        0x0000FFFF
+#define HAL_SRVDSP_power_15_TYPE        SInt16
+#define HAL_SRVDSP_power_15             HAL_SRVDSP_power_15_MASK
+#define HAL_SRVDSP_power_15_READABLE    1
+#define HAL_SRVDSP_power_15_WRITABLE    1
+#define HAL_SRVDSP_power_15_SIGNED      1
+#define HAL_SRVDSP_power_15_ADR         0xB0000DFC
+
+#endif //SV
+
+#endif /* __REG_SERVODSP_H__ */
+

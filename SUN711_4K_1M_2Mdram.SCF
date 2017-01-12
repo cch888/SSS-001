@@ -1,0 +1,236 @@
+; (c) Copyright 2006 SUNEXT DESIGN, INC. All rights reserved.
+;
+;
+; In chips with the ARM Cache controller the Flash memory is mirrored at
+; both addresses 0x3000_0000 and 0x3080_0000. The code must be executed
+; from the 0x3080_0000 address to enable the Cache block.
+;
+; This Scatter File supports 12K Internal memory and 4K Cache
+;
+;                                        FLASH Sector Map
+;                                        -----------
+;                                        SST29VF080
+;
+;  30800000h|--------------------------| ----------
+;           | cstart.o                 |
+;           | initarm.o                |
+;           | initsys.o                |
+;  30800500h|--------------------------|
+;           | callvia.o                |
+;  30800600h|--------------------------|    4K
+;           | Flash.o (FlashFW)        |
+;  30800700h|--------------------------|
+;           | Flash.o (FlashPara)      |
+;  30800800h|--------------------------|
+;           | Flash.o (RO)             |
+;  30801000h|--------------------------| ----------
+;           |                          |    4K
+;  30802000h|--------------------------| ----------
+;           | oem_tbl.o (+RO)          |
+;  30802280h|                          |    4K
+;           | PersistentTable, others  |
+;  30803000h|--------------------------| ----------
+;           |  sun710_oem_tbl.o(+RO)   |    4K
+;  30804000h|--------------------------| ----------
+;           |                          |    4K
+;  30805000h| .     -------------------| ----------
+;           |                          |    4K
+;  30806000h| .     -------------------| ----------
+;           | .                        |
+;  30807000h| .     -------------------|
+;           | .                        |
+;  30808000h| .     -------------------|
+;           | .                        |
+;           | All RO code/data         |  All remaining
+;           | .                        |  segments = 4K
+;  30810000h| .     -------------------|
+;           | .                        |
+;           | .                        |
+;           |                          |
+;  309FFFF0h|--------------------------|
+;           | oem_tbl.o (EOF)          |
+;  30900000h|--------------------------| ----------
+;           .
+;           .
+;           .
+;           .                            --------------------------------
+;           .                                    Internal 16K SRAM
+;  00000000h|--------------------------| ---------- ------------ --------
+;           | SRAM IMAGE (32bitRAM)    |
+;           | vectors.o                |
+;           | IM Func and RW/ZI data   |
+;           |--------------------------| <- HEAP
+;           |                          |
+;  00003000h|--------------------------| <- STACK
+;           |  4K allocated for Cache  |
+;  00004000h|--------------------------| <- ARM Cache
+;           .
+;           .
+;           .                                    External SDRAM Map
+;  601E9000h|--------------------------| ---------- ------------ --------
+;           | SDRAM RW/ZI DATA (SDRAM) |  All(**)
+;           | .                        |
+;           | .                        |
+;           | .                        |
+;  601F9780h|--------------------------| ---------- ------------ --------
+;
+;
+;
+;
+; (*)               When serial EEPROM is not available on PCB
+; ALL(**)4K/64K     All sector size in these area is 4K/64K
+
+
+
+
+FLASH 0x30800000 0x100000
+{
+    BOOT 0x30800000 FIXED 0x5E0
+    {
+        cstart.o (Cstart, +First)
+        initsys.o (+RO)
+        initarm.o (INIT_SYS)
+        initarm.o (INIT_IO)        
+    }
+
+    CALLVIA 0x308005E0 FIXED 0x020
+    {
+        callvia.o (+RO)
+    }
+
+    FLASHFW 0x30800600 FIXED 0x0100
+    {
+        Flash.o (FlashFW)
+    }
+
+    FLASHPARA 0x30800700 FIXED 0x0100
+    {
+        Flash.o (FlashPara)
+    }
+
+    FLASH 0x30800800 FIXED 0x1000
+    {
+        Flash.o (+RO)
+    }
+
+;#if (BOOT_CODE_SUPPORT == 1)
+    ;**************************************************
+    ;    0x30801000 - 0x30803FFF    Bootcode
+    ;**************************************************
+    BootCode 0x30801800 FIXED 0x2800
+    {
+        BootCode.o (+RO)
+    }
+;#endif
+
+    PARA 0x30804000 FIXED 0x2000     ; PersistentTable is placed in 3rd 4K segment
+    {
+        oem_tbl.o (+RO)
+    }
+
+    CHK_EE 0x30804400 FIXED 0x04
+    {
+        oem_tbl.o (CHK_EE)
+    }
+    ;**************************************************
+    ;    0x30806000 - 0x30807FFF    Key_para Table 
+    ;**************************************************
+;    KEY_PARA 0x30806000 FIXED 0x2000     ; key parameter Table is placed in 2rd 4K segment
+;    {
+;        oem_tbl.o (KEY_PARA)
+;    }
+    ;**************************************************
+    ;    0x30808000 - 0x3080FFFF    MKB Table
+    ;**************************************************
+    ;**************************************************
+    ;    0x30810000 - 0x30813FFF    Reserved
+    ;**************************************************    
+    ;**************************************************
+    ;    0x30814000 - 0x3081FFFF    Debug message area
+    ;**************************************************
+    
+    
+    ROM_STR 0x30820000 FIXED 0x10
+    {
+        oem_tbl.o (STR)
+    }
+    ROM_FV  0x30820100 FIXED 0x05
+    {
+        oem_tbl.o (FV)
+    }
+    ROM_OPU  0x30820110 FIXED 0x09
+    {
+        oem_tbl.o (OPU)
+    }
+    ROM_ETC 0x30820200 FIXED
+    {
+        * (+RO)
+    }
+
+;*************************************************
+;****           Instruction Memory             ***
+;*************************************************
+    32bitRAM 0x0000 0x3000
+    {
+        vectors.o (Vect, +First)
+        rt_sdiv.o (+RO)
+        rt_udiv.o (+RO)
+        prcon.o (+RO,+RW,+ZI)
+        com_im.o (+RO)
+        intctl.o (+RO)
+        hif_im.o (+RO)
+        svo_im.o (+RO)
+        svomath.o (+RO)
+        iram.o (+RW,+ZI)
+        main.o (+ZI)
+    }
+;******* End of Instruction Memory *******
+
+;*************************************************
+;****     Heap and Stack to Internal Memory    ***
+;*************************************************
+    HEAP 0x2C00
+    {
+        heap.o (+ZI)
+    }
+
+    STACKS 0x3000 UNINIT
+    {
+        stack.o (+ZI)
+    }
+;******* End of Heap/Stack Memory *******
+
+;*************************************************
+;****         External SDRAM Memory            ***
+;*************************************************
+    INFO 0x601F0000 0x4670
+    {
+        plrdb.o (info)
+    }
+
+
+; experiment with coefs
+    COEF_VALUES 0x601C9000 0x8000
+    {
+        coef_values.o (coef_values_rwdata)
+    }
+    
+    FLASHCODEPARA 0x601E9800 0x20
+    {
+        flash.o (+RW,+ZI)
+    }
+    BOOTCODEPARA 0x601E9820 0x1E0
+    {
+        bootcode.o (+RW,+ZI)
+    }    
+    SDRAM 0x601E9A00 0x6600
+    {
+        * (+RW,+ZI)
+    }
+;******* End of External SDRAM Memory *******
+
+    ROM_EOF 0x308FFFF0 FIXED 0x10
+    {
+        oem_tbl.o (EOF)
+    }
+}
