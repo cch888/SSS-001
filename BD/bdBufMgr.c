@@ -59,7 +59,7 @@ SearchCacheResultE bdSearchCache(TransferS, BYTE);
 //static ULONG bdGetClusterRequest(TransferS, TransferTypeE);
 
 a
-
+b
 
 /*******************************************************************************
 * FUNCTION DEFINITIONS
