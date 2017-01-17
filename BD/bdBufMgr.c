@@ -58,6 +58,8 @@ void bdAdjustHostBufferPtr(ULONG);
 SearchCacheResultE bdSearchCache(TransferS, BYTE);
 //static ULONG bdGetClusterRequest(TransferS, TransferTypeE);
 
+a
+
 
 /*******************************************************************************
 * FUNCTION DEFINITIONS
